@@ -1,6 +1,6 @@
 <nav id="globalnav" class="globalnav uk-navbar">
 	<ul class="gn-logo">
-		<li class="gn-hidden"><a href="#">sipakatau</a></li>
+		<li class="gn-hidden"><a style="font-size: 24px;" href="{{URL('/')}}">Si Emas Terpadu</a></li>
 		<li><button id="toggle-side"><i class="uk-icon-navicon uk-icon-small"></i></button></li>
 	</ul>
 	<!-- <ul class="uk-navbar-nav gn-search">

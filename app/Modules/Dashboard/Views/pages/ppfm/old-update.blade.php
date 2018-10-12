@@ -105,8 +105,8 @@
 										<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 											<div class="data-inner">
 												<label for="nama-krt">7. Nama Kepala Rumah Tangga</label>
-												<input id="nama-krt" type="text" name="nama-krt" readonly value="{{ ((App\Models\PesertaBDT::getkrt($peserta[0]->kodepeserta)) ? App\Models\PesertaBDT::getkrt($peserta[0]->kodepeserta)[0]['nama'] : '') }}">
-												<!-- <div class="error">Pesan Error</div> -->
+												{{--<input id="nama-krt" type="text" name="nama-krt" readonly value="{{ ((App\Models\PesertaBDT::getkrt($peserta[0]->kodepeserta)) ? App\Models\PesertaBDT::getkrt($peserta[0]->kodepeserta)[0]['nama'] : '') }}">
+												--}}<!-- <div class="error">Pesan Error</div> -->
 											</div>
 										</div>
 										<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
@@ -511,7 +511,7 @@
 								</li>
 							</ul>
 						</fieldset>
-						<!-- <fieldset id="page-4" >
+						{{-- <fieldset id="page-4" >
 							<ul id="fs-page-iv-2" class="daftar-input-ppfm uk-nav uk-nav-parent-icon" data-uk-nav={multiple: true}>
 								<li class="uk-parent uk-active">
 									<a href="#">Daftar Inputan Anggota Keluarga 2</a>
@@ -669,7 +669,7 @@
 									</div>
 								</li>
 							</ul>
-						</fieldset> -->
+						</fieldset> --}}
 
 					</div>
 				</form>

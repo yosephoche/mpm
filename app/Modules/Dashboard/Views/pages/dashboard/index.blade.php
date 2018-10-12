@@ -443,5 +443,27 @@
 	</div><!-- mc-peta -->
 </div><!-- m-content -->
 
+<div id="modal-informasi-detail" class="uk-modal">
+    <div class="uk-modal-dialog">
+        <div class="uk-modal-header">
+            <div class="uk-clearfix">
+                <div class="uk-float-left">
+                    <h3>Peringatan!</h3>
+                </div>
+                <div class="uk-float-right">
+                    <button class="uk-modal-close uk-close"></button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-content">
+            <p></p>
+        </div>
+        <div class="uk-modal-footer">
+            <ul>
+                <li><button class="button-blue uk-modal-close" >OK</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
 <script src="{{ URL('/assets/js/backend/index.js') }}"></script>
 @stop

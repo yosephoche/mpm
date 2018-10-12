@@ -36,10 +36,10 @@ class PesertaBDT extends Eloquent
 
     public static function getkrt($kodepeserta){
     	$getkrt = PesertaBDT::where('kodepeserta', $kodepeserta)->where('individu.b4_k3', '1')->first();
-    	if(empty($getkrt)){
+    	if($getkrt){
     		$krt = $getkrt;
     	}else{
-    		$krt = $getkrt->individu;
+    		$krt = $getkrt['individu'];
     	}
         return $krt;
     }
@@ -323,9 +323,47 @@ class PesertaBDT extends Eloquent
 
 		$kurkecamatan = ((!empty($kurkecamatanmpm['result'])) ? $kurkecamatanmpm['result'][0]['count'] : 0) + ((!empty($kurkecamatanbdt['result'])) ? $kurkecamatanbdt['result'][0]['count'] : 0);
 
-		$kecamatan = Kecamatan::where('id_kecamatan', $kec)->where('status', '1')->first();
+		$kecamatan = Kecamatan::where('id_kecamatan', $kec)->where('status', true)->first();
 
-		$summary = array('id' => $id, 'kec' => $kecamatan->kecamatan, 'data' => array(array('key'=>'Jumlah Individu', 'value'=>$indikecamatan),array('key'=>'Punya NIK', 'value'=>$nikkecamatan),array('key'=>'Tidak Punya NIK', 'value'=>$nonikkecamatan),array('key'=>'PKH', 'value'=>$pkhkecamatan),array('key'=>'KKS/KPS', 'value'=>$kkskecamatan),array('key'=>'KUR', 'value'=>$kurkecamatan)));
+		$kelurahan = Kelurahan::where('id_kecamatan', $kec)->where('status', true)->get();
+		
+		$listkel = [];
+		foreach($kelurahan as $lskel){
+			array_push($listkel, array('key'=>$lskel->id_kelurahan,
+					'value'=>$lskel->kelurahan,
+					'detail'=> 
+						array(array('kategori'=>'Rumah', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
+						array('kategori'=>'Listrik', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
+						array('kategori'=>'Kesehatan', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
+						array('kategori'=>'Pendidikan', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
+						array('kategori'=>'Pekerjaan', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
+						array('kategori'=>'Fasilitas MCK', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
+						array('kategori'=>'Fasilitas Memasak', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
+						array('kategori'=>'Kelengkapan Persuratan', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
+						array('kategori'=>'Peserta KKS/KPS', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
+						array('kategori'=>'Peserta Program Rastra', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
+						array('kategori'=>'Peserta Program KUR', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
+						array('kategori'=>'Peserta Program PKH', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
+						array('kategori'=>'Peserta KIP', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
+						array('kategori'=>'Peserta KIS/BPJS', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
+						array('kategori'=>'Asuransi Kesehatan Lain', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
+						
+						)
+					)
+				);
+		}
+		// $summary = array('id' => $id, 'kec' => $kecamatan->kecamatan, 
+		// 'data' => array(array('key'=>'Jumlah Individu', 'value'=>$indikecamatan),
+		// array('key'=>'Punya NIK', 'value'=>$nikkecamatan),
+		// array('key'=>'Tidak Punya NIK', 'value'=>$nonikkecamatan),
+		// array('key'=>'PKH', 'value'=>$pkhkecamatan),
+		// array('key'=>'KKS/KPS', 'value'=>$kkskecamatan),
+		// array('key'=>'KUR', 'value'=>$kurkecamatan)));
+
+		$summary = array('id'=>$id, 'kec'=>$kecamatan->kecamatan,
+		'data'=> $listkel
+		);
+
 		return $summary;
 	}
 
