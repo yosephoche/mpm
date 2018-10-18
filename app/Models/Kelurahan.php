@@ -10,7 +10,7 @@ class Kelurahan extends Eloquent
     public $timestamps = false;
 
 	public static function getkelurahan($id){
-		$getkel = Kelurahan::where('id_kelurahan', $id)->where('status', '1')->get();
+		$getkel = Kelurahan::where('id_kelurahan', $id)->where('status', true)->get();
 
 		if($getkel->isEmpty()){
 			$kelurahan = '';

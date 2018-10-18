@@ -75,7 +75,7 @@
                                                     <td>{{ ucwords(strtoupper($listpeserta->b1_k6)) }}</td>
                                                     <td>{{ ucwords(strtolower(App\Models\Kelurahan::getkelurahan($listpeserta->des))) }}</td>
                                                     <td>{{ ucwords(strtolower(App\Models\Kecamatan::getkecamatan($listpeserta->kec))) }}</td>
-                                                    <td>{{ ((App\Models\PesertaBDT::getkrt($listpeserta->kodepeserta)) ? App\Models\PesertaBDT::getkrt($listpeserta->kodepeserta)[0]['nama'] : '') }}</td>
+                                                    <td>{{ (!empty(App\Models\PesertaBDT::getkrt($listpeserta->kodepeserta)) ? App\Models\PesertaBDT::getkrt($listpeserta->kodepeserta)[0]['nama'] : '') }}</td>
                                                     <td>{{ $listpeserta->b1_k9 }}</td>
                                                     <td>{{ ((int)$listpeserta->statuskesejahteraan*10).' %' }}</td>
                                                     <td>

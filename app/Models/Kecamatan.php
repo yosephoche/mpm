@@ -10,7 +10,7 @@ class Kecamatan extends Eloquent
     public $timestamps = false;
 
 	public static function getkecamatan($id){
-		$getkec = Kecamatan::where('id_kecamatan', $id)->where('status', '1')->get();
+		$getkec = Kecamatan::where('id_kecamatan', $id)->where('status', true)->get();
 
 		if($getkec->isEmpty()){
 			$kecamatan = '';

@@ -36,10 +36,10 @@ class PesertaBDT extends Eloquent
 
     public static function getkrt($kodepeserta){
     	$getkrt = PesertaBDT::where('kodepeserta', $kodepeserta)->where('individu.b4_k3', '1')->first();
-    	if($getkrt){
-    		$krt = $getkrt;
-    	}else{
+		if($getkrt){
     		$krt = $getkrt['individu'];
+    	}else{
+    		$krt = '';
     	}
         return $krt;
     }
