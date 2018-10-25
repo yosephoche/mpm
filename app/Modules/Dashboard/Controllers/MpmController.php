@@ -23,7 +23,7 @@ use App\Http\Controllers\Controller;
 class MpmController extends Controller
 {
 	public function index(){
-		$kecamatan = Kecamatan::where('id_kota', '7316')->where('status', '1')->get();
+		$kecamatan = Kecamatan::where('id_kota', '7316')->where('status', true)->get();
 		/*$indivarindividu = IndikatorVariabel::where('tingkat', '1')->where('pendaftaran', '1')->where('status', 1)->get();*/
 		$indivarrt = IndikatorVariabel::where('tingkat', '2')->where('pendaftaran', '1')->where('status', 1)->get();
 		$indivarasset = IndikatorVariabel::where('tingkat', '3')->where('pendaftaran', '1')->where('status', 1)->get();
@@ -131,8 +131,8 @@ class MpmController extends Controller
 
 	public function update($idpeserta){
 		$peserta = PesertaMpm::where('_id', $idpeserta)->where('status', 1)->get();
-		$kecamatan = Kecamatan::where('id_kota', '7316')->where('status', '1')->get();
-		$kelurahan = Kelurahan::where('id_kecamatan', $peserta[0]->kec)->where('status', '1')->get();
+		$kecamatan = Kecamatan::where('id_kota', '7316')->where('status', true)->get();
+		$kelurahan = Kelurahan::where('id_kecamatan', $peserta[0]->kec)->where('status', true)->get();
 		$indivarindividu = IndikatorVariabel::where('tingkat', '1')->where('pendaftaran', '1')->where('status', 1)->get();
 		$indivarrt = IndikatorVariabel::where('tingkat', '2')->where('pendaftaran', '1')->where('status', 1)->get();
 		$indivarasset = IndikatorVariabel::where('tingkat', '3')->where('pendaftaran', '1')->where('status', 1)->get();
@@ -257,13 +257,13 @@ class MpmController extends Controller
 	}
 
 	public function getkecamatan($idkota){
-		$kecamatan = Kecamatan::where('id_kota', $idkota)->where('status', '1')->get();
+		$kecamatan = Kecamatan::where('id_kota', $idkota)->where('status', true)->get();
 
 		return json_encode($kecamatan);
 	}
 
 	public function getkelurahan($idkec){
-		$kelurahan = Kelurahan::where('id_kecamatan', $idkec)->where('status', '1')->get();
+		$kelurahan = Kelurahan::where('id_kecamatan', $idkec)->where('status', true)->get();
 
 		return json_encode($kelurahan);
 	}

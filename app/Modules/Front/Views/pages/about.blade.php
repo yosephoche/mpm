@@ -12,10 +12,10 @@
                 </div>
                 <div class="uk-width-large-7-10">
                     <p>Si EMAS Terpadu adalah <i>Sistem Informasi Penanggulangan Kemiskinan
-Terpadu</i> pada Kabupaten Soppeng. Aplikasi Si EMAS Terpadu berfungsi 
+Terpadu</i> pada Kabupaten Enrekang. Aplikasi Si EMAS Terpadu berfungsi 
 sebagai basis data informasi online yang berfungsi sebagai acuan
 data rumah tangga dan individu kurang mampu penerima bantuan
-program perlindungan sosial di Kabupaten Soppeng. Aplikasi 
+program perlindungan sosial di Kabupaten Enrekang. Aplikasi 
 Si EMAS Terpadu juga berfungsi sebagai sarana pemuktahiran data  
 penerima bantuan program perlindungan sosial secara online.</p>
                 </div>

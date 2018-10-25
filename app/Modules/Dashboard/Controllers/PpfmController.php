@@ -19,7 +19,7 @@ class PpfmController extends Controller
 {
 	public function newpeserta(){
 		$kec = empty($_GET['kec']) ? '' : $_GET['kec'];
-		$getkecamatan = Kecamatan::where('id_kota', '7316')->where('status', '1')->get();
+		$getkecamatan = Kecamatan::where('id_kota', '7316')->where('status', true)->get();
 
 		if(empty($kec)){
 			$peserta_mpm = PesertaMpm::where('status', 1)->paginate(50);		
@@ -55,7 +55,7 @@ class PpfmController extends Controller
 
 	public function oldpeserta(){
 		$kec = empty($_GET['kec']) ? '' : $_GET['kec'];
-		$getkecamatan = Kecamatan::where('id_kota', '7316')->where('status', '1')->get();
+		$getkecamatan = Kecamatan::where('id_kota', '7316')->where('status', true)->get();
 
 		if(empty($kec)){
 			$peserta_bdt = PesertaBDT::where('status', 1)->orderBy('_id', 'ASC')->paginate(50);
@@ -688,7 +688,7 @@ class PpfmController extends Controller
 
 	public function cetakpesertabaru(){
 		$kec = empty($_GET['kec']) ? '' : $_GET['kec'];
-		$getkecamatan = Kecamatan::where('id_kota', '7316')->where('status', '1')->get();
+		$getkecamatan = Kecamatan::where('id_kota', '7316')->where('status', true)->get();
 
 		if(empty($kec)){
 			$peserta_mpm = PesertaMpm::where('status', 1)->paginate(50);		
@@ -700,7 +700,7 @@ class PpfmController extends Controller
 
 	public function cetakpesertalama(){
 		$kec = empty($_GET['kec']) ? '' : $_GET['kec'];
-		$getkecamatan = Kecamatan::where('id_kota', '7316')->where('status', '1')->get();
+		$getkecamatan = Kecamatan::where('id_kota', '7316')->where('status', true)->get();
 
 		if(empty($kec)){
 			$peserta_bdt = PesertaBDT::where('status', 1)->orderBy('_id', 'ASC')->paginate(50);

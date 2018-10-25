@@ -61,7 +61,7 @@ class IndukController extends Controller
 				),
 				array( '$match' => array(
 					'individu.kodepeserta' => $kodepeserta,
-					'individu.nik' => $idpeserta,
+					'individu._id' =>  new \MongoDB\BSON\ObjectID($idpeserta),
 					'individu.status' => 1
 				))
 			));
@@ -73,7 +73,7 @@ class IndukController extends Controller
 				),
 				array( '$match' => array(
 					'individu.kodepeserta' => $kodepeserta,
-					'individu.nik' => $idpeserta,
+					'individu._id' => new \MongoDB\BSON\ObjectID($idpeserta),
 					'individu.status' => 1
 				))
 			));

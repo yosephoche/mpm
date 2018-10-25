@@ -67,7 +67,7 @@
 																<button class="uk-button" type="button"><i class="uk-icon-caret-down"></i></button>
 																<div class="uk-dropdown uk-dropdown-small">
 																	<ul>
-																		<li><a href="{{ URL('/induk/individu/detail/art').'/'.$peserta->kodepeserta.'/'.$peserta->individu[$ind]['nik'] }}">Detail Individu</a></li>
+																		<li><a href="{{ URL('/induk/individu/detail/art').'/'.$peserta->kodepeserta.'/'.$peserta->individu[$ind]['_id'] }}">Detail Individu</a></li>
 																	</ul>
 																</div>
 															</div>
