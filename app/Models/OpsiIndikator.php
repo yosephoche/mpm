@@ -10,7 +10,7 @@ class OpsiIndikator extends Eloquent
     public $timestamps = false;
 
 	public static function getopsi($kode){
-		$indi = OpsiIndikator::where('kode_variabel', $kode)->where('status', 1)->get();
+		$indi = OpsiIndikator::where('kode_variabel', $kode)->where('status', 1)->orderBy('no_opsi', 'ASC')->get();
 		return $indi;
 	}
 
@@ -20,7 +20,7 @@ class OpsiIndikator extends Eloquent
 	}
 
 	public static function getopsivar($kode, $no_opsi){
-		$getopsi = OpsiIndikator::where('kode_variabel', $kode)->where('no_opsi', $no_opsi)->where('status', 1)->get();
+		$getopsi = OpsiIndikator::where('kode_variabel', $kode)->where('no_opsi', (int)$no_opsi)->where('status', 1)->get();
 
 		if($getopsi->isEmpty()){
 			$getisi = IndikatorVariabel::where('kode', $kode)->where('caraisi', '1')->where('status', 1)->get();

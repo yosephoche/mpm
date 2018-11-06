@@ -149,7 +149,6 @@ class MpmController extends Controller
 
 	public function postupdate(Request $request){
 		$getpesertampm = PesertaMpm::where('_id', $request->get('idpeserta'))->where('status', 1)->get();
-
 		if($getpesertampm->isEmpty()){
 			$pesan = array('success' => 0, 'message' => 'Mohon maaf. Rumah tangga tidak ditemukan');
 		}else{
@@ -164,6 +163,7 @@ class MpmController extends Controller
 				$peserta->b1_k6 = $request->get('namaJalan');
 				$peserta->nokk = $request->get('nomorKk');
 				$peserta->b1_k9 = $request->get('jumAngKel');
+				$peserta->pendidikanart = $request->get('pendidikanart');
 
 		        $individu = PesertaMpm::where('_id', $request->get('idpeserta'))->where('individu.b4_k3', '1')->
 		        		update(array('individu.$.nik' => $request->get('nikKepRt'),
@@ -194,7 +194,7 @@ class MpmController extends Controller
 					$peserta->b1_k6 = $request->get('namaJalan');
 					$peserta->nokk = $request->get('nomorKk');
 					$peserta->b1_k9 = $request->get('jumAngKel');
-
+					$peserta->pendidikanart = $request->get('pendidikanart');
 					$umur = explode("/", $request->get('ttlKepRt'));
 
 			        $individu = PesertaMpm::where('_id', $request->get('idpeserta'))->where('individu.b4_k3', '1')->

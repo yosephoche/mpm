@@ -51,12 +51,12 @@
 				@foreach($peserta as $listpeserta)
 				<tr>
 					<td>{{ $i++.' .' }}</td>
-					<td>{{ ucwords(strtolower(App\Models\Kecamatan::getkecamatan($listpeserta->kecamatan))) }}</td>
-					<td>{{ ucwords(strtolower(App\Models\Kelurahan::getkelurahan($listpeserta->kelurahan))) }}</td>
-					<td>{{ $listpeserta->alamat }}</td>
+					<td>{{ ucwords(strtolower(App\Models\Kecamatan::getkecamatan($listpeserta->kec))) }}</td>
+					<td>{{ ucwords(strtolower(App\Models\Kelurahan::getkelurahan($listpeserta->des))) }}</td>
+					<td>{{ $listpeserta->b1_k6 }}</td>
 					<td>{{ $listpeserta->nokk }}</td>
 					<td>{{ ((App\Models\PesertaBDT::getkrt($listpeserta->kodepeserta)) ? App\Models\PesertaBDT::getkrt($listpeserta->kodepeserta)[0]['nama'] : '') }}</td>
-					<td>{{ $listpeserta->jumart.' ' }}Orang</td>
+					<td>{{ $listpeserta->b1_k9.' ' }}Orang</td>
 				</tr>
 				@endforeach
 			</tbody>

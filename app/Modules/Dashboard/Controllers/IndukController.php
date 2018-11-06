@@ -21,14 +21,14 @@ class IndukController extends Controller
 
 	public function index(){
 		$kec = empty($_GET['kec']) ? '' : $_GET['kec'];
-		$getkecamatan = Kecamatan::where('id_kota', '7316')->where('status', '1')->get();
+		$getkecamatan = Kecamatan::where('id_kota', '7316')->where('status', true)->get();
 
 		if(empty($kec)){
 			$peserta_bdt = PesertaBDT::where('status', 1)->orderBy('_id', 'ASC')->paginate(50);
 			$peserta_count = PesertaBDT::where('status', 1)->orderBy('_id', 'ASC')->count();
 		}else{
-			$peserta_bdt = PesertaBDT::where('status', 1)->where('kecamatan', $kec)->orderBy('_id', 'ASC')->paginate(50);
-			$peserta_count = PesertaBDT::where('status', 1)->where('kecamatan', $kec)->orderBy('_id', 'ASC')->count();
+			$peserta_bdt = PesertaBDT::where('status', 1)->where('kec', $kec)->orderBy('_id', 'ASC')->paginate(50);
+			$peserta_count = PesertaBDT::where('status', 1)->where('kec', $kec)->orderBy('_id', 'ASC')->count();
 		}
 		
 		return view('Dashboard::pages.induk.individu', ['peserta' => $peserta_bdt, 'kecamatan' => $getkecamatan, 'jumpeserta' => $peserta_count]);
@@ -86,14 +86,14 @@ class IndukController extends Controller
 
 	public function indexrt(){
 		$kec = empty($_GET['kec']) ? '' : $_GET['kec'];
-		$getkecamatan = Kecamatan::where('id_kota', '7316')->where('status', '1')->get();
+		$getkecamatan = Kecamatan::where('id_kota', '7316')->where('status', true)->get();
 
 		if(empty($kec)){
 			$peserta_bdt = PesertaBDT::where('status', 1)->orderBy('_id', 'ASC')->paginate(50);
 			$peserta_count = PesertaBDT::where('status', 1)->orderBy('_id', 'ASC')->count();
 		}else{
-			$peserta_bdt = PesertaBDT::where('status', 1)->where('kecamatan', $kec)->orderBy('_id', 'ASC')->paginate(50);
-			$peserta_count = PesertaBDT::where('status', 1)->where('kecamatan', $kec)->orderBy('_id', 'ASC')->count();
+			$peserta_bdt = PesertaBDT::where('status', 1)->where('kec', $kec)->orderBy('_id', 'ASC')->paginate(50);
+			$peserta_count = PesertaBDT::where('status', 1)->where('kec', $kec)->orderBy('_id', 'ASC')->count();
 		}
 		
 		return view('Dashboard::pages.induk.rt', ['peserta' => $peserta_bdt, 'kecamatan' => $getkecamatan, 'jumpeserta' => $peserta_count]);

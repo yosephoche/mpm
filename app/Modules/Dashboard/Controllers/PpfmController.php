@@ -25,8 +25,8 @@ class PpfmController extends Controller
 			$peserta_mpm = PesertaMpm::where('status', 1)->paginate(50);		
 			$peserta_count = PesertaMpm::where('status', 1)->count();		
 		}else{
-			$peserta_mpm = PesertaMpm::where('kecamatan', $kec)->where('status', 1)->paginate(50);
-			$peserta_count = PesertaMpm::where('kecamatan', $kec)->where('status', 1)->count();
+			$peserta_mpm = PesertaMpm::where('kec', $kec)->where('status', 1)->paginate(50);
+			$peserta_count = PesertaMpm::where('kec', $kec)->where('status', 1)->count();
 		}
 		return view('Dashboard::pages.ppfm.list-new-peserta', ['peserta' => $peserta_mpm, 'kecamatan' => $getkecamatan, 'jumpeserta'=>$peserta_count]);
 	}
@@ -61,8 +61,8 @@ class PpfmController extends Controller
 			$peserta_bdt = PesertaBDT::where('status', 1)->orderBy('_id', 'ASC')->paginate(50);
 			$peserta_count = PesertaBDT::where('status', 1)->orderBy('_id', 'ASC')->count();
 		}else{
-			$peserta_bdt = PesertaBDT::where('status', 1)->where('kecamatan', $kec)->orderBy('_id', 'ASC')->paginate(50);
-			$peserta_count = PesertaBDT::where('status', 1)->where('kecamatan', $kec)->orderBy('_id', 'ASC')->count();
+			$peserta_bdt = PesertaBDT::where('status', 1)->where('kec', $kec)->orderBy('_id', 'ASC')->paginate(50);
+			$peserta_count = PesertaBDT::where('status', 1)->where('kec', $kec)->orderBy('_id', 'ASC')->count();
 		}
 		
 		return view('Dashboard::pages.ppfm.list-old-peserta', ['peserta' => $peserta_bdt, 'kecamatan' => $getkecamatan, 'jumpeserta' => $peserta_count]);
@@ -693,7 +693,7 @@ class PpfmController extends Controller
 		if(empty($kec)){
 			$peserta_mpm = PesertaMpm::where('status', 1)->paginate(50);		
 		}else{
-			$peserta_mpm = PesertaMpm::where('kecamatan', $kec)->where('status', 1)->paginate(50);
+			$peserta_mpm = PesertaMpm::where('kec', $kec)->where('status', 1)->paginate(50);
 		}
 		return view('Dashboard::pages.ppfm.printout-belum', ['peserta'=>$peserta_mpm]);
 	}
@@ -705,7 +705,7 @@ class PpfmController extends Controller
 		if(empty($kec)){
 			$peserta_bdt = PesertaBDT::where('status', 1)->orderBy('_id', 'ASC')->paginate(50);
 		}else{
-			$peserta_bdt = PesertaBDT::where('status', 1)->where('kecamatan', $kec)->orderBy('_id', 'ASC')->paginate(50);
+			$peserta_bdt = PesertaBDT::where('status', 1)->where('kec', $kec)->orderBy('_id', 'ASC')->paginate(50);
 		}
 
 		return view('Dashboard::pages.ppfm.printout-sudah', ['peserta'=>$peserta_bdt]);

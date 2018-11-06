@@ -50,7 +50,7 @@
                                     </div>
                                     <div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
                                         <div class="data-inner">
-                                            <label for="namaLengkap">{{$i++}}. Nama Lengkap Sesuai KTP)</label>
+                                            <label for="namaLengkap">{{$i++}}. Nama Lengkap (Sesuai KTP)</label>
                                             <input id="namaLengkap" type="text" name="namaLengkap" value="{{ $peserta[0]->pendaftar[0]['nama'] }}" readonly>
                                         </div>
                                     </div>
@@ -66,7 +66,7 @@
                                     <div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
                                         <div class="data-inner">
                                             <label for="{{$listindi->kode}}">{{ $i++ .'. '.App\Models\IndikatorVariabel::getvariabel($listindi->kode) }}</label>
-                                            <input id="{{$listindi->kode}}" type="text" name="{{$key}}" value="{{ App\Models\OpsiIndikator::getopsivar($listindi->kode, $peserta[0]->pendaftar[0][$kodeindividu]) }}" readonly>
+                                            <input id="{{$listindi->kode}}" type="text" name="{{$key}}" value="{{ App\Models\OpsiIndikator::getopsivar($listindi->kode, $peserta[0]->pendaftar[0][$listindi->kode_variabel]) }}" readonly>
                                         </div>
                                     </div>
                                     @endif
@@ -141,7 +141,7 @@
                                     </div>
                                     <div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
                                         <div class="data-inner">
-                                            <label for="namaJalan">{{$i++}}. Nama Jalam / (RT/RW)</label>
+                                            <label for="namaJalan">{{$i++}}. Nama Jalan / (RT/RW)</label>
                                             <input id="namaJalan" type="text" name="namaJalan" value="{{ $peserta[0]->b1_k6 }}" readonly>
 
                                         </div>

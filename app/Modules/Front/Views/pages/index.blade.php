@@ -15,11 +15,11 @@
 <div class="home-content uk-slidenav-position" data-uk-slideshow="{kenburns:true, kenburns: '50s', autoplay:true, duration: 1000}">
 	<ul class="uk-slideshow">
 		<li>
-			<div id="_1" data-src="/assets/img/person.JPG" class="hc-item uk-cover-background uk-position-cover uk-animation-scale uk-animation-reverse uk-animation-center-center"></div>
+			<div id="_1" data-src="/assets/img/person.jpg" class="hc-item uk-cover-background uk-position-cover uk-animation-scale uk-animation-reverse uk-animation-center-center"></div>
 			
 		</li>
 		<li>
-			<div id="_2" data-src="/assets/img/cambodia.JPG" class="hc-item uk-cover-background uk-position-cover uk-animation-scale uk-animation-center-center"></div>
+			<div id="_2" data-src="/assets/img/cambodia.jpg" class="hc-item uk-cover-background uk-position-cover uk-animation-scale uk-animation-center-center"></div>
 			
 		</li>
 		<li>
@@ -31,7 +31,7 @@
 			
 		</li>
 		<li>
-			<div id="_5" data-src="/assets/img/laos.JPG" class="hc-item uk-cover-background uk-position-cover uk-animation-scale uk-animation-reverse uk-animation-center-center"></div>
+			<div id="_5" data-src="/assets/img/laos.jpg" class="hc-item uk-cover-background uk-position-cover uk-animation-scale uk-animation-reverse uk-animation-center-center"></div>
 			
 		</li>
 	</ul>

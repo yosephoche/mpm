@@ -61,15 +61,15 @@
 				@if(App\Models\IndikatorVariabel::getskrining($listpeserta->kodepeserta) == false)
 				<tr>
 					<td>{{ $i++.' .' }}</td>
-					<td>{{ ucwords(strtolower(App\Models\Kecamatan::getkecamatan($listpeserta->kecamatan))) }}</td>
-					<td>{{ ucwords(strtolower(App\Models\Kelurahan::getkelurahan($listpeserta->kelurahan))) }}</td>
-					<td>{{ $listpeserta->alamat }}</td>
+					<td>{{ ucwords(strtolower(App\Models\Kecamatan::getkecamatan($listpeserta->kec))) }}</td>
+					<td>{{ ucwords(strtolower(App\Models\Kelurahan::getkelurahan($listpeserta->des))) }}</td>
+					<td>{{ $listpeserta->b1_k6 }}</td>
 					<td>{{ $pendaftar[0]->nik }}</td>
 					<td>{{ $pendaftar[0]->nama }}</td>
 					<td>{{ $listpeserta->nokk }}</td>
 					<td>{{ $ruta[0]->nama }}</td>
 					<td>{{ ($ruta[0]->statusbekerja == '1') ? 'Bekerja' : 'Tidak Bekerja' }}</td>
-					<td>{{ $listpeserta->jumart.' ' }}Orang</td>
+					<td>{{ $listpeserta->b1_k9.' ' }}Orang</td>
 					<td>{{ ($ruta[0]->jenkel == '1') ? 'Laki-laki' : 'Perempuan' }}</td>
 					<td>{{ $ruta[0]->btl }}</td>
 					<td>{{ App\Models\OpsiIndikator::getopsivar('spkt2', $pendaftar[0]->spkt2) }}</td>

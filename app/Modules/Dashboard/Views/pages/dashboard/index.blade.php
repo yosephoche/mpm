@@ -39,7 +39,8 @@
 								<div class="circle-progress">
 									<div class="circle-ppfm">
 										<div class="text">
-											<span>{{ empty($pesertajum['result']) ? '0' : $pesertajum['result'][0]['count'] }}</span>
+											{{--<span>{{ empty($pesertajum['result']) ? '0' : $pesertajum['result'][0]['count'] }}</span>--}}
+											<span>{{ empty($pesertajum[0]) ? '0' : $pesertajum[0]->count }}</span>
 										</div>
 										<div class="total-text">
 											<p>Total Peserta</p>

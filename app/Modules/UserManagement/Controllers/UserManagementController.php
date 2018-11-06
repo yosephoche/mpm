@@ -20,6 +20,7 @@ class UserManagementController extends Controller
     	$getemail = Users::where('email', $request->get('email'))->where('status', 1)->get();
     	$credential = ['email' => $request->get('email'), 'password' => $request->get('password'), 'status' => 1];
 
+        Session::flash('getemail', $request->get('email'));
     	if($getemail->isEmpty()){
     		Session::flash('email', '<b>Maaf</b>, Email tidak dikenali!');
     		return redirect('/globallogin');

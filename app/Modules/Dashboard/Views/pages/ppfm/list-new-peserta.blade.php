@@ -91,7 +91,7 @@
 											<tbody>
 												@php($i = empty($_GET['page']) ? 1 : ((($_GET['page'] - 1) * 10) + 1))
 												@foreach($peserta as $listpeserta)
-												@if(App\Models\PesertaMpm::getskrining($listpeserta->kodepeserta) == false)
+												{{--@if(App\Models\PesertaMpm::getskrining($listpeserta->kodepeserta) == false)--}}
 												<tr>
 													<td>{{ $i++ }}</td>
 													<td>{{ $listpeserta->nokk }}</td>
@@ -102,21 +102,25 @@
                                                     <td>{{ (!empty(App\Models\PesertaMpm::getkrt($listpeserta->kodepeserta)) ? App\Models\PesertaMpm::getkrt($listpeserta->kodepeserta)[0]['nama'] : '') }}</td>
 													<td>{!! ($listpeserta->verifikasi == 1) ? '<i class="icon-button check uk-icon-small uk-icon-check-circle-o"></i>' : '<i class="icon-button times uk-icon-small uk-icon-times-circle-o"></i>' !!}</td>
 													<td>
-														<div class="uk-button-group">
-															<button class="uk-button" type="button">Aksi</button>
-															<div data-uk-dropdown="{mode:'click', pos:'bottom-right'}">
-																<button class="uk-button" type="button"><i class="uk-icon-caret-down"></i></button>
-																<div class="uk-dropdown uk-dropdown-small">
-																	<ul>
-																		<li><a href="{{ URL('/ppfm/verifikasi/').'/'.$listpeserta->_id }}">Verifikasi</a></li>
-																		<li><a href="javascript:;" data-id="{{ $listpeserta->_id }}" id="del-peserta">Hapus</a></li>
-																	</ul>
+	                                                    @if(App\Models\PesertaMpm::getskrining($listpeserta->kodepeserta) == true)
+															<i class="icon-button times uk-icon-small uk-icon-times-circle-o"></i>
+														@else
+															<div class="uk-button-group">
+																<button class="uk-button" type="button">Aksi</button>
+																<div data-uk-dropdown="{mode:'click', pos:'bottom-right'}">
+																	<button class="uk-button" type="button"><i class="uk-icon-caret-down"></i></button>
+																	<div class="uk-dropdown uk-dropdown-small">
+																		<ul>
+																			<li><a href="{{ URL('/ppfm/verifikasi/').'/'.$listpeserta->_id }}">Verifikasi</a></li>
+																			<li><a href="javascript:;" data-id="{{ $listpeserta->_id }}" id="del-peserta">Hapus</a></li>
+																		</ul>
+																	</div>
 																</div>
 															</div>
-														</div>
+														@endif
 													</td>
 												</tr>
-												@endif
+												{{--@endif--}}
 												@endforeach
 											</tbody>
 										</table>
