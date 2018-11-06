@@ -34,11 +34,11 @@ class PesertaMpm extends Eloquent
     }
 
 	public static function getskrining($kodepeserta){
-		$getindi1 = count(PesertaMpm::where('kodepeserta', $kodepeserta)->where('datart.b3_k5a', '1')->get()) == 0 ? 0 : 1;
-		$getindi2 = count(PesertaMpm::where('kodepeserta', $kodepeserta)->where('pendidikanart', '<=', '4')->get()) == 0 ? 1 : 0;
-		$getindi3 = count(PesertaMpm::where('kodepeserta', $kodepeserta)->where('asset.b5_k1k', '1')->get()) == 0 ? 0 : 1;
-		$getindi4 = count(PesertaMpm::where('kodepeserta', $kodepeserta)->where('asset.b5_k1c', '1')->get()) == 0 ? 0 : 1;
-		$getindi5 = count(PesertaMpm::where('kodepeserta', $kodepeserta)->where('asset.b5_k1a', '1')->get()) == 0 ? 0 : 1;
+		$getindi1 = count(PesertaMpm::where('status', 1)->where('kodepeserta', $kodepeserta)->where('datart.b3_k5a', '1')->get()) == 0 ? 0 : 1;
+		$getindi2 = count(PesertaMpm::where('status', 1)->where('kodepeserta', $kodepeserta)->where('pendidikanart', '<=', '4')->get()) == 0 ? 1 : 0;
+		$getindi3 = count(PesertaMpm::where('status', 1)->where('kodepeserta', $kodepeserta)->where('asset.b5_k1k', '1')->get()) == 0 ? 0 : 1;
+		$getindi4 = count(PesertaMpm::where('status', 1)->where('kodepeserta', $kodepeserta)->where('asset.b5_k1c', '1')->get()) == 0 ? 0 : 1;
+		$getindi5 = count(PesertaMpm::where('status', 1)->where('kodepeserta', $kodepeserta)->where('asset.b5_k1a', '1')->get()) == 0 ? 0 : 1;
 
 		$getindi = $getindi1 + $getindi2 + $getindi3 + $getindi4 + $getindi5;
 
