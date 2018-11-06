@@ -127,8 +127,8 @@ class PpfmController extends Controller
 		if(!$getpeserta->isEmpty()){
 			$pesan = array('success' => 0, 'message' => 'Anggota rumah tangga telah terdaftar');
 		}else{
-
-			$peserta = PesertaBDT::where('kodepeserta', $request->get('kodepeserta'))->where('status', 1)->push(array('individu' => array_merge(array('_id' => new \MongoDB\BSON\ObjectID(), 'nik' => $request->get('nik'), 'nama' => $request->get('nama'), 'statuskesejahteraan' => '', 'status' => 1), json_decode($request->get('indiVar'), true)) ));
+			$idMongo = new \MongoDB\BSON\ObjectID();
+			$peserta = PesertaBDT::where('kodepeserta', $request->get('kodepeserta'))->where('status', 1)->push(array('individu' => array_merge(array('_id' => $idMongo, 'nik' => $request->get('nik'), 'nama' => $request->get('nama'), 'statuskesejahteraan' => '', 'status' => 1), json_decode($request->get('indiVar'), true)) ));
 
 			if($peserta){
 
@@ -152,7 +152,7 @@ class PpfmController extends Controller
 				$updpesertampm = PesertaBDT::where('kodepeserta', $request->get('kodepeserta'))->where('status', 1)->update([
 					'b1_k9' => count($getcountpeserta)
 					]);
-				$pesan = array('success'=>1, 'message' => 'Pendaftaran anggota berhasil tersimpan');
+				$pesan = array('success'=>1, 'message' => 'Pendaftaran anggota berhasil tersimpan', 'id' => $idMongo);
 			}else{
 				$pesan = array('success'=>0, 'message' => 'Pendaftaran anggota gagal tersimpan');
 			}
@@ -169,8 +169,8 @@ class PpfmController extends Controller
 		if(!$getpeserta->isEmpty()){
 			$pesan = array('success' => 0, 'message' => 'Anggota rumah tangga telah terdaftar');
 		}else{
-
-			$peserta = PesertaMpm::where('kodepeserta', $request->get('kodepeserta'))->where('status', 1)->push(array('individu' => array_merge(array('_id' => new \MongoDB\BSON\ObjectID(), 'nik' => $request->get('nik'), 'nama' => $request->get('nama'), 'statuskesejahteraan' => '', 'status' => 1), json_decode($request->get('indiVar'), true)) ));
+			$idMongo = new \MongoDB\BSON\ObjectID();
+			$peserta = PesertaMpm::where('kodepeserta', $request->get('kodepeserta'))->where('status', 1)->push(array('individu' => array_merge(array('_id' => $idMongo, 'nik' => $request->get('nik'), 'nama' => $request->get('nama'), 'statuskesejahteraan' => '', 'status' => 1), json_decode($request->get('indiVar'), true)) ));
 
 			if($peserta){
 
@@ -194,7 +194,7 @@ class PpfmController extends Controller
 				$updpesertampm = PesertaMpm::where('kodepeserta', $request->get('kodepeserta'))->where('status', 1)->update([
 					'b1_k9' => count($getcountpeserta)
 					]);
-				$pesan = array('success'=>1, 'message' => 'Pendaftaran anggota berhasil tersimpan');
+				$pesan = array('success'=>1, 'message' => 'Pendaftaran anggota berhasil tersimpan', 'id'=>$idMongo);
 			}else{
 				$pesan = array('success'=>0, 'message' => 'Pendaftaran anggota gagal tersimpan');
 			}
@@ -206,14 +206,14 @@ class PpfmController extends Controller
 
 	public function delpesertaindividu(){
 		$kodepeserta = empty($_GET['kode']) ? '' : $_GET['kode'];
-		$nikpeserta = empty($_GET['nik']) ? '' : $_GET['nik'];
+		$idpeserta = empty($_GET['id']) ? '' : $_GET['id'];
 		$no = 1;
 
-		$getpeserta = PesertaBDT::where('kodepeserta', $kodepeserta)->where('individu', 'elemMatch', ['nik' => $nikpeserta,'status' => 1])->get();
+		$getpeserta = PesertaBDT::where('kodepeserta', $kodepeserta)->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($idpeserta),'status' => 1])->get();
 		if($getpeserta->isEmpty()){
 			$pesan = array('success'=>0, 'message'=>'Peserta tidak ditemukan');
 		}else{
-			$updpeserta = PesertaBDT::where('kodepeserta', $kodepeserta)->where('individu', 'elemMatch', ['nik' => $nikpeserta, 'status' => 1])->
+			$updpeserta = PesertaBDT::where('kodepeserta', $kodepeserta)->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($idpeserta), 'status' => 1])->
         		update(array('individu.$.status' => 0,
 				));
 
@@ -230,8 +230,8 @@ class PpfmController extends Controller
 				});
 
 				for ($i=0; $i < count($getcountpeserta); $i++) { 
-					$individu = PesertaBDT::where('kodepeserta', $getcountpeserta[$i]->kodepeserta)->where('individu', 'elemMatch', ['nik' => $getcountpeserta[$i]->individu['nik'],'status' => 1])->
-				        		update(array('individu.$.nourut_art' => $no++,
+					$individu = PesertaBDT::where('kodepeserta', $getcountpeserta[$i]->kodepeserta)->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($getcountpeserta[$i]->individu['_id']),'status' => 1])->
+				        		update(array('individu.$.no_art' => $no++,
 		    					));
 				}
 
@@ -250,16 +250,16 @@ class PpfmController extends Controller
 
 	public function delpesertaverifindividu(){
 		$kodepeserta = empty($_GET['kode']) ? '' : $_GET['kode'];
-		$nikpeserta = empty($_GET['nik']) ? '' : $_GET['nik'];
+		$idpeserta = empty($_GET['id']) ? '' : $_GET['id'];
 		$no = 1;
 
-		$getpeserta = PesertaMpm::where('kodepeserta', $kodepeserta)->where('individu', 'elemMatch', ['nik' => $nikpeserta,'status' => 1])->get();
+		$getpeserta = PesertaMpm::where('kodepeserta', $kodepeserta)->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($idpeserta),'status' => 1])->get();
 		if($getpeserta->isEmpty()){
 			$pesan = array('success'=>0, 'message'=>'Peserta tidak ditemukan');
 		}else{
-			$cantdel = PesertaMpm::where('kodepeserta', $kodepeserta)->where('individu', 'elemMatch', ['nik' => $nikpeserta, 'b4_k3' => '1', 'status' => 1])->get();
+			$cantdel = PesertaMpm::where('kodepeserta', $kodepeserta)->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($idpeserta), 'b4_k3' => '1', 'status' => 1])->get();
 			if($cantdel->isEmpty()){
-			$updpeserta = PesertaMpm::where('kodepeserta', $kodepeserta)->where('individu', 'elemMatch', ['nik' => $nikpeserta, 'status' => 1])->
+			$updpeserta = PesertaMpm::where('kodepeserta', $kodepeserta)->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($idpeserta), 'status' => 1])->
         		update(array('individu.$.status' => 0,
 				));
 
@@ -276,11 +276,10 @@ class PpfmController extends Controller
 					});
 
 					for ($i=0; $i < count($getcountpeserta); $i++) { 
-						$individu = PesertaMpm::where('kodepeserta', $getcountpeserta[$i]->kodepeserta)->where('individu', 'elemMatch', ['nik' => $getcountpeserta[$i]->individu['nik'],'status' => 1])->
-					        		update(array('individu.$.nourut_art' => $no++,
-			    					));
+						$individu = PesertaBDT::where('kodepeserta', $getcountpeserta[$i]->kodepeserta)->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($getcountpeserta[$i]->individu['_id']),'status' => 1])->
+									update(array('individu.$.no_art' => $no++,
+									));
 					}
-
 					$updpesertabdt = PesertaMpm::where('kodepeserta', $kodepeserta)->where('status', 1)->update([
 						'jumart' => count($getcountpeserta)
 						]);
@@ -299,14 +298,13 @@ class PpfmController extends Controller
 
 	public function postupdateindividu(Request $request){
 		$no = 1;
-
-		$getpeserta = PesertaBDT::where('kodepeserta', $request->get('kodepeserta'))->where('individu', 'elemMatch', ['nik' => $request->get('nik'),'status' => 1])->get();
+		$getpeserta = PesertaBDT::where('kodepeserta', $request->get('kodepeserta'))->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($request->get('idp')),'status' => 1])->get();
 		if($getpeserta->isEmpty()){
 			$pesan = array('success' => 0, 'message' => 'Anggota rumah tangga tidak ditemukan');
 		}else{
 
-			$peserta = PesertaBDT::where('kodepeserta', $request->get('kodepeserta'))->where('individu', 'elemMatch', ['nik' => $request->get('nik'),'status' => 1])->update(
-					array_merge(json_decode($request->get('indiVar'), true), array('individu.'.$request->get('index').'.nama' => $request->get('nama') ))
+			$peserta = PesertaBDT::where('kodepeserta', $request->get('kodepeserta'))->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($request->get('idp')),'status' => 1])->update(
+					array_merge(json_decode($request->get('indiVar'), true), array('individu.'.$request->get('index').'.nama' => $request->get('nama'), 'individu.'.$request->get('index').'.nik' => $request->get('nik') ))
 				);
 
 			if($peserta){
@@ -322,7 +320,7 @@ class PpfmController extends Controller
 				});
 
 				for ($i=0; $i < count($getcountpeserta); $i++) { 
-					$individu = PesertaBDT::where('kodepeserta', $getcountpeserta[$i]->kodepeserta)->where('individu', 'elemMatch', ['nik' => $getcountpeserta[$i]->individu['nik'],'status' => 1])->
+					$individu = PesertaBDT::where('kodepeserta', $getcountpeserta[$i]->kodepeserta)->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($getcountpeserta[$i]->individu['_id']),'status' => 1])->
 				        		update(array('individu.$.no_art' => $no++,
 		    					));
 				}
@@ -343,12 +341,12 @@ class PpfmController extends Controller
 	public function postupdateverifindividu(Request $request){
 		$no = 1;
 
-		$getpeserta = PesertaMpm::where('kodepeserta', $request->get('kodepeserta'))->where('individu', 'elemMatch', ['nik' => $request->get('nik'),'status' => 1])->get();
+		$getpeserta = PesertaMpm::where('kodepeserta', $request->get('kodepeserta'))->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($request->get('idp')),'status' => 1])->get();
 		if($getpeserta->isEmpty()){
 			$pesan = array('success' => 0, 'message' => 'Anggota rumah tangga tidak ditemukan');
 		}else{
 
-			$peserta = PesertaMpm::where('kodepeserta', $request->get('kodepeserta'))->where('individu', 'elemMatch', ['nik' => $request->get('nik'),'status' => 1])->update(
+			$peserta = PesertaMpm::where('kodepeserta', $request->get('kodepeserta'))->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($request->get('idp')),'status' => 1])->update(
 					array_merge(json_decode($request->get('indiVar'), true), array('individu.'.$request->get('index').'.nama' => $request->get('nama') ))
 				);
 
@@ -365,7 +363,7 @@ class PpfmController extends Controller
 				});
 
 				for ($i=0; $i < count($getcountpeserta); $i++) { 
-					$individu = PesertaMpm::where('kodepeserta', $getcountpeserta[$i]->kodepeserta)->where('individu', 'elemMatch', ['nik' => $getcountpeserta[$i]->individu['nik'],'status' => 1])->
+					$individu = PesertaMpm::where('kodepeserta', $getcountpeserta[$i]->kodepeserta)->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($getcountpeserta[$i]->individu['nik']),'status' => 1])->
 				        		update(array('individu.$.no_art' => $no++,
 		    					));
 				}

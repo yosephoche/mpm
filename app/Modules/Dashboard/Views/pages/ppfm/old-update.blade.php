@@ -105,8 +105,8 @@
 										<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 											<div class="data-inner">
 												<label for="nama-krt">7. Nama Kepala Rumah Tangga</label>
-												{{--<input id="nama-krt" type="text" name="nama-krt" readonly value="{{ ((App\Models\PesertaBDT::getkrt($peserta[0]->kodepeserta)) ? App\Models\PesertaBDT::getkrt($peserta[0]->kodepeserta)[0]['nama'] : '') }}">
-												--}}<!-- <div class="error">Pesan Error</div> -->
+												<input id="nama-krt" type="text" name="nama-krt" readonly value="{{ ((App\Models\PesertaBDT::getkrt($peserta[0]->kodepeserta)) ? App\Models\PesertaBDT::getkrt($peserta[0]->kodepeserta)[0]['nama'] : '') }}">
+												<!-- <div class="error">Pesan Error</div> -->
 											</div>
 										</div>
 										<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
@@ -298,7 +298,7 @@
 										@if($dataart['status'] == 1)
 										<li class="uk-parent">
 											<a href="#">{{ (array_key_exists('nama', $dataart) ? $dataart['nama'] : '').' ('.(array_key_exists('nik', $dataart) ? $dataart['nik'] : '').')' }}</a>
-											<i id="delete-item-art" data-kdp="{{$peserta[0]->kodepeserta}}" data-nik="{{ (array_key_exists('nik', $dataart) ? $dataart['nik'] : '') }}" class="uk-icon-close delete-item"></i>
+											<i id="delete-item-art" data-kdp="{{$peserta[0]->kodepeserta}}" data-idp="{{ (array_key_exists('_id', $dataart) ? $dataart['_id'] : '') }}" class="uk-icon-close delete-item"></i>
 											<ul class="uk-nav-sub">
 												<li>
 													<ul class="mcf-list">
@@ -314,7 +314,7 @@
 																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 																	<div class="data-inner">
 																		<label for="nik_{{ $indexid }}">{{$i++}}. Nomor Induk Kependudukan (NIK)</label>
-																		<input id="nik_{{ $indexid }}" value="{{ (array_key_exists('nik', $dataart) ? $dataart['nik'] : '') }}" type="text" name="nik_{{ $indexid }}" maxlength="16" disabled>
+																		<input id="nik_{{ $indexid }}" value="{{ (array_key_exists('nik', $dataart) ? $dataart['nik'] : '') }}" type="text" name="nik_{{ $indexid }}" maxlength="16">
 																		<div class="error" id="nik_{{$indexid}}_err"></div>
 																	</div>
 																</div>
@@ -386,7 +386,7 @@
 														<li>
 															<div class="uk-clearfix">
 																<div class="uk-float-right">
-																	<button class="button-save" type="button" data-id="{{ $indexid }}" data-kdp="{{$peserta[0]->kodepeserta}}" id="btn-save">Simpan</button>
+																	<button class="button-save" type="button" data-id="{{ $indexid }}" data-kdp="{{$peserta[0]->kodepeserta}}" data-idp="{{$peserta[0]->individu[$indexid]['_id']}}" id="btn-save">Simpan</button>
 																</div>
 															</div>
 														</li>

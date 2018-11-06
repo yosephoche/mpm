@@ -298,7 +298,7 @@
 										@if($dataart['status'] == 1)
 										<li class="uk-parent">
 											<a href="#">{{ (array_key_exists('nama', $dataart) ? $dataart['nama'] : '').' ('.(array_key_exists('nik', $dataart) ? $dataart['nik'] : '').')' }}</a>
-											<i id="delete-item-art" data-kdp="{{$peserta[0]->kodepeserta}}" data-nik="{{ (array_key_exists('nik', $dataart) ? $dataart['nik'] : '') }}" class="uk-icon-close delete-item"></i>
+											<i id="delete-item-art" data-kdp="{{$peserta[0]->kodepeserta}}" data-nik="{{ (array_key_exists('nik', $dataart) ? $dataart['nik'] : '') }}"  data-idp="{{ (array_key_exists('_id', $dataart) ? $dataart['_id'] : '') }}" class="uk-icon-close delete-item"></i>
 											<ul class="uk-nav-sub">
 												<li>
 													<ul class="mcf-list">
@@ -386,7 +386,7 @@
 														<li>
 															<div class="uk-clearfix">
 																<div class="uk-float-right">
-																	<button class="button-save" type="button" data-id="{{ $indexid }}" data-kdp="{{$peserta[0]->kodepeserta}}" id="btn-save">Simpan</button>
+																	<button class="button-save" type="button" data-id="{{ $indexid }}" data-kdp="{{$peserta[0]->kodepeserta}}"  data-idp="{{$peserta[0]->individu[$indexid]['_id']}}" id="btn-save">Simpan</button>
 																</div>
 															</div>
 														</li>
@@ -511,7 +511,7 @@
 								</li>
 							</ul>
 						</fieldset>
-						<!-- <fieldset id="page-4" >
+						{{-- <fieldset id="page-4" >
 							<ul id="fs-page-iv-2" class="daftar-input-ppfm uk-nav uk-nav-parent-icon" data-uk-nav={multiple: true}>
 								<li class="uk-parent uk-active">
 									<a href="#">Daftar Inputan Anggota Keluarga 2</a>
@@ -669,7 +669,7 @@
 									</div>
 								</li>
 							</ul>
-						</fieldset> -->
+						</fieldset> --}}
 
 					</div>
 				</form>

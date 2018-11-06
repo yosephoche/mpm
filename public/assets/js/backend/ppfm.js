@@ -14,6 +14,80 @@ $(document).ready(function(){
 		$('#sidebar-fppfm-belum').addClass('uk-active');
 	}
 
+	$('#b3_k2').keypress(function (e) {
+		if (e.which !== 8 && e.which !== 0 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
+
+	$('#b3_k6').keypress(function (e) {
+		if (e.which !== 8 && e.which !== 0 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
+
+	$('#b5_k2b').keypress(function (e) {
+		if (e.which !== 8 && e.which !== 0 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
+
+	$('#b5_k2a').keypress(function (e) {
+		if (e.which !== 8 && e.which !== 0 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
+
+	$('#b5_k4e').keypress(function (e) {
+		if (e.which !== 8 && e.which !== 0 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
+
+	$('#b5_k4a').keypress(function (e) {
+		if (e.which !== 8 && e.which !== 0 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
+
+	$('#b5_k4d').keypress(function (e) {
+		if (e.which !== 8 && e.which !== 0 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
+
+	$('#b5_k4b').keypress(function (e) {
+		if (e.which !== 8 && e.which !== 0 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
+
+	$('#b5_k4c').keypress(function (e) {
+		if (e.which !== 8 && e.which !== 0 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
+
+	$('#b5_k3a2').keypress(function (e) {
+		if (e.which !== 8 && e.which !== 0 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
+
+	$('input[name="b4_k7"]').keypress(function (e) {
+		if (e.which !== 8 && e.which !== 0 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
+
+	$('input[name^="nik"]').keypress(function (e) {
+		if (e.which !== 8 && e.which !== 0 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
+
+	
+
 	Array.prototype.unique =
 		function() {
 		var a = [];
@@ -104,7 +178,7 @@ $(document).ready(function(){
 							$('#alert-add-art').addClass('uk-hidden');
 							$('#alert-add-art').removeClass('uk-alert-success');
 							$('#alert-add-art').find('p').html('');
-							fieldSet('fs-page-iv', kdp, $('#nik').val());
+							fieldSet('fs-page-iv', kdp, msg.id);
 						}, 1500);
 
 					}else{
@@ -390,7 +464,7 @@ $(document).ready(function(){
 	function fieldSet(fs, kodepeserta, nik) {
 		var list = $('#'+fs+' > li > ol');
 		var raw =     '<li class="uk-parent">'+
-							'<a href="#"></a><i  id="delete-item-art" data-kdp="'+kodepeserta+'" data-nik="'+nik+'" class="uk-icon-close delete-item"></i>'+
+							'<a href="#"></a><i  id="delete-item-art" data-kdp="'+kodepeserta+'" data-idp="'+nik+'" class="uk-icon-close delete-item"></i>'+
 							'<ul class="uk-nav-sub">'+
 								'<li>'+
 								'</li>'+
@@ -532,7 +606,7 @@ $(document).ready(function(){
 	$('ol').on('click', '#delete-item-art', function(e) {
 		$.ajax({
 			type: 'GET',
-			url: '/delete/pesertaindividu?nik='+$(this).attr('data-nik')+'&kode='+$(this).attr('data-kdp'),
+			url: '/delete/pesertaindividu?id='+$(this).attr('data-idp')+'&kode='+$(this).attr('data-kdp'),
 			success: function(data){
 				msg = $.parseJSON(data);
 				if(msg.success === 1){
@@ -1043,6 +1117,7 @@ $(document).ready(function(){
 			formData.append('kodepeserta', $(this).attr('data-kdp'));
 			formData.append('index', $(this).attr('data-id'));
 			formData.append('nik', $('#nik_'+$(this).attr('data-id')).val());
+			formData.append('idp', $(this).attr('data-idp'));
 			formData.append('nama', $('#nama_'+$(this).attr('data-id')).val());
 			formData.append('indiVar', JSON.stringify(indi_var));
 			formData.append('_token', $('#_token').val());
