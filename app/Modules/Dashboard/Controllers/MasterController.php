@@ -12,7 +12,7 @@ use App\Http\Controllers\Controller;
 class MasterController extends Controller
 {
 	public function indivariabel(){
-		if(auth()->guard('admin')->user()->status_admin == 0 || auth()->guard('admin')->user()->status_admin == 1){
+		if(auth()->guard('admin')->user()->status_admin == 0){
 			/*$skpd = Skpd::where('status', 1)->get();*/
 			return view('Dashboard::pages.master.indikator-variabel');
 		}else{
@@ -79,7 +79,7 @@ class MasterController extends Controller
 	}
 
 	public function indivariabelupdate($idvar){
-		if(auth()->guard('admin')->user()->status_admin == 0 || auth()->guard('admin')->user()->status_admin == 1){
+		if(auth()->guard('admin')->user()->status_admin == 0){
 			$indi = IndikatorVariabel::where('_id', $idvar)->where('status', 1)->get();
 			$skpd = Skpd::where('status', 1)->get();
 
@@ -116,7 +116,7 @@ class MasterController extends Controller
 	}
 
 	public function listindivariabel(){
-		if(auth()->guard('admin')->user()->status_admin == 0 || auth()->guard('admin')->user()->status_admin == 1){
+		if(auth()->guard('admin')->user()->status_admin == 0){
 			$indivariabel = IndikatorVariabel::where('status', 1)->orderBy('kode_variabel', 'ASC')->paginate(10);
 
 			return view('Dashboard::pages.master.list-indikator-variabel', ['indivariabel' => $indivariabel]);
@@ -126,7 +126,7 @@ class MasterController extends Controller
 	}
 
 	public function listindiopsi(){
-		if(auth()->guard('admin')->user()->status_admin == 0 || auth()->guard('admin')->user()->status_admin == 1){
+		if(auth()->guard('admin')->user()->status_admin == 0 ){
 
 			$indiopsi = OpsiIndikator::where('status', 1)->orderBy('kode_variabel','ASC')->orderBy('no_opsi','ASC')->paginate(10);
 
@@ -137,7 +137,7 @@ class MasterController extends Controller
 	}
 
 	public function indiopsi(){
-		if(auth()->guard('admin')->user()->status_admin == 0 || auth()->guard('admin')->user()->status_admin == 1){
+		if(auth()->guard('admin')->user()->status_admin == 0){
 			$indi = IndikatorVariabel::where('caraisi', '2')->orWhere('caraisi', '3')->where('status', 1)->orderBy('kode_variabel','ASC')->get();
 			return view('Dashboard::pages.master.opsi-indikator', ['indi' => $indi]);
 		}else{
@@ -158,7 +158,7 @@ class MasterController extends Controller
 			$opsi->nama_sub = $request->get('nama_sub');*/
 			$opsi->kode_variabel = $request->get('kode');
 			/*$opsi->opsi_indi = $request->get('opsi_indi');*/
-			$opsi->no_opsi = $request->get('no_opsi');
+			$opsi->no_opsi = (int) $request->get('no_opsi');
 			$opsi->desc_opsi = $request->get('desc_opsi');
 			/*$opsi->rincian = $request->get('rincian');*/
 			$opsi->status = 1;
@@ -194,7 +194,7 @@ class MasterController extends Controller
 	}
 
 	public function indiopsiupdate($idopsi){
-		if(auth()->guard('admin')->user()->status_admin == 0 || auth()->guard('admin')->user()->status_admin == 1){
+		if(auth()->guard('admin')->user()->status_admin == 0 ){
 			$indi = IndikatorVariabel::where('caraisi', '2')->where('status', 1)->get();
 			$opsiindi = OpsiIndikator::where('_id', $idopsi)->where('status', 1)->get();
 			$opsi = OpsiIndikator::where('kode_variabel', $opsiindi[0]->kode_variabel)->where('opsi_indi', '')->where('status', 1)->get();
@@ -217,7 +217,7 @@ class MasterController extends Controller
 				if($getopsi[0]->_id == $request->get('id_opsi')){
 					$indi = OpsiIndikator::where('_id', $request->get('id_opsi'))->where('status', 1)->first();
 					$indi->kode_variabel = $request->get('kode');
-					$indi->no_opsi = $request->get('no_opsi');
+					$indi->no_opsi = (int) $request->get('no_opsi');
 					$indi->desc_opsi = $request->get('desc_opsi');
 
 					if($indi->save()){
@@ -231,7 +231,7 @@ class MasterController extends Controller
 			}else{
 				$indi = OpsiIndikator::where('_id', $request->get('id_opsi'))->where('status', 1)->first();
 				$indi->kode_variabel = $request->get('kode');
-				$indi->no_opsi = $request->get('no_opsi');
+				$indi->no_opsi = (int) $request->get('no_opsi');
 				$indi->desc_opsi = $request->get('desc_opsi');
 
 				if($indi->save()){

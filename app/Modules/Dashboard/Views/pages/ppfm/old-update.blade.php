@@ -126,7 +126,7 @@
 										<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 											<div class="data-inner">
 												<label for="statuskesejahteraan">10. Status Kesejahteraan(Desil)</label>
-												<input id="statuskesejahteraan" type="text" value="{{ $peserta[0]->statuskesejahteraan }}" name="statuskesejahteraan">
+												<input id="statuskesejahteraan" type="text" value="{{ $peserta[0]->statuskesejahteraan }}" name="statuskesejahteraan" readonly>
 												<div class="error" id="statuskesejahteraan_err"></div>
 											</div>
 										</div>
@@ -336,10 +336,17 @@
 																				<span></span>
 																				<i class="uk-icon-angle-down uk-icon-medium"></i>
 																				<select id="{{ $listindividu->kode_variabel.'_'.$indexid }}" data-status="individu_{{$indexid}}" name="{{ $listindividu->kode_variabel }}">
-																					<option value="">Pilih </option>
-																					@foreach(App\Models\OpsiIndikator::getopsi($listindividu->kode_variabel) as $listopsiindi)
-																					<option value="{{ $listopsiindi->no_opsi }}" {{ ($listopsiindi->no_opsi == (array_key_exists($listindividu->kode_variabel, $peserta[0]->individu[$indexid]) ? $peserta[0]->individu[$indexid][$listindividu->kode_variabel] : '')) ? 'selected' : '' }}>{{$listopsiindi->no_opsi.'. '.$listopsiindi->desc_opsi}}</option>
-																					@endforeach
+																					@if((array_key_exists($listindividu->kode_variabel, $peserta[0]->individu[$index]) ? $peserta[0]->individu[$index][$listindividu->kode_variabel] : '') === '')
+																						<option value="" selected="">Pilih </option>
+																						@foreach(App\Models\OpsiIndikator::getopsi($listindividu->kode_variabel) as $listopsiindi)
+																						<option value="{{ $listopsiindi->no_opsi }}">{{$listopsiindi->no_opsi.'. '.$listopsiindi->desc_opsi}}</option>
+																						@endforeach
+																					@else
+																						<option value="">Pilih </option>	
+																						@foreach(App\Models\OpsiIndikator::getopsi($listindividu->kode_variabel) as $listopsiindi)
+																						<option value="{{ $listopsiindi->no_opsi }}" {{ ($listopsiindi->no_opsi == (array_key_exists($listindividu->kode_variabel, $peserta[0]->individu[$index]) ? $peserta[0]->individu[$index][$listindividu->kode_variabel] : '')) ? 'selected' : '' }}>{{$listopsiindi->no_opsi.'. '.$listopsiindi->desc_opsi}}</option>
+																						@endforeach
+																					@endif
 																				</select>
 																			</div>
 																			<div class="error" id="{{ $listindividu->kode_variabel.'_'.$indexid }}_err"></div>
@@ -354,7 +361,7 @@
 																			</div>
 																			<div class="input-group">
 																				<i class="satuan">{{ $listindividu->ketsatuan }}</i>
-																				<input id="{{ $listindividu->kode_variabel.'_'.$indexid }}" data-status="individu_{{$indexid}}" value="{{ (array_key_exists($listindividu->kode_variabel, $peserta[0]->individu[$indexid]) ? $peserta[0]->individu[$indexid][$listindividu->kode_variabel] : '') }}" type="text" name="{{ $listindividu->kode_variabel }}">
+																				<input id="{{ $listindividu->kode_variabel.'_'.$indexid }}" data-status="individu_{{$indexid}}" value="{{ (array_key_exists($listindividu->kode_variabel, $peserta[0]->individu[$index]) ? $peserta[0]->individu[$index][$listindividu->kode_variabel] : '') }}" type="text" name="{{ $listindividu->kode_variabel }}">
 																			</div>
 																			<div class="error" id="{{ $listindividu->kode_variabel.'_'.$indexid }}_err"></div>
 																			<!-- <div class="error">Pesan Error</div> -->
@@ -366,7 +373,7 @@
 																			<label for="">{{ $i++.'. '.$listindividu->nama }}</label>
 																			<div class="checkbox">
 																				@foreach(App\Models\OpsiIndikator::getopsi($listindividu->kode_variabel) as $listopsiindi)
-																					<div><input id="{{ $listopsiindi->kode_variabel.'_'.$listopsiindi->no_opsi.'_'.$indexid }}" data-status="individu_{{$indexid}}" {{ ($listopsiindi->no_opsi == (array_key_exists($listindividu->kode_variabel, $peserta[0]->individu[$indexid]) ? $peserta[0]->individu[$indexid][$listindividu->kode_variabel] : '')) ? 'checked' : '' }} value="{{ $listopsiindi->no_opsi }}" type="checkbox" name="{{ $listindividu->kode_variabel }}"><label for="{{ $listopsiindi->kode_variabel.'_'.$listopsiindi->no_opsi.'_'.$indexid }}">{{ $listopsiindi->no_opsi.'. '.$listopsiindi->desc_opsi }}</label></div>
+																					<div><input id="{{ $listopsiindi->kode_variabel.'_'.$listopsiindi->no_opsi.'_'.$indexid }}" data-status="individu_{{$indexid}}" {{ ($listopsiindi->no_opsi == (array_key_exists($listindividu->kode_variabel, $peserta[0]->individu[$index]) ? $peserta[0]->individu[$index][$listindividu->kode_variabel] : '')) ? 'checked' : '' }} value="{{ $listopsiindi->no_opsi }}" type="checkbox" name="{{ $listindividu->kode_variabel }}"><label for="{{ $listopsiindi->kode_variabel.'_'.$listopsiindi->no_opsi.'_'.$indexid }}">{{ $listopsiindi->no_opsi.'. '.$listopsiindi->desc_opsi }}</label></div>
 																				@endforeach
 																			</div>
 																			<div class="error" id="{{ $listindividu->kode_variabel.'_'.$indexid }}_err"></div>
@@ -386,7 +393,7 @@
 														<li>
 															<div class="uk-clearfix">
 																<div class="uk-float-right">
-																	<button class="button-save" type="button" data-id="{{ $indexid }}" data-kdp="{{$peserta[0]->kodepeserta}}" data-idp="{{$peserta[0]->individu[$indexid]['_id']}}" id="btn-save">Simpan</button>
+																	<button class="button-save" type="button" data-ind="{{ $index }}" data-id="{{ $indexid }}" data-kdp="{{$peserta[0]->kodepeserta}}" data-idp="{{$peserta[0]->individu[$index]['_id']}}" id="btn-save">Simpan</button>
 																</div>
 															</div>
 														</li>
@@ -406,7 +413,7 @@
 										<h4>IV. Keterangan Sosial Ekonomi Anggota Rumah Tangga</h4>
 									</div>
 									<div class="desc">
-										<p><i>Tulis siapa saja yang biasanya tinggal dan makan di rumah tangga BAIK, DEWASA, ANAK-ANAK, MAUPUN BAYI. Tuliskan nama sesuai dengan identitas, beserta Nomor Induk Kependudukan.</i></p>
+										<p><i>Tulis siapa saja yang biasanya tinggal dan makan di rumah tangga baik DEWASA, ANAK-ANAK, MAUPUN BAYI. Tuliskan nama sesuai dengan identitas, beserta Nomor Induk Kependudukan.</i></p>
 									</div>
 									@php($i = 1)
 									<div class="data uk-grid">

@@ -25,7 +25,7 @@
 						<div class="mcf-profile">
 							<div class="mcf-content">
 								<ul class="mcf-list">
-								<form id="pengaturan-user" action="" method="post" class="uk-form"  novalidate="novalidate">
+								<form id="pengaturan-user" action="" method="post" class="uk-form">
 				                    <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
 										<li class="mcf-item account-item">
 											<div class="uk-clearfix">
@@ -53,13 +53,14 @@
 													<div class="data-inner">
 														<label for="nama-lengkap">Nama Lengkap</label>
 														<input id="nama_lengkap" type="text" name="nama_lengkap" value="{{ $user[0]->fullname }}">
-														
+														<div class="error" id="nama_lengkap_err"></div>											
 													</div>
 												</div>
 												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 													<div class="data-inner">
 														<label for="username">Email</label>
 														<input id="email" type="email" name="email" value="{{ $user[0]->email }}">
+														<div class="error" id="email_err"></div>
 													</div>
 												</div>
 												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
@@ -73,6 +74,8 @@
 													<div class="data-inner">
 														<label for="kontak">Kontak</label>
 														<input id="kontak" type="text" name="kontak" value="{{ $user[0]->kontak }}">
+														<div class="error" id="kontak_err"></div>
+
 													</div>
 												</div>
 											</div>
@@ -101,21 +104,21 @@
 		</div>
 <div id="modal-reset" class="uk-modal">
     <div class="uk-modal-dialog">
-		<form class="" action="" id="update-password" method="post"  class="uk-form"  novalidate="novalidate">
+		<form class="" action="" id="update-password" method="post"  class="uk-form">
 	        <div class="uk-modal-header"><h3>Reset kata sandi</h3></div>
 	        <div class="uk-modal-body" style="padding: 14px;">
 				<div class="uk-width-large-1-1 uk-width-medium-1-1 uk-width-small-1-1">
 					<div class="data-inner">
 						<label for="password">Kata Sandi</label>
 						<input id="password" type="password" style="width:100%" name="password">
-						<div class="error" id="password_err"></div>
+						<div style="color: #ff1b5f;" class="error" id="password_err"></div>
 					</div>
 				</div>
 				<div class="uk-width-large-1-1 uk-width-medium-1-1 uk-width-small-1-1">
 					<div class="data-inner">
 						<label for="repeat-password">Ulangi Kata Sandi</label>
 						<input id="repeat-password" style="width:100%" type="password" name="repeat-password">
-						<div class="error" id="repeat-password_err"></div>
+						<div style="color: #ff1b5f;" class="error" id="repeat-password_err"></div>
 					</div>
 				</div>
 	        </div>
@@ -134,5 +137,8 @@
 		</form>
     </div>
 </div>
-		<script src="{{ URL('/assets/js/backend/registrasi.js') }}"></script>
+<script>
+	var sidebar = 'registrasi-user';
+</script>
+<script src="{{ URL('/assets/js/backend/registrasi.js') }}"></script>
 @stop

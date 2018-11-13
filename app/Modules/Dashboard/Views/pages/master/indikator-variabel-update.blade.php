@@ -54,7 +54,7 @@
 										<div class="data-inner">
 											<label for="kode-variabel">Kode Variabel</label>
 											<input id="kode-variabel" type="text" name="kode-variabel" value="{{ $indi[0]->kode_variabel }}">
-											<div class="error" id="nama-variabel_err"></div>
+											<div class="error" id="kode-variabel_err"></div>
 										</div>
 									</div>
 									<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">

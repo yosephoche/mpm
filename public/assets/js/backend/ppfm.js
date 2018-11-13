@@ -14,6 +14,25 @@ $(document).ready(function(){
 		$('#sidebar-fppfm-belum').addClass('uk-active');
 	}
 
+	$('#b4_k4').keypress(function (e) {
+		if (e.which !== 8 && e.which !== 0 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
+
+	$('#no_art').keypress(function (e) {
+		if (e.which !== 8 && e.which !== 0 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
+
+	$('#statuskesejahteraan').keypress(function (e) {
+		if (e.which !== 8 && e.which !== 0 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
+
+
 	$('#b3_k2').keypress(function (e) {
 		if (e.which !== 8 && e.which !== 0 && (e.which < 48 || e.which > 57)) {
 			return false;
@@ -75,6 +94,25 @@ $(document).ready(function(){
 	});
 
 	$('input[name="b4_k7"]').keypress(function (e) {
+		if (e.which !== 8 && e.which !== 0 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
+
+	
+	$('input[name^="b4_k19b"]').keypress(function (e) {
+		if (e.which !== 8 && e.which !== 0 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
+
+	$('input[name="b4_k4"]').keypress(function (e) {
+		if (e.which !== 8 && e.which !== 0 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
+
+	$('input[name="no_art"]').keypress(function (e) {
 		if (e.which !== 8 && e.which !== 0 && (e.which < 48 || e.which > 57)) {
 			return false;
 		}
@@ -178,7 +216,7 @@ $(document).ready(function(){
 							$('#alert-add-art').addClass('uk-hidden');
 							$('#alert-add-art').removeClass('uk-alert-success');
 							$('#alert-add-art').find('p').html('');
-							fieldSet('fs-page-iv', kdp, msg.id);
+							fieldSet('fs-page-iv', kdp, msg.id.$oid);
 						}, 1500);
 
 					}else{
@@ -266,7 +304,7 @@ $(document).ready(function(){
 
 			if($('#jum-kel').val() === ''){
 				$('#jum-kel').addClass('error');
-				$('#jum-kel_err').html('Nama Lengkap wajib di isi');
+				$('#jum-kel_err').html('Jumlah Keluarga wajib di isi');
 			}else{
 				$('#jum-kel').removeClass('error');
 				$('#jum-kel_err').html('');
@@ -471,7 +509,7 @@ $(document).ready(function(){
 								'<li>'+
 									'<div class="uk-clearfix">'+
 										'<div class="uk-float-right">'+
-											'<button type="button" id="btn-save" data-id="'+count+'" data-kdp="'+kodepeserta+'" class="button-save">Simpan</button>'+
+											'<button type="button" id="btn-save" data-id="'+count+'" data-kdp="'+kodepeserta+'" data-idp="'+nik+'" class="button-save">Simpan</button>'+
 										'</div>'+
 									'</div>'+
 								'</li>'+
@@ -556,7 +594,9 @@ $(document).ready(function(){
 		if (check) {
 			$(''+page+' > li > ol > li > ul > li').first().append(el);
 			$(''+page+' > li > ol > li').each(function(key, value) {
-				var n = $('[id="nama_'+ key +'"]').val() + ' ( ' +  $('[id="nik_'+ key +'"]').val() + ')';
+				//var n = $('[id="nama_'+ key +'"]').val() + ' ( ' +  $('[id="nik_'+ key +'"]').val() + ')';
+				var n = $(this).find('input[name^="nama"]').val() + ' ( ' + $(this).find('input[name^="nik"]').val() + ' )';
+				
 				$(value).children('a').text(n);
 
 			});
@@ -1012,7 +1052,7 @@ $(document).ready(function(){
 
 			if($('#jum-kel').val() === ''){
 				$('#jum-kel').addClass('error');
-				$('#jum-kel_err').html('Nama Lengkap wajib di isi');
+				$('#jum-kel_err').html('Jumlah Keluarga wajib di isi');
 			}else{
 				$('#jum-kel').removeClass('error');
 				$('#jum-kel_err').html('');
@@ -1066,7 +1106,7 @@ $(document).ready(function(){
 
 
 	$(document).on('click', '#btn-save', function(){
-		var formData = new FormData(), index = $(this).attr('data-id'),
+		var formData = new FormData(), index = $(this).attr('data-id'),indexid = $(this).attr('data-ind'),
 			indi_var = {},
 			arr_indi = [],
 			status_indi = 1;
@@ -1082,12 +1122,12 @@ $(document).ready(function(){
 		$.each(arr_indi.unique(), function(i, el){
 			if($('input[name='+el+']').attr('type') == 'checked'){
 				if($('input[name='+el+']:checked').val() !== undefined){
-					indi_var['individu.'+index+'.'+el] = $('input[id='+el+'_'+index+']:checked').val();
+					indi_var['individu.'+indexid+'.'+el] = $('input[id='+el+'_'+index+']:checked').val();
 				}
 			}else if($('input[name='+el+']').attr('type') == 'text'){
-				indi_var['individu.'+index+'.'+el] = $('input[id='+el+'_'+index+']').val();
+				indi_var['individu.'+indexid+'.'+el] = $('input[id='+el+'_'+index+']').val();
 			}else{
-				indi_var['individu.'+index+'.'+el] = $('select[id='+el+'_'+index+']').val();
+				indi_var['individu.'+indexid+'.'+el] = $('select[id='+el+'_'+index+']').val();
 			}
 		});
 
@@ -1115,7 +1155,7 @@ $(document).ready(function(){
 			
 		}else{
 			formData.append('kodepeserta', $(this).attr('data-kdp'));
-			formData.append('index', $(this).attr('data-id'));
+			formData.append('index', $(this).attr('data-ind'));
 			formData.append('nik', $('#nik_'+$(this).attr('data-id')).val());
 			formData.append('idp', $(this).attr('data-idp'));
 			formData.append('nama', $('#nama_'+$(this).attr('data-id')).val());
@@ -1142,7 +1182,9 @@ $(document).ready(function(){
 							$('#alert-add-art_'+index).removeClass('uk-alert-success');
 							$('#alert-add-art_'+index).find('p').html('');
 							$('#fs-page-iv > li > ol > li').each(function(key, value) {
-								var n = $('[id="nama_'+ key +'"]').val() + ' ( ' +  $('[id="nik_'+ key +'"]').val() + ')';
+
+								//var n = $('[id="nama_'+ key +'"]').val() + ' ( ' +  $('[id="nik_'+ key +'"]').val() + ')';
+								var n = $(this).find('input[name^="nama"]').val() + ' ( ' + $(this).find('input[name^="nik"]').val() + ' )';
 								$(value).children('a').text(n);
 							});
 						}, 1500);

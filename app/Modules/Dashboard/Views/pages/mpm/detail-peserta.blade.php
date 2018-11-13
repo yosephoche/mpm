@@ -98,7 +98,7 @@
                             </li>
                             <li class="mcf-item">
                                 <div class="title">
-                                    <h4>II. Rincian Infomasi Rumah Tangga</h4>
+                                    <h4>II. Rincian Informasi Rumah Tangga</h4>
                                 </div>
                                 <div class="data uk-grid">
                                     <div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
@@ -141,7 +141,7 @@
                                     </div>
                                     <div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
                                         <div class="data-inner">
-                                            <label for="namaJalan">{{$i++}}. Nama Jalan / (RT/RW)</label>
+                                            <label for="namaJalan">{{$i++}}. Nama Jalan / (RT / RW)</label>
                                             <input id="namaJalan" type="text" name="namaJalan" value="{{ $peserta[0]->b1_k6 }}" readonly>
 
                                         </div>

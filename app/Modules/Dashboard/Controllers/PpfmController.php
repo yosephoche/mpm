@@ -39,7 +39,8 @@ class PpfmController extends Controller
 		return view('Dashboard::pages.ppfm.new-verifikasi',['peserta' => $peserta_mpm,
 															'indivarasset' => $indivarasset,
 															'indivarrt' => $indivarrt,
-															'indivarindividu' => $indivarindividu]);
+															'indivarindividu' => $indivarindividu
+															]);
 	}
 
 	public function updateverification($idpeserta){
@@ -50,7 +51,8 @@ class PpfmController extends Controller
 		return view('Dashboard::pages.ppfm.old-update',['peserta' => $peserta_bdt,
 															'indivarasset' => $indivarasset,
 															'indivarrt' => $indivarrt,
-															'indivarindividu' => $indivarindividu]);
+															'indivarindividu' => $indivarindividu
+															]);
 	}
 
 	public function oldpeserta(){
@@ -298,40 +300,59 @@ class PpfmController extends Controller
 
 	public function postupdateindividu(Request $request){
 		$no = 1;
-		$getpeserta = PesertaBDT::where('kodepeserta', $request->get('kodepeserta'))->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($request->get('idp')),'status' => 1])->get();
+		$getpeserta = PesertaBDT::where('status', 1)->where('kodepeserta', $request->get('kodepeserta'))->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($request->get('idp')),'status' => 1])->get();
 		if($getpeserta->isEmpty()){
 			$pesan = array('success' => 0, 'message' => 'Anggota rumah tangga tidak ditemukan');
 		}else{
+			$peserta_nik = PesertaBDT::raw(function($collection) use($request) {
+				return $collection->aggregate(array(
+					array( '$unwind' => '$individu'
+					),
+					array( '$match' => array(
+						'kodepeserta' => $request->get('kodepeserta'),
+						'individu.nik' => $request->get('nik'),
+						'individu.status' => 1
+					))
+				));
+			});
+			if($peserta_nik[0]->individu['_id'] == new \MongoDB\BSON\ObjectID($request->get('idp'))){
 
-			$peserta = PesertaBDT::where('kodepeserta', $request->get('kodepeserta'))->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($request->get('idp')),'status' => 1])->update(
-					array_merge(json_decode($request->get('indiVar'), true), array('individu.'.$request->get('index').'.nama' => $request->get('nama'), 'individu.'.$request->get('index').'.nik' => $request->get('nik') ))
-				);
-
-			if($peserta){
-				$getcountpeserta = PesertaBDT::raw(function($collection) use($request){
-					return $collection->aggregate(array(
-						array( '$unwind' => '$individu'
-						),
-						array( '$match' => array(
-							'kodepeserta' => $request->get('kodepeserta'),
-							'individu.status' => 1
-						))
-					));
-				});
-
-				for ($i=0; $i < count($getcountpeserta); $i++) { 
-					$individu = PesertaBDT::where('kodepeserta', $getcountpeserta[$i]->kodepeserta)->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($getcountpeserta[$i]->individu['_id']),'status' => 1])->
-				        		update(array('individu.$.no_art' => $no++,
-		    					));
+				try {
+					$peserta = PesertaBDT::where('status', 1)->where('kodepeserta', $request->get('kodepeserta'))->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($request->get('idp')),'status' => 1])->update(
+						array_merge(json_decode($request->get('indiVar'), true), array('individu.'.$request->get('index').'.nama' => $request->get('nama'), 'individu.'.$request->get('index').'.nik' => $request->get('nik') ))
+					);
+					if($peserta){
+						$getcountpeserta = PesertaBDT::raw(function($collection) use($request){
+							return $collection->aggregate(array(
+								array( '$unwind' => '$individu'
+								),
+								array( '$match' => array(
+									'kodepeserta' => $request->get('kodepeserta'),
+									'individu.status' => 1
+								))
+							));
+						});
+	
+						for ($i=0; $i < count($getcountpeserta); $i++) { 
+							$individu = PesertaBDT::where('kodepeserta', $getcountpeserta[$i]->kodepeserta)->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($getcountpeserta[$i]->individu['_id']),'status' => 1])->
+										update(array('individu.$.no_art' => $no++,
+										));
+						}
+	
+						$updpesertampm = PesertaBDT::where('kodepeserta', $request->get('kodepeserta'))->where('status', 1)->update([
+							'b1_k9' => count($getcountpeserta)
+							]);
+						$pesan = array('success'=>1, 'message' => 'Data anggota rumah tangga berhasil tersimpan');
+					}else{
+						$pesan = array('success'=>0, 'message' => 'Tidak Ada data yang berubah');
+					}
+				}catch (\Exception $e) {
+					return $e->getMessage();
 				}
-
-				$updpesertampm = PesertaBDT::where('kodepeserta', $request->get('kodepeserta'))->where('status', 1)->update([
-					'b1_k9' => count($getcountpeserta)
-					]);
-				$pesan = array('success'=>1, 'message' => 'Data anggota rumah tangga berhasil tersimpan');
 			}else{
-				$pesan = array('success'=>0, 'message' => 'Data anggota rumah tangga gagal tersimpan');
+				$pesan = array('success'=>0, 'message' => 'NIK sudah digunakan');
 			}
+			
 
 		}
 
@@ -341,39 +362,60 @@ class PpfmController extends Controller
 	public function postupdateverifindividu(Request $request){
 		$no = 1;
 
-		$getpeserta = PesertaMpm::where('kodepeserta', $request->get('kodepeserta'))->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($request->get('idp')),'status' => 1])->get();
+		$getpeserta = PesertaMpm::where('status', 1)->where('kodepeserta', $request->get('kodepeserta'))->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($request->get('idp')),'status' => 1])->get();
 		if($getpeserta->isEmpty()){
 			$pesan = array('success' => 0, 'message' => 'Anggota rumah tangga tidak ditemukan');
 		}else{
 
-			$peserta = PesertaMpm::where('kodepeserta', $request->get('kodepeserta'))->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($request->get('idp')),'status' => 1])->update(
-					array_merge(json_decode($request->get('indiVar'), true), array('individu.'.$request->get('index').'.nama' => $request->get('nama') ))
-				);
+			$peserta_nik = PesertaMpm::raw(function($collection) use($request) {
+				return $collection->aggregate(array(
+					array( '$unwind' => '$individu'
+					),
+					array( '$match' => array(
+						'kodepeserta' => $request->get('kodepeserta'),
+						'individu.nik' => $request->get('nik'),
+						'individu.status' => 1
+					))
+				));
+			});
+			if($peserta_nik[0]->individu['_id'] == new \MongoDB\BSON\ObjectID($request->get('idp'))){
 
-			if($peserta){
-				$getcountpeserta = PesertaMpm::raw(function($collection) use($request){
-					return $collection->aggregate(array(
-						array( '$unwind' => '$individu'
-						),
-						array( '$match' => array(
-							'kodepeserta' => $request->get('kodepeserta'),
-							'individu.status' => 1
-						))
-					));
-				});
-
-				for ($i=0; $i < count($getcountpeserta); $i++) { 
-					$individu = PesertaMpm::where('kodepeserta', $getcountpeserta[$i]->kodepeserta)->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($getcountpeserta[$i]->individu['nik']),'status' => 1])->
-				        		update(array('individu.$.no_art' => $no++,
-		    					));
+				try {
+					$peserta = PesertaMpm::where('status', 1)->where('kodepeserta', $request->get('kodepeserta'))->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($request->get('idp')),'status' => 1])->update(
+							array_merge(json_decode($request->get('indiVar'), true), array('individu.'.$request->get('index').'.nama' => $request->get('nama'), 'individu.'.$request->get('index').'.nik' => $request->get('nik') ))
+						);
+		
+					if($peserta){
+						$getcountpeserta = PesertaMpm::raw(function($collection) use($request){
+							return $collection->aggregate(array(
+								array( '$unwind' => '$individu'
+								),
+								array( '$match' => array(
+									'kodepeserta' => $request->get('kodepeserta'),
+									'individu.status' => 1
+								))
+							));
+						});
+		
+						for ($i=0; $i < count($getcountpeserta); $i++) { 
+							$individu = PesertaMpm::where('kodepeserta', $getcountpeserta[$i]->kodepeserta)->where('individu', 'elemMatch', ['_id' => new \MongoDB\BSON\ObjectID($getcountpeserta[$i]->individu['_id']),'status' => 1])->
+										update(array('individu.$.no_art' => $no++,
+										));
+						}
+		
+						$updpesertampm = PesertaMpm::where('kodepeserta', $request->get('kodepeserta'))->where('status', 1)->update([
+							'b1_k9' => count($getcountpeserta)
+							]);
+						$pesan = array('success'=>1, 'message' => 'Data anggota rumah tangga berhasil tersimpan');
+					}else{
+						$pesan = array('success'=>0, 'message' => 'Tidak Ada Data yang diubah');
+					}
+				}catch (\Exception $e) {
+					return $e->getMessage();
 				}
-
-				$updpesertampm = PesertaMpm::where('kodepeserta', $request->get('kodepeserta'))->where('status', 1)->update([
-					'b1_k9' => count($getcountpeserta)
-					]);
-				$pesan = array('success'=>1, 'message' => 'Data anggota rumah tangga berhasil tersimpan');
 			}else{
-				$pesan = array('success'=>0, 'message' => 'Data anggota rumah tangga gagal tersimpan');
+				$pesan = array('success'=>0, 'message' => 'NIK sudah digunakan');
+
 			}
 
 		}

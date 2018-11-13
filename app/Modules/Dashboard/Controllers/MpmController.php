@@ -61,9 +61,34 @@ class MpmController extends Controller
 
 	public function postregistrasi(Request $request){
 		$getcountbdt = PesertaBDT::where('status', 1)->count();
-		$getkrt = PesertaBDT::where('individu.nik',  $request->get('nikKepRt'))->where('individu.b4_k3', '1')->where('kec', $request->get('kecamatan'))->where('des', $request->get('kelurahan'))->where('status', 1)->get();
-		$getkrtmpm = PesertaMpm::where('individu.nik',  $request->get('nikKepRt'))->where('individu.b4_k3', '1')->where('kec', $request->get('kecamatan'))->where('des', $request->get('kelurahan'))->where('status', 1)->get();
-
+		$getkrt = PesertaBDT::raw(function($collection) use($request){
+			return $collection->aggregate(array(
+				array( '$unwind' => '$individu'
+				),
+				array( '$match' => array(
+					'nokk' => $request->get('nomorKk'),
+					'individu.nik'=> $request->get('nikKepRt'),
+					'individu.b4_k3' => '1',
+					'kec' => $request->get('kecamatan'),
+					'des' => $request->get('kelurahan'),
+					'individu.status' => 1
+				))
+			));
+		});
+		$getkrtmpm = PesertaMpm::raw(function($collection) use($request){
+			return $collection->aggregate(array(
+				array( '$unwind' => '$individu'
+				),
+				array( '$match' => array(
+					'nokk' => $request->get('nomorKk'),
+					'individu.nik'=> $request->get('nikKepRt'),
+					'individu.b4_k3' => '1',
+					'kec' => $request->get('kecamatan'),
+					'des' => $request->get('kelurahan'),
+					'individu.status' => 1
+				))
+			));
+		});
 		$getkodempm = PesertaMpm::where('status', 1)->orderBy('_id', 'DESC')->get();
 		if($getkodempm->isEmpty()){
 			$kode = 'pspkt-'.$getcountbdt;
@@ -71,8 +96,14 @@ class MpmController extends Controller
 			$getkode = substr($getkodempm[0]->kodepeserta, 6);
 			$kode = 'pspkt-'.((int)$getkode + 1);
 		}
-
-		if($getkrt->isEmpty() && $getkrtmpm->isEmpty()){
+		// $getnokk = PesertaBDT::where('nokk', $request->get('nomorKk'))->where('status', 1)->get();
+		// $getnokkMpm = PesertaMpm::where('nokk', $request->get('nomorKk'))->where('status', 1)->get();
+		// if(!$getnokk->isEmpty() && !$getnokkMpm->isEmpty()){
+		// 	$pesan = array('success' => 0, 'message' => 'Mohon maaf. No. Kartu Keluarga sudah terdaftar');
+		// }else 
+		if(!$getkrt->isEmpty() || !$getkrtmpm->isEmpty()){
+			$pesan = array('success' => 0, 'message' => 'Mohon maaf. Rumah tangga telah terdaftar');
+		}else{
 			$peserta = new PesertaMpm;
 			$peserta->prov = '73';
 			$peserta->kota = '7316';
@@ -116,8 +147,6 @@ class MpmController extends Controller
 			}else{
 				$pesan = array('success' => 0, 'message' => 'Mohon maaf. Rumah tangga gagal terdaftar');
 			}
-		}else{
-			$pesan = array('success' => 0, 'message' => 'Mohon maaf. Rumah tangga telah terdaftar');
 		}
 
 		return json_encode($pesan);
@@ -153,8 +182,34 @@ class MpmController extends Controller
 			$pesan = array('success' => 0, 'message' => 'Mohon maaf. Rumah tangga tidak ditemukan');
 		}else{
 
-			$getkrtmpm = PesertaMpm::where('individu.nik', $request->get('nikKepRt'))->where('individu.b4_k3', '1')->where('kec', $request->get('kecamatan'))->where('des', $request->get('kelurahan'))->where('status', 1)->get();
-			$getkrt = PesertaBDT::where('individu.nik', $request->get('nikKepRt'))->where('individu.b4_k3', '1')->where('kec', $request->get('kecamatan'))->where('des', $request->get('kelurahan'))->where('status', 1)->get();
+			$getkrt = PesertaBDT::raw(function($collection) use($request){
+				return $collection->aggregate(array(
+					array( '$unwind' => '$individu'
+					),
+					array( '$match' => array(
+						'nokk' => $request->get('nomorKk'),
+						'individu.nik'=> $request->get('nikKepRt'),
+						'individu.b4_k3' => '1',
+						'kec' => $request->get('kecamatan'),
+						'des' => $request->get('kelurahan'),
+						'individu.status' => 1
+					))
+				));
+			});
+			$getkrtmpm = PesertaMpm::raw(function($collection) use($request){
+				return $collection->aggregate(array(
+					array( '$unwind' => '$individu'
+					),
+					array( '$match' => array(
+						'nokk' => $request->get('nomorKk'),
+						'individu.nik'=> $request->get('nikKepRt'),
+						'individu.b4_k3' => '1',
+						'kec' => $request->get('kecamatan'),
+						'des' => $request->get('kelurahan'),
+						'individu.status' => 1
+					))
+				));
+			});
 
 			if($getkrt->isEmpty() && $getkrtmpm->isEmpty()){
 				$peserta = PesertaMpm::where('_id', $request->get('idpeserta'))->where('status', 1)->first();
@@ -187,7 +242,7 @@ class MpmController extends Controller
 					$pesan = array('success' => 0, 'message' => 'Mohon maaf. Rumah tangga gagal disunting');
 				}
 			}else{
-				if(($getkrtmpm[0]->_id == $request->get('idpeserta'))){
+				if(($getkrtmpm[0]['_id'] == $request->get('idpeserta'))){
 					$peserta = PesertaMpm::where('_id', $request->get('idpeserta'))->where('status', 1)->first();
 					$peserta->kec = $request->get('kecamatan');
 					$peserta->des = $request->get('kelurahan');

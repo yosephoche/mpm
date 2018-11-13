@@ -62,6 +62,8 @@
 		</div>
 		
 	</div>
-
+	<script>
+		var sidebar = '';
+	</script>
     <script src="{{ URL('/assets/js/backend/registrasi.js') }}"></script>
 @stop

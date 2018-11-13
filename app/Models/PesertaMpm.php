@@ -16,13 +16,13 @@ class PesertaMpm extends Eloquent
     }
 
     public static function getkrt($kodepeserta){
-    	$getkrt = PesertaMpm::where('kodepeserta', $kodepeserta)->where('individu.b4_k3', '1')->first();
+    	$getkrt = PesertaMpm::where('kodepeserta', $kodepeserta)->where('status', 1)->where('individu.b4_k3', '1')->first();
 
         return $getkrt->individu;
     }
 
     public static function getnamakrt($kodepeserta){
-        $getkrt = PesertaMpm::where('kodepeserta', $kodepeserta)->where('individu.b4_k3', '1')->get();
+        $getkrt = PesertaMpm::where('kodepeserta', $kodepeserta)->where('status', 1)->where('individu.b4_k3', '1')->get();
 
         if($getkrt->isEmpty()){
             $var = '';

@@ -41,7 +41,7 @@
 						<li id="sidebar-finduk-rt"><a href="{{ URL('/induk/rumahtangga') }}"><i class="uk-icon-circle-o"></i>Rumah Tangga</a></li>
 					</ul>
 				</li>
-				@if(auth()->guard('admin')->user()->status_admin == 0 || auth()->guard('admin')->user()->status_admin == 1)
+				@if(auth()->guard('admin')->user()->status_admin == 0)
 				<li id="sidebar-dm" class="msn-item uk-parent">
 					<a href="#" class="msn-link"><i class="uk-icon-download"></i>Data Master</a>
 					<ul class="uk-nav-sub">

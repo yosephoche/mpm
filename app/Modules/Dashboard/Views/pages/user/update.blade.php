@@ -117,14 +117,14 @@
 					<div class="data-inner">
 						<label for="password">Kata Sandi</label>
 						<input id="password" type="password" style="width:100%" name="password">
-						<div class="error" id="password_err"></div>
+						<div style="color: #ff1b5f;"  class="error" id="password_err"></div>
 					</div>
 				</div>
 				<div class="uk-width-large-1-1 uk-width-medium-1-1 uk-width-small-1-1">
 					<div class="data-inner">
 						<label for="repeat-password">Ulangi Kata Sandi</label>
 						<input id="repeat-password" style="width:100%" type="password" name="repeat-password">
-						<div class="error" id="repeat-password_err"></div>
+						<div style="color: #ff1b5f;"  class="error" id="repeat-password_err"></div>
 					</div>
 				</div>
 	        </div>

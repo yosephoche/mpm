@@ -446,10 +446,10 @@ $(document).ready(function(){
 		if($('#nama-variabel').val() === '' || $('#no-opsi').val() === '' || $('#desc-opsi').val() === ''){
 
 			if($('#nama-variabel').val() === ''){
-				$('#nama-variabel').addClass('error');
+				$('#nama-variabel').parent('div').addClass('error');
 				$('#nama-variabel_err').html('Nama Variabel wajib di isi');
 			}else{
-				$('#nama-variabel').removeClass('error');
+				$('#nama-variabel').parent('div').removeClass('error');
 				$('#nama-variabel_err').html('');
 			}
 

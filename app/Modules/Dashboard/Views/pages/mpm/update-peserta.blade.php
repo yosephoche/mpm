@@ -52,7 +52,7 @@
 									</div>
 									<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 										<div class="data-inner">
-											<label for="namaLengkap">Nama Lengkap Sesuai KTP</label>
+											<label for="namaLengkap">Nama Lengkap (Sesuai KTP)</label>
 											<input id="namaLengkap" type="text" value="{{ $peserta[0]->pendaftar[0]['nama'] }}" name="namaLengkap">
 											<div class="error" id="namaLengkap_err"></div>
 										</div>
@@ -187,7 +187,7 @@
 									</div>
 									<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 										<div class="data-inner">
-											<label for="namaJalan">Nama Jalam / ( RT / RW)</label>
+											<label for="namaJalan">Nama Jalan / (RT / RW)</label>
 											<input id="namaJalan" type="text" name="namaJalan" value="{{ $peserta[0]->b1_k6 }}">
 											<div class="error" id="namaJalan_err"></div>
 										</div>

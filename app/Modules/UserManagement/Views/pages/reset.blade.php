@@ -9,7 +9,7 @@
 						<div class="form-image"></div>
 					</div>
 					<div class="right uk-text-center">
-						<div class="header">
+						<div class="header" style="padding: 20px 15px;">
 							<a href="/"><h3>Si Emas Terpadu</h3></a>
 							<p>( Sistem Informasi Pengetasan Kemiskinan Terpadu )</p>
 						</div>
@@ -46,6 +46,7 @@
 		
 	</div>
 	<style>
+
         .main-login:before {
             background: url('/assets/img/login_bg.png') no-repeat center top;
             background-size: cover;
@@ -53,7 +54,11 @@
         .main-login .ml-wrapper .ml-inner .left .form-image {
 		    background: rgba(0, 0, 0, 0) url("/assets/img/form_img.png") no-repeat scroll center center / cover ;
 		}
-    </style>
 
+    </style>
+	<script>
+		var sidebar = '';
+	
+	</script>
     <script src="{{ URL('/assets/js/backend/registrasi.js') }}"></script>
 @stop

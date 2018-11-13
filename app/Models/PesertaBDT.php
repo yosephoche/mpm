@@ -91,7 +91,7 @@ class PesertaBDT extends Eloquent
 			));
 		});
 
-		$indikecamatan = ((!empty($indikecamatanbdt['result'])) ? $indikecamatanbdt['result'][0]['count'] : 0) + ((!empty($indikecamatanmpm['result'])) ? $indikecamatanmpm['result'][0]['count'] : 0);
+		$indikecamatan = ((!empty($indikecamatanbdt[0])) ? $indikecamatanbdt[0]->count : 0) + ((!empty($indikecamatanmpm[0])) ? $indikecamatanmpm[0]->count : 0);
 
 		$nonikkecamatanbdt = PesertaBDT::raw(function($collection) use($kec){
 			return $collection->aggregate(
@@ -137,7 +137,7 @@ class PesertaBDT extends Eloquent
 			));
 		});
 
-		$nonikkecamatan = ((!empty($nonikkecamatanmpm['result'])) ? $nonikkecamatanmpm['result'][0]['count'] : 0) + ((!empty($nonikkecamatanbdt['result'])) ? $nonikkecamatanbdt['result'][0]['count'] : 0);
+		$nonikkecamatan = ((!empty($nonikkecamatanmpm[0])) ? $nonikkecamatanmpm[0]->count : 0) + ((!empty($nonikkecamatanbdt[0])) ? $nonikkecamatanbdt[0]->count : 0);
 
 		$nikkecamatanbdt = PesertaBDT::raw(function($collection) use($kec){
 			return $collection->aggregate(
@@ -183,7 +183,7 @@ class PesertaBDT extends Eloquent
 			));
 		});
 
-		$nikkecamatan = ((!empty($nikkecamatanmpm['result'])) ? $nikkecamatanmpm['result'][0]['count'] : 0) + ((!empty($nikkecamatanbdt['result'])) ? $nikkecamatanbdt['result'][0]['count'] : 0);
+		$nikkecamatan = ((!empty($nikkecamatanmpm[0])) ? $nikkecamatanmpm[0]->count : 0) + ((!empty($nikkecamatanbdt[0])) ? $nikkecamatanbdt[0]->count : 0);
 
 		$pkhkecamatanbdt = PesertaBDT::raw(function($collection) use($kec){
 			return $collection->aggregate(
@@ -229,7 +229,7 @@ class PesertaBDT extends Eloquent
 			));
 		});
 
-		$pkhkecamatan = ((!empty($pkhkecamatanmpm['result'])) ? $pkhkecamatanmpm['result'][0]['count'] : 0) + ((!empty($pkhkecamatanbdt['result'])) ? $pkhkecamatanbdt['result'][0]['count'] : 0);
+		$pkhkecamatan = ((!empty($pkhkecamatanmpm[0])) ? $pkhkecamatanmpm[0]->count : 0) + ((!empty($pkhkecamatanbdt[0])) ? $pkhkecamatanbdt[0]->count : 0);
 
 		$kkskecamatanbdt = PesertaBDT::raw(function($collection) use($kec){
 			return $collection->aggregate(
@@ -275,7 +275,7 @@ class PesertaBDT extends Eloquent
 			));
 		});
 
-		$kkskecamatan = ((!empty($kkskecamatanmpm['result'])) ? $kkskecamatanmpm['result'][0]['count'] : 0) + ((!empty($kkskecamatanbdt['result'])) ? $kkskecamatanbdt['result'][0]['count'] : 0);
+		$kkskecamatan = ((!empty($kkskecamatanmpm[0])) ? $kkskecamatanmpm[0]->count : 0) + ((!empty($kkskecamatanbdt[0])) ? $kkskecamatanbdt[0]->count : 0);
 
 		$kurkecamatanbdt = PesertaBDT::raw(function($collection) use($kec){
 			return $collection->aggregate(
@@ -321,7 +321,7 @@ class PesertaBDT extends Eloquent
 			));
 		});
 
-		$kurkecamatan = ((!empty($kurkecamatanmpm['result'])) ? $kurkecamatanmpm['result'][0]['count'] : 0) + ((!empty($kurkecamatanbdt['result'])) ? $kurkecamatanbdt['result'][0]['count'] : 0);
+		$kurkecamatan = ((!empty($kurkecamatanmpm[0])) ? $kurkecamatanmpm[0]->count : 0) + ((!empty($kurkecamatanbdt[0])) ? $kurkecamatanbdt[0]->count : 0);
 
 		$kecamatan = Kecamatan::where('id_kecamatan', $kec)->where('status', true)->first();
 

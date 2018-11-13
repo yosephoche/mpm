@@ -38,7 +38,7 @@
 													<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 														<div class="data-inner">
 															<label for="provinsi-1">No. Urut Rumah Tangga</label>
-															<input id="nik" type="text" name="nik" value="{{ (array_key_exists('nourut_rt',  $peserta->individu) ? $peserta->individu['nourut_rt'] : '') }}" readonly>
+															<input id="nik" type="text" name="nik" value="{{ empty($peserta->nourut_rt) ? '' : $peserta->nourut_rt }}" readonly>
 															<!-- <div class="error">Pesan Error</div> -->
 														</div>
 													</div>
@@ -52,7 +52,7 @@
 													<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 														<div class="data-inner">
 															<label for="provinsi-1">Kelurahan</label>
-															<input id="nik" type="text" name="nik" value="{{ App\Models\Kelurahan::getkelurahan($peserta->kel) }}" readonly>
+															<input id="nik" type="text" name="nik" value="{{ App\Models\Kelurahan::getkelurahan($peserta->des) }}" readonly>
 															<!-- <div class="error">Pesan Error</div> -->
 														</div>
 													</div>

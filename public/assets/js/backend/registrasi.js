@@ -43,7 +43,7 @@ $(document).ready(function(){
 
             if($('#kontak').val() === ''){
                 $('#kontak').addClass('error');
-                $('#kontak_err').html('Kata sandi wajib di isi');
+                $('#kontak_err').html('Kontak wajib di isi');
             }else{
                 $('#kontak').removeClass('error');
                 $('#kontak_err').html('');
@@ -170,7 +170,7 @@ $(document).ready(function(){
 
             if($('#kontak').val() === ''){
                 $('#kontak').addClass('error');
-                $('#kontak_err').html('Kata sandi wajib di isi');
+                $('#kontak_err').html('Kontak wajib di isi');
             }else{
                 $('#kontak').removeClass('error');
                 $('#kontak_err').html('');
@@ -335,7 +335,7 @@ $(document).ready(function(){
 
             if($('#kontak').val() === ''){
                 $('#kontak').addClass('error');
-                $('#kontak_err').html('Kata sandi wajib di isi');
+                $('#kontak_err').html('Kontak wajib di isi');
             }else{
                 $('#kontak').removeClass('error');
                 $('#kontak_err').html('');

@@ -50,7 +50,7 @@ class IndukController extends Controller
 				)
 			));
 		});
-
+		
 		return view('Dashboard::pages.induk.individu-detail', ['peserta' => $getbdt, 'jumpeserta' => $peserta_count]);
 	}
 

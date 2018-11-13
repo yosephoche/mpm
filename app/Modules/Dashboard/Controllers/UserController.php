@@ -80,10 +80,15 @@ class UserController extends Controller
     }
 
     public function update($iduser){
-        $users = Users::where('_id', $iduser)->where('status', 1)->get();
-        $userstatus = UserStatus::where('status', 1)->get();
+        if(auth()->guard('admin')->user()->status_admin == 0 || auth()->guard('admin')->user()->status_admin == 1){
+            $users = Users::where('_id', $iduser)->where('status', 1)->get();
+            $userstatus = UserStatus::where('status', 1)->get();
 
-        return view('Dashboard::pages.user.update', ['users' => $users, 'userstatus' => $userstatus]);
+            return view('Dashboard::pages.user.update', ['users' => $users, 'userstatus' => $userstatus]);
+        }else{
+            return redirect('/dashboard');
+
+        }
     }
 
     public function postupdate(Request $request){
@@ -187,6 +192,7 @@ class UserController extends Controller
                 }
             }
         }
+        
         return json_encode($pesan);
     }
 }

@@ -53,7 +53,7 @@
 									</div>
 									<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 										<div class="data-inner">
-											<label for="namaLengkap">Nama Lengkap Sesuai KTP</label>
+											<label for="namaLengkap">Nama Lengkap (Sesuai KTP)</label>
 											<input id="namaLengkap" type="text" name="namaLengkap">
 											<div class="error" id="namaLengkap_err"></div>
 										</div>
@@ -190,7 +190,7 @@
 									</div>
 									<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 										<div class="data-inner">
-											<label for="namaJalan">Nama Jalan / ( RT / RW)</label>
+											<label for="namaJalan">Nama Jalan / (RT / RW)</label>
 											<input id="namaJalan" type="text" name="namaJalan">
 											<div class="error" id="namaJalan_err"></div>
 										</div>

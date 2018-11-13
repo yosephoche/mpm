@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -55,8 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'infosipakatau@gmail.com', 'name' => 'Sipakatau'],
-
+    'from' => ['address' => 'infosipakatau@gmail.com', 'name' => 'Mpm'],
     /*
     |--------------------------------------------------------------------------
     | E-Mail Encryption Protocol
@@ -81,7 +80,7 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
+    'username' => env('MAIL_USERNAME', 'infosipakatau@gmail.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -94,7 +93,7 @@ return [
     |
     */
 
-    'password' => env('MAIL_PASSWORD'),
+    'password' => env('MAIL_PASSWORD', 's1p4k4t4u'),
 
     /*
     |--------------------------------------------------------------------------
