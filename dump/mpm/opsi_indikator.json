@@ -1,0 +1,272 @@
+{"_id":{"$oid":"59adf100beaf13218c001949"},"kode_variabel":"b3_k1a","no_opsi":3,"desc_opsi":"Bebas Sewa","status":1}
+{"_id":{"$oid":"59adc445beaf13218c001947"},"kode_variabel":"b3_k1a","no_opsi":1,"desc_opsi":"Milik Sendiri","status":1}
+{"_id":{"$oid":"59adf119beaf13218c00194a"},"kode_variabel":"b3_k1a","no_opsi":4,"desc_opsi":"Dinas","status":1}
+{"_id":{"$oid":"59adf0eebeaf13218c001948"},"kode_variabel":"b3_k1a","no_opsi":2,"desc_opsi":"Kontrak/Sewa","status":1}
+{"_id":{"$oid":"59adf126beaf13218c00194b"},"kode_variabel":"b3_k1a","no_opsi":5,"desc_opsi":"Lainnya","status":1}
+{"_id":{"$oid":"59adf143beaf13218c00194d"},"kode_variabel":"b3_k1b","no_opsi":2,"desc_opsi":"Milik Orang Lain","status":1}
+{"_id":{"$oid":"59adf157beaf13218c00194e"},"kode_variabel":"b3_k1b","no_opsi":3,"desc_opsi":"Tanah Negara","status":1}
+{"_id":{"$oid":"59adf166beaf13218c00194f"},"kode_variabel":"b3_k1b","no_opsi":4,"desc_opsi":"Lainnya","status":1}
+{"_id":{"$oid":"59adf134beaf13218c00194c"},"kode_variabel":"b3_k1b","no_opsi":1,"desc_opsi":"Milik Sendiri","status":1}
+{"_id":{"$oid":"59adf195beaf13218c001952"},"kode_variabel":"b3_k3","no_opsi":3,"desc_opsi":"Parket/vinil/permadani","status":1}
+{"_id":{"$oid":"59adf1a4beaf13218c001953"},"kode_variabel":"b3_k3","no_opsi":4,"desc_opsi":"Ubin/tegel/teraso","status":1}
+{"_id":{"$oid":"59adf1b4beaf13218c001954"},"kode_variabel":"b3_k3","no_opsi":5,"desc_opsi":"Kayu/papan kualitas tinggi","status":1}
+{"_id":{"$oid":"59adf1c0beaf13218c001955"},"kode_variabel":"b3_k3","no_opsi":6,"desc_opsi":"Bambu","status":1}
+{"_id":{"$oid":"59adf1cdbeaf13218c001956"},"kode_variabel":"b3_k3","no_opsi":7,"desc_opsi":"Bambu","status":1}
+{"_id":{"$oid":"59adf1e4beaf13218c001957"},"kode_variabel":"b3_k3","no_opsi":8,"desc_opsi":"Kayu/papan kualitas rendah","status":1}
+{"_id":{"$oid":"59adf177beaf13218c001950"},"kode_variabel":"b3_k3","no_opsi":1,"desc_opsi":"Marmer/Granit","status":1}
+{"_id":{"$oid":"59adf189beaf13218c001951"},"kode_variabel":"b3_k3","no_opsi":2,"desc_opsi":"Keramik","status":1}
+{"_id":{"$oid":"59adf20dbeaf13218c00195a"},"kode_variabel":"b3_k4a","no_opsi":1,"desc_opsi":"Tembok","status":1}
+{"_id":{"$oid":"59adf21bbeaf13218c00195b"},"kode_variabel":"b3_k4a","no_opsi":2,"desc_opsi":"Plesteran Anyaman Bambu/Kawat","status":1}
+{"_id":{"$oid":"59adf237beaf13218c00195d"},"kode_variabel":"b3_k4a","no_opsi":4,"desc_opsi":"Anyaman Bambu","status":1}
+{"_id":{"$oid":"59adf227beaf13218c00195c"},"kode_variabel":"b3_k4a","no_opsi":3,"desc_opsi":"Kayu","status":1}
+{"_id":{"$oid":"59adf1f0beaf13218c001958"},"kode_variabel":"b3_k3","no_opsi":9,"desc_opsi":"Tanah","status":1}
+{"_id":{"$oid":"59adf246beaf13218c00195e"},"kode_variabel":"b3_k4a","no_opsi":5,"desc_opsi":"Batang Kayu","status":1}
+{"_id":{"$oid":"59adf251beaf13218c00195f"},"kode_variabel":"b3_k4a","no_opsi":6,"desc_opsi":"Bambu","status":1}
+{"_id":{"$oid":"59adf25dbeaf13218c001960"},"kode_variabel":"b3_k4a","no_opsi":7,"desc_opsi":"Lainnya","status":1}
+{"_id":{"$oid":"59adf5a6beaf13218c001963"},"kode_variabel":"b3_k10","no_opsi":1,"desc_opsi":"Listrik","status":1}
+{"_id":{"$oid":"59adf5b5beaf13218c001964"},"kode_variabel":"b3_k10","no_opsi":2,"desc_opsi":"Gas \u003e 3 kg","status":1}
+{"_id":{"$oid":"59adf1fdbeaf13218c001959"},"kode_variabel":"b3_k3","no_opsi":10,"desc_opsi":"Lainnya","status":1}
+{"_id":{"$oid":"59adf5c3beaf13218c001965"},"kode_variabel":"b3_k10","no_opsi":3,"desc_opsi":"Gas 3 kg","status":1}
+{"_id":{"$oid":"59adf602beaf13218c001969"},"kode_variabel":"b3_k10","no_opsi":7,"desc_opsi":"Arang","status":1}
+{"_id":{"$oid":"59adf5d1beaf13218c001966"},"kode_variabel":"b3_k10","no_opsi":4,"desc_opsi":"Gas kota/biogas","status":1}
+{"_id":{"$oid":"59adf60ebeaf13218c00196a"},"kode_variabel":"b3_k10","no_opsi":8,"desc_opsi":"Kayu bakar","status":1}
+{"_id":{"$oid":"59adf5f3beaf13218c001968"},"kode_variabel":"b3_k10","no_opsi":6,"desc_opsi":"Briket","status":1}
+{"_id":{"$oid":"59adf61ebeaf13218c00196b"},"kode_variabel":"b3_k10","no_opsi":9,"desc_opsi":"Tidak memasak di rumah","status":1}
+{"_id":{"$oid":"59adf631beaf13218c00196c"},"kode_variabel":"b3_k11a","no_opsi":1,"desc_opsi":"Sendiri","status":1}
+{"_id":{"$oid":"59adf640beaf13218c00196d"},"kode_variabel":"b3_k11a","no_opsi":2,"desc_opsi":"Bersama","status":1}
+{"_id":{"$oid":"59adf65fbeaf13218c00196f"},"kode_variabel":"b3_k11a","no_opsi":4,"desc_opsi":"Tidak ada","status":1}
+{"_id":{"$oid":"59adf64ebeaf13218c00196e"},"kode_variabel":"b3_k11a","no_opsi":3,"desc_opsi":"Umum","status":1}
+{"_id":{"$oid":"59adf68ebeaf13218c001972"},"kode_variabel":"b3_k11b","no_opsi":3,"desc_opsi":"Cemplung/cubluk","status":1}
+{"_id":{"$oid":"59adf5debeaf13218c001967"},"kode_variabel":"b3_k10","no_opsi":5,"desc_opsi":"Minyak tanah","status":1}
+{"_id":{"$oid":"59adf6a2beaf13218c001973"},"kode_variabel":"b3_k11b","no_opsi":4,"desc_opsi":"Tidak pakai","status":1}
+{"_id":{"$oid":"59adf6b0beaf13218c001974"},"kode_variabel":"b3_k12","no_opsi":1,"desc_opsi":"Tangki","status":1}
+{"_id":{"$oid":"59adf6bdbeaf13218c001975"},"kode_variabel":"b3_k12","no_opsi":2,"desc_opsi":"SPAL","status":1}
+{"_id":{"$oid":"59adf677beaf13218c001970"},"kode_variabel":"b3_k11b","no_opsi":1,"desc_opsi":"Leher angsa","status":1}
+{"_id":{"$oid":"59adf6c6beaf13218c001976"},"kode_variabel":"b3_k12","no_opsi":3,"desc_opsi":"Lubang tanah","status":1}
+{"_id":{"$oid":"59adf683beaf13218c001971"},"kode_variabel":"b3_k11b","no_opsi":2,"desc_opsi":"Plengsengan","status":1}
+{"_id":{"$oid":"59adf6d1beaf13218c001977"},"kode_variabel":"b3_k12","no_opsi":4,"desc_opsi":"Kolam/sawah/sungai/danau/laut","status":1}
+{"_id":{"$oid":"59adf7c8beaf13218c00197b"},"kode_variabel":"b3_k4b","no_opsi":2,"desc_opsi":"Jelek/Kualitas Rendah","status":1}
+{"_id":{"$oid":"59adf7dbbeaf13218c00197c"},"kode_variabel":"b3_k5a","no_opsi":1,"desc_opsi":"Beton/Genteng Beton","status":1}
+{"_id":{"$oid":"59adf7eabeaf13218c00197d"},"kode_variabel":"b3_k5a","no_opsi":2,"desc_opsi":"Genteng Keramik","status":1}
+{"_id":{"$oid":"59adf7fcbeaf13218c00197e"},"kode_variabel":"b3_k5a","no_opsi":3,"desc_opsi":"Genteng Metal","status":1}
+{"_id":{"$oid":"59adf80dbeaf13218c00197f"},"kode_variabel":"b3_k5a","no_opsi":4,"desc_opsi":"Genteng Tanah Liat","status":1}
+{"_id":{"$oid":"59adf819beaf13218c001980"},"kode_variabel":"b3_k5a","no_opsi":5,"desc_opsi":"Asbes","status":1}
+{"_id":{"$oid":"59adf783beaf13218c001979"},"kode_variabel":"b3_k12","no_opsi":6,"desc_opsi":"Lainnya","status":1}
+{"_id":{"$oid":"59adf828beaf13218c001981"},"kode_variabel":"b3_k5a","no_opsi":6,"desc_opsi":"Seng","status":1}
+{"_id":{"$oid":"59adf7b9beaf13218c00197a"},"kode_variabel":"b3_k4b","no_opsi":1,"desc_opsi":"Bagus/Kualitas Tinggi","status":1}
+{"_id":{"$oid":"59adf834beaf13218c001982"},"kode_variabel":"b3_k5a","no_opsi":7,"desc_opsi":"Sirap","status":1}
+{"_id":{"$oid":"59adf83fbeaf13218c001983"},"kode_variabel":"b3_k5a","no_opsi":8,"desc_opsi":"Bambu","status":1}
+{"_id":{"$oid":"59adf862beaf13218c001985"},"kode_variabel":"b3_k5a","no_opsi":10,"desc_opsi":"Lainnya","status":1}
+{"_id":{"$oid":"59adf86cbeaf13218c001986"},"kode_variabel":"b3_k5b","no_opsi":1,"desc_opsi":"Bagus/Kualitas Tinggi","status":1}
+{"_id":{"$oid":"59adf858beaf13218c001984"},"kode_variabel":"b3_k5a","no_opsi":9,"desc_opsi":"Jerami/Ijuk/Daun-daunan/Rumbia","status":1}
+{"_id":{"$oid":"59adf755beaf13218c001978"},"kode_variabel":"b3_k12","no_opsi":5,"desc_opsi":"Pantai/tanah lapang/kebun","status":1}
+{"_id":{"$oid":"59adf8adbeaf13218c00198a"},"kode_variabel":"b3_k7","no_opsi":3,"desc_opsi":"Leding meteran","status":1}
+{"_id":{"$oid":"59adf8a2beaf13218c001989"},"kode_variabel":"b3_k7","no_opsi":2,"desc_opsi":"Air isi ulang","status":1}
+{"_id":{"$oid":"59adf880beaf13218c001987"},"kode_variabel":"b3_k5b","no_opsi":2,"desc_opsi":"Jelek/Kualitas Rendah","status":1}
+{"_id":{"$oid":"59adf8b8beaf13218c00198b"},"kode_variabel":"b3_k7","no_opsi":4,"desc_opsi":"Leding eceran","status":1}
+{"_id":{"$oid":"59adf8d2beaf13218c00198d"},"kode_variabel":"b3_k7","no_opsi":6,"desc_opsi":"Sumur terlindung","status":1}
+{"_id":{"$oid":"59adf8e0beaf13218c00198e"},"kode_variabel":"b3_k7","no_opsi":7,"desc_opsi":"Sumur tak terlindung","status":1}
+{"_id":{"$oid":"59adf8c4beaf13218c00198c"},"kode_variabel":"b3_k7","no_opsi":5,"desc_opsi":"Sumur bor/pompa","status":1}
+{"_id":{"$oid":"59adf8ecbeaf13218c00198f"},"kode_variabel":"b3_k7","no_opsi":8,"desc_opsi":"Mata air terlindung","status":1}
+{"_id":{"$oid":"59adf90abeaf13218c001991"},"kode_variabel":"b3_k7","no_opsi":10,"desc_opsi":"Air sungai/danau/waduk","status":1}
+{"_id":{"$oid":"59adf8fcbeaf13218c001990"},"kode_variabel":"b3_k7","no_opsi":9,"desc_opsi":"Mata air tak terlindung","status":1}
+{"_id":{"$oid":"59adf931beaf13218c001994"},"kode_variabel":"b3_k8","no_opsi":1,"desc_opsi":"Membeli eceran","status":1}
+{"_id":{"$oid":"59adf93ebeaf13218c001995"},"kode_variabel":"b3_k8","no_opsi":2,"desc_opsi":"Langganan","status":1}
+{"_id":{"$oid":"59adf921beaf13218c001993"},"kode_variabel":"b3_k7","no_opsi":12,"desc_opsi":"Lainnya","status":1}
+{"_id":{"$oid":"59adf94cbeaf13218c001996"},"kode_variabel":"b3_k8","no_opsi":3,"desc_opsi":"Tidak membeli","status":1}
+{"_id":{"$oid":"59adf95bbeaf13218c001997"},"kode_variabel":"b3_k9a","no_opsi":1,"desc_opsi":"Listrik PLN","status":1}
+{"_id":{"$oid":"59adf968beaf13218c001998"},"kode_variabel":"b3_k9a","no_opsi":2,"desc_opsi":"Listrik Non PLN","status":1}
+{"_id":{"$oid":"59adf916beaf13218c001992"},"kode_variabel":"b3_k7","no_opsi":11,"desc_opsi":"Air hujan","status":1}
+{"_id":{"$oid":"59adfa6fbeaf13218c00199b"},"kode_variabel":"b3_k9b","no_opsi":1,"desc_opsi":"450 watt","status":1}
+{"_id":{"$oid":"59adf982beaf13218c001999"},"kode_variabel":"b3_k9a","no_opsi":3,"desc_opsi":"Bukan listrik","status":1}
+{"_id":{"$oid":"59adfa78beaf13218c00199c"},"kode_variabel":"b3_k9b","no_opsi":2,"desc_opsi":"900 watt","status":1}
+{"_id":{"$oid":"59adfa87beaf13218c00199d"},"kode_variabel":"b3_k9b","no_opsi":3,"desc_opsi":"1300 watt","status":1}
+{"_id":{"$oid":"59adfa94beaf13218c00199e"},"kode_variabel":"b3_k9b","no_opsi":4,"desc_opsi":"2200 watt","status":1}
+{"_id":{"$oid":"59adf898beaf13218c001988"},"kode_variabel":"b3_k7","no_opsi":1,"desc_opsi":"Air kemasan bermerk","status":1}
+{"_id":{"$oid":"59adfaa6beaf13218c00199f"},"kode_variabel":"b3_k9b","no_opsi":5,"desc_opsi":"\u003e 2200 watt","status":1}
+{"_id":{"$oid":"59adfad0beaf13218c0019a2"},"kode_variabel":"b4_k10","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59adfafdbeaf13218c0019a3"},"kode_variabel":"b4_k11","no_opsi":0,"desc_opsi":"Tidak memiliki","status":1}
+{"_id":{"$oid":"59adfab0beaf13218c0019a0"},"kode_variabel":"b3_k9b","no_opsi":6,"desc_opsi":"Tanpa meteran","status":1}
+{"_id":{"$oid":"59adfb76beaf13218c0019a4"},"kode_variabel":"b4_k11","no_opsi":1,"desc_opsi":"Akta kelahiran","status":1}
+{"_id":{"$oid":"59adfb89beaf13218c0019a5"},"kode_variabel":"b4_k11","no_opsi":2,"desc_opsi":"Kartu pelajar","status":1}
+{"_id":{"$oid":"59adfbabbeaf13218c0019a7"},"kode_variabel":"b3_k9b","no_opsi":8,"desc_opsi":"SIM","status":1}
+{"_id":{"$oid":"59adfb96beaf13218c0019a6"},"kode_variabel":"b4_k11","no_opsi":4,"desc_opsi":"KTP","status":1}
+{"_id":{"$oid":"59ae02dcbeaf13218c0019a8"},"kode_variabel":"b4_k11","no_opsi":8,"desc_opsi":"SIM","status":1}
+{"_id":{"$oid":"59adfac7beaf13218c0019a1"},"kode_variabel":"b4_k10","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af4f88beaf13218c0019ac"},"kode_variabel":"b4_k13","no_opsi":1,"desc_opsi":"Tuna daksa/cacat tubuh","status":1}
+{"_id":{"$oid":"59af4fb4beaf13218c0019ad"},"kode_variabel":"b4_k13","no_opsi":2,"desc_opsi":"Tuna netra/buta","status":1}
+{"_id":{"$oid":"59ae02ffbeaf13218c0019a9"},"kode_variabel":"b4_k12","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af4accbeaf13218c0019ab"},"kode_variabel":"b4_k13","no_opsi":0,"desc_opsi":"Tidak cacat","status":1}
+{"_id":{"$oid":"59af4fbfbeaf13218c0019ae"},"kode_variabel":"b4_k13","no_opsi":3,"desc_opsi":"Tuna rungu","status":1}
+{"_id":{"$oid":"59af4fc8beaf13218c0019af"},"kode_variabel":"b4_k13","no_opsi":4,"desc_opsi":"Tuna wicara","status":1}
+{"_id":{"$oid":"59af4fd4beaf13218c0019b0"},"kode_variabel":"b4_k13","no_opsi":5,"desc_opsi":"Tuna rungu \u0026 wicara","status":1}
+{"_id":{"$oid":"59af4fe7beaf13218c0019b1"},"kode_variabel":"b4_k13","no_opsi":6,"desc_opsi":"Tuna netra \u0026 cacat tubuh","status":1}
+{"_id":{"$oid":"59ae0313beaf13218c0019aa"},"kode_variabel":"b4_k12","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af4ff3beaf13218c0019b2"},"kode_variabel":"b4_k13","no_opsi":7,"desc_opsi":"Tuna netra, rungu, \u0026 wicara","status":1}
+{"_id":{"$oid":"59af5018beaf13218c0019b4"},"kode_variabel":"b4_k13","no_opsi":9,"desc_opsi":"Tuna rungu, wicara, netra \u0026 cacat tubuh","status":1}
+{"_id":{"$oid":"59af5008beaf13218c0019b3"},"kode_variabel":"b4_k13","no_opsi":8,"desc_opsi":"Tuna rungu, wicara \u0026 cacat tubuh","status":1}
+{"_id":{"$oid":"59af502cbeaf13218c0019b6"},"kode_variabel":"b4_k13","no_opsi":11,"desc_opsi":"Mantan penderita gangguan jiwa","status":1}
+{"_id":{"$oid":"59af504dbeaf13218c0019b8"},"kode_variabel":"b4_k14","no_opsi":0,"desc_opsi":"Tidak ada","status":1}
+{"_id":{"$oid":"59af5059beaf13218c0019b9"},"kode_variabel":"b4_k14","no_opsi":1,"desc_opsi":"Hipertensi(tekanan darah tinggi)","status":1}
+{"_id":{"$oid":"59af5039beaf13218c0019b7"},"kode_variabel":"b4_k13","no_opsi":12,"desc_opsi":"Cacat fisik \u0026 mental","status":1}
+{"_id":{"$oid":"59af5063beaf13218c0019ba"},"kode_variabel":"b4_k14","no_opsi":2,"desc_opsi":"Rematik","status":1}
+{"_id":{"$oid":"59af506fbeaf13218c0019bb"},"kode_variabel":"b4_k14","no_opsi":3,"desc_opsi":"Asma","status":1}
+{"_id":{"$oid":"59af5024beaf13218c0019b5"},"kode_variabel":"b4_k13","no_opsi":10,"desc_opsi":"Cacat mental retardasi","status":1}
+{"_id":{"$oid":"59af508fbeaf13218c0019be"},"kode_variabel":"b4_k14","no_opsi":6,"desc_opsi":"Tuberculosis(TBC)","status":1}
+{"_id":{"$oid":"59af50a2beaf13218c0019c0"},"kode_variabel":"b4_k14","no_opsi":8,"desc_opsi":"Kanker atau tumor ganas","status":1}
+{"_id":{"$oid":"59af5099beaf13218c0019bf"},"kode_variabel":"b4_k14","no_opsi":7,"desc_opsi":"Stroke","status":1}
+{"_id":{"$oid":"59af5078beaf13218c0019bc"},"kode_variabel":"b4_k14","no_opsi":4,"desc_opsi":"Masalah jantung","status":1}
+{"_id":{"$oid":"59af50cabeaf13218c0019c3"},"kode_variabel":"b4_k15","no_opsi":1,"desc_opsi":"Masih sekolah","status":1}
+{"_id":{"$oid":"59af50c0beaf13218c0019c2"},"kode_variabel":"b4_k15","no_opsi":0,"desc_opsi":"Tidak/belum pernah sekolah","status":1}
+{"_id":{"$oid":"59af5082beaf13218c0019bd"},"kode_variabel":"b4_k14","no_opsi":5,"desc_opsi":"Diabetes(kencing manis)","status":1}
+{"_id":{"$oid":"59af50aebeaf13218c0019c1"},"kode_variabel":"b4_k14","no_opsi":9,"desc_opsi":"Lainnya(gagal ginjal, paruparu flek dan sejenisnya)","status":1}
+{"_id":{"$oid":"59af50d4beaf13218c0019c4"},"kode_variabel":"b4_k15","no_opsi":2,"desc_opsi":"Tidak bersekolah lagi","status":1}
+{"_id":{"$oid":"59af50fabeaf13218c0019c7"},"kode_variabel":"b4_k16","no_opsi":3,"desc_opsi":"M. Ibtidaiyah","status":1}
+{"_id":{"$oid":"59af5112beaf13218c0019c9"},"kode_variabel":"b4_k16","no_opsi":5,"desc_opsi":"Paket B","status":1}
+{"_id":{"$oid":"59af5108beaf13218c0019c8"},"kode_variabel":"b4_k16","no_opsi":4,"desc_opsi":"SMP/SMPLB","status":1}
+{"_id":{"$oid":"59af511dbeaf13218c0019ca"},"kode_variabel":"b4_k16","no_opsi":6,"desc_opsi":"M. Tsanawiyah","status":1}
+{"_id":{"$oid":"59af50efbeaf13218c0019c6"},"kode_variabel":"b4_k16","no_opsi":2,"desc_opsi":"Paket A","status":1}
+{"_id":{"$oid":"59af5134beaf13218c0019cc"},"kode_variabel":"b4_k16","no_opsi":8,"desc_opsi":"Paket C","status":1}
+{"_id":{"$oid":"59af512abeaf13218c0019cb"},"kode_variabel":"b4_k16","no_opsi":7,"desc_opsi":"SMA/SMK/SMALB","status":1}
+{"_id":{"$oid":"59af514cbeaf13218c0019ce"},"kode_variabel":"b4_k16","no_opsi":10,"desc_opsi":"Perguruan tinggi","status":1}
+{"_id":{"$oid":"59af50e3beaf13218c0019c5"},"kode_variabel":"b4_k16","no_opsi":1,"desc_opsi":"SD/SDLB","status":1}
+{"_id":{"$oid":"59af516bbeaf13218c0019d1"},"kode_variabel":"b4_k17","no_opsi":3,"desc_opsi":"3","status":1}
+{"_id":{"$oid":"59af5175beaf13218c0019d2"},"kode_variabel":"b4_k17","no_opsi":4,"desc_opsi":"4","status":1}
+{"_id":{"$oid":"59af515bbeaf13218c0019cf"},"kode_variabel":"b4_k17","no_opsi":1,"desc_opsi":"1","status":1}
+{"_id":{"$oid":"59af5180beaf13218c0019d3"},"kode_variabel":"b4_k17","no_opsi":5,"desc_opsi":"5","status":1}
+{"_id":{"$oid":"59af513fbeaf13218c0019cd"},"kode_variabel":"b4_k16","no_opsi":9,"desc_opsi":"M. Aliyah","status":1}
+{"_id":{"$oid":"59af5189beaf13218c0019d4"},"kode_variabel":"b4_k17","no_opsi":6,"desc_opsi":"6","status":1}
+{"_id":{"$oid":"59af5191beaf13218c0019d5"},"kode_variabel":"b4_k17","no_opsi":7,"desc_opsi":"7","status":1}
+{"_id":{"$oid":"59af519cbeaf13218c0019d6"},"kode_variabel":"b4_k17","no_opsi":8,"desc_opsi":"8(Tamat)","status":1}
+{"_id":{"$oid":"59af51aebeaf13218c0019d7"},"kode_variabel":"b4_k18","no_opsi":0,"desc_opsi":"Tidak Punya Ijazah","status":1}
+{"_id":{"$oid":"59af51c8beaf13218c0019d9"},"kode_variabel":"b4_k18","no_opsi":2,"desc_opsi":"SMP/Sederajat","status":1}
+{"_id":{"$oid":"59af5163beaf13218c0019d0"},"kode_variabel":"b4_k17","no_opsi":2,"desc_opsi":"2","status":1}
+{"_id":{"$oid":"59af51d3beaf13218c0019da"},"kode_variabel":"b4_k18","no_opsi":3,"desc_opsi":"SMA/Sederajat","status":1}
+{"_id":{"$oid":"59af51e0beaf13218c0019db"},"kode_variabel":"b4_k18","no_opsi":4,"desc_opsi":"D1/D2/D3","status":1}
+{"_id":{"$oid":"59af523bbeaf13218c0019dd"},"kode_variabel":"b4_k18","no_opsi":6,"desc_opsi":"S2/S3","status":1}
+{"_id":{"$oid":"59af51eebeaf13218c0019dc"},"kode_variabel":"b4_k18","no_opsi":5,"desc_opsi":"D4/S1","status":1}
+{"_id":{"$oid":"59af5248beaf13218c0019de"},"kode_variabel":"b4_k19a","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af51b9beaf13218c0019d8"},"kode_variabel":"b4_k18","no_opsi":1,"desc_opsi":"SD/Sederajat","status":1}
+{"_id":{"$oid":"59af55a9beaf13218c0019e3"},"kode_variabel":"b4_k20","no_opsi":3,"desc_opsi":"Perkebunan","status":1}
+{"_id":{"$oid":"59af55b8beaf13218c0019e4"},"kode_variabel":"b4_k20","no_opsi":4,"desc_opsi":"Perikanan tangkap","status":1}
+{"_id":{"$oid":"59af53e7beaf13218c0019e0"},"kode_variabel":"b4_k19a","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5408beaf13218c0019e2"},"kode_variabel":"b4_k20","no_opsi":2,"desc_opsi":"Hortikultura","status":1}
+{"_id":{"$oid":"59af5732beaf13218c0019e5"},"kode_variabel":"b4_k20","no_opsi":5,"desc_opsi":"Perikanan budidaya","status":1}
+{"_id":{"$oid":"59af5744beaf13218c0019e6"},"kode_variabel":"b4_k20","no_opsi":6,"desc_opsi":"Peternakan","status":1}
+{"_id":{"$oid":"59af5778beaf13218c0019e8"},"kode_variabel":"b4_k20","no_opsi":8,"desc_opsi":"Pertambangan/penggalian","status":1}
+{"_id":{"$oid":"59af575ebeaf13218c0019e7"},"kode_variabel":"b4_k20","no_opsi":7,"desc_opsi":"Kehutanan \u0026 pertanian lainnya","status":1}
+{"_id":{"$oid":"59af53fcbeaf13218c0019e1"},"kode_variabel":"b4_k20","no_opsi":1,"desc_opsi":"Pertanian tanaman padi \u0026 palawija","status":1}
+{"_id":{"$oid":"59af57c1beaf13218c0019ec"},"kode_variabel":"b4_k20","no_opsi":12,"desc_opsi":"Perdagangan","status":1}
+{"_id":{"$oid":"59af57b7beaf13218c0019eb"},"kode_variabel":"b4_k20","no_opsi":11,"desc_opsi":"Bangunan/konstruksi","status":1}
+{"_id":{"$oid":"59af5795beaf13218c0019e9"},"kode_variabel":"b4_k20","no_opsi":9,"desc_opsi":"Industri pengolahan","status":1}
+{"_id":{"$oid":"59af57cbbeaf13218c0019ed"},"kode_variabel":"b4_k20","no_opsi":13,"desc_opsi":"Hotel \u0026 rumah makan","status":1}
+{"_id":{"$oid":"59af57d7beaf13218c0019ee"},"kode_variabel":"b4_k20","no_opsi":14,"desc_opsi":"Transportasi \u0026 pergudangan","status":1}
+{"_id":{"$oid":"59af57f2beaf13218c0019f0"},"kode_variabel":"b4_k20","no_opsi":16,"desc_opsi":"Keuangan dan asuransi","status":1}
+{"_id":{"$oid":"59af57e3beaf13218c0019ef"},"kode_variabel":"b4_k20","no_opsi":15,"desc_opsi":"Informasi \u0026 komunikasi","status":1}
+{"_id":{"$oid":"59af57fcbeaf13218c0019f1"},"kode_variabel":"b4_k20","no_opsi":17,"desc_opsi":"Jasa pendidikan","status":1}
+{"_id":{"$oid":"59af57aabeaf13218c0019ea"},"kode_variabel":"b4_k20","no_opsi":10,"desc_opsi":"Listrik dan gas","status":1}
+{"_id":{"$oid":"59af5816beaf13218c0019f3"},"kode_variabel":"b4_k20","no_opsi":19,"desc_opsi":"Jasa kemasyarakatan, pemerintahan \u0026 perorangan","status":1}
+{"_id":{"$oid":"59af5824beaf13218c0019f4"},"kode_variabel":"b4_k20","no_opsi":20,"desc_opsi":"Pemulung","status":1}
+{"_id":{"$oid":"59af5842beaf13218c0019f6"},"kode_variabel":"b4_k21","no_opsi":1,"desc_opsi":"Berusaha sendiri","status":1}
+{"_id":{"$oid":"59af584fbeaf13218c0019f7"},"kode_variabel":"b4_k21","no_opsi":2,"desc_opsi":"Berusaha dibantu buruh tidak tetap/tidak dibayar","status":1}
+{"_id":{"$oid":"59af585cbeaf13218c0019f8"},"kode_variabel":"b4_k21","no_opsi":3,"desc_opsi":"Berusaha dibantu buruh tetap/dibayar","status":1}
+{"_id":{"$oid":"59af5872beaf13218c0019f9"},"kode_variabel":"b4_k21","no_opsi":4,"desc_opsi":"Buruh/Karyawan/Pegawai swasta","status":1}
+{"_id":{"$oid":"59af5809beaf13218c0019f2"},"kode_variabel":"b4_k20","no_opsi":18,"desc_opsi":"Jasa kesehatan","status":1}
+{"_id":{"$oid":"59af582fbeaf13218c0019f5"},"kode_variabel":"b4_k20","no_opsi":21,"desc_opsi":"Lainnya","status":1}
+{"_id":{"$oid":"59af587dbeaf13218c0019fa"},"kode_variabel":"b4_k21","no_opsi":5,"desc_opsi":"PNS/TNI/POLRI/BUMN/BUMD/anggota legislatif","status":1}
+{"_id":{"$oid":"59af58ccbeaf13218c0019fe"},"kode_variabel":"b4_k3","no_opsi":1,"desc_opsi":"Kepala Rumah Tangga","status":1}
+{"_id":{"$oid":"59af58dcbeaf13218c0019ff"},"kode_variabel":"b4_k3","no_opsi":2,"desc_opsi":"Istri/Suami","status":1}
+{"_id":{"$oid":"59af5899beaf13218c0019fc"},"kode_variabel":"b4_k21","no_opsi":7,"desc_opsi":"Pekerja bebas non pertanian","status":1}
+{"_id":{"$oid":"59af58eabeaf13218c001a00"},"kode_variabel":"b4_k3","no_opsi":3,"desc_opsi":"Anak","status":1}
+{"_id":{"$oid":"59af58febeaf13218c001a02"},"kode_variabel":"b4_k3","no_opsi":5,"desc_opsi":"Cucu","status":1}
+{"_id":{"$oid":"59af58f4beaf13218c001a01"},"kode_variabel":"b4_k3","no_opsi":4,"desc_opsi":"Menantu","status":1}
+{"_id":{"$oid":"59af590abeaf13218c001a03"},"kode_variabel":"b4_k3","no_opsi":6,"desc_opsi":"Orang Tua/Mertua","status":1}
+{"_id":{"$oid":"59af588ebeaf13218c0019fb"},"kode_variabel":"b4_k21","no_opsi":6,"desc_opsi":"Pekerja bebas pertanian","status":1}
+{"_id":{"$oid":"59af58aabeaf13218c0019fd"},"kode_variabel":"b4_k21","no_opsi":8,"desc_opsi":"Pekerja keluarga/tidak dibayar","status":1}
+{"_id":{"$oid":"59af5935beaf13218c001a07"},"kode_variabel":"b4_k5","no_opsi":2,"desc_opsi":"Istri/Suami","status":1}
+{"_id":{"$oid":"59af592cbeaf13218c001a06"},"kode_variabel":"b4_k5","no_opsi":1,"desc_opsi":"Kepala Keluarga","status":1}
+{"_id":{"$oid":"59af594abeaf13218c001a09"},"kode_variabel":"b4_k5","no_opsi":4,"desc_opsi":"Menantu","status":1}
+{"_id":{"$oid":"59af593fbeaf13218c001a08"},"kode_variabel":"b4_k5","no_opsi":3,"desc_opsi":"Anak","status":1}
+{"_id":{"$oid":"59af5916beaf13218c001a04"},"kode_variabel":"b4_k3","no_opsi":7,"desc_opsi":"Pembantu Rumah Tangga","status":1}
+{"_id":{"$oid":"59af5953beaf13218c001a0a"},"kode_variabel":"b4_k5","no_opsi":5,"desc_opsi":"Cucu","status":1}
+{"_id":{"$oid":"59af591fbeaf13218c001a05"},"kode_variabel":"b4_k3","no_opsi":8,"desc_opsi":"Lainnya","status":1}
+{"_id":{"$oid":"59af595fbeaf13218c001a0b"},"kode_variabel":"b4_k5","no_opsi":6,"desc_opsi":"Orang Tua/Mertua","status":1}
+{"_id":{"$oid":"59af596abeaf13218c001a0c"},"kode_variabel":"b4_k5","no_opsi":7,"desc_opsi":"Pembantu Rumah Tangga","status":1}
+{"_id":{"$oid":"59af59b9beaf13218c001a10"},"kode_variabel":"b4_k8","no_opsi":1,"desc_opsi":"Belum kawin","status":1}
+{"_id":{"$oid":"59af59c5beaf13218c001a11"},"kode_variabel":"b4_k8","no_opsi":2,"desc_opsi":"Kawin/nikah","status":1}
+{"_id":{"$oid":"59af59cfbeaf13218c001a12"},"kode_variabel":"b4_k8","no_opsi":3,"desc_opsi":"Cerai hidup","status":1}
+{"_id":{"$oid":"59af59debeaf13218c001a13"},"kode_variabel":"b4_k8","no_opsi":4,"desc_opsi":"Cerai mati","status":1}
+{"_id":{"$oid":"59af59f3beaf13218c001a14"},"kode_variabel":"b4_k9","no_opsi":0,"desc_opsi":"Tidak Ada","status":1}
+{"_id":{"$oid":"59af59fdbeaf13218c001a15"},"kode_variabel":"b4_k9","no_opsi":1,"desc_opsi":"Ya, dapat ditunjukkan","status":1}
+{"_id":{"$oid":"59af59adbeaf13218c001a0f"},"kode_variabel":"b4_k6","no_opsi":2,"desc_opsi":"Perempuan","status":1}
+{"_id":{"$oid":"59af5a10beaf13218c001a16"},"kode_variabel":"b4_k9","no_opsi":2,"desc_opsi":"Ya, tidak dapat ditunjukkan","status":1}
+{"_id":{"$oid":"59af5973beaf13218c001a0d"},"kode_variabel":"b4_k5","no_opsi":8,"desc_opsi":"Lainnya","status":1}
+{"_id":{"$oid":"59af5a2bbeaf13218c001a18"},"kode_variabel":"b5_k1a","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5a23beaf13218c001a17"},"kode_variabel":"b5_k1a","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5a39beaf13218c001a1a"},"kode_variabel":"b5_k1b","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5a33beaf13218c001a19"},"kode_variabel":"b5_k1b","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5a42beaf13218c001a1b"},"kode_variabel":"b5_k1c","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5998beaf13218c001a0e"},"kode_variabel":"b4_k6","no_opsi":1,"desc_opsi":"Laki-laki","status":1}
+{"_id":{"$oid":"59af5a7fbeaf13218c001a1f"},"kode_variabel":"b5_k1e","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5a8cbeaf13218c001a20"},"kode_variabel":"b5_k1e","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5a95beaf13218c001a21"},"kode_variabel":"b5_k1f","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5a9dbeaf13218c001a22"},"kode_variabel":"b5_k1f","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5aa6beaf13218c001a23"},"kode_variabel":"b5_k1g","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5ab1beaf13218c001a24"},"kode_variabel":"b5_k1g","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5a56beaf13218c001a1d"},"kode_variabel":"b5_k1d","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5ababeaf13218c001a25"},"kode_variabel":"b5_k1h","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5ad7beaf13218c001a27"},"kode_variabel":"b5_k1i","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5a49beaf13218c001a1c"},"kode_variabel":"b5_k1c","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5a5ebeaf13218c001a1e"},"kode_variabel":"b5_k1d","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5ac2beaf13218c001a26"},"kode_variabel":"b5_k1h","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5aecbeaf13218c001a29"},"kode_variabel":"b5_k1j","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5af6beaf13218c001a2a"},"kode_variabel":"b5_k1j","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5ae1beaf13218c001a28"},"kode_variabel":"b5_k1i","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5b55beaf13218c001a2e"},"kode_variabel":"b5_k1l","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5b5cbeaf13218c001a2f"},"kode_variabel":"b5_k1m","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5b66beaf13218c001a30"},"kode_variabel":"b5_k1m","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5b75beaf13218c001a31"},"kode_variabel":"b5_k1n","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5b7dbeaf13218c001a32"},"kode_variabel":"b5_k1n","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5b85beaf13218c001a33"},"kode_variabel":"b5_k1o","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5b9cbeaf13218c001a34"},"kode_variabel":"b5_k1o","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5c0bbeaf13218c001a36"},"kode_variabel":"b5_k3a1","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5b4ebeaf13218c001a2d"},"kode_variabel":"b5_k1l","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5b46beaf13218c001a2c"},"kode_variabel":"b5_k1k","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5c13beaf13218c001a37"},"kode_variabel":"b5_k3a1","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5c21beaf13218c001a38"},"kode_variabel":"b5_k3b","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5c42beaf13218c001a3a"},"kode_variabel":"b5_k5a","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5c29beaf13218c001a39"},"kode_variabel":"b5_k3b","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5b39beaf13218c001a2b"},"kode_variabel":"b5_k1k","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5c88beaf13218c001a3c"},"kode_variabel":"b5_k6a","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5c99beaf13218c001a3e"},"kode_variabel":"b5_k6g","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5ca1beaf13218c001a3f"},"kode_variabel":"b5_k6g","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5caabeaf13218c001a40"},"kode_variabel":"b5_k6h","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5cbabeaf13218c001a41"},"kode_variabel":"b5_k6h","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5cccbeaf13218c001a42"},"kode_variabel":"b5_k6i","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5cd3beaf13218c001a43"},"kode_variabel":"b5_k6i","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5c91beaf13218c001a3d"},"kode_variabel":"b5_k6a","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5ce1beaf13218c001a45"},"kode_variabel":"b5_r6b","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5c4dbeaf13218c001a3b"},"kode_variabel":"b5_k5a","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5cedbeaf13218c001a46"},"kode_variabel":"b5_r6c","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5d07beaf13218c001a47"},"kode_variabel":"b5_r6c","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59af5d0fbeaf13218c001a48"},"kode_variabel":"b5_r6d","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5cdabeaf13218c001a44"},"kode_variabel":"b5_r6b","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5d1fbeaf13218c001a4a"},"kode_variabel":"b5_r6e","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59af5d18beaf13218c001a49"},"kode_variabel":"b5_r6d","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59b65ccabeaf13218c001a85"},"kode_variabel":"b4_k11","no_opsi":3,"desc_opsi":"Akta kelahiran, Kartu Pelajar","status":1}
+{"_id":{"$oid":"59b65cf1beaf13218c001a86"},"kode_variabel":"b4_k11","no_opsi":7,"desc_opsi":"Akta kelahiran, Kartu pelajar, KTP","status":1}
+{"_id":{"$oid":"59b65d0ebeaf13218c001a87"},"kode_variabel":"b4_k11","no_opsi":15,"desc_opsi":"Akta kelahiran, Kartu pelajar, KTP, SIM","status":1}
+{"_id":{"$oid":"59b65d30beaf13218c001a88"},"kode_variabel":"b4_k11","no_opsi":5,"desc_opsi":"Akta kelahiran, KTP","status":1}
+{"_id":{"$oid":"59af5d2fbeaf13218c001a4c"},"kode_variabel":"b5_r6f","no_opsi":1,"desc_opsi":"Ya","status":1}
+{"_id":{"$oid":"59b65d7cbeaf13218c001a89"},"kode_variabel":"b4_k11","no_opsi":13,"desc_opsi":"Akta kelahiran, KTP, SIM","status":1}
+{"_id":{"$oid":"59af5d36beaf13218c001a4d"},"kode_variabel":"b5_r6f","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"59b65d98beaf13218c001a8a"},"kode_variabel":"b4_k11","no_opsi":9,"desc_opsi":"Akta kelahiran, SIM","status":1}
+{"_id":{"$oid":"59b65dc8beaf13218c001a8c"},"kode_variabel":"b4_k11","no_opsi":14,"desc_opsi":"Kartu pelajar, KTP, SIM","status":1}
+{"_id":{"$oid":"59b65db0beaf13218c001a8b"},"kode_variabel":"b4_k11","no_opsi":6,"desc_opsi":"Kartu pelajar, KTP","status":1}
+{"_id":{"$oid":"59b65de6beaf13218c001a8d"},"kode_variabel":"b4_k11","no_opsi":12,"desc_opsi":"KTP, SIM","status":1}
+{"_id":{"$oid":"59af5d26beaf13218c001a4b"},"kode_variabel":"b5_r6e","no_opsi":2,"desc_opsi":"Tidak","status":1}
+{"_id":{"$oid":"5be91025835f191c9e091785"},"kode_variabel":"aa","no_opsi":1,"desc_opsi":"a","status":0}
+{"_id":{"$oid":"5be9102f835f191c9d5b2c33"},"kode_variabel":"aa","no_opsi":1,"desc_opsi":"aa","status":0}
+{"_id":{"$oid":"5be93a1a835f191ca00f1e93"},"kode_variabel":"aa","no_opsi":1,"desc_opsi":"a","status":0}
+{"_id":{"$oid":"5be93a34835f191c9e091787"},"kode_variabel":"aa","no_opsi":2,"desc_opsi":"aa","status":0}
+{"_id":{"$oid":"5beb84ee835f191c9d5b2c39"},"kode_variabel":"aa","no_opsi":1,"desc_opsi":"aa","status":0}

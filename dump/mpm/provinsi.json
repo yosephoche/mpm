@@ -1,0 +1,35 @@
+{"_id":{"$oid":"591d0c54868d904c01b2951d"},"id_provinsi":"12","provinsi":"SUMATERA UTARA","id_pulau":"1","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b2951f"},"id_provinsi":"14","provinsi":"RIAU","id_pulau":"1","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b29520"},"id_provinsi":"15","provinsi":"JAMBI","id_pulau":"1","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b29521"},"id_provinsi":"16","provinsi":"SUMATERA SELATAN","id_pulau":"1","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b29523"},"id_provinsi":"18","provinsi":"LAMPUNG","id_pulau":"1","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b29522"},"id_provinsi":"17","provinsi":"BENGKULU","id_pulau":"1","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b29524"},"id_provinsi":"19","provinsi":"KEPULAUAN BANGKA BELITUNG","id_pulau":"1","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b2951e"},"id_provinsi":"13","provinsi":"SUMATERA BARAT","id_pulau":"1","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b2951c"},"id_provinsi":"11","provinsi":"ACEH","id_pulau":"1","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b29528"},"id_provinsi":"33","provinsi":"JAWA TENGAH","id_pulau":"3","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b29527"},"id_provinsi":"32","provinsi":"JAWA BARAT","id_pulau":"3","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b29526"},"id_provinsi":"31","provinsi":"DKI JAKARTA","id_pulau":"3","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b29529"},"id_provinsi":"34","provinsi":"DI YOGYAKARTA","id_pulau":"3","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b2952a"},"id_provinsi":"35","provinsi":"JAWA TIMUR","id_pulau":"3","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b2952b"},"id_provinsi":"36","provinsi":"BANTEN","id_pulau":"3","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b29525"},"id_provinsi":"21","provinsi":"KEPULAUAN RIAU","id_pulau":"1","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b2952f"},"id_provinsi":"61","provinsi":"KALIMANTAN BARAT","id_pulau":"6","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b2952c"},"id_provinsi":"51","provinsi":"BALI","id_pulau":"5","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b2952d"},"id_provinsi":"52","provinsi":"NUSA TENGGARA BARAT","id_pulau":"5","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b2952e"},"id_provinsi":"53","provinsi":"NUSA TENGGARA TIMUR","id_pulau":"5","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b29530"},"id_provinsi":"62","provinsi":"KALIMANTAN TENGAH","id_pulau":"6","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b29531"},"id_provinsi":"63","provinsi":"KALIMANTAN SELATAN","id_pulau":"6","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b29532"},"id_provinsi":"64","provinsi":"KALIMANTAN TIMUR","id_pulau":"6","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b29533"},"id_provinsi":"65","provinsi":"KALIMANTAN UTARA","id_pulau":"6","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b29534"},"id_provinsi":"71","provinsi":"SULAWESI UTARA","id_pulau":"7","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b29536"},"id_provinsi":"73","provinsi":"SULAWESI SELATAN","id_pulau":"7","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b29535"},"id_provinsi":"72","provinsi":"SULAWESI TENGAH","id_pulau":"7","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b29537"},"id_provinsi":"74","provinsi":"SULAWESI TENGGARA","id_pulau":"7","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b29539"},"id_provinsi":"76","provinsi":"SULAWESI BARAT","id_pulau":"7","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b29538"},"id_provinsi":"75","provinsi":"GORONTALO","id_pulau":"7","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b2953a"},"id_provinsi":"79","provinsi":"Provinsi Sulawesi Barat","id_pulau":null,"status":"0"}
+{"_id":{"$oid":"591d0c54868d904c01b2953b"},"id_provinsi":"81","provinsi":"MALUKU","id_pulau":"8","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b2953d"},"id_provinsi":"91","provinsi":"PAPUA BARAT","id_pulau":"9","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b2953e"},"id_provinsi":"94","provinsi":"PAPUA","id_pulau":"9","status":true}
+{"_id":{"$oid":"591d0c54868d904c01b2953c"},"id_provinsi":"82","provinsi":"MALUKU UTARA","id_pulau":"8","status":true}

@@ -1,0 +1,3 @@
+{"_id":{"$oid":"592b79c157e60e675561f0c7"},"kode":2,"name":"Verifikator","status":1}
+{"_id":{"$oid":"592b799b57e60e675561f0c3"},"kode":1,"name":"Admin","status":1}
+{"_id":{"$oid":"592b795157e60e675561f0bf"},"kode":0,"name":"Superadmin","status":1}

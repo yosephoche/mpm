@@ -1,0 +1,516 @@
+{"_id":{"$oid":"591d0c6d868d904c01b29554"},"id_kota":"1102","id_provinsi":"11","kota":"KABUPATEN ACEH SINGKIL","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29557"},"id_kota":"1105","id_provinsi":"11","kota":"KABUPATEN ACEH TIMUR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29556"},"id_kota":"1104","id_provinsi":"11","kota":"KABUPATEN ACEH TENGGARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29555"},"id_kota":"1103","id_provinsi":"11","kota":"KABUPATEN ACEH SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2955a"},"id_kota":"1108","id_provinsi":"11","kota":"KABUPATEN ACEH BESAR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29558"},"id_kota":"1106","id_provinsi":"11","kota":"KABUPATEN ACEH TENGAH","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2955c"},"id_kota":"1110","id_provinsi":"11","kota":"KABUPATEN BIREUEN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2955b"},"id_kota":"1109","id_provinsi":"11","kota":"KABUPATEN PIDIE","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29559"},"id_kota":"1107","id_provinsi":"11","kota":"KABUPATEN ACEH BARAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2955d"},"id_kota":"1111","id_provinsi":"11","kota":"KABUPATEN ACEH UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2955e"},"id_kota":"1112","id_provinsi":"11","kota":"KABUPATEN ACEH BARAT DAYA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2955f"},"id_kota":"1113","id_provinsi":"11","kota":"KABUPATEN GAYO LUES","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29561"},"id_kota":"1115","id_provinsi":"11","kota":"KABUPATEN NAGAN RAYA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29562"},"id_kota":"1116","id_provinsi":"11","kota":"KABUPATEN ACEH JAYA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29560"},"id_kota":"1114","id_provinsi":"11","kota":"KABUPATEN ACEH TAMIANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29563"},"id_kota":"1117","id_provinsi":"11","kota":"KABUPATEN BENER MERIAH","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29564"},"id_kota":"1118","id_provinsi":"11","kota":"KABUPATEN PIDIE JAYA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29565"},"id_kota":"1122","id_provinsi":"11","kota":"aceh utara","status":"0"}
+{"_id":{"$oid":"591d0c6d868d904c01b29567"},"id_kota":"1172","id_provinsi":"11","kota":"KOTA SABANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29566"},"id_kota":"1171","id_provinsi":"11","kota":"KOTA BANDA ACEH","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29553"},"id_kota":"1101","id_provinsi":"11","kota":"KABUPATEN SIMEULUE","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2956b"},"id_kota":"1201","id_provinsi":"12","kota":"KABUPATEN NIAS","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2956c"},"id_kota":"1202","id_provinsi":"12","kota":"KABUPATEN MANDAILING NATAL","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2956d"},"id_kota":"1203","id_provinsi":"12","kota":"KABUPATEN TAPANULI SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2956e"},"id_kota":"1204","id_provinsi":"12","kota":"KABUPATEN TAPANULI TENGAH","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2956f"},"id_kota":"1205","id_provinsi":"12","kota":"KABUPATEN TAPANULI UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29570"},"id_kota":"1206","id_provinsi":"12","kota":"KABUPATEN TOBA SAMOSIR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29571"},"id_kota":"1207","id_provinsi":"12","kota":"KABUPATEN LABUHAN BATU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29572"},"id_kota":"1208","id_provinsi":"12","kota":"KABUPATEN ASAHAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29573"},"id_kota":"1209","id_provinsi":"12","kota":"KABUPATEN SIMALUNGUN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29574"},"id_kota":"1210","id_provinsi":"12","kota":"KABUPATEN DAIRI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29575"},"id_kota":"1211","id_provinsi":"12","kota":"KABUPATEN KARO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29569"},"id_kota":"1174","id_provinsi":"11","kota":"KOTA LHOKSEUMAWE","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29576"},"id_kota":"1212","id_provinsi":"12","kota":"KABUPATEN DELI SERDANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29578"},"id_kota":"1214","id_provinsi":"12","kota":"KABUPATEN NIAS SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29577"},"id_kota":"1213","id_provinsi":"12","kota":"KABUPATEN LANGKAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29568"},"id_kota":"1173","id_provinsi":"11","kota":"KOTA LANGSA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29579"},"id_kota":"1215","id_provinsi":"12","kota":"KABUPATEN HUMBANG HASUNDUTAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2957a"},"id_kota":"1216","id_provinsi":"12","kota":"KABUPATEN PAKPAK BHARAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2956a"},"id_kota":"1175","id_provinsi":"11","kota":"KOTA SUBULUSSALAM","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2957b"},"id_kota":"1217","id_provinsi":"12","kota":"KABUPATEN SAMOSIR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2957c"},"id_kota":"1218","id_provinsi":"12","kota":"KABUPATEN SERDANG BEDAGAI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2957e"},"id_kota":"1220","id_provinsi":"12","kota":"KABUPATEN PADANG LAWAS UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2957f"},"id_kota":"1221","id_provinsi":"12","kota":"KABUPATEN PADANG LAWAS","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2957d"},"id_kota":"1219","id_provinsi":"12","kota":"KABUPATEN BATU BARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29580"},"id_kota":"1222","id_provinsi":"12","kota":"KABUPATEN LABUHAN BATU SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29581"},"id_kota":"1223","id_provinsi":"12","kota":"KABUPATEN LABUHAN BATU UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29585"},"id_kota":"1271","id_provinsi":"12","kota":"KOTA SIBOLGA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29586"},"id_kota":"1272","id_provinsi":"12","kota":"KOTA TANJUNG BALAI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29587"},"id_kota":"1273","id_provinsi":"12","kota":"KOTA PEMATANG SIANTAR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29588"},"id_kota":"1274","id_provinsi":"12","kota":"KOTA TEBING TINGGI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29584"},"id_kota":"1232","id_provinsi":"12","kota":"asdfasdasd","status":"0"}
+{"_id":{"$oid":"591d0c6d868d904c01b29589"},"id_kota":"1275","id_provinsi":"12","kota":"KOTA MEDAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2958b"},"id_kota":"1277","id_provinsi":"12","kota":"KOTA PADANGSIDIMPUAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2958a"},"id_kota":"1276","id_provinsi":"12","kota":"KOTA BINJAI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2958c"},"id_kota":"1278","id_provinsi":"12","kota":"KOTA GUNUNGSITOLI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2958d"},"id_kota":"1301","id_provinsi":"13","kota":"KABUPATEN KEPULAUAN MENTAWAI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2958e"},"id_kota":"1302","id_provinsi":"13","kota":"KABUPATEN PESISIR SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2958f"},"id_kota":"1303","id_provinsi":"13","kota":"KABUPATEN SOLOK","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29590"},"id_kota":"1304","id_provinsi":"13","kota":"KABUPATEN SIJUNJUNG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29582"},"id_kota":"1224","id_provinsi":"12","kota":"KABUPATEN NIAS UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29583"},"id_kota":"1225","id_provinsi":"12","kota":"KABUPATEN NIAS BARAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29593"},"id_kota":"1307","id_provinsi":"13","kota":"KABUPATEN AGAM","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29594"},"id_kota":"1308","id_provinsi":"13","kota":"KABUPATEN LIMA PULUH KOTA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29591"},"id_kota":"1305","id_provinsi":"13","kota":"KABUPATEN TANAH DATAR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29595"},"id_kota":"1309","id_provinsi":"13","kota":"KABUPATEN PASAMAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29598"},"id_kota":"1312","id_provinsi":"13","kota":"KABUPATEN PASAMAN BARAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29592"},"id_kota":"1306","id_provinsi":"13","kota":"KABUPATEN PADANG PARIAMAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29596"},"id_kota":"1310","id_provinsi":"13","kota":"KABUPATEN SOLOK SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29597"},"id_kota":"1311","id_provinsi":"13","kota":"KABUPATEN DHARMASRAYA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2959c"},"id_kota":"1374","id_provinsi":"13","kota":"KOTA PADANG PANJANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2959d"},"id_kota":"1375","id_provinsi":"13","kota":"KOTA BUKITTINGGI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2959e"},"id_kota":"1376","id_provinsi":"13","kota":"KOTA PAYAKUMBUH","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2959f"},"id_kota":"1377","id_provinsi":"13","kota":"KOTA PARIAMAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295a0"},"id_kota":"1401","id_provinsi":"14","kota":"KABUPATEN KUANTAN SINGINGI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2959b"},"id_kota":"1373","id_provinsi":"13","kota":"KOTA SAWAH LUNTO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2959a"},"id_kota":"1372","id_provinsi":"13","kota":"KOTA SOLOK","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295a1"},"id_kota":"1402","id_provinsi":"14","kota":"KABUPATEN INDRAGIRI HULU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29599"},"id_kota":"1371","id_provinsi":"13","kota":"KOTA PADANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295a2"},"id_kota":"1403","id_provinsi":"14","kota":"KABUPATEN INDRAGIRI HILIR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295a3"},"id_kota":"1404","id_provinsi":"14","kota":"KABUPATEN PELALAWAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295a6"},"id_kota":"1407","id_provinsi":"14","kota":"KABUPATEN ROKAN HULU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295a5"},"id_kota":"1406","id_provinsi":"14","kota":"KABUPATEN KAMPAR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295a7"},"id_kota":"1408","id_provinsi":"14","kota":"KABUPATEN BENGKALIS","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295a8"},"id_kota":"1409","id_provinsi":"14","kota":"KABUPATEN ROKAN HILIR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295a9"},"id_kota":"1410","id_provinsi":"14","kota":"KABUPATEN KEPULAUAN MERANTI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295aa"},"id_kota":"1471","id_provinsi":"14","kota":"KOTA PEKANBARU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295a4"},"id_kota":"1405","id_provinsi":"14","kota":"KABUPATEN S I A K","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295ae"},"id_kota":"1503","id_provinsi":"15","kota":"KABUPATEN SAROLANGUN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295ad"},"id_kota":"1502","id_provinsi":"15","kota":"KABUPATEN MERANGIN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295af"},"id_kota":"1504","id_provinsi":"15","kota":"KABUPATEN BATANG HARI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295b0"},"id_kota":"1505","id_provinsi":"15","kota":"KABUPATEN MUARO JAMBI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295b1"},"id_kota":"1506","id_provinsi":"15","kota":"KABUPATEN TANJUNG JABUNG TIMUR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295ab"},"id_kota":"1473","id_provinsi":"14","kota":"KOTA D U M A I","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295b2"},"id_kota":"1507","id_provinsi":"15","kota":"KABUPATEN TANJUNG JABUNG BARAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295b3"},"id_kota":"1508","id_provinsi":"15","kota":"KABUPATEN TEBO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295ac"},"id_kota":"1501","id_provinsi":"15","kota":"KABUPATEN KERINCI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295b4"},"id_kota":"1509","id_provinsi":"15","kota":"KABUPATEN BUNGO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295b5"},"id_kota":"1571","id_provinsi":"15","kota":"KOTA JAMBI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295b9"},"id_kota":"1603","id_provinsi":"16","kota":"KABUPATEN MUARA ENIM","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295b8"},"id_kota":"1602","id_provinsi":"16","kota":"KABUPATEN OGAN KOMERING ILIR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295bb"},"id_kota":"1605","id_provinsi":"16","kota":"KABUPATEN MUSI RAWAS","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295ba"},"id_kota":"1604","id_provinsi":"16","kota":"KABUPATEN LAHAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295b6"},"id_kota":"1572","id_provinsi":"15","kota":"KOTA SUNGAI PENUH","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295bd"},"id_kota":"1607","id_provinsi":"16","kota":"KABUPATEN BANYU ASIN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295bc"},"id_kota":"1606","id_provinsi":"16","kota":"KABUPATEN MUSI BANYUASIN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295be"},"id_kota":"1608","id_provinsi":"16","kota":"KABUPATEN OGAN KOMERING ULU SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295b7"},"id_kota":"1601","id_provinsi":"16","kota":"KABUPATEN OGAN KOMERING ULU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295c1"},"id_kota":"1611","id_provinsi":"16","kota":"KABUPATEN EMPAT LAWANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295c2"},"id_kota":"1612","id_provinsi":"16","kota":"KABUPATEN PENUKAL ABAB LEMATANG ILIR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295c3"},"id_kota":"1613","id_provinsi":"16","kota":"KABUPATEN MUSI RAWAS UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295c4"},"id_kota":"1671","id_provinsi":"16","kota":"KOTA PALEMBANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295c5"},"id_kota":"1672","id_provinsi":"16","kota":"KOTA PRABUMULIH","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295bf"},"id_kota":"1609","id_provinsi":"16","kota":"KABUPATEN OGAN KOMERING ULU TIMUR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295c6"},"id_kota":"1673","id_provinsi":"16","kota":"KOTA PAGAR ALAM","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295c0"},"id_kota":"1610","id_provinsi":"16","kota":"KABUPATEN OGAN ILIR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295c7"},"id_kota":"1674","id_provinsi":"16","kota":"KOTA LUBUKLINGGAU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295ca"},"id_kota":"1703","id_provinsi":"17","kota":"KABUPATEN BENGKULU UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295cb"},"id_kota":"1704","id_provinsi":"17","kota":"KABUPATEN KAUR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295c8"},"id_kota":"1701","id_provinsi":"17","kota":"KABUPATEN BENGKULU SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295cc"},"id_kota":"1705","id_provinsi":"17","kota":"KABUPATEN SELUMA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295cd"},"id_kota":"1706","id_provinsi":"17","kota":"KABUPATEN MUKOMUKO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295ce"},"id_kota":"1707","id_provinsi":"17","kota":"KABUPATEN LEBONG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295d0"},"id_kota":"1709","id_provinsi":"17","kota":"KABUPATEN BENGKULU TENGAH","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295cf"},"id_kota":"1708","id_provinsi":"17","kota":"KABUPATEN KEPAHIANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295c9"},"id_kota":"1702","id_provinsi":"17","kota":"KABUPATEN REJANG LEBONG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295d2"},"id_kota":"1801","id_provinsi":"18","kota":"KABUPATEN LAMPUNG BARAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295d5"},"id_kota":"1804","id_provinsi":"18","kota":"KABUPATEN LAMPUNG TIMUR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295d6"},"id_kota":"1805","id_provinsi":"18","kota":"KABUPATEN LAMPUNG TENGAH","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295d3"},"id_kota":"1802","id_provinsi":"18","kota":"KABUPATEN TANGGAMUS","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295d7"},"id_kota":"1806","id_provinsi":"18","kota":"KABUPATEN LAMPUNG UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295d8"},"id_kota":"1807","id_provinsi":"18","kota":"KABUPATEN WAY KANAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295d9"},"id_kota":"1808","id_provinsi":"18","kota":"KABUPATEN TULANGBAWANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295d1"},"id_kota":"1771","id_provinsi":"17","kota":"KOTA BENGKULU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295d4"},"id_kota":"1803","id_provinsi":"18","kota":"KABUPATEN LAMPUNG SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295dd"},"id_kota":"1812","id_provinsi":"18","kota":"KABUPATEN TULANG BAWANG BARAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295dc"},"id_kota":"1811","id_provinsi":"18","kota":"KABUPATEN MESUJI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295da"},"id_kota":"1809","id_provinsi":"18","kota":"KABUPATEN PESAWARAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295de"},"id_kota":"1813","id_provinsi":"18","kota":"KABUPATEN PESISIR BARAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295df"},"id_kota":"1871","id_provinsi":"18","kota":"KOTA BANDAR LAMPUNG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295e0"},"id_kota":"1872","id_provinsi":"18","kota":"KOTA METRO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295e2"},"id_kota":"1902","id_provinsi":"19","kota":"KABUPATEN BELITUNG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295db"},"id_kota":"1810","id_provinsi":"18","kota":"KABUPATEN PRINGSEWU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295e1"},"id_kota":"1901","id_provinsi":"19","kota":"KABUPATEN BANGKA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295e6"},"id_kota":"1906","id_provinsi":"19","kota":"KABUPATEN BELITUNG TIMUR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295e7"},"id_kota":"1971","id_provinsi":"19","kota":"KOTA PANGKAL PINANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295e4"},"id_kota":"1904","id_provinsi":"19","kota":"KABUPATEN BANGKA TENGAH","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295e5"},"id_kota":"1905","id_provinsi":"19","kota":"KABUPATEN BANGKA SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295e8"},"id_kota":"2101","id_provinsi":"21","kota":"KABUPATEN KARIMUN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295e9"},"id_kota":"2102","id_provinsi":"21","kota":"KABUPATEN BINTAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295eb"},"id_kota":"2104","id_provinsi":"21","kota":"KABUPATEN LINGGA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295ea"},"id_kota":"2103","id_provinsi":"21","kota":"KABUPATEN NATUNA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295e3"},"id_kota":"1903","id_provinsi":"19","kota":"KABUPATEN BANGKA BARAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295ef"},"id_kota":"3101","id_provinsi":"31","kota":"KABUPATEN KEPULAUAN SERIBU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295f0"},"id_kota":"3171","id_provinsi":"31","kota":"KOTA JAKARTA SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295ed"},"id_kota":"2171","id_provinsi":"21","kota":"KOTA B A T A M","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295f1"},"id_kota":"3172","id_provinsi":"31","kota":"KOTA JAKARTA TIMUR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295f2"},"id_kota":"3173","id_provinsi":"31","kota":"KOTA JAKARTA PUSAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295f3"},"id_kota":"3174","id_provinsi":"31","kota":"KOTA JAKARTA BARAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295ee"},"id_kota":"2172","id_provinsi":"21","kota":"KOTA TANJUNG PINANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295ec"},"id_kota":"2105","id_provinsi":"21","kota":"KABUPATEN KEPULAUAN ANAMBAS","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295f4"},"id_kota":"3175","id_provinsi":"31","kota":"KOTA JAKARTA UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295f5"},"id_kota":"3201","id_provinsi":"32","kota":"KABUPATEN BOGOR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295f7"},"id_kota":"3203","id_provinsi":"32","kota":"KABUPATEN CIANJUR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295f6"},"id_kota":"3202","id_provinsi":"32","kota":"KABUPATEN SUKABUMI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295f9"},"id_kota":"3205","id_provinsi":"32","kota":"KABUPATEN GARUT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295fa"},"id_kota":"3206","id_provinsi":"32","kota":"KABUPATEN TASIKMALAYA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295fb"},"id_kota":"3207","id_provinsi":"32","kota":"KABUPATEN CIAMIS","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295fc"},"id_kota":"3208","id_provinsi":"32","kota":"KABUPATEN KUNINGAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295f8"},"id_kota":"3204","id_provinsi":"32","kota":"KABUPATEN BANDUNG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295fd"},"id_kota":"3209","id_provinsi":"32","kota":"KABUPATEN CIREBON","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295fe"},"id_kota":"3210","id_provinsi":"32","kota":"KABUPATEN MAJALENGKA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b295ff"},"id_kota":"3211","id_provinsi":"32","kota":"KABUPATEN SUMEDANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29602"},"id_kota":"3214","id_provinsi":"32","kota":"KABUPATEN PURWAKARTA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29603"},"id_kota":"3215","id_provinsi":"32","kota":"KABUPATEN KARAWANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29604"},"id_kota":"3216","id_provinsi":"32","kota":"KABUPATEN BEKASI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29605"},"id_kota":"3217","id_provinsi":"32","kota":"KABUPATEN BANDUNG BARAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29606"},"id_kota":"3218","id_provinsi":"32","kota":"KABUPATEN PANGANDARAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29601"},"id_kota":"3213","id_provinsi":"32","kota":"KABUPATEN SUBANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29607"},"id_kota":"3271","id_provinsi":"32","kota":"KOTA BOGOR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29600"},"id_kota":"3212","id_provinsi":"32","kota":"KABUPATEN INDRAMAYU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2960a"},"id_kota":"3274","id_provinsi":"32","kota":"KOTA CIREBON","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2960b"},"id_kota":"3275","id_provinsi":"32","kota":"KOTA BEKASI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2960c"},"id_kota":"3276","id_provinsi":"32","kota":"KOTA DEPOK","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2960e"},"id_kota":"3278","id_provinsi":"32","kota":"KOTA TASIKMALAYA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2960d"},"id_kota":"3277","id_provinsi":"32","kota":"KOTA CIMAHI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2960f"},"id_kota":"3279","id_provinsi":"32","kota":"KOTA BANJAR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29608"},"id_kota":"3272","id_provinsi":"32","kota":"KOTA SUKABUMI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29610"},"id_kota":"3301","id_provinsi":"33","kota":"KABUPATEN CILACAP","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29609"},"id_kota":"3273","id_provinsi":"32","kota":"KOTA BANDUNG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29613"},"id_kota":"3304","id_provinsi":"33","kota":"KABUPATEN BANJARNEGARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29611"},"id_kota":"3302","id_provinsi":"33","kota":"KABUPATEN BANYUMAS","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29612"},"id_kota":"3303","id_provinsi":"33","kota":"KABUPATEN PURBALINGGA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29614"},"id_kota":"3305","id_provinsi":"33","kota":"KABUPATEN KEBUMEN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29615"},"id_kota":"3306","id_provinsi":"33","kota":"KABUPATEN PURWOREJO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29616"},"id_kota":"3307","id_provinsi":"33","kota":"KABUPATEN WONOSOBO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29617"},"id_kota":"3308","id_provinsi":"33","kota":"KABUPATEN MAGELANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29618"},"id_kota":"3309","id_provinsi":"33","kota":"KABUPATEN BOYOLALI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29619"},"id_kota":"3310","id_provinsi":"33","kota":"KABUPATEN KLATEN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2961a"},"id_kota":"3311","id_provinsi":"33","kota":"KABUPATEN SUKOHARJO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2961e"},"id_kota":"3315","id_provinsi":"33","kota":"KABUPATEN GROBOGAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2961f"},"id_kota":"3316","id_provinsi":"33","kota":"KABUPATEN BLORA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2961c"},"id_kota":"3313","id_provinsi":"33","kota":"KABUPATEN KARANGANYAR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2961b"},"id_kota":"3312","id_provinsi":"33","kota":"KABUPATEN WONOGIRI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2961d"},"id_kota":"3314","id_provinsi":"33","kota":"KABUPATEN SRAGEN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29621"},"id_kota":"3318","id_provinsi":"33","kota":"KABUPATEN PATI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29622"},"id_kota":"3319","id_provinsi":"33","kota":"KABUPATEN KUDUS","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29623"},"id_kota":"3320","id_provinsi":"33","kota":"KABUPATEN JEPARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29625"},"id_kota":"3322","id_provinsi":"33","kota":"KABUPATEN SEMARANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29626"},"id_kota":"3323","id_provinsi":"33","kota":"KABUPATEN TEMANGGUNG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29627"},"id_kota":"3324","id_provinsi":"33","kota":"KABUPATEN KENDAL","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29628"},"id_kota":"3325","id_provinsi":"33","kota":"KABUPATEN BATANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29624"},"id_kota":"3321","id_provinsi":"33","kota":"KABUPATEN DEMAK","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2962a"},"id_kota":"3327","id_provinsi":"33","kota":"KABUPATEN PEMALANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2962b"},"id_kota":"3328","id_provinsi":"33","kota":"KABUPATEN TEGAL","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29629"},"id_kota":"3326","id_provinsi":"33","kota":"KABUPATEN PEKALONGAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2962c"},"id_kota":"3329","id_provinsi":"33","kota":"KABUPATEN BREBES","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2962e"},"id_kota":"3372","id_provinsi":"33","kota":"KOTA SURAKARTA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2962f"},"id_kota":"3373","id_provinsi":"33","kota":"KOTA SALATIGA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29630"},"id_kota":"3374","id_provinsi":"33","kota":"KOTA SEMARANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29631"},"id_kota":"3375","id_provinsi":"33","kota":"KOTA PEKALONGAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29632"},"id_kota":"3376","id_provinsi":"33","kota":"KOTA TEGAL","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29633"},"id_kota":"3401","id_provinsi":"34","kota":"KABUPATEN KULON PROGO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2962d"},"id_kota":"3371","id_provinsi":"33","kota":"KOTA MAGELANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29635"},"id_kota":"3403","id_provinsi":"34","kota":"KABUPATEN GUNUNG KIDUL","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29636"},"id_kota":"3404","id_provinsi":"34","kota":"KABUPATEN SLEMAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29637"},"id_kota":"3471","id_provinsi":"34","kota":"KOTA YOGYAKARTA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29638"},"id_kota":"3501","id_provinsi":"35","kota":"KABUPATEN PACITAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29639"},"id_kota":"3502","id_provinsi":"35","kota":"KABUPATEN PONOROGO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2963a"},"id_kota":"3503","id_provinsi":"35","kota":"KABUPATEN TRENGGALEK","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2963b"},"id_kota":"3504","id_provinsi":"35","kota":"KABUPATEN TULUNGAGUNG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29634"},"id_kota":"3402","id_provinsi":"34","kota":"KABUPATEN BANTUL","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2963c"},"id_kota":"3505","id_provinsi":"35","kota":"KABUPATEN BLITAR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2963e"},"id_kota":"3507","id_provinsi":"35","kota":"KABUPATEN MALANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2963d"},"id_kota":"3506","id_provinsi":"35","kota":"KABUPATEN KEDIRI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2963f"},"id_kota":"3508","id_provinsi":"35","kota":"KABUPATEN LUMAJANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29640"},"id_kota":"3509","id_provinsi":"35","kota":"KABUPATEN JEMBER","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29641"},"id_kota":"3510","id_provinsi":"35","kota":"KABUPATEN BANYUWANGI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29643"},"id_kota":"3512","id_provinsi":"35","kota":"KABUPATEN SITUBONDO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29642"},"id_kota":"3511","id_provinsi":"35","kota":"KABUPATEN BONDOWOSO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29646"},"id_kota":"3515","id_provinsi":"35","kota":"KABUPATEN SIDOARJO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29647"},"id_kota":"3516","id_provinsi":"35","kota":"KABUPATEN MOJOKERTO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29648"},"id_kota":"3517","id_provinsi":"35","kota":"KABUPATEN JOMBANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29649"},"id_kota":"3518","id_provinsi":"35","kota":"KABUPATEN NGANJUK","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2964a"},"id_kota":"3519","id_provinsi":"35","kota":"KABUPATEN MADIUN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29645"},"id_kota":"3514","id_provinsi":"35","kota":"KABUPATEN PASURUAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2964b"},"id_kota":"3520","id_provinsi":"35","kota":"KABUPATEN MAGETAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2964c"},"id_kota":"3521","id_provinsi":"35","kota":"KABUPATEN NGAWI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2964e"},"id_kota":"3523","id_provinsi":"35","kota":"KABUPATEN TUBAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2964d"},"id_kota":"3522","id_provinsi":"35","kota":"KABUPATEN BOJONEGORO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2964f"},"id_kota":"3524","id_provinsi":"35","kota":"KABUPATEN LAMONGAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29651"},"id_kota":"3526","id_provinsi":"35","kota":"KABUPATEN BANGKALAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29650"},"id_kota":"3525","id_provinsi":"35","kota":"KABUPATEN GRESIK","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29652"},"id_kota":"3527","id_provinsi":"35","kota":"KABUPATEN SAMPANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29654"},"id_kota":"3529","id_provinsi":"35","kota":"KABUPATEN SUMENEP","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29655"},"id_kota":"3571","id_provinsi":"35","kota":"KOTA KEDIRI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29644"},"id_kota":"3513","id_provinsi":"35","kota":"KABUPATEN PROBOLINGGO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29656"},"id_kota":"3572","id_provinsi":"35","kota":"KOTA BLITAR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29653"},"id_kota":"3528","id_provinsi":"35","kota":"KABUPATEN PAMEKASAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29658"},"id_kota":"3574","id_provinsi":"35","kota":"KOTA PROBOLINGGO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29657"},"id_kota":"3573","id_provinsi":"35","kota":"KOTA MALANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2965a"},"id_kota":"3576","id_provinsi":"35","kota":"KOTA MOJOKERTO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2965b"},"id_kota":"3577","id_provinsi":"35","kota":"KOTA MADIUN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2965c"},"id_kota":"3578","id_provinsi":"35","kota":"KOTA SURABAYA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2965d"},"id_kota":"3579","id_provinsi":"35","kota":"KOTA BATU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2965e"},"id_kota":"3601","id_provinsi":"36","kota":"KABUPATEN PANDEGLANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2965f"},"id_kota":"3602","id_provinsi":"36","kota":"KABUPATEN LEBAK","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29660"},"id_kota":"3603","id_provinsi":"36","kota":"KABUPATEN TANGERANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29661"},"id_kota":"3604","id_provinsi":"36","kota":"KABUPATEN SERANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29662"},"id_kota":"3671","id_provinsi":"36","kota":"KOTA TANGERANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29664"},"id_kota":"3673","id_provinsi":"36","kota":"KOTA SERANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29663"},"id_kota":"3672","id_provinsi":"36","kota":"KOTA CILEGON","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29665"},"id_kota":"3674","id_provinsi":"36","kota":"KOTA TANGERANG SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29667"},"id_kota":"5102","id_provinsi":"51","kota":"KABUPATEN TABANAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29659"},"id_kota":"3575","id_provinsi":"35","kota":"KOTA PASURUAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29668"},"id_kota":"5103","id_provinsi":"51","kota":"KABUPATEN BADUNG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29666"},"id_kota":"5101","id_provinsi":"51","kota":"KABUPATEN JEMBRANA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29669"},"id_kota":"5104","id_provinsi":"51","kota":"KABUPATEN GIANYAR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2966a"},"id_kota":"5105","id_provinsi":"51","kota":"KABUPATEN KLUNGKUNG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2966b"},"id_kota":"5106","id_provinsi":"51","kota":"KABUPATEN BANGLI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2966d"},"id_kota":"5108","id_provinsi":"51","kota":"KABUPATEN BULELENG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2966c"},"id_kota":"5107","id_provinsi":"51","kota":"KABUPATEN KARANG ASEM","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2966e"},"id_kota":"5171","id_provinsi":"51","kota":"KOTA DENPASAR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2966f"},"id_kota":"5201","id_provinsi":"52","kota":"KABUPATEN LOMBOK BARAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29671"},"id_kota":"5203","id_provinsi":"52","kota":"KABUPATEN LOMBOK TIMUR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29672"},"id_kota":"5204","id_provinsi":"52","kota":"KABUPATEN SUMBAWA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29673"},"id_kota":"5205","id_provinsi":"52","kota":"KABUPATEN DOMPU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29674"},"id_kota":"5206","id_provinsi":"52","kota":"KABUPATEN BIMA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29670"},"id_kota":"5202","id_provinsi":"52","kota":"KABUPATEN LOMBOK TENGAH","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29675"},"id_kota":"5207","id_provinsi":"52","kota":"KABUPATEN SUMBAWA BARAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29678"},"id_kota":"5272","id_provinsi":"52","kota":"KOTA BIMA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29676"},"id_kota":"5208","id_provinsi":"52","kota":"KABUPATEN LOMBOK UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29679"},"id_kota":"5301","id_provinsi":"53","kota":"KABUPATEN SUMBA BARAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2967a"},"id_kota":"5302","id_provinsi":"53","kota":"KABUPATEN SUMBA TIMUR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2967b"},"id_kota":"5303","id_provinsi":"53","kota":"KABUPATEN KUPANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2967c"},"id_kota":"5304","id_provinsi":"53","kota":"KABUPATEN TIMOR TENGAH SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2967d"},"id_kota":"5305","id_provinsi":"53","kota":"KABUPATEN TIMOR TENGAH UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29677"},"id_kota":"5271","id_provinsi":"52","kota":"KOTA MATARAM","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2967f"},"id_kota":"5307","id_provinsi":"53","kota":"KABUPATEN ALOR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29680"},"id_kota":"5308","id_provinsi":"53","kota":"KABUPATEN LEMBATA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29681"},"id_kota":"5309","id_provinsi":"53","kota":"KABUPATEN FLORES TIMUR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29682"},"id_kota":"5310","id_provinsi":"53","kota":"KABUPATEN SIKKA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29683"},"id_kota":"5311","id_provinsi":"53","kota":"KABUPATEN ENDE","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29684"},"id_kota":"5312","id_provinsi":"53","kota":"KABUPATEN NGADA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29686"},"id_kota":"5314","id_provinsi":"53","kota":"KABUPATEN ROTE NDAO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29685"},"id_kota":"5313","id_provinsi":"53","kota":"KABUPATEN MANGGARAI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29687"},"id_kota":"5315","id_provinsi":"53","kota":"KABUPATEN MANGGARAI BARAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29688"},"id_kota":"5316","id_provinsi":"53","kota":"KABUPATEN SUMBA TENGAH","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29689"},"id_kota":"5317","id_provinsi":"53","kota":"KABUPATEN SUMBA BARAT DAYA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2968a"},"id_kota":"5318","id_provinsi":"53","kota":"KABUPATEN NAGEKEO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2968c"},"id_kota":"5320","id_provinsi":"53","kota":"KABUPATEN SABU RAIJUA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2968b"},"id_kota":"5319","id_provinsi":"53","kota":"KABUPATEN MANGGARAI TIMUR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2968d"},"id_kota":"5321","id_provinsi":"53","kota":"KABUPATEN MALAKA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2968f"},"id_kota":"6101","id_provinsi":"61","kota":"KABUPATEN SAMBAS","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29690"},"id_kota":"6102","id_provinsi":"61","kota":"KABUPATEN BENGKAYANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29691"},"id_kota":"6103","id_provinsi":"61","kota":"KABUPATEN LANDAK","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2968e"},"id_kota":"5371","id_provinsi":"53","kota":"KOTA KUPANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29692"},"id_kota":"6104","id_provinsi":"61","kota":"KABUPATEN MEMPAWAH","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29693"},"id_kota":"6105","id_provinsi":"61","kota":"KABUPATEN SANGGAU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29694"},"id_kota":"6106","id_provinsi":"61","kota":"KABUPATEN KETAPANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29696"},"id_kota":"6108","id_provinsi":"61","kota":"KABUPATEN KAPUAS HULU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29697"},"id_kota":"6109","id_provinsi":"61","kota":"KABUPATEN SEKADAU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2967e"},"id_kota":"5306","id_provinsi":"53","kota":"KABUPATEN BELU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29698"},"id_kota":"6110","id_provinsi":"61","kota":"KABUPATEN MELAWI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29695"},"id_kota":"6107","id_provinsi":"61","kota":"KABUPATEN SINTANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29699"},"id_kota":"6111","id_provinsi":"61","kota":"KABUPATEN KAYONG UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2969a"},"id_kota":"6112","id_provinsi":"61","kota":"KABUPATEN KUBU RAYA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2969b"},"id_kota":"6171","id_provinsi":"61","kota":"KOTA PONTIANAK","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2969e"},"id_kota":"6202","id_provinsi":"62","kota":"KABUPATEN KOTAWARINGIN TIMUR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2969c"},"id_kota":"6172","id_provinsi":"61","kota":"KOTA SINGKAWANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2969f"},"id_kota":"6203","id_provinsi":"62","kota":"KABUPATEN KAPUAS","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296a0"},"id_kota":"6204","id_provinsi":"62","kota":"KABUPATEN BARITO SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296a1"},"id_kota":"6205","id_provinsi":"62","kota":"KABUPATEN BARITO UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296a2"},"id_kota":"6206","id_provinsi":"62","kota":"KABUPATEN SUKAMARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296a3"},"id_kota":"6207","id_provinsi":"62","kota":"KABUPATEN LAMANDAU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2969d"},"id_kota":"6201","id_provinsi":"62","kota":"KABUPATEN KOTAWARINGIN BARAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296a4"},"id_kota":"6208","id_provinsi":"62","kota":"KABUPATEN SERUYAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296a6"},"id_kota":"6210","id_provinsi":"62","kota":"KABUPATEN PULANG PISAU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296a7"},"id_kota":"6211","id_provinsi":"62","kota":"KABUPATEN GUNUNG MAS","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296a8"},"id_kota":"6212","id_provinsi":"62","kota":"KABUPATEN BARITO TIMUR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296a9"},"id_kota":"6213","id_provinsi":"62","kota":"KABUPATEN MURUNG RAYA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296aa"},"id_kota":"6271","id_provinsi":"62","kota":"KOTA PALANGKA RAYA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296a5"},"id_kota":"6209","id_provinsi":"62","kota":"KABUPATEN KATINGAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296ab"},"id_kota":"6301","id_provinsi":"63","kota":"KABUPATEN TANAH LAUT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296ac"},"id_kota":"6302","id_provinsi":"63","kota":"KABUPATEN KOTA BARU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296ae"},"id_kota":"6304","id_provinsi":"63","kota":"KABUPATEN BARITO KUALA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296af"},"id_kota":"6305","id_provinsi":"63","kota":"KABUPATEN TAPIN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296b0"},"id_kota":"6306","id_provinsi":"63","kota":"KABUPATEN HULU SUNGAI SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296b2"},"id_kota":"6308","id_provinsi":"63","kota":"KABUPATEN HULU SUNGAI UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296b1"},"id_kota":"6307","id_provinsi":"63","kota":"KABUPATEN HULU SUNGAI TENGAH","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296b4"},"id_kota":"6310","id_provinsi":"63","kota":"KABUPATEN TANAH BUMBU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296b3"},"id_kota":"6309","id_provinsi":"63","kota":"KABUPATEN TABALONG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296ad"},"id_kota":"6303","id_provinsi":"63","kota":"KABUPATEN BANJAR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296b7"},"id_kota":"6372","id_provinsi":"63","kota":"KOTA BANJAR BARU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296b5"},"id_kota":"6311","id_provinsi":"63","kota":"KABUPATEN BALANGAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296b9"},"id_kota":"6402","id_provinsi":"64","kota":"KABUPATEN KUTAI BARAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296b6"},"id_kota":"6371","id_provinsi":"63","kota":"KOTA BANJARMASIN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296b8"},"id_kota":"6401","id_provinsi":"64","kota":"KABUPATEN PASER","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296ba"},"id_kota":"6403","id_provinsi":"64","kota":"KABUPATEN KUTAI KARTANEGARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296bb"},"id_kota":"6404","id_provinsi":"64","kota":"KABUPATEN KUTAI TIMUR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296bc"},"id_kota":"6405","id_provinsi":"64","kota":"KABUPATEN BERAU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296bf"},"id_kota":"6471","id_provinsi":"64","kota":"KOTA BALIKPAPAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296c0"},"id_kota":"6472","id_provinsi":"64","kota":"KOTA SAMARINDA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296c1"},"id_kota":"6474","id_provinsi":"64","kota":"KOTA BONTANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296c2"},"id_kota":"6501","id_provinsi":"65","kota":"KABUPATEN MALINAU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296bd"},"id_kota":"6409","id_provinsi":"64","kota":"KABUPATEN PENAJAM PASER UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296c3"},"id_kota":"6502","id_provinsi":"65","kota":"KABUPATEN BULUNGAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296c4"},"id_kota":"6503","id_provinsi":"65","kota":"KABUPATEN TANA TIDUNG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296be"},"id_kota":"6411","id_provinsi":"64","kota":"KABUPATEN MAHAKAM HULU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29620"},"id_kota":"3317","id_provinsi":"33","kota":"KABUPATEN REMBANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296c5"},"id_kota":"6504","id_provinsi":"65","kota":"KABUPATEN NUNUKAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296c6"},"id_kota":"6571","id_provinsi":"65","kota":"KOTA TARAKAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296c8"},"id_kota":"7102","id_provinsi":"71","kota":"KABUPATEN MINAHASA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296c7"},"id_kota":"7101","id_provinsi":"71","kota":"KABUPATEN BOLAANG MONGONDOW","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296cb"},"id_kota":"7105","id_provinsi":"71","kota":"KABUPATEN MINAHASA SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296c9"},"id_kota":"7103","id_provinsi":"71","kota":"KABUPATEN KEPULAUAN SANGIHE","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296ca"},"id_kota":"7104","id_provinsi":"71","kota":"KABUPATEN KEPULAUAN TALAUD","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296cc"},"id_kota":"7106","id_provinsi":"71","kota":"KABUPATEN MINAHASA UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296cf"},"id_kota":"7109","id_provinsi":"71","kota":"KABUPATEN MINAHASA TENGGARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296ce"},"id_kota":"7108","id_provinsi":"71","kota":"KABUPATEN SIAU TAGULANDANG BIARO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296d0"},"id_kota":"7110","id_provinsi":"71","kota":"KABUPATEN BOLAANG MONGONDOW SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296d1"},"id_kota":"7111","id_provinsi":"71","kota":"KABUPATEN BOLAANG MONGONDOW TIMUR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296d2"},"id_kota":"7171","id_provinsi":"71","kota":"KOTA MANADO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296d3"},"id_kota":"7172","id_provinsi":"71","kota":"KOTA BITUNG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296d4"},"id_kota":"7173","id_provinsi":"71","kota":"KOTA TOMOHON","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296cd"},"id_kota":"7107","id_provinsi":"71","kota":"KABUPATEN BOLAANG MONGONDOW UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296d7"},"id_kota":"7202","id_provinsi":"72","kota":"KABUPATEN BANGGAI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296d5"},"id_kota":"7174","id_provinsi":"71","kota":"KOTA KOTAMOBAGU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296d6"},"id_kota":"7201","id_provinsi":"72","kota":"KABUPATEN BANGGAI KEPULAUAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296d8"},"id_kota":"7203","id_provinsi":"72","kota":"KABUPATEN MOROWALI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296d9"},"id_kota":"7204","id_provinsi":"72","kota":"KABUPATEN POSO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296da"},"id_kota":"7205","id_provinsi":"72","kota":"KABUPATEN DONGGALA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296db"},"id_kota":"7206","id_provinsi":"72","kota":"KABUPATEN TOLI-TOLI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296dc"},"id_kota":"7207","id_provinsi":"72","kota":"KABUPATEN BUOL","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296de"},"id_kota":"7209","id_provinsi":"72","kota":"KABUPATEN TOJO UNA-UNA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296df"},"id_kota":"7210","id_provinsi":"72","kota":"KABUPATEN SIGI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296dd"},"id_kota":"7208","id_provinsi":"72","kota":"KABUPATEN PARIGI MOUTONG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296e0"},"id_kota":"7211","id_provinsi":"72","kota":"KABUPATEN BANGGAI LAUT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296e1"},"id_kota":"7212","id_provinsi":"72","kota":"KABUPATEN MOROWALI UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296e2"},"id_kota":"7271","id_provinsi":"72","kota":"KOTA PALU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296e6"},"id_kota":"7304","id_provinsi":"73","kota":"KABUPATEN JENEPONTO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296e7"},"id_kota":"7305","id_provinsi":"73","kota":"KABUPATEN TAKALAR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296e8"},"id_kota":"7306","id_provinsi":"73","kota":"KABUPATEN GOWA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296e4"},"id_kota":"7302","id_provinsi":"73","kota":"KABUPATEN BULUKUMBA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296ea"},"id_kota":"7308","id_provinsi":"73","kota":"KABUPATEN MAROS","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296e5"},"id_kota":"7303","id_provinsi":"73","kota":"KABUPATEN BANTAENG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296eb"},"id_kota":"7309","id_provinsi":"73","kota":"KABUPATEN PANGKAJENE DAN KEPULAUAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296e3"},"id_kota":"7301","id_provinsi":"73","kota":"KABUPATEN KEPULAUAN SELAYAR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296e9"},"id_kota":"7307","id_provinsi":"73","kota":"KABUPATEN SINJAI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296ed"},"id_kota":"7311","id_provinsi":"73","kota":"KABUPATEN BONE","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296f0"},"id_kota":"7314","id_provinsi":"73","kota":"KABUPATEN SIDENRENG RAPPANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296ec"},"id_kota":"7310","id_provinsi":"73","kota":"KABUPATEN BARRU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296f2"},"id_kota":"7316","id_provinsi":"73","kota":"KABUPATEN ENREKANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296ee"},"id_kota":"7312","id_provinsi":"73","kota":"KABUPATEN SOPPENG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296f3"},"id_kota":"7317","id_provinsi":"73","kota":"KABUPATEN LUWU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296f1"},"id_kota":"7315","id_provinsi":"73","kota":"KABUPATEN PINRANG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296f4"},"id_kota":"7318","id_provinsi":"73","kota":"KABUPATEN TANA TORAJA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296f7"},"id_kota":"7326","id_provinsi":"73","kota":"KABUPATEN TORAJA UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296f6"},"id_kota":"7325","id_provinsi":"73","kota":"KABUPATEN LUWU TIMUR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296f9"},"id_kota":"7372","id_provinsi":"73","kota":"KOTA PAREPARE","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296f5"},"id_kota":"7322","id_provinsi":"73","kota":"KABUPATEN LUWU UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296fa"},"id_kota":"7373","id_provinsi":"73","kota":"KOTA PALOPO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296f8"},"id_kota":"7371","id_provinsi":"73","kota":"KOTA MAKASSAR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296fb"},"id_kota":"7401","id_provinsi":"74","kota":"KABUPATEN BUTON","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296fc"},"id_kota":"7402","id_provinsi":"74","kota":"KABUPATEN MUNA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296ff"},"id_kota":"7405","id_provinsi":"74","kota":"KABUPATEN KONAWE SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29700"},"id_kota":"7406","id_provinsi":"74","kota":"KABUPATEN BOMBANA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296fe"},"id_kota":"7404","id_provinsi":"74","kota":"KABUPATEN KOLAKA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29702"},"id_kota":"7408","id_provinsi":"74","kota":"KABUPATEN KOLAKA UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29701"},"id_kota":"7407","id_provinsi":"74","kota":"KABUPATEN WAKATOBI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29703"},"id_kota":"7409","id_provinsi":"74","kota":"KABUPATEN BUTON UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29704"},"id_kota":"7410","id_provinsi":"74","kota":"KABUPATEN KONAWE UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29705"},"id_kota":"7411","id_provinsi":"74","kota":"KABUPATEN KOLAKA TIMUR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296fd"},"id_kota":"7403","id_provinsi":"74","kota":"KABUPATEN KONAWE","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29708"},"id_kota":"7414","id_provinsi":"74","kota":"KABUPATEN BUTON TENGAH","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29709"},"id_kota":"7415","id_provinsi":"74","kota":"KABUPATEN BUTON SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29707"},"id_kota":"7413","id_provinsi":"74","kota":"KABUPATEN MUNA BARAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2970b"},"id_kota":"7472","id_provinsi":"74","kota":"KOTA BAUBAU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2970a"},"id_kota":"7471","id_provinsi":"74","kota":"KOTA KENDARI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2970d"},"id_kota":"7502","id_provinsi":"75","kota":"KABUPATEN GORONTALO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2970c"},"id_kota":"7501","id_provinsi":"75","kota":"KABUPATEN BOALEMO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2970e"},"id_kota":"7503","id_provinsi":"75","kota":"KABUPATEN POHUWATO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29710"},"id_kota":"7505","id_provinsi":"75","kota":"KABUPATEN GORONTALO UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2970f"},"id_kota":"7504","id_provinsi":"75","kota":"KABUPATEN BONE BOLANGO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29711"},"id_kota":"7571","id_provinsi":"75","kota":"KOTA GORONTALO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29713"},"id_kota":"7602","id_provinsi":"76","kota":"KABUPATEN POLEWALI MANDAR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29706"},"id_kota":"7412","id_provinsi":"74","kota":"KABUPATEN KONAWE KEPULAUAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29712"},"id_kota":"7601","id_provinsi":"76","kota":"KABUPATEN MAJENE","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29714"},"id_kota":"7603","id_provinsi":"76","kota":"KABUPATEN MAMASA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29716"},"id_kota":"7605","id_provinsi":"76","kota":"KABUPATEN MAMUJU UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29715"},"id_kota":"7604","id_provinsi":"76","kota":"KABUPATEN MAMUJU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29717"},"id_kota":"7606","id_provinsi":"76","kota":"KABUPATEN MAMUJU TENGAH","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29718"},"id_kota":"8101","id_provinsi":"81","kota":"KABUPATEN MALUKU TENGGARA BARAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2971a"},"id_kota":"8103","id_provinsi":"81","kota":"KABUPATEN MALUKU TENGAH","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2971b"},"id_kota":"8104","id_provinsi":"81","kota":"KABUPATEN BURU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29719"},"id_kota":"8102","id_provinsi":"81","kota":"KABUPATEN MALUKU TENGGARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2971c"},"id_kota":"8105","id_provinsi":"81","kota":"KABUPATEN KEPULAUAN ARU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2971e"},"id_kota":"8107","id_provinsi":"81","kota":"KABUPATEN SERAM BAGIAN TIMUR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2971f"},"id_kota":"8108","id_provinsi":"81","kota":"KABUPATEN MALUKU BARAT DAYA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29720"},"id_kota":"8109","id_provinsi":"81","kota":"KABUPATEN BURU SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29721"},"id_kota":"8171","id_provinsi":"81","kota":"KOTA AMBON","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29722"},"id_kota":"8172","id_provinsi":"81","kota":"KOTA TUAL","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2971d"},"id_kota":"8106","id_provinsi":"81","kota":"KABUPATEN SERAM BAGIAN BARAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29723"},"id_kota":"8201","id_provinsi":"82","kota":"KABUPATEN HALMAHERA BARAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29724"},"id_kota":"8202","id_provinsi":"82","kota":"KABUPATEN HALMAHERA TENGAH","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29725"},"id_kota":"8203","id_provinsi":"82","kota":"KABUPATEN KEPULAUAN SULA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29726"},"id_kota":"8204","id_provinsi":"82","kota":"KABUPATEN HALMAHERA SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29727"},"id_kota":"8205","id_provinsi":"82","kota":"KABUPATEN HALMAHERA UTARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29729"},"id_kota":"8207","id_provinsi":"82","kota":"KABUPATEN PULAU MOROTAI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29728"},"id_kota":"8206","id_provinsi":"82","kota":"KABUPATEN HALMAHERA TIMUR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2972a"},"id_kota":"8208","id_provinsi":"82","kota":"KABUPATEN PULAU TALIABU","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2972d"},"id_kota":"9101","id_provinsi":"91","kota":"KABUPATEN FAKFAK","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2972c"},"id_kota":"8272","id_provinsi":"82","kota":"KOTA TIDORE KEPULAUAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2972b"},"id_kota":"8271","id_provinsi":"82","kota":"KOTA TERNATE","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b296ef"},"id_kota":"7313","id_provinsi":"73","kota":"KABUPATEN WAJO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29731"},"id_kota":"9105","id_provinsi":"91","kota":"KABUPATEN MANOKWARI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29730"},"id_kota":"9104","id_provinsi":"91","kota":"KABUPATEN TELUK BINTUNI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29732"},"id_kota":"9106","id_provinsi":"91","kota":"KABUPATEN SORONG SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2972e"},"id_kota":"9102","id_provinsi":"91","kota":"KABUPATEN KAIMANA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29735"},"id_kota":"9109","id_provinsi":"91","kota":"KABUPATEN TAMBRAUW","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29736"},"id_kota":"9110","id_provinsi":"91","kota":"KABUPATEN MAYBRAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29734"},"id_kota":"9108","id_provinsi":"91","kota":"KABUPATEN RAJA AMPAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29733"},"id_kota":"9107","id_provinsi":"91","kota":"KABUPATEN SORONG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2972f"},"id_kota":"9103","id_provinsi":"91","kota":"KABUPATEN TELUK WONDAMA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29737"},"id_kota":"9111","id_provinsi":"91","kota":"KABUPATEN MANOKWARI SELATAN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2973b"},"id_kota":"9402","id_provinsi":"94","kota":"KABUPATEN JAYAWIJAYA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2973c"},"id_kota":"9403","id_provinsi":"94","kota":"KABUPATEN JAYAPURA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29739"},"id_kota":"9171","id_provinsi":"91","kota":"KOTA SORONG","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2973e"},"id_kota":"9408","id_provinsi":"94","kota":"KABUPATEN KEPULAUAN YAPEN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29738"},"id_kota":"9112","id_provinsi":"91","kota":"KABUPATEN PEGUNUNGAN ARFAK","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2973f"},"id_kota":"9409","id_provinsi":"94","kota":"KABUPATEN BIAK NUMFOR","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2973a"},"id_kota":"9401","id_provinsi":"94","kota":"KABUPATEN MERAUKE","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29740"},"id_kota":"9410","id_provinsi":"94","kota":"KABUPATEN PANIAI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2973d"},"id_kota":"9404","id_provinsi":"94","kota":"KABUPATEN NABIRE","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29744"},"id_kota":"9414","id_provinsi":"94","kota":"KABUPATEN MAPPI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29745"},"id_kota":"9415","id_provinsi":"94","kota":"KABUPATEN ASMAT","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29746"},"id_kota":"9416","id_provinsi":"94","kota":"KABUPATEN YAHUKIMO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29743"},"id_kota":"9413","id_provinsi":"94","kota":"KABUPATEN BOVEN DIGOEL","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29742"},"id_kota":"9412","id_provinsi":"94","kota":"KABUPATEN MIMIKA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29749"},"id_kota":"9419","id_provinsi":"94","kota":"KABUPATEN SARMI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29741"},"id_kota":"9411","id_provinsi":"94","kota":"KABUPATEN PUNCAK JAYA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2974a"},"id_kota":"9420","id_provinsi":"94","kota":"KABUPATEN KEEROM","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29748"},"id_kota":"9418","id_provinsi":"94","kota":"KABUPATEN TOLIKARA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2974b"},"id_kota":"9426","id_provinsi":"94","kota":"KABUPATEN WAROPEN","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2974c"},"id_kota":"9427","id_provinsi":"94","kota":"KABUPATEN SUPIORI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2974d"},"id_kota":"9428","id_provinsi":"94","kota":"KABUPATEN MAMBERAMO RAYA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2974e"},"id_kota":"9429","id_provinsi":"94","kota":"KABUPATEN NDUGA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b2974f"},"id_kota":"9430","id_provinsi":"94","kota":"KABUPATEN LANNY JAYA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29751"},"id_kota":"9432","id_provinsi":"94","kota":"KABUPATEN YALIMO","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29753"},"id_kota":"9434","id_provinsi":"94","kota":"KABUPATEN DOGIYAI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29750"},"id_kota":"9431","id_provinsi":"94","kota":"KABUPATEN MAMBERAMO TENGAH","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29752"},"id_kota":"9433","id_provinsi":"94","kota":"KABUPATEN PUNCAK","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29754"},"id_kota":"9435","id_provinsi":"94","kota":"KABUPATEN INTAN JAYA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29755"},"id_kota":"9436","id_provinsi":"94","kota":"KABUPATEN DEIYAI","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29756"},"id_kota":"9471","id_provinsi":"94","kota":"KOTA JAYAPURA","status":true}
+{"_id":{"$oid":"591d0c6d868d904c01b29747"},"id_kota":"9417","id_provinsi":"94","kota":"KABUPATEN PEGUNUNGAN BINTANG","status":true}
