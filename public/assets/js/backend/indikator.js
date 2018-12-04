@@ -517,4 +517,65 @@ $(document).ready(function(){
 		}
 
 	});
+
+	$('#form_master_opd').submit(function(e){
+		var formData = new FormData();
+		e.preventDefault();
+		$('#submit-save').attr('disabled', 'true');
+		$('#submit-save').css('cursor', 'not-allowed');
+		$('#alert-indi-var').addClass('uk-hidden');
+		$('#alert-indi-var').find('p').html('');
+		var formData = new FormData();
+		if($('#name_opd').val() === ''){
+			if($('#name_opd').val() === ''){
+				$('#name_opd').parent('div').addClass('error');
+				$('#name_opd_err').html('Nama OPD wajib di isi');
+			}else{
+				$('#name_opd').parent('div').removeClass('error');
+				$('#name_opd_err').html('');
+			}
+
+			$('#submit-save').removeAttr('disabled');
+			$('#submit-save').css('cursor', 'pointer');
+		}else{
+			formData.append('name_opd', $('#name_opd').val());
+			formData.append('_token', $('#_token').val());
+
+			$.ajax({
+				url: '/master/opd/input',
+				type: 'POST',
+				data: formData,
+				cache: false,
+				contentType: false,
+				processData: false,
+				success: function(data) {
+					msg = $.parseJSON(data);
+					if(msg.success == 1){
+						$('#alert-indi-var').removeClass('uk-alert-danger');
+						$('#alert-indi-var').removeClass('uk-hidden');
+						$('#alert-indi-var').addClass('uk-alert-success');
+						$('#alert-indi-var').find('p').html(msg.message);
+						setTimeout(function(){
+							location.reload(true);
+						}, 2000);
+					}else{
+						$('#alert-indi-var').removeClass('uk-alert-success');
+						$('#alert-indi-var').removeClass('uk-hidden');
+						$('#alert-indi-var').addClass('uk-alert-danger');
+						$('#alert-indi-var').find('p').html(msg.message);
+						$('#submit-save').removeAttr('disabled');
+						$('#submit-save').css('cursor', 'pointer');
+					}
+				},
+				error: function(response){
+					$('#alert-indi-var').removeClass('uk-alert-success');
+					$('#alert-indi-var').removeClass('uk-hidden');
+					$('#alert-indi-var').addClass('uk-alert-danger');
+					$('#alert-indi-var').find('p').html('Terjadi kesalahan. Silahkan ulangi beberapa saat lagi');
+					$('#submit-save').removeAttr('disabled');
+					$('#submit-save').css('cursor', 'pointer');
+				}
+			});
+		}
+	});
 });

@@ -100,6 +100,16 @@ Route::group(['prefix' => '/master', 'namespace' => 'App\Modules\Dashboard\Contr
 
 			Route::get('/indikator/opsi/update/{idvar}', ['as' => 'dashboard.master.indikator.opsi.update', 'uses' => 'MasterController@indiopsiupdate']);
 			Route::post('/indikator/opsi/update', ['as' => 'dashboard.master.indikator.opsi.postupdate', 'uses' => 'MasterController@indiopsipostupdate']);
+
+			//master opd
+			Route::group(['prefix' => 'opd'], function () {
+				Route::get('/', ['as' => 'dashboard.master.opd.index', 'uses' => 'MasterController@opdIndex']);
+				Route::get('/input', ['as' => 'dashboard.master.opd.create', 'uses' => 'MasterController@opdCreate']);
+				Route::post('/input', ['as'	=> 'dashboard.master.opd.save', 'uses'	=> 'MasterController@opdSave']);
+				Route::get('/update/{idOpd}', ['as' => 'dashboard.master.opd.edit', 'uses' => 'MasterController@opdEdit']);
+				Route::put('/update', ['as' => 'dashboard.master.opd.update', 'uses' => 'MasterController@opdUpdate']);
+				Route::get('/delete/{idOpd}', ['as' => 'dashboard.master.opd.delete', 'uses' => 'MasterController@opdDelete']);
+			});
 		});
 	});
 });

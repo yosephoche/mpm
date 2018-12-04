@@ -47,6 +47,7 @@
 					<ul class="uk-nav-sub">
 						<li id="sidebar-dm-indikator-variabel" class=""><a href="{{ URL('/master/indikator/variabel') }}"><i class="uk-icon-circle-o"></i>Indikator Variabel</a></li>
 						<li id="sidebar-dm-indikator-opsi" class=""><a href="{{ URL('/master/indikator/opsi') }}"><i class="uk-icon-circle-o"></i>Opsi Indikator</a></li>
+						<li id="sidebar-dm-opd" class=""><a href="{{ URL('/master/opd') }}"><i class="uk-icon-circle-o"></i>OPD</a></li>
 	<!-- 					<li><a href="#"><i class="uk-icon-circle-o"></i>Perubahan Data PPFM</a></li>
 	<li><a href="#"><i class="uk-icon-circle-o"></i>Daftar Peserta PPFM</a></li> -->
 					</ul>

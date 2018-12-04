@@ -1,0 +1,8 @@
+version: "3.1"
+services:
+    mongo_db_backup:
+      image: mongo:latest
+      volumes:
+        - '/home/rahmat/Documents/projects/mpm:/application'
+      command: |
+        mongoexport --host mongo --db eproc-local --collection temp_users --out /application/temp_users.json
