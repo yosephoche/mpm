@@ -578,4 +578,102 @@ $(document).ready(function(){
 			});
 		}
 	});
+
+	$(document).on('click', '#del-opd', function(){
+		$('#delOpd').attr('data-id', $(this).attr('data-id'));
+		$.UIkit.modal('#modal-del').show();
+	});
+
+	$('#delOpd').on('click', function(){
+		$.ajax({
+			type: 'GET',
+			url: '/master/opd/delete/'+ $(this).attr('data-id'),
+			success: function(data){
+				msg = $.parseJSON(data);
+				if(msg.success == 1){
+					$('#alert-modal').removeClass('uk-alert-danger');
+					$('#alert-modal').removeClass('uk-hidden');
+					$('#alert-modal').addClass('uk-alert-success');
+					$('#alert-modal').find('p').html(msg.message);
+					setTimeout(function(){
+						location.reload(true);
+					}, 1000);
+				}else{
+					$('#alert-modal').removeClass('uk-alert-success');
+					$('#alert-modal').removeClass('uk-hidden');
+					$('#alert-modal').addClass('uk-alert-danger');
+					$('#alert-modal').find('p').html(msg.message);
+				}
+			},
+			error : function(response){
+				$('#alert-modal').removeClass('uk-alert-success');
+				$('#alert-modal').removeClass('uk-hidden');
+				$('#alert-modal').addClass('uk-alert-danger');
+				$('#alert-modal').find('p').html('Terjadi Kesalahan. Silahkan ulangi beberapa saat lagi.');
+			}
+		});
+	});
+
+	$('#form_master_opd_update').submit(function(e){
+		var formData = new FormData();
+		e.preventDefault();
+		$('#submit-save').attr('disabled', 'true');
+		$('#submit-save').css('cursor', 'not-allowed');
+		$('#alert-indi-var').addClass('uk-hidden');
+		$('#alert-indi-var').find('p').html('');
+		var formData = new FormData();
+		if($('#name_opd').val() === ''){
+			if($('#name_opd').val() === ''){
+				$('#name_opd').parent('div').addClass('error');
+				$('#name_opd_err').html('Nama OPD wajib di isi');
+			}else{
+				$('#name_opd').parent('div').removeClass('error');
+				$('#name_opd_err').html('');
+			}
+
+			$('#submit-save').removeAttr('disabled');
+			$('#submit-save').css('cursor', 'pointer');
+		}else{
+			formData.append('name_opd', $('#name_opd').val());
+			formData.append('_token', $('#_token').val());
+			formData.append('idOpd', $('#submit-save').attr('data-id'));
+
+			$.ajax({
+				url: '/master/opd/update',
+				type: 'POST',
+				data: formData,
+				cache: false,
+				contentType: false,
+				processData: false,
+				success: function(data) {
+					msg = $.parseJSON(data);
+					if(msg.success == 1){
+						$('#alert-indi-var').removeClass('uk-alert-danger');
+						$('#alert-indi-var').removeClass('uk-hidden');
+						$('#alert-indi-var').addClass('uk-alert-success');
+						$('#alert-indi-var').find('p').html(msg.message);
+						setTimeout(function(){
+							location.reload(true);
+						}, 2000);
+					}else{
+						$('#alert-indi-var').removeClass('uk-alert-success');
+						$('#alert-indi-var').removeClass('uk-hidden');
+						$('#alert-indi-var').addClass('uk-alert-danger');
+						$('#alert-indi-var').find('p').html(msg.message);
+						$('#submit-save').removeAttr('disabled');
+						$('#submit-save').css('cursor', 'pointer');
+					}
+				},
+				error: function(response){
+					console.log(response);
+					$('#alert-indi-var').removeClass('uk-alert-success');
+					$('#alert-indi-var').removeClass('uk-hidden');
+					$('#alert-indi-var').addClass('uk-alert-danger');
+					$('#alert-indi-var').find('p').html('Terjadi kesalahan. Silahkan ulangi beberapa saat lagi');
+					$('#submit-save').removeAttr('disabled');
+					$('#submit-save').css('cursor', 'pointer');
+				}
+			});
+		}
+	});
 });

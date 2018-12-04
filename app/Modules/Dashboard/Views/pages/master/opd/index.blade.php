@@ -64,7 +64,7 @@
                                                                 <div class="uk-dropdown uk-dropdown-small">
                                                                     <ul>
                                                                         <li><a href="{{ URL('/master/opd/update/').'/'.$thisSkpd->_id }}">Edit</a></li>
-                                                                        <li><a href="javascript:;" data-id="{{ $thisSkpd->_id }}" id="del-indi-var">Hapus</a></li>
+                                                                        <li><a href="javascript:;" data-id="{{ $thisSkpd->_id }}" id="del-opd">Hapus</a></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -153,7 +153,7 @@
         <div class="uk-modal-footer">
             <ul>
                 <li><button class="button-blue uk-modal-close" >Tidak</button></li>
-                <li><button class="button-red" data-id="" id="delIndiVar">Ya</button></li>
+                <li><button class="button-red" data-id="" id="delOpd">Ya</button></li>
             </ul>
         </div>
     </div>

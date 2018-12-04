@@ -107,7 +107,7 @@ Route::group(['prefix' => '/master', 'namespace' => 'App\Modules\Dashboard\Contr
 				Route::get('/input', ['as' => 'dashboard.master.opd.create', 'uses' => 'MasterController@opdCreate']);
 				Route::post('/input', ['as'	=> 'dashboard.master.opd.save', 'uses'	=> 'MasterController@opdSave']);
 				Route::get('/update/{idOpd}', ['as' => 'dashboard.master.opd.edit', 'uses' => 'MasterController@opdEdit']);
-				Route::put('/update', ['as' => 'dashboard.master.opd.update', 'uses' => 'MasterController@opdUpdate']);
+				Route::post('/update', ['as' => 'dashboard.master.opd.update', 'uses' => 'MasterController@opdUpdate']);
 				Route::get('/delete/{idOpd}', ['as' => 'dashboard.master.opd.delete', 'uses' => 'MasterController@opdDelete']);
 			});
 		});

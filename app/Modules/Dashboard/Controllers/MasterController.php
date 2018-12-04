@@ -328,9 +328,9 @@ class MasterController extends Controller
 	{
 		if ($this->authCheck()) {
 			$thisSkpd = Skpd::where('_id', $idOpd)->where('status', 1)->get();
-
+			
 			return view('Dashboard::pages.master.opd.edit')
-				->withSkpd($skpd)
+				->withSkpd($thisSkpd[0])
 				->withTitle("Edit Data OPD");
 		}
 	}
