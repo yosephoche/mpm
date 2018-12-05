@@ -1,0 +1,29 @@
+version: "3"
+services:
+
+  mongo:
+    image: mongo:latest
+    container_name: mpm-mongo
+    command: ["--bind_ip_all"]
+    ports:
+      - "27021:27017"
+    volumes:
+      - .:/appllication
+
+  webserver:
+    image: nginx:alpine
+    container_name: mpm-webserver
+    working_dir: /application
+    volumes:
+      - .:/application
+      - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "8088:80"
+    
+  php-fpm:
+    build: ./docker/php-fpm
+    container_name: mpm-php-fpm
+    working_dir: /application
+    volumes:
+      - .:/application
+      - ./docker/php-fpm/php-ini-overrides.ini:/etc/php/7.2/fpm/conf.d/99-overrides.ini
