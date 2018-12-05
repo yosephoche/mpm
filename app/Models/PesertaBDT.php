@@ -329,24 +329,28 @@ class PesertaBDT extends Eloquent
 		
 		$listkel = [];
 		foreach($kelurahan as $lskel){
+			$rtjum = PesertaBDT::where('kab', '7316')->where('des', $lskel->id_kelurahan)->where('status', 1)->count();
+			$rtjummpm = PesertaMpm::where('kab', '7316')->where('des', $lskel->id_kelurahan)->where('status', 1)->count();
+			$jumrt = $rtjum + $rtjummpm;
 			array_push($listkel, array('key'=>$lskel->id_kelurahan,
+					'jum' => $jumrt,
 					'value'=>$lskel->kelurahan,
 					'detail'=> 
-						array(array('kategori'=>'Rumah', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
-						array('kategori'=>'Listrik', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
-						array('kategori'=>'Kesehatan', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
-						array('kategori'=>'Pendidikan', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
+						array(array('kategori'=>'Rumah', 'rendah'=>5, 'sedang'=>30, 'tinggi'=>15),
+						array('kategori'=>'Listrik', 'rendah'=>0, 'sedang'=>30, 'tinggi'=>0),
+						array('kategori'=>'Kesehatan', 'rendah'=>0, 'sedang'=>5, 'tinggi'=>0),
+						array('kategori'=>'Pendidikan', 'rendah'=>23, 'sedang'=>0, 'tinggi'=>5),
 						array('kategori'=>'Pekerjaan', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
-						array('kategori'=>'Fasilitas MCK', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
-						array('kategori'=>'Fasilitas Memasak', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
-						array('kategori'=>'Kelengkapan Persuratan', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
-						array('kategori'=>'Peserta KKS/KPS', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
-						array('kategori'=>'Peserta Program Rastra', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
-						array('kategori'=>'Peserta Program KUR', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
-						array('kategori'=>'Peserta Program PKH', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
-						array('kategori'=>'Peserta KIP', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
-						array('kategori'=>'Peserta KIS/BPJS', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
-						array('kategori'=>'Asuransi Kesehatan Lain', 'rendah'=>0, 'sedang'=>0, 'tinggi'=>0),
+						array('kategori'=>'Fasilitas MCK', 'rendah'=>0, 'sedang'=>100, 'tinggi'=>0),
+						array('kategori'=>'Fasilitas Memasak', 'rendah'=>20, 'sedang'=>50, 'tinggi'=>0),
+						array('kategori'=>'Kelengkapan Persuratan', 'rendah'=>56, 'sedang'=>56, 'tinggi'=>0),
+						array('kategori'=>'Peserta KKS/KPS', 'rendah'=>0, 'sedang'=>32, 'tinggi'=>0),
+						array('kategori'=>'Peserta Program Rastra', 'rendah'=>34, 'sedang'=>78, 'tinggi'=>0),
+						array('kategori'=>'Peserta Program KUR', 'rendah'=>0, 'sedang'=>72, 'tinggi'=>0),
+						array('kategori'=>'Peserta Program PKH', 'rendah'=>23, 'sedang'=>45, 'tinggi'=>0),
+						array('kategori'=>'Peserta KIP', 'rendah'=>0, 'sedang'=>67, 'tinggi'=>56),
+						array('kategori'=>'Peserta KIS/BPJS', 'rendah'=>0, 'sedang'=>67, 'tinggi'=>87),
+						array('kategori'=>'Asuransi Kesehatan Lain', 'rendah'=>35, 'sedang'=>56, 'tinggi'=>56),
 						
 						)
 					)

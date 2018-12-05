@@ -84,6 +84,25 @@
 											<div class="error" id="status_admin_err"></div>
 										</div>
 									</div>
+
+									<div id="div-kec" class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1 uk-hidden">
+										<div class="data-inner">
+											<div>
+												<label for="kec_admin">Kecamatan</label>
+											</div>
+											<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+												<span class="">Kecamatan</span>
+			                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+			                                    <select id="kec_admin" name="kec_admin">
+			                                        <option value="">Pilih Kecamatan</option>
+                                                    @foreach($kecamatan as $kec)
+			                            	            <option value="{{ $kec->id_kecamatan }}">{{ $kec->kecamatan }}</option>
+                                                    @endforeach
+			                                    </select>
+											</div>
+											<div class="error" id="kec_admin_err"></div>
+										</div>
+									</div>
 								</div>
 							</li>
                             <li class="mcf-item">
