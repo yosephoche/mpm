@@ -9,6 +9,7 @@ use App\Models\OpsiIndikator;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\JenisKegiatan;
+use App\Models\IndikatorKegiatan;
 
 class MasterController extends Controller
 {
@@ -516,6 +517,145 @@ class MasterController extends Controller
 	public function jenisKegiatanDelete($idJenis)
 	{
 		$thisKegiatan = JenisKegiatan::where('_id', $idJenis)->where('status', 1)->first();
+
+		if (!$thisKegiatan) {
+			//not found id
+			$pesan = array('success' => 0, 'message' => 'Mohon maaf, Data tidak ditemukan');
+		} else {
+			$thisKegiatan->status = 0;
+
+			if ($thisKegiatan->save()) {
+				//success
+				$pesan = array('success' => 1, 'message' => 'Terima kasih. Data berhasil dihapus');
+			} else {
+				$pesan = array('success' => 0, 'message' => 'Terima kasih. Data gagal dihapus');
+			}
+		}
+
+		return json_encode($pesan);
+	}
+
+	//master indikator kegiatan
+	/**
+	 * Route => /master/indikator-kegiatan
+	 * 
+	 * @method get indikatorKegiatanIndex()
+	 */
+	public function indikatorKegiatanIndex()
+	{
+		if ($this->authSuperCheck()) {
+			$indikatorKegiatan = IndikatorKegiatan::paginate(15);
+			return view('Dashboard::pages.master.indikator-kegiatan.index')
+					->withIndikator($indikatorKegiatan)
+					->withTitle("Master Data indikator Kegiatan");
+		} else {
+			return redirect('/dashboard');
+		}
+	}
+
+	/**
+	 * Route => /master/Indikator-kegiatan/input
+	 * 
+	 * @method get IndikatorKegiatanCreate()
+	 */
+	public function indikatorKegiatanCreate()
+	{
+		if ($this->authSuperCheck()) {
+			return view('Dashboard::pages.master.Indikator-kegiatan.create')
+				->withTitle('Tambah Data Master Indikator Kegiatan');
+		} else {
+			return redirect('/dashboard');
+		}
+	}
+
+	/**
+	 * Route => /master/Indikator-kegiatan/input
+	 * 
+	 * @method post IndikatorKegiatanSave()
+	 */
+	public function indikatorKegiatanSave(Request $request)
+	{
+		$lastIndikatorKegiatanKode = IndikatorKegiatan::where('status', 1)->orderBy('kode', 'DESC')->get();
+		if ($lastIndikatorKegiatanKode->isEmpty()) {
+			$kode = 'jk001';
+		} else {
+			$getKode = substr($lastIndikatorKegiatanKode[0]->kode, 1);
+			$kode = 'jk'.str_pad((int)$getKode + 1, 3, '0', STR_PAD_LEFT);
+		}
+
+		$newKegiatan = new IndikatorKegiatan;
+		$newKegiatan->kode = $kode;
+		$newKegiatan->name = $request->name_Indikator_kegiatan;
+		$newKegiatan->status = 1;
+
+		if ($newKegiatan->save()) {
+			$pesan = array('success' => 1, 'message' => 'Data Indikator Kegiatan berhasil disimpan');
+		} else {
+			$pesan = array('success' => 0, 'message' => 'Data Indikator Kegiatan gagal disimpan');
+		}
+
+		return json_encode($pesan);
+	}
+
+	/**
+	 * Route => /master/Indikator-kegiatan/update/{idIndikator}
+	 * 
+	 * @method get IndikatorKegiatanEdit()
+	 * 
+	 * @param _id $idIndikator
+	 */
+	public function indikatorKegiatanEdit($idIndikator)
+	{
+		if ($this->authSuperCheck()) {
+			$thisIndikatorKegiatan = IndikatorKegiatan::where('_id', $idIndikator)->where('status', 1)->get();
+			if ($thisIndikatorKegiatan->isEmpty()) {
+				//not found Indikator kegiatan
+			} else {
+				return view('Dashboard::pages.master.Indikator-kegiatan.edit')
+					->withKegiatan($thisIndikatorKegiatan[0])
+					->withTitle('Edit Data Master Indikator Kegiatan');
+			}
+		} else {
+			return redirect('/dashboard');
+		}
+	}
+
+	/**
+	 * Route => /master/Indikator-kegiatan/update
+	 * 
+	 * @method post IndikatorKegiatanUpdate()
+	 */
+	public function indikatorKegiatanUpdate(Request $request)
+	{
+		$thisKegiatan = IndikatorKegiatan::where('_id', $request->get('idIndikator'))->where('status', 1)->first();
+
+		if (!$thisKegiatan) {
+			//not found id
+			$pesan = array('success' => 0, 'message' => 'Mohon maaf, Data tidak ditemukan');
+		} else {
+			$thisKegiatan->name = $request->get('name_Indikator_kegiatan');
+
+			if ($thisKegiatan->save()) {
+				//success
+				$pesan = array('success' => 1, 'message' => 'Terima kasih. Data berhasil diperbaharui');
+			} else {
+				$pesan = array('success' => 0, 'message' => 'Terima kasih. Data gagal diperbaharui');
+			}
+		}
+
+		return json_encode($pesan);
+	}
+
+	/**
+	 * Route => /master/Indikator-kegiatan/delete/{idIndikator}
+	 * 
+	 * @method get IndikatorKegiatanDelete()
+	 * 
+	 * @param _id $idIndikator
+	 */
+	public function indikatorKegiatanDelete($idIndikator)
+	{
+		$thisKegiatan = IndikatorKegiatan::where('_id', $idIndikator)->where('status', 1)->first();
 
 		if (!$thisKegiatan) {
 			//not found id

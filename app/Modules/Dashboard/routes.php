@@ -120,6 +120,16 @@ Route::group(['prefix' => '/master', 'namespace' => 'App\Modules\Dashboard\Contr
 				Route::post('/update', ['as' => 'dashboard.master.jenis-kegiatan.update', 'uses' => 'MasterController@jenisKegiatanUpdate']);
 				Route::get('delete/{idJenis}', ['as' => 'dashboard.master.jenis-kegiatan.delete', 'uses' => 'MasterController@jenisKegiatanDelete']);
 			});
+
+			//master indikator kegiatan
+			Route::group(['prefix'	=> 'indikator-kegiatan'], function () {
+				Route::get('/', ['as' => 'dashboard.master.indikator-kegiatan.index', 'uses' => 'MasterController@indikatorKegiatanIndex']);
+				Route::get('/input', ['as' => 'dashboard.master.indikator-kegiatan.create', 'uses' => 'MasterController@indikatorKegiatanCreate']);
+				Route::post('/input', ['as' => 'dashboard.master.indikator-kegiatan.save', 'uses' => 'MasterController@indikatorKegiatanSave']);
+				Route::get('/update/{idIndikator}', ['as' => 'dashboard.master.indikator-kegiatan.edit', 'uses' => 'MasterController@indikatorKegiatanEdit']);
+				Route::post('/update', ['as' => 'dashboard.master.indikator-kegiatan.update', 'uses' => 'MasterController@indikatorKegiatanUpdate']);
+				Route::get('delete/{idIndikator}', ['as' => 'dashboard.master.indikator-kegiatan.delete', 'uses' => 'MasterController@indikatorKegiatanDelete']);
+			});
 		});
 	});
 });
