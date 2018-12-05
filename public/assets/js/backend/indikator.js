@@ -676,4 +676,163 @@ $(document).ready(function(){
 			});
 		}
 	});
+
+	$('#form_master_jenis_kegiatan').submit(function(e){
+		var formData = new FormData();
+		e.preventDefault();
+		$('#submit-save').attr('disabled', 'true');
+		$('#submit-save').css('cursor', 'not-allowed');
+		$('#alert-indi-var').addClass('uk-hidden');
+		$('#alert-indi-var').find('p').html('');
+		var formData = new FormData();
+		if($('#name_jenis_kegiatan').val() === ''){
+			if($('#name_jenis_kegiatan').val() === ''){
+				$('#name_jenis_kegiatan').parent('div').addClass('error');
+				$('#name_jenis_kegiatan_err').html('Nama Jenis Kegiatan wajib di isi');
+			}else{
+				$('#name_jenis_kegiatan').parent('div').removeClass('error');
+				$('#name_jenis_kegiatan_err').html('');
+			}
+
+			$('#submit-save').removeAttr('disabled');
+			$('#submit-save').css('cursor', 'pointer');
+		}else{
+			formData.append('name_jenis_kegiatan', $('#name_jenis_kegiatan').val());
+			formData.append('_token', $('#_token').val());
+
+			$.ajax({
+				url: '/master/jenis-kegiatan/input',
+				type: 'POST',
+				data: formData,
+				cache: false,
+				contentType: false,
+				processData: false,
+				success: function(data) {
+					msg = $.parseJSON(data);
+					if(msg.success == 1){
+						$('#alert-indi-var').removeClass('uk-alert-danger');
+						$('#alert-indi-var').removeClass('uk-hidden');
+						$('#alert-indi-var').addClass('uk-alert-success');
+						$('#alert-indi-var').find('p').html(msg.message);
+						setTimeout(function(){
+							location.reload(true);
+						}, 2000);
+					}else{
+						$('#alert-indi-var').removeClass('uk-alert-success');
+						$('#alert-indi-var').removeClass('uk-hidden');
+						$('#alert-indi-var').addClass('uk-alert-danger');
+						$('#alert-indi-var').find('p').html(msg.message);
+						$('#submit-save').removeAttr('disabled');
+						$('#submit-save').css('cursor', 'pointer');
+					}
+				},
+				error: function(response){
+					$('#alert-indi-var').removeClass('uk-alert-success');
+					$('#alert-indi-var').removeClass('uk-hidden');
+					$('#alert-indi-var').addClass('uk-alert-danger');
+					$('#alert-indi-var').find('p').html('Terjadi kesalahan. Silahkan ulangi beberapa saat lagi');
+					$('#submit-save').removeAttr('disabled');
+					$('#submit-save').css('cursor', 'pointer');
+				}
+			});
+		}
+	});
+
+	$('#form_master_jenis_kegiatan_update').submit(function(e){
+		var formData = new FormData();
+		e.preventDefault();
+		$('#submit-save').attr('disabled', 'true');
+		$('#submit-save').css('cursor', 'not-allowed');
+		$('#alert-indi-var').addClass('uk-hidden');
+		$('#alert-indi-var').find('p').html('');
+		var formData = new FormData();
+		if($('#name_jenis_kegiatan').val() === ''){
+			if($('#name_jenis_kegiatan').val() === ''){
+				$('#name_jenis_kegiatan').parent('div').addClass('error');
+				$('#name_jenis_kegiatan_err').html('Nama OPD wajib di isi');
+			}else{
+				$('#name_jenis_kegiatan').parent('div').removeClass('error');
+				$('#name_jenis_kegiatan_err').html('');
+			}
+
+			$('#submit-save').removeAttr('disabled');
+			$('#submit-save').css('cursor', 'pointer');
+		}else{
+			formData.append('name_jenis_kegiatan', $('#name_jenis_kegiatan').val());
+			formData.append('_token', $('#_token').val());
+			formData.append('idJenis', $('#submit-save').attr('data-id'));
+
+			$.ajax({
+				url: '/master/jenis-kegiatan/update',
+				type: 'POST',
+				data: formData,
+				cache: false,
+				contentType: false,
+				processData: false,
+				success: function(data) {
+					msg = $.parseJSON(data);
+					if(msg.success == 1){
+						$('#alert-indi-var').removeClass('uk-alert-danger');
+						$('#alert-indi-var').removeClass('uk-hidden');
+						$('#alert-indi-var').addClass('uk-alert-success');
+						$('#alert-indi-var').find('p').html(msg.message);
+						setTimeout(function(){
+							location.reload(true);
+						}, 2000);
+					}else{
+						$('#alert-indi-var').removeClass('uk-alert-success');
+						$('#alert-indi-var').removeClass('uk-hidden');
+						$('#alert-indi-var').addClass('uk-alert-danger');
+						$('#alert-indi-var').find('p').html(msg.message);
+						$('#submit-save').removeAttr('disabled');
+						$('#submit-save').css('cursor', 'pointer');
+					}
+				},
+				error: function(response){
+					console.log(response);
+					$('#alert-indi-var').removeClass('uk-alert-success');
+					$('#alert-indi-var').removeClass('uk-hidden');
+					$('#alert-indi-var').addClass('uk-alert-danger');
+					$('#alert-indi-var').find('p').html('Terjadi kesalahan. Silahkan ulangi beberapa saat lagi');
+					$('#submit-save').removeAttr('disabled');
+					$('#submit-save').css('cursor', 'pointer');
+				}
+			});
+		}
+	});
+
+	$(document).on('click', '#del-jenis-kegiatan', function(){
+		$('#delJenisKegiatan').attr('data-id', $(this).attr('data-id'));
+		$.UIkit.modal('#modal-del').show();
+	});
+
+	$('#delJenisKegiatan').on('click', function(){
+		$.ajax({
+			type: 'GET',
+			url: '/master/jenis-kegiatan/delete/'+ $(this).attr('data-id'),
+			success: function(data){
+				msg = $.parseJSON(data);
+				if(msg.success == 1){
+					$('#alert-modal').removeClass('uk-alert-danger');
+					$('#alert-modal').removeClass('uk-hidden');
+					$('#alert-modal').addClass('uk-alert-success');
+					$('#alert-modal').find('p').html(msg.message);
+					setTimeout(function(){
+						location.reload(true);
+					}, 1000);
+				}else{
+					$('#alert-modal').removeClass('uk-alert-success');
+					$('#alert-modal').removeClass('uk-hidden');
+					$('#alert-modal').addClass('uk-alert-danger');
+					$('#alert-modal').find('p').html(msg.message);
+				}
+			},
+			error : function(response){
+				$('#alert-modal').removeClass('uk-alert-success');
+				$('#alert-modal').removeClass('uk-hidden');
+				$('#alert-modal').addClass('uk-alert-danger');
+				$('#alert-modal').find('p').html('Terjadi Kesalahan. Silahkan ulangi beberapa saat lagi.');
+			}
+		});
+	});
 });

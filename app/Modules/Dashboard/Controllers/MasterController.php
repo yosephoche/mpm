@@ -8,6 +8,7 @@ use App\Models\IndikatorVariabel;
 use App\Models\OpsiIndikator;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\JenisKegiatan;
 
 class MasterController extends Controller
 {
@@ -262,7 +263,7 @@ class MasterController extends Controller
 	 */
 	public function opdIndex()
 	{
-		if ($this->authCheck()) {
+		if ($this->authSuperCheck()) {
 			$skpd = Skpd::where('status', 1)->paginate(10);
 
 			return view('Dashboard::pages.master.opd.index')
@@ -280,7 +281,7 @@ class MasterController extends Controller
 	 */
 	public function opdCreate()
 	{
-		if ($this->authCheck()) {
+		if ($this->authSuperCheck()) {
 			return view('Dashboard::pages.master.opd.create')->withTitle('Tambah Data OPD');
 		} else {
 			return redirect('/dashboard');
@@ -326,12 +327,14 @@ class MasterController extends Controller
 	*/
 	public function opdEdit($idOpd)
 	{
-		if ($this->authCheck()) {
+		if ($this->authSuperCheck()) {
 			$thisSkpd = Skpd::where('_id', $idOpd)->where('status', 1)->get();
 			
 			return view('Dashboard::pages.master.opd.edit')
 				->withSkpd($thisSkpd[0])
 				->withTitle("Edit Data OPD");
+		} else {
+			return redirect('/dashboard');
 		}
 	}
 
@@ -387,8 +390,147 @@ class MasterController extends Controller
 		return json_encode($pesan);
 	}
 
-	public function authCheck()
+	public function authSuperCheck()
 	{
 		return (auth()->guard('admin')->user()->status_admin == 0) ? true : false;
+	}
+
+	//master jenis kegiatan
+	/**
+	 * Route => /master/jenis-kegiatan
+	 * 
+	 * @method get jenisKegiatanIndex()
+	 */
+	public function jenisKegiatanIndex()
+	{
+		if ($this->authSuperCheck()) {
+			$JenisKegiatan = JenisKegiatan::where('status', 1)->paginate(10);
+			return view('Dashboard::pages.master.jenis-kegiatan.index')
+					->withKegiatan($JenisKegiatan)
+					->withTitle("Master Data Jenis Kegiatan");
+		} else {
+			return redirect('/dashboard');
+		}
+	}
+
+	/**
+	 * Route => /master/jenis-kegiatan/input
+	 * 
+	 * @method get jenisKegiatanCreate()
+	 */
+	public function jenisKegiatanCreate()
+	{
+		if ($this->authSuperCheck()) {
+			return view('Dashboard::pages.master.jenis-kegiatan.create')
+				->withTitle('Tambah Data Master Jenis Kegiatan');
+		} else {
+			return redirect('/dashboard');
+		}
+	}
+
+	/**
+	 * Route => /master/jenis-kegiatan/input
+	 * 
+	 * @method post jenisKegiatanSave()
+	 */
+	public function jenisKegiatanSave(Request $request)
+	{
+		$lastJenisKegiatanKode = JenisKegiatan::where('status', 1)->orderBy('kode', 'DESC')->get();
+		if ($lastJenisKegiatanKode->isEmpty()) {
+			$kode = 'jk001';
+		} else {
+			$getKode = substr($lastJenisKegiatanKode[0]->kode, 1);
+			$kode = 'jk'.str_pad((int)$getKode + 1, 3, '0', STR_PAD_LEFT);
+		}
+
+		$newKegiatan = new JenisKegiatan;
+		$newKegiatan->kode = $kode;
+		$newKegiatan->name = $request->name_jenis_kegiatan;
+		$newKegiatan->status = 1;
+
+		if ($newKegiatan->save()) {
+			$pesan = array('success' => 1, 'message' => 'Data Jenis Kegiatan berhasil disimpan');
+		} else {
+			$pesan = array('success' => 0, 'message' => 'Data Jenis Kegiatan gagal disimpan');
+		}
+
+		return json_encode($pesan);
+	}
+
+	/**
+	 * Route => /master/jenis-kegiatan/update/{idJenis}
+	 * 
+	 * @method get jenisKegiatanEdit()
+	 * 
+	 * @param _id $idJenis
+	 */
+	public function jenisKegiatanEdit($idJenis)
+	{
+		if ($this->authSuperCheck()) {
+			$thisJenisKegiatan = JenisKegiatan::where('_id', $idJenis)->where('status', 1)->get();
+			if ($thisJenisKegiatan->isEmpty()) {
+				//not found jenis kegiatan
+			} else {
+				return view('Dashboard::pages.master.jenis-kegiatan.edit')
+					->withKegiatan($thisJenisKegiatan[0])
+					->withTitle('Edit Data Master Jenis Kegiatan');
+			}
+		} else {
+			return redirect('/dashboard');
+		}
+	}
+
+	/**
+	 * Route => /master/jenis-kegiatan/update
+	 * 
+	 * @method post jenisKegiatanUpdate()
+	 */
+	public function jenisKegiatanUpdate(Request $request)
+	{
+		$thisKegiatan = JenisKegiatan::where('_id', $request->get('idJenis'))->where('status', 1)->first();
+
+		if (!$thisKegiatan) {
+			//not found id
+			$pesan = array('success' => 0, 'message' => 'Mohon maaf, Data tidak ditemukan');
+		} else {
+			$thisKegiatan->name = $request->get('name_jenis_kegiatan');
+
+			if ($thisKegiatan->save()) {
+				//success
+				$pesan = array('success' => 1, 'message' => 'Terima kasih. Data berhasil diperbaharui');
+			} else {
+				$pesan = array('success' => 0, 'message' => 'Terima kasih. Data gagal diperbaharui');
+			}
+		}
+
+		return json_encode($pesan);
+	}
+
+	/**
+	 * Route => /master/jenis-kegiatan/delete/{idJenis}
+	 * 
+	 * @method get jenisKegiatanDelete()
+	 * 
+	 * @param _id $idJenis
+	 */
+	public function jenisKegiatanDelete($idJenis)
+	{
+		$thisKegiatan = JenisKegiatan::where('_id', $idJenis)->where('status', 1)->first();
+
+		if (!$thisKegiatan) {
+			//not found id
+			$pesan = array('success' => 0, 'message' => 'Mohon maaf, Data tidak ditemukan');
+		} else {
+			$thisKegiatan->status = 0;
+
+			if ($thisKegiatan->save()) {
+				//success
+				$pesan = array('success' => 1, 'message' => 'Terima kasih. Data berhasil dihapus');
+			} else {
+				$pesan = array('success' => 0, 'message' => 'Terima kasih. Data gagal dihapus');
+			}
+		}
+
+		return json_encode($pesan);
 	}
 }
