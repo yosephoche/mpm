@@ -250,4 +250,145 @@ class MasterController extends Controller
 
 		return json_encode($opsi);
 	}
+
+	//master opd
+	
+	/**
+	 * route : /master/opd
+	 *
+	 * @method get opdIndex()
+	 * 
+	 * @return void
+	 */
+	public function opdIndex()
+	{
+		if ($this->authCheck()) {
+			$skpd = Skpd::where('status', 1)->paginate(10);
+
+			return view('Dashboard::pages.master.opd.index')
+				->withSkpd($skpd)
+				->withTitle("Daftar OPD");
+		} else {
+			return redirect('/dashboard');
+		}
+	}
+
+	/**
+	 * route => /master/input
+	 * 
+	 * @method get opdCreate()
+	 */
+	public function opdCreate()
+	{
+		if ($this->authCheck()) {
+			return view('Dashboard::pages.master.opd.create')->withTitle('Tambah Data OPD');
+		} else {
+			return redirect('/dashboard');
+		}
+	}
+
+	/**
+	 * route => /master/input
+	 *
+	 * @method post opdSave()
+	 * 
+	 * @return void
+	 */
+	public function opdSave(Request $request)
+	{
+		$lastSkpdKode = Skpd::where('status', 1)->orderBy('kode', 'DESC')->get();
+		if ($lastSkpdKode->isEmpty()) {
+			$kode = 's001';
+		} else {
+			$getKode = substr($lastSkpdKode[0]->kode, 1);
+			$kode = 's'.str_pad((int)$getKode + 1, 3, '0', STR_PAD_LEFT);
+		}
+
+		$newSkpd = new Skpd;
+		$newSkpd->kode = $kode;
+		$newSkpd->name = $request->name_opd;
+		$newSkpd->status = 1;
+
+		if ($newSkpd->save()) {
+			$pesan = array('success' => 1, 'message' => 'Data Skpd berhasil disimpan');
+		} else {
+			$pesan = array('success' => 0, 'message' => 'Data Skpd gagal disimpan');
+		}
+
+		return json_encode($pesan);
+	}
+
+	/** 
+	 * Route => /master/update/{idOpd}
+	 * 
+	 * @method get opdEdit()
+	 * 
+	*/
+	public function opdEdit($idOpd)
+	{
+		if ($this->authCheck()) {
+			$thisSkpd = Skpd::where('_id', $idOpd)->where('status', 1)->get();
+			
+			return view('Dashboard::pages.master.opd.edit')
+				->withSkpd($thisSkpd[0])
+				->withTitle("Edit Data OPD");
+		}
+	}
+
+	/**
+	 * Route => /master/update
+	 * 
+	 * @method post opdUpdate()
+	 */
+	public function opdUpdate(Request $request)
+	{
+		$thisSkpd = Skpd::where('_id', $request->get('idOpd'))->where('status', 1)->first();
+
+		if (!$thisSkpd) {
+			//not found id
+			$pesan = array('success' => 0, 'message' => 'Mohon maaf, Data tidak ditemukan');
+		} else {
+			$thisSkpd->name = $request->get('name_opd');
+
+			if ($thisSkpd->save()) {
+				//success
+				$pesan = array('success' => 1, 'message' => 'Terima kasih. Data berhasil diperbaharui');
+			} else {
+				$pesan = array('success' => 0, 'message' => 'Terima kasih. Data gagal diperbaharui');
+			}
+		}
+
+		return json_encode($pesan);
+	}
+
+	/**
+	 * Route => /master/delete/{idOpd}
+	 * 
+	 * @method get opdDelete()
+	 */
+	public function opdDelete($idOpd)
+	{
+		$thisSkpd = Skpd::where('_id', $idOpd)->where('status', 1)->first();
+
+		if (!$thisSkpd) {
+			//not found id
+			$pesan = array('success' => 0, 'message' => 'Mohon maaf, Data tidak ditemukan');
+		} else {
+			$thisSkpd->status = 0;
+
+			if ($thisSkpd->save()) {
+				//success
+				$pesan = array('success' => 1, 'message' => 'Terima kasih. Data berhasil dihapus');
+			} else {
+				$pesan = array('success' => 0, 'message' => 'Terima kasih. Data gagal dihapus');
+			}
+		}
+
+		return json_encode($pesan);
+	}
+
+	public function authCheck()
+	{
+		return (auth()->guard('admin')->user()->status_admin == 0) ? true : false;
+	}
 }
