@@ -432,7 +432,7 @@ $(function() {
       $('.ml-form .mlf-input').last().fadeToggle(function() {
         $('.ml-form .mlf-input').first().fadeToggle();
         h4.text('Silahkan login untuk mengakses halaman admin.');
-        p.text('Lupa kata sandi?');
+        p.text('Lupa kata sandi?.');
       });
     }
   });

@@ -19,23 +19,74 @@ use DB;
 class DashboardController extends Controller
 {
 	public function index(){
-		$pesertajum = PesertaBDT::raw(function($collection) {
-			return $collection->aggregate(array(
-				array( '$match' => array(
-					'kab'=> '7316'
-				)),
-				array( '$unwind' => '$individu'
-				),
-				array( '$match' => array(
-					'individu.status' => 1
-				)),
-                array( '$count'=> 'count' )
-			));
-		});
+		if(auth()->guard('admin')->user()->status_admin == 2){
+			$kec = auth()->guard('admin')->user()->kec;
+			$pesertajum = PesertaBDT::raw(function($collection) use ($kec) {
+				return $collection->aggregate(array(
+					array( '$match' => array(
+						'kab'=> '7316',
+						'kec'=>$kec
+					)),
+					array( '$unwind' => '$individu'
+					),
+					array( '$match' => array(
+						'individu.status' => 1
+					)),
+					array( '$count'=> 'count' )
+				));
+			});
+			$rtjum = PesertaBDT::where('kab', '7316')->where('kec', $kec)->where('status', 1)->count();
 
-		$rtjum = PesertaBDT::where('kab', '7316')->where('status', 1)->count();
+			$pesertajummpm = PesertaMpm::raw(function($collection) use ($kec) {
+				return $collection->aggregate(array(
+					array( '$match' => array(
+						'kab'=> '7316',
+						'kec'=>$kec
+					)),
+					array( '$unwind' => '$individu'
+					),
+					array( '$match' => array(
+						'individu.status' => 1
+					)),
+					array( '$count'=> 'count' )
+				));
+			});
+			$rtjummpm = PesertaMpm::where('kab', '7316')->where('kec', $kec)->where('status', 1)->count();
 
-		return view('Dashboard::pages.dashboard.index', ['pesertajum' => $pesertajum, 'rtjum' => $rtjum]);
+		}else{
+			$pesertajum = PesertaBDT::raw(function($collection) {
+				return $collection->aggregate(array(
+					array( '$match' => array(
+						'kab'=> '7316'
+					)),
+					array( '$unwind' => '$individu'
+					),
+					array( '$match' => array(
+						'individu.status' => 1
+					)),
+					array( '$count'=> 'count' )
+				));
+			});
+			$rtjum = PesertaBDT::where('kab', '7316')->where('status', 1)->count();
+
+			$pesertajummpm = PesertaMpm::raw(function($collection) {
+				return $collection->aggregate(array(
+					array( '$match' => array(
+						'kab'=> '7316'
+					)),
+					array( '$unwind' => '$individu'
+					),
+					array( '$match' => array(
+						'individu.status' => 1
+					)),
+					array( '$count'=> 'count' )
+				));
+			});
+			$rtjummpm = PesertaMpm::where('kab', '7316')->where('status', 1)->count();
+		}
+
+
+		return view('Dashboard::pages.dashboard.index', ['pesertajum' => $pesertajum, 'rtjum' => $rtjum, 'pesertajummpm'=>$pesertajummpm, 'rtjummpm' => $rtjummpm]);
 	}
 
 	public function pertanyaan(){

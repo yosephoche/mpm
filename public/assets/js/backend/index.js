@@ -96,7 +96,7 @@ WebuiPopovers.show(id, {title:title,content: '<button id="'+regionId+'" class="s
 						r += 	'<li onClick="handleClickItemMaps(this,\'' + itemData.key + '\',\'' + item.id + '\')">'+
 								'<div class="uk-grid uk-grid-collapse">'+
 									'<div class="uk-width-large-10-10 uk-width-medium-1-1 uk-width-small-1-1 text-center">'+
-										'<span class="key">'+ itemData.value +'</span>'+
+										'<span class="key">'+ itemData.value + ' <b>[' + itemData.jum + ']</b>' +'</span>'+
 									'</div>'+
 								'</div>'+
 							'</li>';

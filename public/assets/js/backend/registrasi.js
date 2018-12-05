@@ -5,6 +5,14 @@ $(document).ready(function(){
         $('#sidebar-user').addClass('uk-active');
     }
 
+    $('#status_admin').on('change', function(){
+        if($(this).val() == '2'){
+            $('#div-kec').removeClass('uk-hidden');
+        }else{
+            $('#div-kec').addClass('uk-hidden');
+        }
+    });
+
     $('#registrasi-user').submit(function(e){
         var formData = new FormData(),
             pattern_email = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
@@ -14,7 +22,7 @@ $(document).ready(function(){
 		$('#alert').addClass('uk-hidden');
 		$('#alert').find('p').html('');
 		var formData = new FormData();
-		if($('#nama_lengkap').val() === '' || $('#email').val() === '' || $('#kontak').val() === '' || !pattern_email.test($('#email').val()) || $('#password').val() === '' || $('#status_admin').val() === ''){
+		if($('#nama_lengkap').val() === '' || $('#email').val() === '' || $('#kontak').val() === '' || !pattern_email.test($('#email').val()) || $('#password').val() === '' || $('#status_admin').val() === '' || ($('#status_admin').val() === '2' && $('#kec_admin').val() === '')){
             if($('#nama_lengkap').val() === ''){
             	$('#nama_lengkap').addClass('error');
     			$('#nama_lengkap_err').html('Nama lengkap wajib di isi');
@@ -56,6 +64,15 @@ $(document).ready(function(){
                 $('#status_admin').parent('div').removeClass('error');
                 $('#status_admin_err').html('');
             }
+
+            if($('#status_admin').val() === '2' && $('#kec_admin').val() === ''){
+                $('#kec_admin').parent('div').addClass('error');
+                $('#kec_admin_err').html('Kecamatan wajib di isi');
+            }else{
+                $('#kec_admin').parent('div').removeClass('error');
+                $('#kec_admin_err').html('');
+            }
+
             $('#submit-save').removeAttr('disabled');
             $('#submit-save').css('cursor', 'pointer');
         }else{
@@ -65,6 +82,9 @@ $(document).ready(function(){
             formData.append('password', $('#password').val());
             formData.append('kontak', $('#kontak').val());
 			formData.append('status', $('#status_admin').val());
+            if($('#status_admin').val() === '2'){
+                formData.append('kec', $('#kec_admin').val());
+            }
 			formData.append('_token', $('#_token').val());
 
 			$.ajax({
@@ -149,7 +169,8 @@ $(document).ready(function(){
         $('#alert').addClass('uk-hidden');
         $('#alert').find('p').html('');
         var formData = new FormData();
-        if($('#nama_lengkap').val() === '' || $('#email').val() === '' || $('#kontak').val() === '' || !pattern_email.test($('#email').val()) || $('#status_admin').val() === ''){
+		if($('#nama_lengkap').val() === '' || $('#email').val() === '' || $('#kontak').val() === '' || !pattern_email.test($('#email').val()) || $('#status_admin').val() === '' || ($('#status_admin').val() === '2' && $('#kec_admin').val() === '')){
+        
             if($('#nama_lengkap').val() === ''){
                 $('#nama_lengkap').addClass('error');
                 $('#nama_lengkap_err').html('Nama lengkap wajib di isi');
@@ -160,7 +181,7 @@ $(document).ready(function(){
             if($('#email').val() === ''){
                 $('#email').addClass('error');
                 $('#email_err').html('Email wajib di isi');
-            }else if(!pattern_email.test($('#email_register').val())){
+            }else if(!pattern_email.test($('#email').val())){
                 $('#email').addClass('error');
                 $('#email_err').html('Email tidak valid');
             }else{
@@ -183,6 +204,15 @@ $(document).ready(function(){
                 $('#status_admin').parent('div').removeClass('error');
                 $('#status_admin_err').html('');
             }
+
+            if($('#status_admin').val() === '2' && $('#kec_admin').val() === ''){
+                $('#kec_admin').parent('div').addClass('error');
+                $('#kec_admin_err').html('Kecamatan wajib di isi');
+            }else{
+                $('#kec_admin').parent('div').removeClass('error');
+                $('#kec_admin_err').html('');
+            }
+
             $('#submit-update').removeAttr('disabled');
             $('#submit-update').css('cursor', 'pointer');
         }else{
@@ -192,6 +222,9 @@ $(document).ready(function(){
             formData.append('email', $('#email').val());
             formData.append('kontak', $('#kontak').val());
             formData.append('status', $('#status_admin').val());
+            if($('#status_admin').val() === '2'){
+                formData.append('kec', $('#kec_admin').val());
+            }
             formData.append('_token', $('#_token').val());
 
             $.ajax({

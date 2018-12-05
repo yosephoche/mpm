@@ -5,6 +5,7 @@ namespace App\Modules\Dashboard\Controllers;
 use Illuminate\Http\Request;
 use App\Models\UserStatus;
 use App\Models\Users;
+use App\Models\Kecamatan;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Hash;
@@ -13,9 +14,10 @@ class UserController extends Controller
 {
     public function index(){
         if(auth()->guard('admin')->user()->status_admin == 0 || auth()->guard('admin')->user()->status_admin == 1){
-        	$userstatus = UserStatus::where('status', 1)->get();
+    		$kecamatan = Kecamatan::where('id_kota', '7316')->where('status', true)->get();
+            $userstatus = UserStatus::where('status', 1)->get();
 
-        	return view('Dashboard::pages.user.index', ['userstatus' => $userstatus]);
+        	return view('Dashboard::pages.user.index', ['userstatus' => $userstatus, 'kecamatan' => $kecamatan]);
         }else{
             return redirect('/dashboard');
         }
@@ -47,6 +49,9 @@ class UserController extends Controller
             $user->password = Hash::make($request->get('password'));
             $user->kontak = $request->get('kontak');
             $user->status_admin = $request->get('status');
+            if($request->get('status') == '2'){
+                $user->kec = $request->get('kec');
+            }
             $user->status = 1;
 
             if($user->save()){
@@ -83,8 +88,9 @@ class UserController extends Controller
         if(auth()->guard('admin')->user()->status_admin == 0 || auth()->guard('admin')->user()->status_admin == 1){
             $users = Users::where('_id', $iduser)->where('status', 1)->get();
             $userstatus = UserStatus::where('status', 1)->get();
+    		$kecamatan = Kecamatan::where('id_kota', '7316')->where('status', true)->get();
 
-            return view('Dashboard::pages.user.update', ['users' => $users, 'userstatus' => $userstatus]);
+            return view('Dashboard::pages.user.update', ['users' => $users, 'userstatus' => $userstatus, 'kecamatan'=>$kecamatan]);
         }else{
             return redirect('/dashboard');
 
@@ -99,12 +105,23 @@ class UserController extends Controller
         }else{
             $getemail = Users::where('email', $request->get('email'))->where('status', 1)->get();
             if($getemail->isEmpty()){
-                $email = Users::where('_id', $request->get('iduser'))->where('status', 1)->update([
-                    'fullname' => $request->get('nama_lengkap'),
-                    'email' => $request->get('email'),
-                    'kontak' => $request->get('kontak'),
-                    'status_admin' => $request->get('status')
-                ]);
+                if($request->get('status') == '2'){
+                    $email = Users::where('_id', $request->get('iduser'))->where('status', 1)->update([
+                        'fullname' => $request->get('nama_lengkap'),
+                        'email' => $request->get('email'),
+                        'kontak' => $request->get('kontak'),
+                        'kec' => $request->get('kec'),
+                        'status_admin' => $request->get('status')
+                    ]);
+                }else{
+                    $email = Users::where('_id', $request->get('iduser'))->where('status', 1)->update([
+                        'fullname' => $request->get('nama_lengkap'),
+                        'email' => $request->get('email'),
+                        'kontak' => $request->get('kontak'),
+                        'status_admin' => $request->get('status')
+                    ]);
+                }
+
                 if($email){
                     $pesan = array('success' => 1, 'message' => 'Pengguna berhasil disunting.');
                 }else{
@@ -112,12 +129,23 @@ class UserController extends Controller
                 }
             }else{
                 if($getemail[0]->_id == $request->get('iduser')){
-                    $email = Users::where('_id', $request->get('iduser'))->where('status', 1)->update([
-                        'fullname' => $request->get('nama_lengkap'),
-                        'email' => $request->get('email'),
-                        'kontak' => $request->get('kontak'),
-                        'status_admin' => $request->get('status')
-                    ]);
+                    if($request->get('status') == '2'){
+
+                        $email = Users::where('_id', $request->get('iduser'))->where('status', 1)->update([
+                            'fullname' => $request->get('nama_lengkap'),
+                            'email' => $request->get('email'),
+                            'kontak' => $request->get('kontak'),
+                            'kec' => $request->get('kec'),
+                            'status_admin' => $request->get('status')
+                        ]);
+                    }else{
+                        $email = Users::where('_id', $request->get('iduser'))->where('status', 1)->update([
+                            'fullname' => $request->get('nama_lengkap'),
+                            'email' => $request->get('email'),
+                            'kontak' => $request->get('kontak'),
+                            'status_admin' => $request->get('status')
+                        ]);
+                    }
                     if($email){
                         $pesan = array('success' => 1, 'message' => 'Pengguna berhasil disunting.');
                     }else{
