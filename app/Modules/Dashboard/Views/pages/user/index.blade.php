@@ -103,6 +103,25 @@
 											<div class="error" id="kec_admin_err"></div>
 										</div>
 									</div>
+
+									<div id="div-opd" class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1 uk-hidden">
+										<div class="data-inner">
+											<div>
+												<label for="opd_name">OPD</label>
+											</div>
+											<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+												<span class="">OPD</span>
+			                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+			                                    <select id="opd_name" name="opd_name">
+			                                        <option value="">Pilih OPD</option>
+                                                    @foreach($skpd as $thisSkpd)
+			                            	            <option value="{{ $thisSkpd->kode }}">{{ $thisSkpd->name }}</option>
+                                                    @endforeach
+			                                    </select>
+											</div>
+											<div class="error" id="opd_name_err"></div>
+										</div>
+									</div>
 								</div>
 							</li>
                             <li class="mcf-item">

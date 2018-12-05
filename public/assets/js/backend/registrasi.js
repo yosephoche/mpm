@@ -11,6 +11,12 @@ $(document).ready(function(){
         }else{
             $('#div-kec').addClass('uk-hidden');
         }
+
+        if ($(this).val() == '3') {
+            $('#div-opd').removeClass('uk-hidden');
+        } else {
+            $('#div-opd').addClass('uk-hidden');
+        }
     });
 
     $('#registrasi-user').submit(function(e){
@@ -73,6 +79,14 @@ $(document).ready(function(){
                 $('#kec_admin_err').html('');
             }
 
+            if ($('#status_admin').val() === '3' && $('#opd_name').val() === '') {
+                $('#opd_name').parent('div').addClass('error');
+                $('#opd_name_err').html('Kecamatan wajib di isi');
+            } else {
+                $('#opd_name').parent('div').removeClass('error');
+                $('#opd_name_err').html('');
+            }
+
             $('#submit-save').removeAttr('disabled');
             $('#submit-save').css('cursor', 'pointer');
         }else{
@@ -84,6 +98,10 @@ $(document).ready(function(){
 			formData.append('status', $('#status_admin').val());
             if($('#status_admin').val() === '2'){
                 formData.append('kec', $('#kec_admin').val());
+            }
+
+            if ($('#status_admin').val() === '3') {
+                formData.append('opd', $('#opd_name').val());
             }
 			formData.append('_token', $('#_token').val());
 

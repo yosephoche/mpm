@@ -5,4 +5,4 @@ services:
       volumes:
         - '/home/rahmat/Documents/projects/mpm:/application'
       command: |
-        mongoexport --host mongo --db eproc-local --collection temp_users --out /application/temp_users.json
+        mongoexport --host mpm-mongo --db mpm --collection indikator_kategori --out /application/dump/mpm/indikator_kategori.json

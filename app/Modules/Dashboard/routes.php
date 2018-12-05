@@ -110,6 +110,16 @@ Route::group(['prefix' => '/master', 'namespace' => 'App\Modules\Dashboard\Contr
 				Route::post('/update', ['as' => 'dashboard.master.opd.update', 'uses' => 'MasterController@opdUpdate']);
 				Route::get('/delete/{idOpd}', ['as' => 'dashboard.master.opd.delete', 'uses' => 'MasterController@opdDelete']);
 			});
+
+			//master jenis kegiatan
+			Route::group(['prefix'	=> 'jenis-kegiatan'], function () {
+				Route::get('/', ['as' => 'dashboard.master.jenis-kegiatan.index', 'uses' => 'MasterController@jenisKegiatanIndex']);
+				Route::get('/input', ['as' => 'dashboard.master.jenis-kegiatan.create', 'uses' => 'MasterController@jenisKegiatanCreate']);
+				Route::post('/input', ['as' => 'dashboard.master.jenis-kegiatan.save', 'uses' => 'MasterController@jenisKegiatanSave']);
+				Route::get('/update/{idJenis}', ['as' => 'dashboard.master.jenis-kegiatan.edit', 'uses' => 'MasterController@jenisKegiatanEdit']);
+				Route::post('/update', ['as' => 'dashboard.master.jenis-kegiatan.update', 'uses' => 'MasterController@jenisKegiatanUpdate']);
+				Route::get('delete/{idJenis}', ['as' => 'dashboard.master.jenis-kegiatan.delete', 'uses' => 'MasterController@jenisKegiatanDelete']);
+			});
 		});
 	});
 });

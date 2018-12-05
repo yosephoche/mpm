@@ -8,7 +8,7 @@ services:
     ports:
       - "27021:27017"
     volumes:
-      - .:/appllication
+      - .:/application
 
   webserver:
     image: nginx:alpine
