@@ -544,7 +544,7 @@ class MasterController extends Controller
 	public function indikatorKegiatanIndex()
 	{
 		if ($this->authSuperCheck()) {
-			$indikatorKegiatan = IndikatorKegiatan::paginate(15);
+			$indikatorKegiatan = IndikatorKegiatan::where('status', 1)->paginate(15);
 			return view('Dashboard::pages.master.indikator-kegiatan.index')
 					->withIndikator($indikatorKegiatan)
 					->withTitle("Master Data indikator Kegiatan");
@@ -561,8 +561,10 @@ class MasterController extends Controller
 	public function indikatorKegiatanCreate()
 	{
 		if ($this->authSuperCheck()) {
-			return view('Dashboard::pages.master.Indikator-kegiatan.create')
-				->withTitle('Tambah Data Master Indikator Kegiatan');
+			$indikatorVariabel = IndikatorVariabel::where('status', 1)->get();
+			return view('Dashboard::pages.master.indikator-kegiatan.create')
+				->withTitle('Tambah Data Master Indikator Kegiatan')
+				->withIndikator($indikatorVariabel);
 		} else {
 			return redirect('/dashboard');
 		}
@@ -575,18 +577,21 @@ class MasterController extends Controller
 	 */
 	public function indikatorKegiatanSave(Request $request)
 	{
-		$lastIndikatorKegiatanKode = IndikatorKegiatan::where('status', 1)->orderBy('kode', 'DESC')->get();
-		if ($lastIndikatorKegiatanKode->isEmpty()) {
-			$kode = 'jk001';
-		} else {
-			$getKode = substr($lastIndikatorKegiatanKode[0]->kode, 1);
-			$kode = 'jk'.str_pad((int)$getKode + 1, 3, '0', STR_PAD_LEFT);
-		}
+		// $lastIndikatorKegiatanKode = IndikatorKegiatan::where('status', 1)->orderBy('kode', 'DESC')->get();
+		// if ($lastIndikatorKegiatanKode->isEmpty()) {
+		// 	$kode = 'ik001';
+		// } else {
+		// 	$getKode = substr($lastIndikatorKegiatanKode[0]->kode, 1);
+		// 	$kode = 'ik'.str_pad((int)$getKode + 1, 3, '0', STR_PAD_LEFT);
+		// }
 
 		$newKegiatan = new IndikatorKegiatan;
-		$newKegiatan->kode = $kode;
-		$newKegiatan->name = $request->name_Indikator_kegiatan;
+		//$newKegiatan->kode = $kode;
+		$newKegiatan->kategori_name = $request->get('name_indikator_kegiatan');
 		$newKegiatan->status = 1;
+		$newKegiatan->datavariable = array(
+			array_merge(json_decode($request->get('rtVar'), true))
+			);
 
 		if ($newKegiatan->save()) {
 			$pesan = array('success' => 1, 'message' => 'Data Indikator Kegiatan berhasil disimpan');
@@ -608,11 +613,13 @@ class MasterController extends Controller
 	{
 		if ($this->authSuperCheck()) {
 			$thisIndikatorKegiatan = IndikatorKegiatan::where('_id', $idIndikator)->where('status', 1)->get();
+			$indikatorVariabel = IndikatorVariabel::where('status', 1)->get();
 			if ($thisIndikatorKegiatan->isEmpty()) {
 				//not found Indikator kegiatan
 			} else {
-				return view('Dashboard::pages.master.Indikator-kegiatan.edit')
+				return view('Dashboard::pages.master.indikator-kegiatan.edit')
 					->withKegiatan($thisIndikatorKegiatan[0])
+					->withIndikator($indikatorVariabel)
 					->withTitle('Edit Data Master Indikator Kegiatan');
 			}
 		} else {
@@ -634,7 +641,9 @@ class MasterController extends Controller
 			$pesan = array('success' => 0, 'message' => 'Mohon maaf, Data tidak ditemukan');
 		} else {
 			$thisKegiatan->name = $request->get('name_Indikator_kegiatan');
-
+			$thisKegiatan->datavariable = array(
+				array_merge(json_decode($request->get('rtVar'), true))
+				);
 			if ($thisKegiatan->save()) {
 				//success
 				$pesan = array('success' => 1, 'message' => 'Terima kasih. Data berhasil diperbaharui');

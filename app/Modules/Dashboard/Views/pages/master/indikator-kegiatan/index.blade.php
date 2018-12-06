@@ -34,7 +34,7 @@
                                         <div class="uk-clearfix">
                                             <div class="uk-float-right">
                                                 <ul>
-                                                    <li><a href="{{ URL('/master/jenis-kegiatan/input') }}"><button class="button-add">Tambah</button></a></li>
+                                                    <li><a href="{{ URL('/master/indikator-kegiatan/input') }}"><button class="button-add">Tambah</button></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -56,7 +56,15 @@
                                                     <tr>
                                                         <td>{{ $i++ }}</td>
                                                         <td>{{ $thisIndikator->kategori_name }}</td>
-                                                        <td></td>
+                                                        <td>
+                                                            @if (!empty($thisIndikator->datavariable))
+                                                                @foreach ($thisIndikator->datavariable[0] as $key => $item)
+                                                                    {{ $item }},
+                                                                @endforeach
+                                                            @else
+                                                                -
+                                                            @endif
+                                                        </td>
                                                         <td>
                                                             <div class="uk-button-group">
                                                                 <button class="uk-button" type="button">Aksi</button>
@@ -64,8 +72,8 @@
                                                                     <button class="uk-button" type="button"><i class="uk-icon-caret-down"></i></button>
                                                                     <div class="uk-dropdown uk-dropdown-small">
                                                                         <ul>
-                                                                            <li><a href="{{ URL('/master/jenis-kegiatan/update/').'/'.$thisIndikator->_id }}">Edit</a></li>
-                                                                            <li><a href="javascript:;" data-id="{{ $thisIndikator->_id }}" id="del-jenis-kegiatan">Hapus</a></li>
+                                                                            <li><a href="{{ URL('/master/indikator-kegiatan/update/').'/'.$thisIndikator->_id }}">Edit</a></li>
+                                                                            <li><a href="javascript:;" data-id="{{ $thisIndikator->_id }}" id="del-indikator-kegiatan">Hapus</a></li>
                                                                         </ul>
                                                                     </div>
                                                                 </div>
@@ -155,7 +163,7 @@
         <div class="uk-modal-footer">
             <ul>
                 <li><button class="button-blue uk-modal-close" >Tidak</button></li>
-                <li><button class="button-red" data-id="" id="delJenisKegiatan">Ya</button></li>
+                <li><button class="button-red" data-id="" id="delIndikatorKegiatan">Ya</button></li>
             </ul>
         </div>
     </div>

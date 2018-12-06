@@ -23,7 +23,7 @@
 	<div class="mc-form">
 		<div class="mc-form-wrapper">
 			<div class="mc-form-inner">
-				<form id="form_master_jenis_kegiatan" action="" method="post" class="uk-form"  novalidate="novalidate">
+				<form id="form_master_indikator_kegiatan" action="" method="post" class="uk-form"  novalidate="novalidate">
 					<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
 					<div class="mcf-content">
 						<div class="mcf-title">
@@ -34,10 +34,25 @@
 								<div class="data uk-grid">
 									<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 										<div class="data-inner">
-											<label for="name_jenis_kegiatan">Nama Jenis Kegiatan</label>
-											<input id="name_jenis_kegiatan" type="text" name="name_jenis_kegiatan" required>
-											<div class="error" id="name_jenis_kegiatan_err"></div>
+											<label for="name_indikator_kegiatan">Nama Jenis Kegiatan</label>
+											<input id="name_indikator_kegiatan" type="text" name="name_indikator_kegiatan" required>
+											<div class="error" id="name_indikator_kegiatan_err"></div>
 										</div>
+									</div>
+								</div>
+							</li>
+							<li class="mcf-item">
+								<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+									<div class="data-inner uk-text-left">
+										<div class="checkbox">
+											@foreach($indikator as $item)
+											<div>
+												<input data-status="rt" value="{{ $item->nama }}" id="{{ $item->kode_variabel }}" type="checkbox" name="{{ $item->kode_variabel }}">
+												<label for="{{ $item->kode_variabel }}">{{ $item->nama }}</label>
+											</div>
+											@endforeach
+										</div>
+										<div class="error" id="{{ $item->kode_variabel }}_err"></div>
 									</div>
 								</div>
 							</li>

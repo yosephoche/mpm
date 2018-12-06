@@ -23,7 +23,7 @@
 	<div class="mc-form">
 		<div class="mc-form-wrapper">
 			<div class="mc-form-inner">
-				<form id="form_master_jenis_kegiatan_update" action="" method="post" class="uk-form"  novalidate="novalidate">
+				<form id="form_master_indikator_kegiatan_update" action="" method="post" class="uk-form"  novalidate="novalidate">
 					<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
 					<div class="mcf-content">
 						<div class="mcf-title">
@@ -35,9 +35,31 @@
 									<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 										<div class="data-inner">
 											<label for="name_jenis_kegiatan">Nama Jenis Kegiatan</label>
-                                            <input id="name_jenis_kegiatan" type="text" name="name_jenis_kegiatan" value="{{$kegiatan->name}}" required>
+                                            <input id="name_jenis_kegiatan" type="text" name="name_jenis_kegiatan" value="{{$kegiatan->kategori_name}}" required>
 											<div class="error" id="name_jenis_kegiatan_err"></div>
 										</div>
+									</div>
+								</div>
+							</li>
+							<li class="mcf-item">
+								<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+									<div class="data-inner uk-text-left">
+										<div class="checkbox">
+
+											@foreach($indikator as $item)
+											<div>
+												<input data-status="rt" value="{{ $item->nama }}" id="{{ $item->kode_variabel }}" type="checkbox" name="{{ $item->kode_variabel }}" 
+													@if (!empty($kegiatan->datavariable))
+														@foreach ($kegiatan->datavariable[0] as $key => $itemIndikator)
+															{{ ($itemIndikator == $item->nama) ? 'checked' : '' }}
+														@endforeach
+													@endif
+												>
+												<label for="{{ $item->kode_variabel }}">{{ $item->nama }}</label>
+											</div>
+											@endforeach
+										</div>
+										<div class="error" id="{{ $item->kode_variabel }}_err"></div>
 									</div>
 								</div>
 							</li>
