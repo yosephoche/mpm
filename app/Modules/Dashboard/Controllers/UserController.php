@@ -9,15 +9,17 @@ use App\Models\Kecamatan;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Hash;
+use App\Models\Skpd;
 
 class UserController extends Controller
 {
     public function index(){
         if(auth()->guard('admin')->user()->status_admin == 0 || auth()->guard('admin')->user()->status_admin == 1){
-    		$kecamatan = Kecamatan::where('id_kota', '7316')->where('status', true)->get();
+            $kecamatan = Kecamatan::where('id_kota', '7316')->where('status', true)->get();
+            $skpd = Skpd::where('status', 1)->get();
             $userstatus = UserStatus::where('status', 1)->get();
 
-        	return view('Dashboard::pages.user.index', ['userstatus' => $userstatus, 'kecamatan' => $kecamatan]);
+        	return view('Dashboard::pages.user.index', ['userstatus' => $userstatus, 'kecamatan' => $kecamatan, 'skpd' => $skpd]);
         }else{
             return redirect('/dashboard');
         }
@@ -52,6 +54,11 @@ class UserController extends Controller
             if($request->get('status') == '2'){
                 $user->kec = $request->get('kec');
             }
+
+            if ($request->get('status') == '3') {
+                $user->opd = $request->get('opd');
+            }
+            
             $user->status = 1;
 
             if($user->save()){
