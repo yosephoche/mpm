@@ -57,7 +57,7 @@
 				@endif
 				@if (auth()->guard('admin')->user()->status_admin == 3)
 					<li id="sidebar-anggaran-kegiatan" class="msn-item">
-						<a href="{{ URL('/pengguna') }}" class="msn-link"><i class="uk-icon-user"></i>Anggaran Kegiatan</a>
+						<a href="{{ URL('/anggaran-kegiatan') }}" class="msn-link"><i class="uk-icon-user"></i>Anggaran Kegiatan</a>
 					</li>
 				@endif
 				@if(auth()->guard('admin')->user()->status_admin == 0 || auth()->guard('admin')->user()->status_admin == 1)

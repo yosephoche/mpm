@@ -133,3 +133,13 @@ Route::group(['prefix' => '/master', 'namespace' => 'App\Modules\Dashboard\Contr
 		});
 	});
 });
+
+Route::group(['prefix' => 'anggaran-kegiatan', 'middleware' => ['admin','auth:admin'], 'namespace' => 'App\Modules\Dashboard\Controllers'], function () {
+	//anggaran kegiatan
+	Route::get('/', ['as' => 'dashboard.anggaran-kegiatan.index', 'uses' => 'AnggaranKegiatanController@index']);
+	Route::get('/input', ['as' => 'dashboard.anggaran-kegiatan.create', 'uses' => 'AnggaranKegiatanController@create']);
+	Route::post('/input', ['as' => 'dashboard.anggaran-kegiatan.save', 'uses' => 'AnggaranKegiatanController@save']);
+	Route::get('/update/{idAnggaran}', ['as' => 'dashboard.anggaran-kegiatan.edit' , 'uses' => 'AnggaranKegiatanController@edit']);
+	Route::post('/update', ['as' => 'dashboard.anggaran-kegiatan.update', 'uses' => 'AnggaranKegiatanController@update']);
+	Route::get('/delete/{idAnggaran}' , ['as' => 'dashboard.anggaran-kegiatan.delete', 'uses' => 'AnggaranKegiatanController@delete']);
+});
