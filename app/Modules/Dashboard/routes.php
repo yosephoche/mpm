@@ -130,6 +130,16 @@ Route::group(['prefix' => '/master', 'namespace' => 'App\Modules\Dashboard\Contr
 				Route::post('/update', ['as' => 'dashboard.master.indikator-kegiatan.update', 'uses' => 'MasterController@indikatorKegiatanUpdate']);
 				Route::get('delete/{idIndikator}', ['as' => 'dashboard.master.indikator-kegiatan.delete', 'uses' => 'MasterController@indikatorKegiatanDelete']);
 			});
+
+			//master tahun anggaran
+			Route::group(['prefix' => 'tahun-anggaran'], function () {
+				Route::get('/', ['as' => 'dashboard.master.tahun-anggaran.index', 'uses' => 'MasterController@tahunAnggaranIndex']);
+				Route::get('/input', ['as' => 'dashboard.master.tahun-anggaran.create', 'uses' => 'MasterController@tahunAnggaranCreate']);
+				Route::post('/input', ['as' => 'dashboard.master.tahun-anggaran.save', 'uses' => 'MasterController@tahunAnggaranSave']);
+				Route::get('/update/{idTahun}', ['as' => 'dashboard.master.tahun-anggaran.edit', 'uses' => 'MasterController@tahunAnggaranEdit']);
+				Route::post('/update', ['as' => 'dashboard.master.tahun-anggaran.update', 'uses' => 'MasterController@tahunAnggaranUpdate']);
+				Route::get('delete/{idTahun}', ['as' => 'dashboard.master.tahun-anggaran.delete', 'uses' => 'MasterController@tahunAnggaranDelete']);
+			});
 		});
 	});
 });

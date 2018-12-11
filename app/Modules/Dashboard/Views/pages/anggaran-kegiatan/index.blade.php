@@ -37,6 +37,17 @@
                                                     <li><a href="{{ URL('/anggaran-kegiatan/input') }}"><button class="button-add">Tambah</button></a></li>
                                                 </ul>
                                             </div>
+                                            <div class="uk-float-left">
+                                                    <ul>
+                                                        <li>Tahun Anggaran
+                                                            <select name="tahun_anggaran" id="tahun_anggaran" class="button-add">
+                                                                <option value="">2018</option>
+                                                                <option value="">2019</option>
+                                                                <option value="">2020</option>
+                                                            </select>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                         </div>
                                     </div>
                                     <div>
@@ -44,7 +55,9 @@
                                             <thead>
                                                 <tr>
                                                     <th>No.</th>
+                                                    <th>Jenis Kegiatan</th>
                                                     <th>Nama Kegiatan</th>
+                                                    <th>Tahun Anggaran</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
@@ -53,7 +66,9 @@
                                                 @foreach($anggaran as $thisAnggaran)
                                                 <tr>
                                                     <td>{{ $i++ }}</td>
+                                                    <td>{{ App\Models\JenisKegiatan::getJenisKegiatanByName($thisAnggaran->anggaran_jenis_kegiatan)}}</td>
                                                     <td>{{ $thisAnggaran->anggaran_nama_kegiatan }}</td>
+                                                    <td></td>
                                                     <td>
                                                         <div class="uk-button-group">
                                                             <button class="uk-button" type="button">Aksi</button>
@@ -157,7 +172,7 @@
     </div>
 </div>
 <script>
-	var sidebar = 'indi-var';
+	var sidebar = 'sidebar-anggaran-kegiatan';
 </script>
 
 <script src="{{ URL('/assets/js/backend/indikator.js') }}"></script>

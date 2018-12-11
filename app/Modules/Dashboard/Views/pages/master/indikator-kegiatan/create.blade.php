@@ -78,7 +78,7 @@
 	</div>
 </div>
 <script>
-	var sidebar = 'indi-var';
+	var sidebar = 'indi-indikator-kegiatan';
 </script>
 
 <script src="{{ URL('/assets/js/backend/indikator.js') }}"></script>
