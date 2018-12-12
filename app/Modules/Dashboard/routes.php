@@ -152,4 +152,5 @@ Route::group(['prefix' => 'anggaran-kegiatan', 'middleware' => ['admin','auth:ad
 	Route::get('/update/{idAnggaran}', ['as' => 'dashboard.anggaran-kegiatan.edit' , 'uses' => 'AnggaranKegiatanController@edit']);
 	Route::post('/update', ['as' => 'dashboard.anggaran-kegiatan.update', 'uses' => 'AnggaranKegiatanController@update']);
 	Route::get('/delete/{idAnggaran}' , ['as' => 'dashboard.anggaran-kegiatan.delete', 'uses' => 'AnggaranKegiatanController@delete']);
+	Route::get('/detail/{idAnggaran}', ['as' => 'dashboard.anggaran-kegiatan.detail', 'uses' => 'AnggaranKegiatanController@detail']);
 });

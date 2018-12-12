@@ -266,6 +266,18 @@ $(document).ready(function(){
 		});
 	});
 
+	$('#filter_tahun_anggaran').on('change', function (e) {
+		e.preventDefault();
+		var loc = window.location;
+		var url = loc.protocol + '//' + loc.host + loc.pathname;
+		console.log(loc, url);
+		if($(this).val() !== ''){
+			location.href = url+'?tahun='+$("#filter_tahun_anggaran").val();
+		}else{
+			location.href = url;
+		}
+	});
+
 	var dengan_rupiah = document.getElementById('anggaran_besaran');
 	dengan_rupiah.addEventListener('keyup', function(e)
 	{

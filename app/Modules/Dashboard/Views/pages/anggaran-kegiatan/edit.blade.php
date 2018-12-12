@@ -16,7 +16,7 @@
 	<div class="mc-breadcrumb" data-uk-sticky="{top:60}">
 		<ul class="uk-breadcrumb">
 			<li><a href="{{ URL('/dashboard') }}">Dashboard</a></li>
-			<li><a href="{{ URL('/master/jenis-kegiatan') }}">Daftar Jenis Kegiatan</a></li>
+			<li><a href="{{ URL('/anggaran-kegiatan') }}">Anggaran Kegiatan</a></li>
 			<li><a href="javascript:;">{{ $title }}</a></li>
 		</ul>
 	</div>

@@ -1067,4 +1067,170 @@ $(document).ready(function(){
 			}
 		});
 	});
+
+	//master tahun anggaran
+	$('#tahun_anggaran').keypress(function (e) {
+		if (e.which !== 8 && e.which !== 0 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
+
+	$('#form_master_tahun_anggaran').submit(function(e){
+		var formData = new FormData();
+		e.preventDefault();
+		$('#submit-save').attr('disabled', 'true');
+		$('#submit-save').css('cursor', 'not-allowed');
+		$('#alert-indi-var').addClass('uk-hidden');
+		$('#alert-indi-var').find('p').html('');
+		var formData = new FormData();
+		if($('#tahun_anggaran').val() === ''){
+			if($('#tahun_anggaran').val() === ''){
+				$('#tahun_anggaran').parent('div').addClass('error');
+				$('#tahun_anggaran_err').html('Tahun Anggaran wajib di isi');
+			}else{
+				$('#tahun_anggaran').parent('div').removeClass('error');
+				$('#tahun_anggaran_err').html('');
+			}
+
+			$('#submit-save').removeAttr('disabled');
+			$('#submit-save').css('cursor', 'pointer');
+		}else{
+			formData.append('tahun_anggaran', $('#tahun_anggaran').val());
+			formData.append('_token', $('#_token').val());
+
+			$.ajax({
+				url: '/master/tahun-anggaran/input',
+				type: 'POST',
+				data: formData,
+				cache: false,
+				contentType: false,
+				processData: false,
+				success: function(data) {
+					msg = $.parseJSON(data);
+					if(msg.success == 1){
+						$('#alert-indi-var').removeClass('uk-alert-danger');
+						$('#alert-indi-var').removeClass('uk-hidden');
+						$('#alert-indi-var').addClass('uk-alert-success');
+						$('#alert-indi-var').find('p').html(msg.message);
+						setTimeout(function(){
+							location.reload(true);
+						}, 2000);
+					}else{
+						$('#alert-indi-var').removeClass('uk-alert-success');
+						$('#alert-indi-var').removeClass('uk-hidden');
+						$('#alert-indi-var').addClass('uk-alert-danger');
+						$('#alert-indi-var').find('p').html(msg.message);
+						$('#submit-save').removeAttr('disabled');
+						$('#submit-save').css('cursor', 'pointer');
+					}
+				},
+				error: function(response){
+					$('#alert-indi-var').removeClass('uk-alert-success');
+					$('#alert-indi-var').removeClass('uk-hidden');
+					$('#alert-indi-var').addClass('uk-alert-danger');
+					$('#alert-indi-var').find('p').html('Terjadi kesalahan. Silahkan ulangi beberapa saat lagi');
+					$('#submit-save').removeAttr('disabled');
+					$('#submit-save').css('cursor', 'pointer');
+				}
+			});
+		}
+	});
+
+	$(document).on('click', '#del-tahun-anggaran', function(){
+		$('#delTahunAnggaran').attr('data-id', $(this).attr('data-id'));
+		$.UIkit.modal('#modal-del').show();
+	});
+
+	$('#delTahunAnggaran').on('click', function(){
+		$.ajax({
+			type: 'GET',
+			url: '/master/tahun-anggaran/delete/'+ $(this).attr('data-id'),
+			success: function(data){
+				msg = $.parseJSON(data);
+				if(msg.success == 1){
+					$('#alert-modal').removeClass('uk-alert-danger');
+					$('#alert-modal').removeClass('uk-hidden');
+					$('#alert-modal').addClass('uk-alert-success');
+					$('#alert-modal').find('p').html(msg.message);
+					setTimeout(function(){
+						location.reload(true);
+					}, 1000);
+				}else{
+					$('#alert-modal').removeClass('uk-alert-success');
+					$('#alert-modal').removeClass('uk-hidden');
+					$('#alert-modal').addClass('uk-alert-danger');
+					$('#alert-modal').find('p').html(msg.message);
+				}
+			},
+			error : function(response){
+				$('#alert-modal').removeClass('uk-alert-success');
+				$('#alert-modal').removeClass('uk-hidden');
+				$('#alert-modal').addClass('uk-alert-danger');
+				$('#alert-modal').find('p').html('Terjadi Kesalahan. Silahkan ulangi beberapa saat lagi.');
+			}
+		});
+	});
+
+	$('#form_master_tahun_anggaran_update').submit(function(e){
+		var formData = new FormData();
+		e.preventDefault();
+		$('#submit-save').attr('disabled', 'true');
+		$('#submit-save').css('cursor', 'not-allowed');
+		$('#alert-indi-var').addClass('uk-hidden');
+		$('#alert-indi-var').find('p').html('');
+		var formData = new FormData();
+		if($('#tahun_anggaran').val() === ''){
+			if($('#tahun_anggaran').val() === ''){
+				$('#tahun_anggaran').parent('div').addClass('error');
+				$('#tahun_anggaran_err').html('Nama OPD wajib di isi');
+			}else{
+				$('#tahun_anggaran').parent('div').removeClass('error');
+				$('#tahun_anggaran_err').html('');
+			}
+
+			$('#submit-save').removeAttr('disabled');
+			$('#submit-save').css('cursor', 'pointer');
+		}else{
+			formData.append('tahun_anggaran', $('#tahun_anggaran').val());
+			formData.append('_token', $('#_token').val());
+			formData.append('idTahunAnggaran', $('#submit-save').attr('data-id'));
+
+			$.ajax({
+				url: '/master/tahun-anggaran/update',
+				type: 'POST',
+				data: formData,
+				cache: false,
+				contentType: false,
+				processData: false,
+				success: function(data) {
+					msg = $.parseJSON(data);
+					if(msg.success == 1){
+						$('#alert-indi-var').removeClass('uk-alert-danger');
+						$('#alert-indi-var').removeClass('uk-hidden');
+						$('#alert-indi-var').addClass('uk-alert-success');
+						$('#alert-indi-var').find('p').html(msg.message);
+						setTimeout(function(){
+							location.reload(true);
+						}, 2000);
+					}else{
+						$('#alert-indi-var').removeClass('uk-alert-success');
+						$('#alert-indi-var').removeClass('uk-hidden');
+						$('#alert-indi-var').addClass('uk-alert-danger');
+						$('#alert-indi-var').find('p').html(msg.message);
+						$('#submit-save').removeAttr('disabled');
+						$('#submit-save').css('cursor', 'pointer');
+					}
+				},
+				error: function(response){
+					console.log(response);
+					$('#alert-indi-var').removeClass('uk-alert-success');
+					$('#alert-indi-var').removeClass('uk-hidden');
+					$('#alert-indi-var').addClass('uk-alert-danger');
+					$('#alert-indi-var').find('p').html('Terjadi kesalahan. Silahkan ulangi beberapa saat lagi');
+					$('#submit-save').removeAttr('disabled');
+					$('#submit-save').css('cursor', 'pointer');
+				}
+			});
+		}
+	});
 });

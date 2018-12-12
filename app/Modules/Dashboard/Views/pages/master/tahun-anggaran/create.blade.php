@@ -16,14 +16,14 @@
 	<div class="mc-breadcrumb" data-uk-sticky="{top:60}">
 		<ul class="uk-breadcrumb">
 			<li><a href="{{ URL('/dashboard') }}">Dashboard</a></li>
-			<li><a href="{{ URL('/master/indikator/variabel') }}">Daftar Indikator Variabel</a></li>
+			<li><a href="{{ URL('/master/tahun-anggaran') }}">Daftar Tahun Anggaran</a></li>
 			<li><a href="javascript:;">{{ $title }}</a></li>
 		</ul>
 	</div>
 	<div class="mc-form">
 		<div class="mc-form-wrapper">
 			<div class="mc-form-inner">
-				<form id="form_master_opd" action="" method="post" class="uk-form"  novalidate="novalidate">
+				<form id="form_master_tahun_anggaran" action="" method="post" class="uk-form"  novalidate="novalidate">
 					<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
 					<div class="mcf-content">
 						<div class="mcf-title">
@@ -34,9 +34,9 @@
 								<div class="data uk-grid">
 									<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 										<div class="data-inner">
-											<label for="name_opd">Nama OPD</label>
-											<input id="name_opd" type="text" name="name_opd" required>
-											<div class="error" id="name_opd_err"></div>
+											<label for="tahun_anggaran">Tahun Anggaran</label>
+											<input id="tahun_anggaran" type="text" name="tahun_anggaran" required>
+											<div class="error" id="tahun_anggaran_err"></div>
 										</div>
 									</div>
 								</div>
@@ -63,7 +63,7 @@
 	</div>
 </div>
 <script>
-	var sidebar = 'indi-opd';
+	var sidebar = 'indi-tahun-anggaran';
 </script>
 
 <script src="{{ URL('/assets/js/backend/indikator.js') }}"></script>

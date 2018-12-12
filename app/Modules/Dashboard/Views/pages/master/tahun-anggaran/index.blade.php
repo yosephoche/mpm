@@ -34,7 +34,7 @@
                                         <div class="uk-clearfix">
                                             <div class="uk-float-right">
                                                 <ul>
-                                                    <li><a href="{{ URL('/master/opd/input') }}"><button class="button-add">Tambah</button></a></li>
+                                                    <li><a href="{{ URL('/master/tahun-anggaran/input') }}"><button class="button-add">Tambah</button></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -44,18 +44,16 @@
                                             <thead>
                                                 <tr>
                                                     <th>No.</th>
-                                                    <th>Kode</th>
-                                                    <th>Nama OPD</th>
+                                                    <th>Tahun Anggaran Aktif</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 @php($i = empty($_GET['page']) ? 1 : ((($_GET['page'] - 1) * 10) + 1))
-                                                @foreach($skpd as $thisSkpd)
+                                                @foreach($tahun as $thisTahun)
                                                 <tr>
                                                     <td>{{ $i++ }}</td>
-                                                    <td>{{ $thisSkpd->kode }}</td>
-                                                    <td>{{ $thisSkpd->name }}</td>
+                                                    <td>{{ $thisTahun->tahun_anggaran }}</td>
                                                     <td>
                                                         <div class="uk-button-group">
                                                             <button class="uk-button" type="button">Aksi</button>
@@ -63,8 +61,8 @@
                                                                 <button class="uk-button" type="button"><i class="uk-icon-caret-down"></i></button>
                                                                 <div class="uk-dropdown uk-dropdown-small">
                                                                     <ul>
-                                                                        <li><a href="{{ URL('/master/opd/update/').'/'.$thisSkpd->_id }}">Edit</a></li>
-                                                                        <li><a href="javascript:;" data-id="{{ $thisSkpd->_id }}" id="del-opd">Hapus</a></li>
+                                                                        <li><a href="{{ URL('/master/tahun-anggaran/update/').'/'.$thisTahun->_id }}">Edit</a></li>
+                                                                        <li><a href="javascript:;" data-id="{{ $thisTahun->_id }}" id="del-tahun-anggaran">Hapus</a></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -76,13 +74,13 @@
                                         </table>
                                     </div>
 
-                                    @if($skpd->lastPage() > 1)
+                                    @if($tahun->lastPage() > 1)
                                     <div class="pagination uk-clearfix">
                                         <div class="uk-float-right">
                                             <ul class="uk-pagination">
                                                 <li class="{{ ((empty($_GET['page'])) || ($_GET['page'] == 1)) ? 'uk-disabled' : '' }}"><a href="{{ URL('/master/opd').'?page='.(!empty($_GET['page']) ? ($_GET['page'] - 1) : '1') }}"><i class="uk-icon-caret-left"></i></a></li>
                                                 @php($pageNow = empty($_GET['page']) ? 1 : $_GET['page'])
-                                                @if($skpd->lastPage() > 12)
+                                                @if($tahun->lastPage() > 12)
                                                     <li class="{{ ($pageNow == 1) ? 'uk-active' : '' }}"><a href="{{ URL('/master/opd').'?page=1' }}">1</a></li>
                                                     <li class="uk-active"><a href="javascript:;">...</a></li>
                                                     @if($pageNow == 1)
@@ -91,13 +89,13 @@
                                                         <li class="{{ ($pageNow == $i) ? 'uk-active' : '' }}"><a href="{{ URL('/master/opd').'?page='.$i }}">{{ $i }}</a></li>
                                                         @endfor
                                                     @else
-                                                        @php($pagelast = ($skpd->lastPage() - 1) - $pageNow)
+                                                        @php($pagelast = ($tahun->lastPage() - 1) - $pageNow)
                                                         @if($pagelast >= 4)
                                                             @for($i = $pageNow;$i <= $pageNow + 4; $i++)
                                                             <li class="{{ ($pageNow == $i) ? 'uk-active' : '' }}"><a href="{{ URL('/master/opd').'?page='.$i }}">{{ $i }}</a></li>
                                                             @endfor
                                                         @else
-                                                            @if($skpd->lastPage() == $pageNow)
+                                                            @if($tahun->lastPage() == $pageNow)
                                                                 @for($i = $pageNow - 5;$i <= ($pageNow - 5) + 4; $i++)
                                                                 <li class="{{ ($pageNow == $i) ? 'uk-active' : '' }}"><a href="{{ URL('/master/opd').'?page='.$i }}">{{ $i }}</a></li>
                                                                 @endfor
@@ -109,13 +107,13 @@
                                                         @endif
                                                     @endif
                                                     <li class="uk-active"><a href="javascript:;">...</a></li>
-                                                    <li class="{{ ($pageNow == $skpd->lastPage()) ? 'uk-active' : '' }}"><a href="{{ URL('/master/opd').'?page='.$skpd->lastPage() }}">{{ $skpd->lastPage() }}</a></li>
+                                                    <li class="{{ ($pageNow == $tahun->lastPage()) ? 'uk-active' : '' }}"><a href="{{ URL('/master/opd').'?page='.$tahun->lastPage() }}">{{ $tahun->lastPage() }}</a></li>
                                                 @else
-                                                    @for($i = 1;$i <= $skpd->lastPage(); $i++)
+                                                    @for($i = 1;$i <= $tahun->lastPage(); $i++)
                                                         <li class="{{ ($pageNow == $i) ? 'uk-active' : '' }}"><a href="{{ URL('/master/opd').'?page='.$i }}">{{ $i }}</a></li>
                                                     @endfor
                                                 @endif
-                                                <li class="{{ ((!empty($_GET['page'])) && ($_GET['page'] == $skpd->lastPage())) ? 'uk-disabled' : '' }}"><a href="{{ URL('/master/opd').'?page='.(!empty($_GET['page']) ? ($_GET['page'] + 1) : '2') }}"><i class="uk-icon-caret-right"></i></a></li>
+                                                <li class="{{ ((!empty($_GET['page'])) && ($_GET['page'] == $tahun->lastPage())) ? 'uk-disabled' : '' }}"><a href="{{ URL('/master/opd').'?page='.(!empty($_GET['page']) ? ($_GET['page'] + 1) : '2') }}"><i class="uk-icon-caret-right"></i></a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -153,13 +151,13 @@
         <div class="uk-modal-footer">
             <ul>
                 <li><button class="button-blue uk-modal-close" >Tidak</button></li>
-                <li><button class="button-red" data-id="" id="delOpd">Ya</button></li>
+                <li><button class="button-red" data-id="" id="delTahunAnggaran">Ya</button></li>
             </ul>
         </div>
     </div>
 </div>
 <script>
-	var sidebar = 'indi-opd';
+	var sidebar = 'indi-tahun-anggaran';
 </script>
 
 <script src="{{ URL('/assets/js/backend/indikator.js') }}"></script>

@@ -23,7 +23,7 @@
 	<div class="mc-form">
 		<div class="mc-form-wrapper">
 			<div class="mc-form-inner">
-				<form id="form_anggaran_kegiatan_opd" action="" method="post" class="uk-form"  novalidate="novalidate">
+				<form action="" method="post" class="uk-form"  novalidate="novalidate">
 					<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
 					<div class="mcf-content">
 						<div class="mcf-title">
@@ -40,11 +40,11 @@
 											<div class="uk-button uk-form-select uk-active" data-uk-form-select>
 												<span class="">Jenis Kegiatan</span>
 												<i class="uk-icon-angle-down uk-icon-medium"></i>
-												<select id="anggaran_jenis_kegiatan" name="anggaran_jenis_kegiatan">
+												<select id="anggaran_jenis_kegiatan" name="anggaran_jenis_kegiatan" disabled>
 													<option value="">Pilih Jenis Kegiatan</option>
 													@foreach($jenis as $thisJenis)
 														@if ($thisJenis->name != null)
-															<option value="{{ $thisJenis->_id }}">{{ $thisJenis->name }}</option>
+															<option value="{{ $thisJenis->_id }}" {{ ($thisJenis->_id == $anggaran->anggaran_jenis_kegiatan) ? 'selected' : ''}}>{{ $thisJenis->name }}</option>
 														@endif
 													@endforeach
 												</select>
@@ -53,37 +53,37 @@
 										</div>
 									</div>
 								</div>
-							</li>
-							<li class="mcf-item">
-								<div class="data uk-grid">
-									<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
-										<div class="data-inner">
-											<div>
-												<label for="indikator_kegiatan">Indikator Kegiatan</label>
-											</div>
-											<div class="uk-button uk-form-select uk-active" data-uk-form-select>
-												<span class="">Indikator Kegiatan</span>
-												<i class="uk-icon-angle-down uk-icon-medium"></i>
-												<select id="indikator_kegiatan" name="indikator_kegiatan">
-													<option value="">Pilih Indikator Kegiatan</option>
-													@foreach($indikator as $thisIndikator)
-														@if ($thisIndikator->kategori_name != null)
-															<option value="{{ $thisIndikator->_id }}">{{ $thisIndikator->kategori_name }}</option>
-														@endif
-													@endforeach
-												</select>
-											</div>
-											<div class="error" id="indikator_kegiatan_err"></div>
-										</div>
-									</div>
-								</div>
-							</li>
+                            </li>
+                            <li class="mcf-item">
+                                    <div class="data uk-grid">
+                                        <div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+                                            <div class="data-inner">
+                                                <div>
+                                                    <label for="indikator_kegiatan">Indikator Kegiatan</label>
+                                                </div>
+                                                <div class="uk-button uk-form-select uk-active" data-uk-form-select>
+                                                    <span class="">Indikator Kegiatan</span>
+                                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+                                                    <select id="indikator_kegiatan" name="indikator_kegiatan" disabled>
+                                                        <option value="">Pilih Indikator Kegiatan</option>
+                                                        @foreach($indikator as $thisIndikator)
+                                                            @if ($thisIndikator->kategori_name != null)
+                                                                <option value="{{ $thisIndikator->_id }} {{ ($thisIndikator->_id == $anggaran->anggaran_indikator_kegiatan) ? 'selected' : ''}}">{{ $thisIndikator->kategori_name }}</option>
+                                                            @endif
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                                <div class="error" id="indikator_kegiatan_err"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
 							<li class="mcf-item">
 								<div class="data uk-grid">
 									<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 										<div class="data-inner">
 											<label for="anggaran_nama_kegiatan">Nama Kegiatan</label>
-											<input id="anggaran_nama_kegiatan" type="text" name="anggaran_nama_kegiatan" required>
+											<input id="anggaran_nama_kegiatan" type="text" name="anggaran_nama_kegiatan" value="{{ $anggaran->anggaran_nama_kegiatan }}" required disabled="true">
 											<div class="error" id="anggaran_nama_kegiatan_err"></div>
 										</div>
 									</div>
@@ -94,7 +94,7 @@
 									<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 										<div class="data-inner">
 											<label for="anggaran_besaran">Nilai Anggaran Kegiatan</label>
-											<input id="anggaran_besaran" type="text" name="anggaran_besaran" required>
+											<input id="anggaran_besaran" type="text" name="anggaran_besaran" value="{{ $anggaran->anggaran_besaran }}" required disabled>
 											<div class="error" id="anggaran_besaran_err"></div>
 										</div>
 									</div>
@@ -104,21 +104,8 @@
 								<div class="data uk-grid">
 									<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 										<div class="data-inner">
-											<div>
-												<label for="anggaran_tahun_kegiatan">Tahun Anggaran Kegiatan</label>
-											</div>
-											<div class="uk-button uk-form-select uk-active" data-uk-form-select>
-												<span class="">Tahun Anggaran Kegiatan</span>
-												<i class="uk-icon-angle-down uk-icon-medium"></i>
-												<select id="anggaran_tahun_kegiatan" name="anggaran_tahun_kegiatan">
-													<option value="">Pilih Tahun Anggaran Kegiatan</option>
-													@foreach($tahun as $thisTahun)
-														@if ($thisTahun->tahun_anggaran != null)
-															<option value="{{ $thisTahun->tahun_anggaran }}">{{ $thisTahun->tahun_anggaran }}</option>
-														@endif
-													@endforeach
-												</select>
-											</div>
+											<label for="anggaran_tahun_kegiatan">Tahun Anggaran Kegiatan</label>
+											<input id="anggaran_tahun_kegiatan" type="text" name="anggaran_tahun_kegiatan" value="{{ $anggaran->anggaran_tahun_kegiatan }}" required disabled>
 											<div class="error" id="anggaran_tahun_kegiatan_err"></div>
 										</div>
 									</div>
@@ -129,15 +116,6 @@
                                     <p></p>
                                 </div>
                             </li>
-							<li class="mcf-item">
-								<div class="submit">
-									<div class="uk-clearfix">
-										<div class="uk-float-right">
-											<button name="submit" id="submit-save" type="submit">Simpan</button>
-										</div>
-									</div>
-								</div>
-							</li>
 						</ul>
 					</div>
 				</form>

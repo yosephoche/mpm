@@ -10,6 +10,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\JenisKegiatan;
 use App\Models\IndikatorKegiatan;
+use App\Models\TahunAnggaran;
 
 class MasterController extends Controller
 {
@@ -616,6 +617,7 @@ class MasterController extends Controller
 			$indikatorVariabel = IndikatorVariabel::where('status', 1)->get();
 			if ($thisIndikatorKegiatan->isEmpty()) {
 				//not found Indikator kegiatan
+				return redirect('/dashboard');
 			} else {
 				return view('Dashboard::pages.master.indikator-kegiatan.edit')
 					->withKegiatan($thisIndikatorKegiatan[0])
@@ -692,7 +694,10 @@ class MasterController extends Controller
 	 */
 	public function tahunAnggaranIndex()
 	{
-		# code...
+		$tahunAnggaran = TahunAnggaran::where('status', 1)->paginate(10);
+		return view('Dashboard::pages.master.tahun-anggaran.index')
+			->withTitle('Data Master Tahun Anggaran')
+			->withTahun($tahunAnggaran);
 	}
 
 	/**
@@ -702,7 +707,8 @@ class MasterController extends Controller
 	 */
 	public function tahunAnggaranCreate()
 	{
-		# code...
+		return view('Dashboard::pages.master.tahun-anggaran.create')
+			->withTitle('Tambah Data Master Tahun Anggaran');
 	}
 
 	/**
@@ -712,7 +718,17 @@ class MasterController extends Controller
 	 */
 	public function tahunAnggaranSave(Request $request)
 	{
-		# code...
+		$tahunAnggaran = new TahunAnggaran;
+		$tahunAnggaran->tahun_anggaran = $request->get('tahun_anggaran');
+		$tahunAnggaran->status = 1;
+		if ($tahunAnggaran->save()) {
+			//success
+			$pesan = array('success' => 1, 'message' => 'Terima kasih. Data berhasil disimpan');
+		} else {
+			$pesan = array('success' => 0, 'message' => 'Terima kasih. Data gagal disimpan');
+		}
+
+		return json_encode($pesan);
 	}
 
 	/**
@@ -722,7 +738,19 @@ class MasterController extends Controller
 	 */
 	public function tahunAnggaranEdit($idTahun)
 	{
-		# code...
+		if ($this->authSuperCheck()) {
+			$isTahunAnggaran = TahunAnggaran::where('status', 1)->where('_id', $idTahun)->first();
+	
+			if ($isTahunAnggaran) {
+				return view('Dashboard::pages.master.tahun-anggaran.edit')
+					->withTitle('Edit Data Master Tahun Anggaran')
+					->withTahun($isTahunAnggaran);
+			} else {
+				return redirect('/dashboard');
+			}
+		} else {
+			return redirect('/dashboard');
+		}
 	}
 
 	/**
@@ -730,9 +758,24 @@ class MasterController extends Controller
 	 * 
 	 * @method post tahunAnggaranUpdate()
 	 */
-	public function tahunAnggaranUpdate()
+	public function tahunAnggaranUpdate(Request $request)
 	{
-		# code...
+		$tahun = TahunAnggaran::where('_id', $request->get('idTahunAnggaran'))->where('status', 1)->first();
+
+		if (!$tahun) {
+			//not found id
+			$pesan = array('success' => 0, 'message' => 'Mohon maaf, Data tidak ditemukan');
+		} else {
+			$tahun->tahun_anggaran = $request->get('tahun_anggaran');
+			if ($tahun->save()) {
+				//success
+				$pesan = array('success' => 1, 'message' => 'Terima kasih. Data berhasil diperbaharui');
+			} else {
+				$pesan = array('success' => 0, 'message' => 'Terima kasih. Data gagal diperbaharui');
+			}
+		}
+
+		return json_encode($pesan);
 	}
 
 	/**
@@ -742,7 +785,23 @@ class MasterController extends Controller
 	 */
 	public function tahunAnggaranDelete($idTahun)
 	{
-		# code...
+		$tahun = TahunAnggaran::where('_id', $idTahun)->where('status', 1)->first();
+
+		if (!$tahun) {
+			//not found id
+			$pesan = array('success' => 0, 'message' => 'Mohon maaf, Data tidak ditemukan');
+		} else {
+			$tahun->status = 0;
+
+			if ($tahun->save()) {
+				//success
+				$pesan = array('success' => 1, 'message' => 'Terima kasih. Data berhasil dihapus');
+			} else {
+				$pesan = array('success' => 0, 'message' => 'Terima kasih. Data gagal dihapus');
+			}
+		}
+
+		return json_encode($pesan);
 	}
 
 }
