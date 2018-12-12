@@ -58,6 +58,30 @@
 								<div class="data uk-grid">
 									<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 										<div class="data-inner">
+											<div>
+												<label for="indikator_kegiatan">Indikator Kegiatan</label>
+											</div>
+											<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+												<span class="">Indikator Kegiatan</span>
+												<i class="uk-icon-angle-down uk-icon-medium"></i>
+												<select id="indikator_kegiatan" name="indikator_kegiatan">
+													<option value="">Pilih Indikator Kegiatan</option>
+													@foreach($indikator as $thisIndikator)
+														@if ($thisIndikator->kategori_name != null)
+															<option value="{{ $thisIndikator->_id }}">{{ $thisIndikator->kategori_name }}</option>
+														@endif
+													@endforeach
+												</select>
+											</div>
+											<div class="error" id="indikator_kegiatan_err"></div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="mcf-item">
+								<div class="data uk-grid">
+									<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+										<div class="data-inner">
 											<label for="anggaran_nama_kegiatan">Nama Kegiatan</label>
 											<input id="anggaran_nama_kegiatan" type="text" name="anggaran_nama_kegiatan" required>
 											<div class="error" id="anggaran_nama_kegiatan_err"></div>
@@ -80,8 +104,19 @@
 								<div class="data uk-grid">
 									<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 										<div class="data-inner">
-											<label for="anggaran_tahun_kegiatan">Tahun Anggaran Kegiatan</label>
-											<input id="anggaran_tahun_kegiatan" type="text" name="anggaran_tahun_kegiatan" required>
+											<div>
+												<label for="anggaran_tahun_kegiatan">Tahun Anggaran Kegiatan</label>
+											</div>
+											<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+												<span class="">Tahun Anggaran Kegiatan</span>
+												<i class="uk-icon-angle-down uk-icon-medium"></i>
+												<select id="anggaran_tahun_kegiatan" name="anggaran_tahun_kegiatan">
+													<option value="">Pilih Tahun Anggaran Kegiatan</option>
+													<option value="2018">2018</option>
+													<option value="2019">2019</option>
+													<option value="2020">2020</option>
+												</select>
+											</div>
 											<div class="error" id="anggaran_tahun_kegiatan_err"></div>
 										</div>
 									</div>

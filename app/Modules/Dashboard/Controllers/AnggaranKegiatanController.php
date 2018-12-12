@@ -16,7 +16,7 @@ class AnggaranKegiatanController extends Controller
 {
 	public function authOpdCheck()
 	{
-		return (auth()->guard('admin')->user()->status_admin == 3) ? true : false;
+		return (auth()->guard('admin')->user()->status_admin == 3 || auth()->guard('admin')->user()->status_admin == 0) ? true : false;
 	}
 
 	/**
@@ -45,9 +45,11 @@ class AnggaranKegiatanController extends Controller
 	{
 		if ($this->authOpdCheck()) {
 			$jenisKegiatan = JenisKegiatan::where('status', 1)->get();
+			$indikatorKegiatan = IndikatorKegiatan::where('status', 1)->get();
 			return view('Dashboard::pages.anggaran-kegiatan.create')
 				->withTitle('Tambah Data Anggaran Kegiatan')
-				->withJenis($jenisKegiatan);
+				->withJenis($jenisKegiatan)
+				->withIndikator($indikatorKegiatan);
 		} else {
 			return redirect('/dashboard');
 		}
@@ -73,9 +75,10 @@ class AnggaranKegiatanController extends Controller
 		$anggaranKegiatan = new AnggaranKegiatan;
 		$anggaranKegiatan->anggaran_jenis_kegiatan = $request->get('anggaran_jenis_kegiatan');
 		$anggaranKegiatan->anggaran_nama_kegiatan = $request->get('anggaran_nama_kegiatan');
-		$anggaranKegiatan->anggaran_besaran = $request->get('anggaran_besaran');
+		$anggaranKegiatan->anggaran_besaran = (int)$request->get('anggaran_besaran');
 		$anggaranKegiatan->anggaran_tahun_kegiatan = $request->get('anggaran_tahun_kegiatan');
-		$anggaranKegiatan->opd_id = auth()->guard('admin')->user()->opd;
+		$anggaranKegiatan->anggaran_indikator_kegiatan = $request->get('anggaran_indikator_kegiatan');
+		$anggaranKegiatan->opd_id = !empty(auth()->guard('admin')->user()->opd) ? auth()->guard('admin')->user()->opd : '0';
 		$anggaranKegiatan->status = 1;
 
 		if ($anggaranKegiatan->save()) {

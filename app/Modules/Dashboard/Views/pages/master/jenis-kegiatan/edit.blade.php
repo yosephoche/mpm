@@ -63,7 +63,7 @@
 	</div>
 </div>
 <script>
-	var sidebar = 'indi-var';
+	var sidebar = 'indi-jenis';
 </script>
 
 <script src="{{ URL('/assets/js/backend/indikator.js') }}"></script>

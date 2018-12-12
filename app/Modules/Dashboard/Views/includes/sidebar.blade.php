@@ -49,13 +49,14 @@
 						<li id="sidebar-dm-indikator-opsi" class=""><a href="{{ URL('/master/indikator/opsi') }}"><i class="uk-icon-circle-o"></i>Opsi Indikator</a></li>
 						<li id="sidebar-dm-opd" class=""><a href="{{ URL('/master/opd') }}"><i class="uk-icon-circle-o"></i>OPD</a></li>
 						<li id="sidebar-dm-jenis-kegiatan" class=""><a href="{{ URL('/master/jenis-kegiatan') }}"><i class="uk-icon-circle-o"></i>Jenis Kegiatan</a></li>
-						<li id="sidebar-dm-jenis-kegiatan" class=""><a href="{{ URL('/master/indikator-kegiatan') }}"><i class="uk-icon-circle-o"></i>Indikator Kegiatan</a></li>
+						<li id="sidebar-dm-indikator-kegiatan" class=""><a href="{{ URL('/master/indikator-kegiatan') }}"><i class="uk-icon-circle-o"></i>Indikator Kegiatan</a></li>
+						<li id="sidebar-dm-tahun-anggaran" class=""><a href="{{ URL('/master/tahun-anggaran') }}"><i class="uk-icon-circle-o"></i>Tahun Anggaran</a></li>
 	<!-- 					<li><a href="#"><i class="uk-icon-circle-o"></i>Perubahan Data PPFM</a></li>
 	<li><a href="#"><i class="uk-icon-circle-o"></i>Daftar Peserta PPFM</a></li> -->
 					</ul>
 				</li>
 				@endif
-				@if (auth()->guard('admin')->user()->status_admin == 3)
+				@if (auth()->guard('admin')->user()->status_admin == 3 || auth()->guard('admin')->user()->status_admin == 0)
 					<li id="sidebar-anggaran-kegiatan" class="msn-item">
 						<a href="{{ URL('/anggaran-kegiatan') }}" class="msn-link"><i class="uk-icon-user"></i>Anggaran Kegiatan</a>
 					</li>

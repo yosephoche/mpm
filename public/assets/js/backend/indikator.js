@@ -19,10 +19,26 @@ $(document).ready(function(){
 		$('.m-sidebar').find('.uk-active').removeClass('uk-active');
 		$('#sidebar-dm').addClass('uk-active');
 		$('#sidebar-dm-indikator-variabel').addClass('uk-active');
-	}else if(sidebar == 'indi-opsi'){
+	} else if(sidebar == 'indi-opsi'){
 		$('.m-sidebar').find('.uk-active').removeClass('uk-active');
 		$('#sidebar-dm').addClass('uk-active');
 		$('#sidebar-dm-indikator-opsi').addClass('uk-active');
+	} else if(sidebar == 'indi-opd') {
+		$('.m-sidebar').find('.uk-active').removeClass('uk-active');
+		$('#sidebar-dm').addClass('uk-active');
+		$('#sidebar-dm-opd').addClass('uk-active');
+	} else if (sidebar == 'indi-jenis') {
+		$('.m-sidebar').find('.uk-active').removeClass('uk-active');
+		$('#sidebar-dm').addClass('uk-active');
+		$('#sidebar-dm-jenis-kegiatan').addClass('uk-active');
+	} else if (sidebar == 'indi-indikator-kegiatan') {
+		$('.m-sidebar').find('.uk-active').removeClass('uk-active');
+		$('#sidebar-dm').addClass('uk-active');
+		$('#sidebar-dm-indikator-kegiatan').addClass('uk-active');
+	} else if (sidebar == 'indi-tahun-anggaran') {
+		$('.m-sidebar').find('.uk-active').removeClass('uk-active');
+		$('#sidebar-dm').addClass('uk-active');
+		$('#sidebar-dm-tahun-anggaran').addClass('uk-active');
 	}
 
 

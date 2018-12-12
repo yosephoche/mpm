@@ -10,4 +10,18 @@ class JenisKegiatan extends Eloquent
     public $timestamps = false;
 
     protected $guarded = [];
+
+    //get jenis kegiatan by name
+    static public function getJenisKegiatanByName($idJenisKegiatan)
+    {
+        $jenis = JenisKegiatan::where('status', 1)->where('_id', $idJenisKegiatan)->first();
+
+        if ($jenis) {
+            $jenisKegiatan = $jenis->name;
+        } else {
+            $jenisKegiatan = '';
+        }
+
+        return $jenisKegiatan;
+    }
 }

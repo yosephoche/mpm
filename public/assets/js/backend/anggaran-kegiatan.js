@@ -69,7 +69,7 @@ $(document).ready(function(){
 
 			if($('#anggaran_besaran').val() === ''){
 				$('#anggaran_besaran').parent('div').addClass('error');
-				$('#anggaran_besaran_err').html('Nama Jenis Kegiatan wajib di isi');
+				$('#anggaran_besaran_err').html('Besaran Anggaran wajib di isi');
 			}else{
 				$('#anggaran_besaran').parent('div').removeClass('error');
 				$('#anggaran_besaran_err').html('');
@@ -77,7 +77,7 @@ $(document).ready(function(){
 
 			if($('#anggaran_tahun_kegiatan').val() === ''){
 				$('#anggaran_tahun_kegiatan').parent('div').addClass('error');
-				$('#anggaran_tahun_kegiatan_err').html('Nama Jenis Kegiatan wajib di isi');
+				$('#anggaran_tahun_kegiatan_err').html('Tahun Anggaran Kegiatan wajib di isi');
 			}else{
 				$('#anggaran_tahun_kegiatan').parent('div').removeClass('error');
 				$('#anggaran_tahun_kegiatan_err').html('');
@@ -85,7 +85,7 @@ $(document).ready(function(){
 
 			if($('#anggaran_jenis_kegiatan').val() === ''){
 				$('#anggaran_jenis_kegiatan').parent('div').addClass('error');
-				$('#anggaran_jenis_kegiatan_err').html('Nama Jenis Kegiatan wajib di isi');
+				$('#anggaran_jenis_kegiatan_err').html('Jenis Kegiatan wajib di isi');
 			}else{
 				$('#anggaran_jenis_kegiatan').parent('div').removeClass('error');
 				$('#anggaran_jenis_kegiatan_err').html('');
@@ -96,8 +96,10 @@ $(document).ready(function(){
 		}else{
 			formData.append('anggaran_nama_kegiatan', $('#anggaran_nama_kegiatan').val());
 			formData.append('anggaran_jenis_kegiatan', $('#anggaran_jenis_kegiatan').val());
-			formData.append('anggaran_besaran', $('#anggaran_besaran').val());
+			let anggaran = reverseFormatRupiah($('#anggaran_besaran').val());
+			formData.append('anggaran_besaran', anggaran);
 			formData.append('anggaran_tahun_kegiatan', $('#anggaran_tahun_kegiatan').val());
+			formData.append('anggaran_indikator_kegiatan', $('#indikator_kegiatan').val());
 			formData.append('_token', $('#_token').val());
 
 			$.ajax({
@@ -263,4 +265,34 @@ $(document).ready(function(){
 			}
 		});
 	});
+
+	var dengan_rupiah = document.getElementById('anggaran_besaran');
+	dengan_rupiah.addEventListener('keyup', function(e)
+	{
+		dengan_rupiah.value = formatRupiah(this.value, 'Rp. ');
+	});
+
+	function formatRupiah(angka, prefix)
+	{
+		let number_string = angka.replace(/[^,\d]/g, '').toString(),
+			split	= number_string.split(','),
+			sisa 	= split[0].length % 3,
+			rupiah 	= split[0].substr(0, sisa),
+			ribuan 	= split[0].substr(sisa).match(/\d{3}/gi);
+			
+		if (ribuan) {
+			separator = sisa ? '.' : '';
+			rupiah += separator + ribuan.join('.');
+		}
+		
+		rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+		return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+	}
+
+	function reverseFormatRupiah(angka)
+	{
+		let number = angka.replace(/[Rp.]/g, '').toString();
+
+		return number;
+	}
 });

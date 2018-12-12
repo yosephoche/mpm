@@ -682,4 +682,67 @@ class MasterController extends Controller
 
 		return json_encode($pesan);
 	}
+
+	//master tahun anggaran
+	
+	/**
+	 * Route => /master/tahun-anggaran
+	 * 
+	 * @method get tahunAnggaranIndex()
+	 */
+	public function tahunAnggaranIndex()
+	{
+		# code...
+	}
+
+	/**
+	 * Route => /master/tahun-anggaran/input
+	 * 
+	 * @method get tahunAnggaranCreate()
+	 */
+	public function tahunAnggaranCreate()
+	{
+		# code...
+	}
+
+	/**
+	 * Route => /master/tahun-anggaran/input
+	 * 
+	 * @method post tahunAnggaranSave()
+	 */
+	public function tahunAnggaranSave(Request $request)
+	{
+		# code...
+	}
+
+	/**
+	 * Route => /master/tahun-anggaran/update/{idTahun}
+	 * 
+	 * @method get tahunAnggaranEdit($idTahun)
+	 */
+	public function tahunAnggaranEdit($idTahun)
+	{
+		# code...
+	}
+
+	/**
+	 * Route => /master/tahun-anggaran/update
+	 * 
+	 * @method post tahunAnggaranUpdate()
+	 */
+	public function tahunAnggaranUpdate()
+	{
+		# code...
+	}
+
+	/**
+	 * Route => /master/tahun-anggara/delete/{idTahun}
+	 * 
+	 * @method get tahunAnggaranDelete($idTahun)
+	 */
+	public function tahunAnggaranDelete($idTahun)
+	{
+		# code...
+	}
+
 }
