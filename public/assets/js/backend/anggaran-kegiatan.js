@@ -270,7 +270,6 @@ $(document).ready(function(){
 		e.preventDefault();
 		var loc = window.location;
 		var url = loc.protocol + '//' + loc.host + loc.pathname;
-		console.log(loc, url);
 		if($(this).val() !== ''){
 			location.href = url+'?tahun='+$("#filter_tahun_anggaran").val();
 		}else{
