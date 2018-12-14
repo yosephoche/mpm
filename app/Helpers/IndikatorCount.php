@@ -15,6 +15,7 @@ class IndikatorCount
         if ($value == 2) {
             $status = 2; //tinggi
         }
+        
         return $status;
     }
 
@@ -124,16 +125,23 @@ class IndikatorCount
     //#10 fasilitas MCK
     public function fasilitasMck($valueOne, $valueTwo, $valueThree)
     {
-        //b3_k11a
+        //b3_k11a -> hanya di cek
         //b3_k11b
         //b3_k12
         $status = 0; //rendah
-
+        if ($valueOne == 1) {
+            $status = 2; //tinggi
+        } elseif ($valueOne == 2) {
+            $status = 1; //sedang
+        } elseif ($valueOne == 3 || $valueOne == 4) {
+            $status = 0; //rendah
+        }
     }
 
     //#11 pekerjaan
     public function indiPekerjaan($value)
     {
+        //on individu
         $status = 1;
         if ($value == 1) { //tinggi
             $status = 2;
@@ -151,6 +159,20 @@ class IndikatorCount
         //b4_k16
         //b4_k17
         //b4_k18
+        if ($valueOne == 2) {
+            //cek variabel indikator yang lain
+            if ($valueTwo == 10 && $valueThree == 10 && $valueFour == 10) {
+                $status = 2;
+            } elseif ($valueTwo = $valueThree = $valueFour == 7 || $valueTwo = $valueThree = $valueFour == 8 || $valueTwo = $valueThree = $valueFour == 9) {
+                $status = 1;
+            } else {
+                $status = 0;
+            }
+        } else {
+            $status = 0;
+        }
+
+        return $status;
     }
 
     //#13 kesehatan
@@ -171,6 +193,16 @@ class IndikatorCount
     {
         //b3_k9a
         //b3_k9b
+        $status = 0; //rendah
+        if ($valueOne == 1) {
+            $status = 2;
+        } elseif ($valueOne == 2) {
+            $status = 1;
+        } elseif ($valueOne == 3) {
+            $status = 0;
+        }
+
+        return $status;
     }
 
     //#15 rumah
@@ -180,6 +212,18 @@ class IndikatorCount
         //b3_k1b
         //b3_k3
         //b3_k4a
+        if ($valueOne == 1 && $valueTwo == 1) {
+            //cek variabel indikator yang lain
+            if (($valueThree == 1 || $valueThree == 2 || $valueThree == 3 || $valueThree == 4) && ($valueFour == 1 || $valueFour == 2)) {
+                $status = 2; //tinggi
+            } else {
+                $status = 0; //rendah
+            }
+        } else {
+            $status = 1; //sedang
+        }
+
+        return $status;
     }
 
     //main function
