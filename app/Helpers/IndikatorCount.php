@@ -22,7 +22,7 @@ class IndikatorCount
     public function indiKisBpjs($valueOne, $valueTwo)
     {
         $status = 1;
-        if ($valueOne == 2 && $valueTwo == 2) { //tinggi
+        if ($valueOne == 1 && $valueTwo == 2) { //tinggi
             $status = 2;
         } elseif ($valueOne == 1 && $valueTwo == 1) {
             $status = 0;
@@ -121,6 +121,16 @@ class IndikatorCount
         return $status;
     }
 
+    //#10 fasilitas MCK
+    public function fasilitasMck($valueOne, $valueTwo, $valueThree)
+    {
+        //b3_k11a
+        //b3_k11b
+        //b3_k12
+        $status = 0; //rendah
+
+    }
+
     //#11 pekerjaan
     public function indiPekerjaan($value)
     {
@@ -134,5 +144,43 @@ class IndikatorCount
         return $status;
     }
 
-    //#
+    //#12 pendidikan
+    public function indiPendidikan($valueOne, $valueTwo, $valueThree, $valueFour)
+    {
+        //b4_k15
+        //b4_k16
+        //b4_k17
+        //b4_k18
+    }
+
+    //#13 kesehatan
+    public function indiKesehatan($valueOne, $valueTwo)
+    {
+        //b4_k13
+        //b4_k14
+        $status = 0; //rendah
+        if ($valueOne == 0 && $valueTwo == 0) {
+            $status = 2; //tinggi
+        }
+
+        return $status;
+    }
+
+    //#14 listrik
+    public function indiListrik($valueOne, $valueTwo)
+    {
+        //b3_k9a
+        //b3_k9b
+    }
+
+    //#15 rumah
+    public function indiRumah($valueOne, $valueTwo, $valueThree, $valueFour)
+    {
+        //b3_k1a
+        //b3_k1b
+        //b3_k3
+        //b3_k4a
+    }
+
+    //main function
 }
