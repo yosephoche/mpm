@@ -84,8 +84,22 @@ class DashboardController extends Controller
 			});
 			$rtjummpm = PesertaMpm::where('kab', '7316')->where('status', 1)->count();
 		}
+		
+		// $baroko = PesertaBDT::getsummary('baroko', '7316053');
+		// $malle = PesertaBDT::getsummary('malle', '7316052');
+		// $alla = PesertaBDT::getsummary('alla', '7316050');
+		// $curio = PesertaBDT::getsummary('curio', '7316051');
+		// $angoraja = PesertaBDT::getsummary('angoraja', '7316040');
+		// $malua = PesertaBDT::getsummary('malua', '7316041');
+		// $baraka = PesertaBDT::getsummary('baraka', '7316030');
+		// $enrekang = PesertaBDT::getsummary('enrekang', '7316020');
+		// $buntubatu = PesertaBDT::getsummary('buntubatu', '7316031');
+		// $bungin = PesertaBDT::getsummary('bungin', '7316011');
+		// $cendana = PesertaBDT::getsummary('cendana', '7316021');
+		// $maiwa = PesertaBDT::getsummary('maiwa', '7316010');
 
-
+		// $data = array($baroko, $malle, $alla, $curio, $angoraja, $malua, $baraka, $enrekang, $buntubatu, $bungin, $cendana, $maiwa);
+		// dd($data);
 		return view('Dashboard::pages.dashboard.index', ['pesertajum' => $pesertajum, 'rtjum' => $rtjum, 'pesertajummpm'=>$pesertajummpm, 'rtjummpm' => $rtjummpm]);
 	}
 
@@ -109,5 +123,19 @@ class DashboardController extends Controller
 
 		$data = array($baroko, $malle, $alla, $curio, $angoraja, $malua, $baraka, $enrekang, $buntubatu, $bungin, $cendana, $maiwa);
 		return json_encode(array('message' => 'ok', 'data' => json_encode($data)));
+	}
+
+	public function getSummmaryDetail()
+	{
+		$isKecamatan = isset($_GET['id']) ? $_GET['id'] : '';
+		$idKelurahan = isset($_GET['kec']) ? $_GET['kec'] : '';
+		
+		
+		$result = PesertaBDT::getSummaryDetail($isKecamatan, $idKelurahan);
+
+		return json_encode(array(
+			'message'	=> 'ok',
+			'data'	=>json_encode($result)
+		));
 	}
 }

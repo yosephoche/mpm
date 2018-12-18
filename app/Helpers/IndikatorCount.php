@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Helpers;
+namespace App\Helpers;
 
 use App\Models\IndikatorVariabel;
 
@@ -15,13 +15,15 @@ class IndikatorCount
         if ($value == 2) {
             $status = 2; //tinggi
         }
-        
+
         return $status;
     }
 
     //#2 kis/bpjs
     public function indiKisBpjs($valueOne, $valueTwo)
     {
+        //b5_r6c
+        //b5_r6d
         $status = 1;
         if ($valueOne == 1 && $valueTwo == 2) { //tinggi
             $status = 2;
@@ -112,6 +114,8 @@ class IndikatorCount
     //#9 fasilitas memasak
     public function indiFasilitasMemasak($valueOne, $valueTwo)
     {
+        //b3_k10
+		//b5_k1a
         $status = 1;
         if (($valueOne == 1 || $valueOne == 2) && ($valueTwo == 1)) { //tinggi
             $status = 2;
@@ -123,11 +127,9 @@ class IndikatorCount
     }
 
     //#10 fasilitas MCK
-    public function fasilitasMck($valueOne, $valueTwo, $valueThree)
+    public function indiFasilitasMck($valueOne)
     {
         //b3_k11a -> hanya di cek
-        //b3_k11b
-        //b3_k12
         $status = 0; //rendah
         if ($valueOne == 1) {
             $status = 2; //tinggi
@@ -136,12 +138,15 @@ class IndikatorCount
         } elseif ($valueOne == 3 || $valueOne == 4) {
             $status = 0; //rendah
         }
+
+        return $status;
     }
 
     //#11 pekerjaan
     public function indiPekerjaan($value)
     {
         //on individu
+        //b4_k19a
         $status = 1;
         if ($value == 1) { //tinggi
             $status = 2;
@@ -227,4 +232,28 @@ class IndikatorCount
     }
 
     //main function
+    public function getAllIndikatorvalue($data)
+    {
+        $result['status'] = 0;
+        $result['data'] = '';
+        $result['message'] = '';
+        //steps :
+        //do selection if the data value is empty
+        if (!empty($data)) {
+            //split data value to call indicator function
+
+    
+            //check if the data of each indicator is empty or not, handle it
+    
+            //formatting result
+    
+            //return result
+            $result['message'] = 'Data is not empty';
+            
+        } else {
+            $result['message'] = 'Data passing are empty';
+        }
+
+        return $result;
+    }
 }
