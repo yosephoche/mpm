@@ -138,4 +138,18 @@ class DashboardController extends Controller
 			'data'	=>json_encode($result)
 		));
 	}
+
+	public function getDetailKategori()
+	{
+		$indikator = isset($_GET['indikator']) ? $_GET['indikator'] : false;
+		$value = isset($_GET['value']) ? $_GET['value'] : false;
+		$kategori = isset($_GET['kategori']) ? $_GET['kategori'] : false;
+
+		dd("sedang pengembangan");
+		if ($indikator && $value && $kategori) {
+
+		} else {
+			//no data indikator and value
+		}
+	}
 }
