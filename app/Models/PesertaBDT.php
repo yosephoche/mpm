@@ -625,7 +625,7 @@ class PesertaBDT extends Eloquent
 
 		$summary = array(
 			'id'	=>	$isKecamatan,
-			'kec'	=>	$kelurahan[0]->kecamatan,
+			'kec'	=>	$idKelurahan,
 			'data'	=>	$listkel
 		);
 

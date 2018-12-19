@@ -131,7 +131,7 @@ class DashboardController extends Controller
 		$idKelurahan = isset($_GET['kec']) ? $_GET['kec'] : '';
 		
 		
-		$result = PesertaBDT::getSummaryDetail($isKecamatan, $idKelurahan);
+		$result = array(PesertaBDT::getSummaryDetail($isKecamatan, $idKelurahan));
 
 		return json_encode(array(
 			'message'	=> 'ok',

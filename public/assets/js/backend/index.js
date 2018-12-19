@@ -1,6 +1,7 @@
 
 
 var d=[];
+var res = [];
 $(document).ready(function(){
 	$.ajax({
 		type: 'GET',
@@ -31,19 +32,21 @@ function closeModal() {
 	$('.mc-peta-inner .mcpw-wrapper .modal-maps').remove()
 }
 function handleClickItemMaps(e, key, id) {
-	let result = [];
-	console.log($($(e).find('span.key')).text());
-	console.log(id, key);
+	// console.log($($(e).find('span.key')).text());
+	// console.log(id, key);
 	$.ajax({
 		type: 'GET',
 		url: '/detail-summary?id='+id+'&kec='+key,
 		success: function(data){
+			$('#maps-loading').addClass('uk-hidden');
+        	$('#maps-failed').removeClass('uk-hidden');
 			msg = $.parseJSON(data);
-			result = $.parseJSON(msg.data);
-			console.log(result);
+			res = $.parseJSON(msg.data);
+			// console.log(d);
+			// console.log(res);
 			no=0;
 			
-			result.map((item, i) => {
+			res.map((item, i) => {
 				if (item.id === id) {
 					item.data.map((item, i) => {
 					if (item.key === key) {
