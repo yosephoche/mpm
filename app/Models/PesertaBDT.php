@@ -531,90 +531,105 @@ class PesertaBDT extends Eloquent
 				array(
 					array(
 						'kategori'	=>	'Rumah',
+						'kategori_lower'	=> 	'rumah',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('rumah', $indiRendah, $rt),
 						'sedang'	=>	$valueIndikator->getValueOfIndicator('rumah', $indiSedang, $rt),
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('rumah', $indiTinggi, $rt)
 					),
 					array(
 						'kategori'	=>	'Listrik',
+						'kategori_lower'	=> 	'listrik',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('listrik', $indiRendah, $rt),
 						'sedang'	=>	$valueIndikator->getValueOfIndicator('listrik', $indiSedang, $rt),
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('listrik', $indiTinggi, $rt)
 					),
 					array(
 						'kategori'	=>	'Kesehatan',
+						'kategori_lower'	=> 	'kesehatan',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('kesehatan', $indiRendah, $rt),
 						'sedang'	=>	$valueIndikator->getValueOfIndicator('kesehatan', $indiSedang, $rt),
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('kesehatan', $indiTinggi, $rt)
 					),
 					array(
 						'kategori'	=>	'Pendidikan',
+						'kategori_lower'	=> 	'pendidikan',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('pendidikan', $indiRendah, $rt),
 						'sedang'	=>	$valueIndikator->getValueOfIndicator('pendidikan', $indiSedang, $rt),
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('pendidikan', $indiTinggi, $rt)
 					),
 					array(
 						'kategori'	=>	'Pekerjaan',
+						'kategori_lower'	=> 	'pekerjaan',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('pekerjaan', $indiRendah, $rt),
 						'sedang'	=>	$valueIndikator->getValueOfIndicator('pekerjaan', $indiSedang, $rt),
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('pekerjaan', $indiTinggi, $rt)
 					),
 					array(
 						'kategori'	=>	'Fasilitas MCK',
+						'kategori_lower'	=> 	'fasilitasmck',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('fasilitasmck', $indiRendah, $rt),
 						'sedang'	=>	$valueIndikator->getValueOfIndicator('fasilitasmck', $indiSedang, $rt),
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('fasilitasmck', $indiTinggi, $rt)
 					),
 					array(
 						'kategori'	=>	'Fasilitas Memasak',
+						'kategori_lower'	=> 	'fasilitasmemasak',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('fasilitasmemasak', $indiRendah, $rt),
 						'sedang'	=>	$valueIndikator->getValueOfIndicator('fasilitasmemasak', $indiSedang, $rt),
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('fasilitasmemasak', $indiTinggi, $rt)
 					),
 					array(
 						'kategori'	=>	'Kelengkapan Persuratan',
+						'kategori_lower'	=> 	'kelengkapanpersuratan',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('kelengkapanpersuratan', $indiRendah, $rt),
 						'sedang'	=>	$valueIndikator->getValueOfIndicator('kelengkapanpersuratan', $indiSedang, $rt),
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('kelengkapanpersuratan', $indiTinggi, $rt)
 					),
 					array(
 						'kategori'	=>	'Peserta KKS/KPS',
+						'kategori_lower'	=> 	'pesertakks',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('pesertakks', $indiRendah, $rt),
 						'sedang'	=>	$valueIndikator->getValueOfIndicator('pesertakks', $indiSedang, $rt),
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('pesertakks', $indiTinggi, $rt)
 					),
 					array(
 						'kategori'	=>	'Peserta Program Rastra',
+						'kategori_lower'	=> 	'pesertarastra',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('pesertarastra', $indiRendah, $rt),
 						'sedang'	=>	$valueIndikator->getValueOfIndicator('pesertarastra', $indiSedang, $rt),
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('pesertarastra', $indiTinggi, $rt)
 					),
 					array(
 						'kategori'	=>	'Peserta Program KUR',
+						'kategori_lower'	=> 	'pesertakur',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('pesertakur', $indiRendah, $rt),
 						'sedang'	=>	$valueIndikator->getValueOfIndicator('pesertakur', $indiSedang, $rt),
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('pesertakur', $indiTinggi, $rt)
 					),
 					array(
 						'kategori'	=>	'Peserta Program PKH',
+						'kategori_lower'	=> 	'pesertapkh',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('pesertapkh', $indiRendah, $rt),
 						'sedang'	=>	$valueIndikator->getValueOfIndicator('pesertapkh', $indiSedang, $rt),
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('pesertapkh', $indiTinggi, $rt)
 					),
 					array(
 						'kategori'	=>	'Peserta KIP',
+						'kategori_lower'	=> 	'kip',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('kip', $indiRendah, $rt),
 						'sedang'	=>	$valueIndikator->getValueOfIndicator('kip', $indiSedang, $rt),
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('kip', $indiTinggi, $rt)
 					),
 					array(
 						'kategori'	=>	'Peserta KIS/BPJS',
+						'kategori_lower'	=> 	'kisbpjs',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('kisbpjs', $indiRendah, $rt),
 						'sedang'	=>	$valueIndikator->getValueOfIndicator('kisbpjs', $indiSedang, $rt),
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('kisbpjs', $indiTinggi, $rt)
 					),
 					array(
 						'kategori'	=>	'Asuransi Kesehatan Lain',
+						'kategori_lower'	=> 	'kesehatan_lain',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('kesehatan_lain', $indiRendah, $rt),
 						'sedang'	=>	$valueIndikator->getValueOfIndicator('kesehatan_lain', $indiSedang, $rt),
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('kesehatan_lain', $indiTinggi, $rt)

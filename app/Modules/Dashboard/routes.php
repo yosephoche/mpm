@@ -73,7 +73,10 @@ Route::group(['prefix' => '/', 'namespace' => 'App\Modules\Dashboard\Controllers
 			Route::get('/getsummary', ['as' => 'dashboard.bdt.rt.detail', 'uses' => 'DashboardController@getsummary']);
 
 			//detail summary indicator
-			Route::get('/detail-summary', ['as' => 'dashboard.bdt.rt.detail-summay', 'uses' => 'DashboardController@getSummmaryDetail']);
+			Route::get('/detail-summary', ['as' => 'dashboard.bdt.rt.detail-summary', 'uses' => 'DashboardController@getSummmaryDetail']);
+
+			//detail kategori by value
+			Route::get('/detail-kategori', ['as' => 'dashboard.bdt.rt.detail-kategori', 'uses' => 'DashboardController@getDetailKategori']);
 
 		});
 	});
