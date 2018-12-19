@@ -37,56 +37,56 @@
                                                     <li><a href="{{ URL('/anggaran-kegiatan/input') }}"><button class="button-add">Tambah</button></a></li>
                                                 </ul>
                                             </div>
-                                            <div class="uk-float-left">
-                                                    <ul>
-                                                        <li>Tahun Anggaran
-                                                            <select name="tahun_anggaran" id="tahun_anggaran" class="button-add">
-                                                                <option value="">2018</option>
-                                                                <option value="">2019</option>
-                                                                <option value="">2020</option>
-                                                            </select>
-                                                        </li>
-                                                    </ul>
-                                                </div>
                                         </div>
                                     </div>
                                     <div>
-                                        <table class="uk-table uk-table-hover">
-                                            <thead>
-                                                <tr>
-                                                    <th>No.</th>
-                                                    <th>Jenis Kegiatan</th>
-                                                    <th>Nama Kegiatan</th>
-                                                    <th>Tahun Anggaran</th>
-                                                    <th>Aksi</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                @php($i = empty($_GET['page']) ? 1 : ((($_GET['page'] - 1) * 10) + 1))
-                                                @foreach($anggaran as $thisAnggaran)
-                                                <tr>
-                                                    <td>{{ $i++ }}</td>
-                                                    <td>{{ App\Models\JenisKegiatan::getJenisKegiatanByName($thisAnggaran->anggaran_jenis_kegiatan)}}</td>
-                                                    <td>{{ $thisAnggaran->anggaran_nama_kegiatan }}</td>
-                                                    <td></td>
-                                                    <td>
-                                                        <div class="uk-button-group">
-                                                            <button class="uk-button" type="button">Aksi</button>
-                                                            <div data-uk-dropdown="{mode:'click', pos:'bottom-right'}">
-                                                                <button class="uk-button" type="button"><i class="uk-icon-caret-down"></i></button>
-                                                                <div class="uk-dropdown uk-dropdown-small">
-                                                                    <ul>
-                                                                        <li><a href="{{ URL('/anggaran-kegiatan/update/').'/'.$thisAnggaran->_id }}">Edit</a></li>
-                                                                        <li><a href="javascript:;" data-id="{{ $thisAnggaran->_id }}" id="del-anggaran-kegiatan">Hapus</a></li>
-                                                                    </ul>
+                                        <form action="{{ route('dashboard.anggaran-kegiatan.index')}}">
+                                            <div class="uk-float-left">
+                                                Tahun Anggaran
+                                                <select name="filter_tahun_anggaran" id="filter_tahun_anggaran" class="">
+                                                    <option value="">Filter Tahun Anggaran</option>
+                                                    @foreach ($tahun as $item)
+                                                        <option value="{{ $item->tahun_anggaran }}"  {{ (empty($_GET['tahun']) ? 'selected' : (($_GET['tahun'] == $item->tahun_anggaran) ? 'selected' : '')) }} >{{ $item->tahun_anggaran }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                            <table class="uk-table uk-table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No.</th>
+                                                        <th>Jenis Kegiatan</th>
+                                                        <th>Nama Kegiatan</th>
+                                                        <th>Tahun Anggaran</th>
+                                                        <th>Aksi</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @php($i = empty($_GET['page']) ? 1 : ((($_GET['page'] - 1) * 10) + 1))
+                                                    @foreach($anggaran as $thisAnggaran)
+                                                    <tr>
+                                                        <td>{{ $i++ }}</td>
+                                                        <td>{{ App\Models\JenisKegiatan::getJenisKegiatanByName($thisAnggaran->anggaran_jenis_kegiatan)}}</td>
+                                                        <td>{{ $thisAnggaran->anggaran_nama_kegiatan }}</td>
+                                                        <td><a href="{{ URL('/anggaran-kegiatan/detail/').'/'.$thisAnggaran->_id }}">{{ $thisAnggaran->anggaran_tahun_kegiatan}}</a></td>
+                                                        <td>
+                                                            <div class="uk-button-group">
+                                                                <button class="uk-button" type="button">Aksi</button>
+                                                                <div data-uk-dropdown="{mode:'click', pos:'bottom-right'}">
+                                                                    <button class="uk-button" type="button"><i class="uk-icon-caret-down"></i></button>
+                                                                    <div class="uk-dropdown uk-dropdown-small">
+                                                                        <ul>
+                                                                            <li><a href="{{ URL('/anggaran-kegiatan/update/').'/'.$thisAnggaran->_id }}">Edit</a></li>
+                                                                            <li><a href="javascript:;" data-id="{{ $thisAnggaran->_id }}" id="del-anggaran-kegiatan">Hapus</a></li>
+                                                                        </ul>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                @endforeach
-                                            </tbody>
-                                        </table>
+                                                        </td>
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </form>
                                     </div>
 
                                     @if($anggaran->lastPage() > 1)
@@ -175,5 +175,5 @@
 	var sidebar = 'sidebar-anggaran-kegiatan';
 </script>
 
-<script src="{{ URL('/assets/js/backend/indikator.js') }}"></script>
+<script src="{{ URL('/assets/js/backend/anggaran-kegiatan.js') }}"></script>
 @stop

@@ -1,6 +1,7 @@
 
 
 var d=[];
+var res = [];
 $(document).ready(function(){
 	$.ajax({
 		type: 'GET',
@@ -8,7 +9,6 @@ $(document).ready(function(){
 		success: function(data){
 			msg = $.parseJSON(data);
 			d = $.parseJSON(msg.data);
-
 			
 			$('#maps-loading').addClass('uk-hidden');
 			$('#maps').removeClass('uk-hidden');
@@ -32,51 +32,67 @@ function closeModal() {
 	$('.mc-peta-inner .mcpw-wrapper .modal-maps').remove()
 }
 function handleClickItemMaps(e, key, id) {
-	// console.log($($(e).find('span.key')).text())
-	no=0;
-	d.map((item, i) => {
-		if (item.id === id) {
-			item.data.map((item, i) => {
-			if (item.key === key) {
-				$('.mc-peta-inner .mcpw-wrapper').append(
-					'<div class="modal-maps" style="position: absolute;left: 0;right: 0;top: 0;bottom: 0;background: #fff;z-index: 100;">'+
-					'<button style="position: absolute;background: #23c4ff;border: 1px solid #28a1e2;right: 20px;top: 15px;" onClick="closeModal()"><span class="uk-icon-remove"></span></button>'+
-					'<div style="margin-top: 13px;padding: 20px;">'+
-					'<table class="uk-table">'+
-					'<caption>'+item.value+'</caption>'+
-					'<thead>'+
-					'<tr>'+
-						'<th>No.</th>'+
-						'<th>Kategori Indikator</th>'+
-						'<th>Rendah</th>'+
-						'<th>Sedang</th>'+
-						'<th>Tinggi</th>'+
-					'</tr>'+
-					'</thead>'+
-					'<tbody class="body-detail">'+
+	// console.log($($(e).find('span.key')).text());
+	// console.log(id, key);
+	$.ajax({
+		type: 'GET',
+		url: '/detail-summary?id='+id+'&kec='+key,
+		success: function(data){
+			$('#maps-loading').addClass('uk-hidden');
+        	$('#maps-failed').removeClass('uk-hidden');
+			msg = $.parseJSON(data);
+			res = $.parseJSON(msg.data);
+			// console.log(d);
+			// console.log(res);
+			no=0;
+			
+			res.map((item, i) => {
+				if (item.id === id) {
+					item.data.map((item, i) => {
+					if (item.key === key) {
+						$('.mc-peta-inner .mcpw-wrapper').append(
+							'<div class="modal-maps" style="position: absolute;left: 0;right: 0;top: 0;bottom: 0;background: #fff;z-index: 100;">'+
+							'<button style="position: absolute;background: #23c4ff;border: 1px solid #28a1e2;right: 20px;top: 15px;" onClick="closeModal()"><span class="uk-icon-remove"></span></button>'+
+							'<div style="margin-top: 13px;padding: 20px;">'+
+							'<table class="uk-table">'+
+							'<caption>'+item.value+'</caption>'+
+							'<thead>'+
+							'<tr>'+
+								'<th>No.</th>'+
+								'<th>Kategori Indikator</th>'+
+								'<th>Rendah</th>'+
+								'<th>Sedang</th>'+
+								'<th>Tinggi</th>'+
+							'</tr>'+
+							'</thead>'+
+							'<tbody class="body-detail">'+
 
-					'</tbody>'+
-					'</table>'+
-					'</div>'+
-					'</div>'
-					)
-					$.each( item.detail, function( key, value ) {
-						$('.body-detail').append(
-						'<tr>'+
-							'<td>'+(key+1)+'</td>'+
-							'<td>'+ value.kategori +'</td>'+
-							'<td><a href="#" class="click-detail">'+value.rendah+'</a></td>'+
-							'<td><a href="#" class="click-detail">'+value.sedang+'</a></td>'+
-							'<td><a href="#" class="click-detail">'+value.tinggi+'</a></td>'+
-						'</tr>'
-						);
+							'</tbody>'+
+							'</table>'+
+							'</div>'+
+							'</div>'
+							)
+							$.each( item.detail, function( key, value ) {
+								$('.body-detail').append(
+								'<tr>'+
+									'<td>'+(key+1)+'</td>'+
+									'<td>'+ value.kategori +'</td>'+
+									'<td><a href="#" class="click-detail">'+value.rendah+'</a></td>'+
+									'<td><a href="#" class="click-detail">'+value.sedang+'</a></td>'+
+									'<td><a href="#" class="click-detail">'+value.tinggi+'</a></td>'+
+								'</tr>'
+								);
+							})
+						}
 					})
+
 				}
 			})
-
+			
 		}
 	})
 }
+
 $('#maps > svg > g, #maps > svg > path').on('mouseover', function(e) {
 e.stopPropagation();
 var regionId = this.id.replace('region-', '');

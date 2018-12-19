@@ -23,7 +23,7 @@
 	<div class="mc-form">
 		<div class="mc-form-wrapper">
 			<div class="mc-form-inner">
-				<form id="form_master_opd_update" action="" method="post" class="uk-form"  novalidate="novalidate">
+				<form id="form_master_tahun_anggaran_update" action="" method="post" class="uk-form"  novalidate="novalidate">
 					<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
 					<div class="mcf-content">
 						<div class="mcf-title">
@@ -34,9 +34,9 @@
 								<div class="data uk-grid">
 									<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 										<div class="data-inner">
-											<label for="name_opd">Nama OPD</label>
-                                            <input id="name_opd" type="text" name="name_opd" value="{{$skpd->name}}" required>
-											<div class="error" id="name_opd_err"></div>
+											<label for="tahun_anggaran">Tahun Anggaran</label>
+                                            <input id="tahun_anggaran" type="text" name="tahun_anggaran" value="{{$tahun->tahun_anggaran}}" required>
+											<div class="error" id="tahun_anggaran_err"></div>
 										</div>
 									</div>
 								</div>
@@ -50,7 +50,7 @@
 								<div class="submit">
 									<div class="uk-clearfix">
 										<div class="uk-float-right">
-											<button name="submit" id="submit-save" data-id="{{ $skpd->_id }}" type="submit">Simpan</button>
+											<button name="submit" id="submit-save" data-id="{{ $tahun->_id }}" type="submit">Simpan</button>
 										</div>
 									</div>
 								</div>
@@ -63,7 +63,7 @@
 	</div>
 </div>
 <script>
-	var sidebar = 'indi-opd';
+	var sidebar = 'indi-tahun-anggaran';
 </script>
 
 <script src="{{ URL('/assets/js/backend/indikator.js') }}"></script>
