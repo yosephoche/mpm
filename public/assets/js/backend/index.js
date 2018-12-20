@@ -23,8 +23,10 @@ $(document).ready(function(){
 	});
 
 	$(document).on('click', '.click-detail', function(e){
-		$('.uk-modal-dialog').find('p').html('Data Kosong, Silahkan Isi Data MPM dan Verifikasi');
-		$.UIkit.modal('#modal-informasi-detail').show();
+		//e.preventDefault();
+		console.log("halooo");
+		//$('.uk-modal-dialog').find('p').html('Data Kosong, Silahkan Isi Data MPM dan Verifikasi');
+		//$.UIkit.modal('#modal-informasi-detail').show();
 	});
 });
 

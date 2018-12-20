@@ -864,14 +864,22 @@ class PesertaBDT extends Eloquent
 				$tempResult = $this->indiRumah($this->isNotNullData($dataRt['b3_k1a']), $this->isNotNullData($dataRt['b3_k1b']), $this->isNotNullData($dataRt['b3_k3']), $this->isNotNullData($dataRt['b3_k4a']));
 			} elseif ($type == 'listrik') {
 				$tempResult = $this->indiListrik($this->isNotNullData($dataRt['b3_k9a']), $this->isNotNullData($dataRt['b3_k9b']));
-			} elseif ($type == 'kesehatan') {
-				$tempResult = $this->indiKesehatan($this->isNotNullData($isDataIndividu['b4_k13']), $this->isNotNullData($isDataIndividu['b4_k14']));
-			} elseif ($type == 'pendidikan') {
-				$tempResult = $this->indiPendidikan($this->isNotNullData($isDataIndividu['b4_k15']), $this->isNotNullData($isDataIndividu['b4_k16']), $this->isNotNullData($isDataIndividu['b4_k17']), $this->isNotNullData($isDataIndividu['b4_k18']));
-			} elseif ($type == 'pekerjaan') {
-				$tempResult = $this->indiPekerjaan($this->isNotNullData($isDataIndividu['b4_k19a']));
-			} elseif ($type == 'kelengkapanpersuratan') {
-				$tempResult = $this->indiKelengkapanPersuratan($this->isNotNullData($isDataIndividu['b4_k9']), $this->isNotNullData($isDataIndividu['b4_k11']));
+			} elseif ($type == 'kesehatan' || $type == 'pendidikan' || $type == 'pekerjaan') {
+				foreach ($dataIndividu as $key => $isDataIndividu) {
+					if ($type == 'kesehatan') {
+						//kesehatan
+						$tempResult = $this->indiKesehatan($this->isNotNullData($isDataIndividu['b4_k13']), $this->isNotNullData($isDataIndividu['b4_k14']));
+					} elseif ($type == 'pendidikan') {
+						//pendidikan
+						$tempResult = $this->indiPendidikan($this->isNotNullData($isDataIndividu['b4_k15']), $this->isNotNullData($isDataIndividu['b4_k16']), $this->isNotNullData($isDataIndividu['b4_k17']), $this->isNotNullData($isDataIndividu['b4_k18']));
+					} elseif ($type == 'pekerjaan') {
+						//pekerjaan
+						$tempResult = $this->indiPekerjaan($this->isNotNullData($isDataIndividu['b4_k19a']));
+					} elseif ($type == 'kelengkapanpersuratan') {
+						//kelengkapan persuratan
+						$tempResult = $this->indiKelengkapanPersuratan($this->isNotNullData($isDataIndividu['b4_k9']), $this->isNotNullData($isDataIndividu['b4_k11']));
+					}
+				}
 			} elseif ($type == 'fasilitasmck') {
 				$tempResult = $this->indiFasilitasMck($this->isNotNullData($dataRt['b3_k11a']));
 			} elseif ($type == 'fasilitasmemasak') {
