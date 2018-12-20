@@ -15,6 +15,10 @@ use App\Models\PesertaBDT;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
+use Illuminate\Pagination\Paginator;
+//use Jenssegers\Mongodb\Collection;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class DashboardController extends Controller
 {
@@ -144,12 +148,35 @@ class DashboardController extends Controller
 		$indikator = isset($_GET['indikator']) ? $_GET['indikator'] : false;
 		$value = isset($_GET['value']) ? $_GET['value'] : false;
 		$kategori = isset($_GET['kategori']) ? $_GET['kategori'] : false;
+		$idKelurahan = isset($_GET['kelurahan']) ? $_GET['kelurahan'] : false;
+		$getkecamatan = Kecamatan::where('id_kota', '7316')->where('status', true)->get();
 
-		dd("sedang pengembangan");
-		if ($indikator && $value && $kategori) {
+		$kelurahan = Kelurahan::where('id_kelurahan', $idKelurahan)->where('status', true)->get();
+		$kecamatan = Kecamatan::where('id_kecamatan', $kelurahan[0]['id_kecamatan'])->where('status', true)->first();
 
-		} else {
-			//no data indikator and value
-		}
+		$rt = PesertaBDT::where('kab', '7316')->where('des', $idKelurahan)->where('status', 1)->get();
+		$rtmpm = PesertaMpm::where('kab', '7316')->where('des', $idKelurahan)->where('status', 1)->get();
+		$listkel = [];
+		
+		$rt->merge($rtmpm);
+
+		$processData = new PesertaBDT;
+		$result = $processData->getPesertaValueOfIndicator($indikator, $value,$kategori, $rt);
+		$resultCollection = collect($result);
+		
+		//dd($this->paginateMe($resultCollection, 50, $page = null, $options = []));
+		
+		return view('Dashboard::pages.dashboard.detail-map', [
+			'peserta' => $this->paginateMe($resultCollection, 50, $page = null, $options = []),
+			'kecamatan' => $getkecamatan,
+			'jumpeserta' => count($result)
+		]);
+	}
+
+	public function paginateMe($items, $perPage = 15, $page = null, $options = [])
+	{
+		$page = $page ?: (Paginator::resolveCurrentPage() ?: 1);
+		$items = $items instanceof Collection ? $items : Collection::make($items);
+		return new LengthAwarePaginator($items->forPage($page, $perPage), $items->count(), $perPage, $page, $options);
 	}
 }
