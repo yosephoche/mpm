@@ -77,9 +77,9 @@ function handleClickItemMaps(e, key, id) {
 								'<tr>'+
 									'<td>'+(key+1)+'</td>'+
 									'<td>'+ value.kategori +'</td>'+
-									'<td><a href="/detail-kategori?indikator='+value.kategori_lower+'&kategori=0&value='+value.rendah+'" target="_blank" class="click-detail">'+value.rendah+'</a></td>'+
-									'<td><a href="/detail-kategori?indikator='+value.kategori_lower+'&kategori=1&value='+value.sedang+'"target="_blank" class="click-detail">'+value.sedang+'</a></td>'+
-									'<td><a href="/detail-kategori?indikator='+value.kategori_lower+'&kategori=2&value='+value.tinggi+'"target="_blank" class="click-detail">'+value.tinggi+'</a></td>'+
+									'<td><a href="/detail-kategori?kelurahan='+value.kelurahan+'&indikator='+value.kategori_lower+'&kategori=0&value='+value.rendah+'" target="_blank" class="click-detail">'+value.rendah+'</a></td>'+
+									'<td><a href="/detail-kategori?kelurahan='+value.kelurahan+'&indikator='+value.kategori_lower+'&kategori=1&value='+value.sedang+'"target="_blank" class="click-detail">'+value.sedang+'</a></td>'+
+									'<td><a href="/detail-kategori?kelurahan='+value.kelurahan+'&indikator='+value.kategori_lower+'&kategori=2&value='+value.tinggi+'"target="_blank" class="click-detail">'+value.tinggi+'</a></td>'+
 								'</tr>'
 								);
 							})

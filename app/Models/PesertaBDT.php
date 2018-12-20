@@ -530,6 +530,7 @@ class PesertaBDT extends Eloquent
 			'detail'=> 
 				array(
 					array(
+						'kelurahan'	=> $idKelurahan,
 						'kategori'	=>	'Rumah',
 						'kategori_lower'	=> 	'rumah',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('rumah', $indiRendah, $rt),
@@ -537,6 +538,7 @@ class PesertaBDT extends Eloquent
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('rumah', $indiTinggi, $rt)
 					),
 					array(
+						'kelurahan'	=> $idKelurahan,
 						'kategori'	=>	'Listrik',
 						'kategori_lower'	=> 	'listrik',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('listrik', $indiRendah, $rt),
@@ -544,6 +546,7 @@ class PesertaBDT extends Eloquent
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('listrik', $indiTinggi, $rt)
 					),
 					array(
+						'kelurahan'	=> $idKelurahan,
 						'kategori'	=>	'Kesehatan',
 						'kategori_lower'	=> 	'kesehatan',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('kesehatan', $indiRendah, $rt),
@@ -551,6 +554,7 @@ class PesertaBDT extends Eloquent
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('kesehatan', $indiTinggi, $rt)
 					),
 					array(
+						'kelurahan'	=> $idKelurahan,
 						'kategori'	=>	'Pendidikan',
 						'kategori_lower'	=> 	'pendidikan',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('pendidikan', $indiRendah, $rt),
@@ -558,6 +562,7 @@ class PesertaBDT extends Eloquent
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('pendidikan', $indiTinggi, $rt)
 					),
 					array(
+						'kelurahan'	=> $idKelurahan,
 						'kategori'	=>	'Pekerjaan',
 						'kategori_lower'	=> 	'pekerjaan',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('pekerjaan', $indiRendah, $rt),
@@ -565,6 +570,7 @@ class PesertaBDT extends Eloquent
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('pekerjaan', $indiTinggi, $rt)
 					),
 					array(
+						'kelurahan'	=> $idKelurahan,
 						'kategori'	=>	'Fasilitas MCK',
 						'kategori_lower'	=> 	'fasilitasmck',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('fasilitasmck', $indiRendah, $rt),
@@ -572,6 +578,7 @@ class PesertaBDT extends Eloquent
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('fasilitasmck', $indiTinggi, $rt)
 					),
 					array(
+						'kelurahan'	=> $idKelurahan,
 						'kategori'	=>	'Fasilitas Memasak',
 						'kategori_lower'	=> 	'fasilitasmemasak',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('fasilitasmemasak', $indiRendah, $rt),
@@ -579,6 +586,7 @@ class PesertaBDT extends Eloquent
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('fasilitasmemasak', $indiTinggi, $rt)
 					),
 					array(
+						'kelurahan'	=> $idKelurahan,
 						'kategori'	=>	'Kelengkapan Persuratan',
 						'kategori_lower'	=> 	'kelengkapanpersuratan',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('kelengkapanpersuratan', $indiRendah, $rt),
@@ -586,6 +594,7 @@ class PesertaBDT extends Eloquent
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('kelengkapanpersuratan', $indiTinggi, $rt)
 					),
 					array(
+						'kelurahan'	=> $idKelurahan,
 						'kategori'	=>	'Peserta KKS/KPS',
 						'kategori_lower'	=> 	'pesertakks',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('pesertakks', $indiRendah, $rt),
@@ -593,6 +602,7 @@ class PesertaBDT extends Eloquent
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('pesertakks', $indiTinggi, $rt)
 					),
 					array(
+						'kelurahan'	=> $idKelurahan,
 						'kategori'	=>	'Peserta Program Rastra',
 						'kategori_lower'	=> 	'pesertarastra',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('pesertarastra', $indiRendah, $rt),
@@ -600,6 +610,7 @@ class PesertaBDT extends Eloquent
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('pesertarastra', $indiTinggi, $rt)
 					),
 					array(
+						'kelurahan'	=> $idKelurahan,
 						'kategori'	=>	'Peserta Program KUR',
 						'kategori_lower'	=> 	'pesertakur',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('pesertakur', $indiRendah, $rt),
@@ -607,6 +618,7 @@ class PesertaBDT extends Eloquent
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('pesertakur', $indiTinggi, $rt)
 					),
 					array(
+						'kelurahan'	=> $idKelurahan,
 						'kategori'	=>	'Peserta Program PKH',
 						'kategori_lower'	=> 	'pesertapkh',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('pesertapkh', $indiRendah, $rt),
@@ -614,6 +626,7 @@ class PesertaBDT extends Eloquent
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('pesertapkh', $indiTinggi, $rt)
 					),
 					array(
+						'kelurahan'	=> $idKelurahan,
 						'kategori'	=>	'Peserta KIP',
 						'kategori_lower'	=> 	'kip',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('kip', $indiRendah, $rt),
@@ -621,6 +634,7 @@ class PesertaBDT extends Eloquent
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('kip', $indiTinggi, $rt)
 					),
 					array(
+						'kelurahan'	=> $idKelurahan,
 						'kategori'	=>	'Peserta KIS/BPJS',
 						'kategori_lower'	=> 	'kisbpjs',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('kisbpjs', $indiRendah, $rt),
@@ -628,6 +642,7 @@ class PesertaBDT extends Eloquent
 						'tinggi'	=>	$valueIndikator->getValueOfIndicator('kisbpjs', $indiTinggi, $rt)
 					),
 					array(
+						'kelurahan'	=> $idKelurahan,
 						'kategori'	=>	'Asuransi Kesehatan Lain',
 						'kategori_lower'	=> 	'kesehatan_lain',
 						'rendah'	=>	$valueIndikator->getValueOfIndicator('kesehatan_lain', $indiRendah, $rt),
@@ -656,6 +671,83 @@ class PesertaBDT extends Eloquent
 			$dataRt = $isData['datart'][0];
 			$dataAsset = $isData['asset'][0];
 			$dataIndividu = $isData['individu'];
+			
+			//indikator rumah
+			$tempResult['rumah'] = $this->indiRumah($this->isNotNullData($dataRt['b3_k1a']), $this->isNotNullData($dataRt['b3_k1b']), $this->isNotNullData($dataRt['b3_k3']), $this->isNotNullData($dataRt['b3_k4a']));
+
+			//indikator listrik
+			$tempResult['listrik'] = $this->indiListrik($this->isNotNullData($dataRt['b3_k9a']), $this->isNotNullData($dataRt['b3_k9b']));
+
+			foreach ($dataIndividu as $key => $isDataIndividu) {
+				//indikator kesehatan => individu
+				$tempResult['kesehatan'][$key] = $this->indiKesehatan($this->isNotNullData($isDataIndividu['b4_k13']), $this->isNotNullData($isDataIndividu['b4_k14']));
+
+				//indikator pendidikan
+				$tempResult['pendidikan'][$key] = $this->indiPendidikan($this->isNotNullData($isDataIndividu['b4_k15']), $this->isNotNullData($isDataIndividu['b4_k16']), $this->isNotNullData($isDataIndividu['b4_k17']), $this->isNotNullData($isDataIndividu['b4_k18']));
+				
+				//indikator pekerjaan
+				$tempResult['pekerjaan'][$key] = $this->indiPekerjaan($this->isNotNullData($isDataIndividu['b4_k19a']));
+				
+				//indikator kelengkapan persuratan
+				$tempResult['kelengkapanpersuratan'][$key] = $this->indiKelengkapanPersuratan($this->isNotNullData($isDataIndividu['b4_k9']), $this->isNotNullData($isDataIndividu['b4_k11']));
+			}
+
+			//indikator fasilitas MCK
+			$tempResult['fasilitasmck'] = $this->indiFasilitasMck($this->isNotNullData($dataRt['b3_k11a']));
+
+			//indikator fasilitas memasak
+			$tempResult['fasilitasmemasak'] = $this->indiFasilitasMemasak($this->isNotNullData($dataRt['b3_k10']), $this->isNotNullData($dataAsset['b5_k1a']));
+
+			//indikator peserta kks/kps
+			//$a = $this->isNotNullData($dataAsset['b5_k6a']);
+			$indiKks = isset($dataAsset['b5_k6a']) ? $dataAsset['b5_k6a'] : null;
+			$tempResult['pesertakks'] = $this->indiPesertaKks($indiKks);
+
+			//indikator peserta program rastra
+			$indiRastra = isset($dataAsset['b5_k6h']) ? $dataAsset['b5_k6h'] : null;
+			$tempResult['pesertarastra'] = $this->indiPesertaRastra($indiRastra);
+
+			//indikator peserta program kur
+			$indiKur = isset($dataAsset['b5_k6i']) ? $dataAsset['b5_k6i'] : null;
+			$tempResult['pesertakur'] = $this->indiPesertaKur($indiKur);
+
+			//indikator peserta program pkh
+			$indiPkh = isset($dataAsset['b5_k6g']) ? $dataAsset['b5_k6g'] : null;
+			$tempResult['pesertapkh'] = $this->indiPesertaPkh($indiPkh);
+
+			//indikator kip
+			$indiKip = isset($dataAsset['b5_k6b']) ? $dataAsset['b5_k6b'] : null;
+			$tempResult['kip'] = $this->indiKip($indiKip);
+
+			//indikator kis/bpjs
+			$indiKis = isset($dataAsset['b5_r6c']) ? $dataAsset['b5_r6c'] : null;
+			$indiBpjs = isset($dataAsset['b5_r6d']) ? $dataAsset['b5_r6d'] : null;
+			$tempResult['kisbpjs'] = $this->indiKisBpjs($indiKis, $indiBpjs);
+
+			//indikator kesehatan lain
+			$indiKesehatanLain = isset($dataAsset['b5_r6d']) ? $dataAsset['b5_r6d'] : null;
+			$tempResult['kesehatan_lain'] = $this->indiKesehatanLain($indiKesehatanLain);
+
+			//count each
+			//array push to result var
+			array_push($result, $tempResult);
+		}
+		return $result;
+	}
+
+	//get value indikator with data include
+	public function getValueIndikatorWithData($data)
+	{
+		$result = [];
+		//do looping, for now, skip looping
+		foreach ($data as $key => $isData) {
+			//set initial value
+			$dataRt = $isData['datart'][0];
+			$dataAsset = $isData['asset'][0];
+			$dataIndividu = $isData['individu'];
+
+			$tempResult['data']['all'] = $isData;
+			$tempResult['data']['individu'] = $dataIndividu;
 			
 			//indikator rumah
 			$tempResult['rumah'] = $this->indiRumah($this->isNotNullData($dataRt['b3_k1a']), $this->isNotNullData($dataRt['b3_k1b']), $this->isNotNullData($dataRt['b3_k3']), $this->isNotNullData($dataRt['b3_k4a']));
@@ -752,6 +844,65 @@ class PesertaBDT extends Eloquent
 						}
 					}
 				}
+			}
+		}
+		return $result;
+	}
+
+	//get Peserta by value indicator
+	public function getPesertaValueOfIndicator($type, $val, $kategori, $data)
+	{
+		//return data push to result
+		$result = [];
+		foreach ($data as $key => $isData) {
+
+			$dataRt = $isData['datart'][0];
+			$dataAsset = $isData['asset'][0];
+			$dataIndividu = $isData['individu'];
+			
+			if ($type == 'rumah') {
+				$tempResult = $this->indiRumah($this->isNotNullData($dataRt['b3_k1a']), $this->isNotNullData($dataRt['b3_k1b']), $this->isNotNullData($dataRt['b3_k3']), $this->isNotNullData($dataRt['b3_k4a']));
+			} elseif ($type == 'listrik') {
+				$tempResult = $this->indiListrik($this->isNotNullData($dataRt['b3_k9a']), $this->isNotNullData($dataRt['b3_k9b']));
+			} elseif ($type == 'kesehatan') {
+				$tempResult = $this->indiKesehatan($this->isNotNullData($isDataIndividu['b4_k13']), $this->isNotNullData($isDataIndividu['b4_k14']));
+			} elseif ($type == 'pendidikan') {
+				$tempResult = $this->indiPendidikan($this->isNotNullData($isDataIndividu['b4_k15']), $this->isNotNullData($isDataIndividu['b4_k16']), $this->isNotNullData($isDataIndividu['b4_k17']), $this->isNotNullData($isDataIndividu['b4_k18']));
+			} elseif ($type == 'pekerjaan') {
+				$tempResult = $this->indiPekerjaan($this->isNotNullData($isDataIndividu['b4_k19a']));
+			} elseif ($type == 'kelengkapanpersuratan') {
+				$tempResult = $this->indiKelengkapanPersuratan($this->isNotNullData($isDataIndividu['b4_k9']), $this->isNotNullData($isDataIndividu['b4_k11']));
+			} elseif ($type == 'fasilitasmck') {
+				$tempResult = $this->indiFasilitasMck($this->isNotNullData($dataRt['b3_k11a']));
+			} elseif ($type == 'fasilitasmemasak') {
+				$tempResult = $this->indiFasilitasMemasak($this->isNotNullData($dataRt['b3_k10']), $this->isNotNullData($dataAsset['b5_k1a']));
+			} elseif ($type == 'pesertakks') {
+				$indiKks = isset($dataAsset['b5_k6a']) ? $dataAsset['b5_k6a'] : null;
+				$tempResult = $this->indiPesertaKks($indiKks);
+			} elseif ($type == 'pesertarastra') {
+				$indiRastra = isset($dataAsset['b5_k6h']) ? $dataAsset['b5_k6h'] : null;
+				$tempResult = $this->indiPesertaRastra($indiRastra);
+			} elseif ($type == 'pesertakur') {
+				$indiKur = isset($dataAsset['b5_k6i']) ? $dataAsset['b5_k6i'] : null;
+				$tempResult = $this->indiPesertaKur($indiKur);
+			} elseif ($type == 'pesertapkh') {
+				$indiPkh = isset($dataAsset['b5_k6g']) ? $dataAsset['b5_k6g'] : null;
+				$tempResult = $this->indiPesertaPkh($indiPkh);
+			} elseif ($type == 'kip') {
+				$indiKip = isset($dataAsset['b5_k6b']) ? $dataAsset['b5_k6b'] : null;
+				$tempResult = $this->indiKip($indiKip);
+			} elseif ($type == 'kisbpjs') {
+				$indiKis = isset($dataAsset['b5_r6c']) ? $dataAsset['b5_r6c'] : null;
+				$indiBpjs = isset($dataAsset['b5_r6d']) ? $dataAsset['b5_r6d'] : null;
+				$tempResult = $this->indiKisBpjs($indiKis, $indiBpjs);
+			} elseif ($type == 'kesehatan_lain') {
+				$indiKesehatanLain = isset($dataAsset['b5_r6d']) ? $dataAsset['b5_r6d'] : null;
+				$tempResult = $this->indiKesehatanLain($indiKesehatanLain);
+			}
+
+			//filter by kategori and push to result
+			if ($tempResult == $kategori) {
+				array_push($result, $isData);
 			}
 		}
 		return $result;
