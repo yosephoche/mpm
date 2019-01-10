@@ -1,14 +1,15 @@
-{"_id":{"$oid":"5c07732fd238821f9c0fd922"},"kategori_name":"Rumah"}
-{"_id":{"$oid":"5c07732fd238821f9c0fd923"},"kategori_name":"Listrik"}
-{"_id":{"$oid":"5c07732fd238821f9c0fd924"},"kategori_name":"Kesehatan"}
-{"_id":{"$oid":"5c07732fd238821f9c0fd925"},"kategori_name":"Pendidikan"}
-{"_id":{"$oid":"5c07732fd238821f9c0fd926"},"kategori_name":"Pekerjaan"}
-{"_id":{"$oid":"5c07732fd238821f9c0fd927"},"kategori_name":"Fasilitas MCK"}
-{"_id":{"$oid":"5c07732fd238821f9c0fd928"},"kategori_name":"Kelengkapan Persuaratan"}
-{"_id":{"$oid":"5c07732fd238821f9c0fd929"},"kategori_name":"Peserta KKS/KPS"}
-{"_id":{"$oid":"5c07732fd238821f9c0fd92a"},"kategori_name":"Peserta Program Rastra"}
-{"_id":{"$oid":"5c07732fd238821f9c0fd92b"},"kategori_name":"Peserta Program KUR"}
-{"_id":{"$oid":"5c07732fd238821f9c0fd92c"},"kategori_name":"Peserta Program PKH"}
-{"_id":{"$oid":"5c07732fd238821f9c0fd92d"},"kategori_name":"Peserta KIP"}
-{"_id":{"$oid":"5c07732fd238821f9c0fd92e"},"kategori_name":"Peserta KIS/BPJS"}
-{"_id":{"$oid":"5c07732fd238821f9c0fd92f"},"kategori_name":"Asuransi Kesehatan Lain"}
+{"_id":{"$oid":"5c07732fd238821f9c0fd922"},"kode":"rumah","kategori_name":"Rumah"}
+{"_id":{"$oid":"5c07732fd238821f9c0fd923"},"kode":"listrik","kategori_name":"Listrik"}
+{"_id":{"$oid":"5c07732fd238821f9c0fd924"},"kode":"kesehatan","kategori_name":"Kesehatan"}
+{"_id":{"$oid":"5c07732fd238821f9c0fd925"},"kode":"pendidikan","kategori_name":"Pendidikan"}
+{"_id":{"$oid":"5c07732fd238821f9c0fd926"},"kode":"pekerjaan","kategori_name":"Pekerjaan"}
+{"_id":{"$oid":"5c07732fd238821f9c0fd927"},"kode":"fasilitasmck","kategori_name":"Fasilitas MCK"}
+{"_id":{"$oid":"5c07732fd238821f9c0fd928"},"kode":"kelengkapanpersuratan","kategori_name":"Kelengkapan Persuratan"}
+{"_id":{"$oid":"5c07732fd238821f9c0fd929"},"kode":"pesertakks","kategori_name":"Peserta KKS/KPS"}
+{"_id":{"$oid":"5c07732fd238821f9c0fd92a"},"kode":"pesertarastra","kategori_name":"Peserta Program Rastra"}
+{"_id":{"$oid":"5c07732fd238821f9c0fd92b"},"kode":"pesertakur","kategori_name":"Peserta Program KUR"}
+{"_id":{"$oid":"5c07732fd238821f9c0fd92c"},"kode":"pesertapkh","kategori_name":"Peserta Program PKH"}
+{"_id":{"$oid":"5c07732fd238821f9c0fd92d"},"kode":"kip","kategori_name":"Peserta KIP"}
+{"_id":{"$oid":"5c07732fd238821f9c0fd92e"},"kode":"kisbpjs","kategori_name":"Peserta KIS/BPJS"}
+{"_id":{"$oid":"5c07732fd238821f9c0fd92f"},"kode":"kesehatan_lain","kategori_name":"Asuransi Kesehatan Lain"}
+{"_id":{"$oid":"5c359f76eacb47407c36c3ad"},"kode":"fasilitasmemasak","kategori_name":"Fasilitas Memasak"}

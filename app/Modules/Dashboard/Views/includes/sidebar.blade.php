@@ -20,6 +20,7 @@
 				<li class="msn-item uk-active">
 					<a href="{{ URL('/dashboard') }}" class="msn-link"><i class="uk-icon-home"></i>Dashboard</a>
 				</li>
+				@if(auth()->guard('admin')->user()->status_admin != 3)
 				<li class="msn-item uk-parent" id="sidebar-fmpm">
 					<a href="#" class="msn-link"><i class="uk-icon-edit"></i>Pendaftaran</a>
 					<ul class="uk-nav-sub">
@@ -41,13 +42,16 @@
 						<li id="sidebar-finduk-rt"><a href="{{ URL('/induk/rumahtangga') }}"><i class="uk-icon-circle-o"></i>Rumah Tangga</a></li>
 					</ul>
 				</li>
-				@if(auth()->guard('admin')->user()->status_admin == 0)
+				@endif
+				@if(auth()->guard('admin')->user()->status_admin == 0 || auth()->guard('admin')->user()->status_admin == 3)
 				<li id="sidebar-dm" class="msn-item uk-parent">
 					<a href="#" class="msn-link"><i class="uk-icon-download"></i>Data Master</a>
 					<ul class="uk-nav-sub">
+						@if(auth()->guard('admin')->user()->status_admin != 3)
 						<li id="sidebar-dm-indikator-variabel" class=""><a href="{{ URL('/master/indikator/variabel') }}"><i class="uk-icon-circle-o"></i>Indikator Variabel</a></li>
 						<li id="sidebar-dm-indikator-opsi" class=""><a href="{{ URL('/master/indikator/opsi') }}"><i class="uk-icon-circle-o"></i>Opsi Indikator</a></li>
 						<li id="sidebar-dm-opd" class=""><a href="{{ URL('/master/opd') }}"><i class="uk-icon-circle-o"></i>OPD</a></li>
+						@endif
 						<li id="sidebar-dm-jenis-kegiatan" class=""><a href="{{ URL('/master/jenis-kegiatan') }}"><i class="uk-icon-circle-o"></i>Jenis Kegiatan</a></li>
 						<li id="sidebar-dm-indikator-kegiatan" class=""><a href="{{ URL('/master/indikator-kegiatan') }}"><i class="uk-icon-circle-o"></i>Indikator Kegiatan</a></li>
 						<li id="sidebar-dm-tahun-anggaran" class=""><a href="{{ URL('/master/tahun-anggaran') }}"><i class="uk-icon-circle-o"></i>Tahun Anggaran</a></li>
