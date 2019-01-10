@@ -10,8 +10,17 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\JenisKegiatan;
 use App\Models\IndikatorKegiatan;
+use App\Models\IndikatorKategori;
 use App\Models\AnggaranKegiatan;
 use App\Models\TahunAnggaran;
+use App\Models\PesertaBDT;
+use App\Models\PesertaMpm;
+use Illuminate\Pagination\Paginator;
+//use Jenssegers\Mongodb\Collection;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Pagination\LengthAwarePaginator;
+
+ini_set('memory_limit', '1024M');
 
 class AnggaranKegiatanController extends Controller
 {
@@ -55,11 +64,12 @@ class AnggaranKegiatanController extends Controller
 			$jenisKegiatan = JenisKegiatan::where('status', 1)->get();
 			$indikatorKegiatan = IndikatorKegiatan::where('status', 1)->get();
 			$tahunAnggaran = TahunAnggaran::where('status', 1)->get();
+			$indikatorKategori = IndikatorKategori::get();
 			return view('Dashboard::pages.anggaran-kegiatan.create')
 				->withTitle('Tambah Data Anggaran Kegiatan')
 				->withJenis($jenisKegiatan)
 				->withTahun($tahunAnggaran)
-				->withIndikator($indikatorKegiatan);
+				->withIndikator($indikatorKategori);
 		} else {
 			return redirect('/dashboard');
 		}
@@ -87,7 +97,7 @@ class AnggaranKegiatanController extends Controller
 		$anggaranKegiatan->anggaran_nama_kegiatan = $request->get('anggaran_nama_kegiatan');
 		$anggaranKegiatan->anggaran_besaran = (int)$request->get('anggaran_besaran');
 		$anggaranKegiatan->anggaran_tahun_kegiatan = $request->get('anggaran_tahun_kegiatan');
-		$anggaranKegiatan->anggaran_indikator_kegiatan = $request->get('anggaran_indikator_kegiatan');
+		$anggaranKegiatan->indi_kategori = json_decode($request->indiVar);
 		$anggaranKegiatan->opd_id = !empty(auth()->guard('admin')->user()->opd) ? auth()->guard('admin')->user()->opd : '0';
 		$anggaranKegiatan->status = 1;
 
@@ -112,12 +122,17 @@ class AnggaranKegiatanController extends Controller
 		if ($this->authOpdCheck()) {
 			$jenisKegiatan = JenisKegiatan::where('status', 1)->get();
 			$anggaranKegiatan = AnggaranKegiatan::where('_id', $idAnggaran)->where('status', 1)->get();
+			$indikatorKategori = IndikatorKategori::get();
+			$tahunAnggaran = TahunAnggaran::where('status', 1)->get();
+
 			if ($anggaranKegiatan->isEmpty()) {
 				//not found jenis kegiatan
 			} else {
 				return view('Dashboard::pages.anggaran-kegiatan.edit')
 					->withAnggaran($anggaranKegiatan[0])
 					->withJenis($jenisKegiatan)
+					->withIndikator($indikatorKategori)
+					->withTahun($tahunAnggaran)
 					->withTitle('Edit Data Anggaran Kegiatan');
 			}
 		} else {
@@ -132,7 +147,7 @@ class AnggaranKegiatanController extends Controller
 	 */
 	public function update(Request $request)
 	{
-		$anggaranKegiatan = AnggaranKegiatan::where('_id',  $request->get('idAnggaran'))->where('status', 1)->get();
+		$anggaranKegiatan = AnggaranKegiatan::where('_id',  $request->get('idAnggaran'))->where('status', 1)->first();
 
 		if (!$anggaranKegiatan) {
 			//not found id
@@ -141,6 +156,7 @@ class AnggaranKegiatanController extends Controller
 			$anggaranKegiatan->anggaran_nama_kegiatan = $request->get('anggaran_nama_kegiatan');
 			$anggaranKegiatan->anggaran_jenis_kegiatan = $request->get('anggaran_jenis_kegiatan');
 			$anggaranKegiatan->anggaran_besaran = $request->get('anggaran_besaran');
+			$anggaranKegiatan->indi_kategori = json_decode($request->indiVar);
 			$anggaranKegiatan->anggaran_tahun_kegiatan = $request->get('anggaran_tahun_kegiatan');
 
 			if ($anggaranKegiatan->save()) {
@@ -195,6 +211,8 @@ class AnggaranKegiatanController extends Controller
 			$jenisKegiatan = JenisKegiatan::where('status', 1)->get();
 			$anggaranKegiatan = AnggaranKegiatan::where('_id', $idAnggaran)->where('status', 1)->get();
 			$indikatorKegiatan = IndikatorKegiatan::where('status', 1)->get();
+			$indikatorKategori = IndikatorKategori::get();
+
 			if ($anggaranKegiatan->isEmpty()) {
 				//not found jenis kegiatan
 				return redirect('/dashboard');
@@ -202,11 +220,56 @@ class AnggaranKegiatanController extends Controller
 				return view('Dashboard::pages.anggaran-kegiatan.detail')
 					->withAnggaran($anggaranKegiatan[0])
 					->withJenis($jenisKegiatan)
-					->withIndikator($indikatorKegiatan)
+					->withIndikator($indikatorKategori)
 					->withTitle('Detail Data Anggaran Kegiatan');
 			}
 		} else {
 			return redirect('/dashboard');
 		}
+	}
+
+	/**
+	 * Route => /anggaran-kegiatan/detail-data/{idAnggaran}
+	 * 
+	 * @method get detaildata()
+	 * 
+	 * @param _id $idAnggaran
+	 */
+	public function detaildata($idAnggaran){
+		$anggaran = AnggaranKegiatan::where('_id', $idAnggaran)->where('status', 1)->first();
+		
+		$rt = PesertaBDT::where('kab', '7316')->where('status', 1)->get();
+
+		$rtmpm = PesertaMpm::where('kab', '7316')->where('status', 1)->get();
+		$listkel = [];
+		
+		$rt->merge($rtmpm);
+
+
+		$res = [];
+		foreach($anggaran->indi_kategori as $listAngg){
+			if(!is_null($listAngg)){
+				/* for($i=0; $i<=2; $i++){ */
+					$processData = new PesertaBDT;
+					$result = $processData->getPesertaValueOfIndicator($listAngg, 0, 0, $rt);
+					$res = array_unique(array_merge($res,$result), SORT_REGULAR);
+				/* } */
+			}
+		}
+		$resultCollection = collect($res);
+
+		//dd($this->paginateMe($resultCollection, 50, $page = null, $options = []));
+		
+		return view('Dashboard::pages.anggaran-kegiatan.lihat-data', [
+			'peserta' => $this->paginateMe($resultCollection, 50, $page = null, $options = []),
+			'jumpeserta' => $resultCollection->count()
+		]);
+	}
+
+	public function paginateMe($items, $perPage = 15, $page = null, $options = [])
+	{
+		$page = $page ?: (Paginator::resolveCurrentPage() ?: 1);
+		$items = $items instanceof Collection ? $items : Collection::make($items);
+		return new LengthAwarePaginator($items->forPage($page, $perPage), $items->count(), $perPage, $page, $options);
 	}
 }

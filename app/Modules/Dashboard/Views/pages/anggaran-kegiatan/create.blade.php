@@ -54,30 +54,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="mcf-item">
-								<div class="data uk-grid">
-									<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
-										<div class="data-inner">
-											<div>
-												<label for="indikator_kegiatan">Indikator Kegiatan</label>
-											</div>
-											<div class="uk-button uk-form-select uk-active" data-uk-form-select>
-												<span class="">Indikator Kegiatan</span>
-												<i class="uk-icon-angle-down uk-icon-medium"></i>
-												<select id="indikator_kegiatan" name="indikator_kegiatan">
-													<option value="">Pilih Indikator Kegiatan</option>
-													@foreach($indikator as $thisIndikator)
-														@if ($thisIndikator->kategori_name != null)
-															<option value="{{ $thisIndikator->_id }}">{{ $thisIndikator->kategori_name }}</option>
-														@endif
-													@endforeach
-												</select>
-											</div>
-											<div class="error" id="indikator_kegiatan_err"></div>
-										</div>
-									</div>
-								</div>
-							</li>
+							
 							<li class="mcf-item">
 								<div class="data uk-grid">
 									<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
@@ -121,6 +98,22 @@
 											</div>
 											<div class="error" id="anggaran_tahun_kegiatan_err"></div>
 										</div>
+									</div>
+								</div>
+							</li>
+							<li class="mcf-item">
+								<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+									<span class="" >Indikator Kegiatan</span>
+									<div class="data-inner uk-text-left" style="padding-top: 10px;">
+										<div class="checkbox">
+											@foreach($indikator as $item)
+											<div>
+												<input data-status="indi" value="{{ $item->kode }}" id="{{ $item->_id }}" type="checkbox" name="{{ $item->kode }}">
+												<label for="{{ $item->_id }}">{{ $item->kategori_name }}</label>
+											</div>
+											@endforeach
+										</div>
+										<div class="error" id="{{ $item->kode_variabel }}_err"></div>
 									</div>
 								</div>
 							</li>

@@ -916,6 +916,9 @@ class PesertaBDT extends Eloquent
 		return $result;
 	}
 	
+
+
+
 	//perhitungan masing-masing nilai indikator
 	//#15 rumah
     public function indiRumah($valueOne, $valueTwo, $valueThree, $valueFour)

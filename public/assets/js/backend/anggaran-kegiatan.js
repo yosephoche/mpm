@@ -53,6 +53,25 @@ $(document).ready(function(){
 		e.preventDefault();
 		var formData = new FormData();
 		e.preventDefault();
+
+		var indi_var = [],
+			arr_indi = [],
+			status_indi = 1;
+
+		var values = $('input[data-status^=indi]').map(function() {
+			arr_indi.push(this.name);
+		}).get();
+
+		$.each(arr_indi.unique(), function(i, el){
+			if($('input[name='+el+']:checked').val() === undefined){
+				status_indi = 0;
+			}else{
+				if($('input[name='+el+']:checked').val() !== null){
+					indi_var[i] = $('input[name='+el+']:checked').val();
+				}
+			}
+		});
+
 		$('#submit-save').attr('disabled', 'true');
 		$('#submit-save').css('cursor', 'not-allowed');
 		$('#alert-indi-var').addClass('uk-hidden');
@@ -99,7 +118,7 @@ $(document).ready(function(){
 			let anggaran = reverseFormatRupiah($('#anggaran_besaran').val());
 			formData.append('anggaran_besaran', anggaran);
 			formData.append('anggaran_tahun_kegiatan', $('#anggaran_tahun_kegiatan').val());
-			formData.append('anggaran_indikator_kegiatan', $('#indikator_kegiatan').val());
+			formData.append('indiVar', JSON.stringify(indi_var));
 			formData.append('_token', $('#_token').val());
 
 			$.ajax({
@@ -144,6 +163,24 @@ $(document).ready(function(){
 		e.preventDefault();
 		var formData = new FormData();
 		e.preventDefault();
+		var indi_var = [],
+			arr_indi = [],
+			status_indi = 1;
+
+		var values = $('input[data-status^=indi]').map(function() {
+			arr_indi.push(this.name);
+		}).get();
+
+		$.each(arr_indi.unique(), function(i, el){
+			if($('input[name='+el+']:checked').val() === undefined){
+				status_indi = 0;
+			}else{
+				if($('input[name='+el+']:checked').val() !== null){
+					indi_var[i] = $('input[name='+el+']:checked').val();
+				}
+			}
+		});
+
 		$('#submit-save').attr('disabled', 'true');
 		$('#submit-save').css('cursor', 'not-allowed');
 		$('#alert-indi-var').addClass('uk-hidden');
@@ -187,8 +224,10 @@ $(document).ready(function(){
 		}else{
 			formData.append('anggaran_nama_kegiatan', $('#anggaran_nama_kegiatan').val());
 			formData.append('anggaran_jenis_kegiatan', $('#anggaran_jenis_kegiatan').val());
-			formData.append('anggaran_besaran', $('#anggaran_besaran').val());
 			formData.append('anggaran_tahun_kegiatan', $('#anggaran_tahun_kegiatan').val());
+			formData.append('indiVar', JSON.stringify(indi_var));
+			let anggaran = reverseFormatRupiah($('#anggaran_besaran').val());
+			formData.append('anggaran_besaran', anggaran);
 			formData.append('_token', $('#_token').val());
 			formData.append('idAnggaran', $('#submit-save').attr('data-id'));
 
@@ -283,6 +322,7 @@ $(document).ready(function(){
 		dengan_rupiah.value = formatRupiah(this.value, 'Rp. ');
 	});
 
+	
 	function formatRupiah(angka, prefix)
 	{
 		let number_string = angka.replace(/[^,\d]/g, '').toString(),

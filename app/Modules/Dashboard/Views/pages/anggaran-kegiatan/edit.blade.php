@@ -70,7 +70,7 @@
 									<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 										<div class="data-inner">
 											<label for="anggaran_besaran">Nilai Anggaran Kegiatan</label>
-											<input id="anggaran_besaran" type="text" name="anggaran_besaran" value="{{ $anggaran->anggaran_besaran }}" required>
+											<input id="anggaran_besaran" type="text" name="anggaran_besaran" value="{{ 'Rp. '.number_format($anggaran->anggaran_besaran, 0 , '.', '.') }}" required>
 											<div class="error" id="anggaran_besaran_err"></div>
 										</div>
 									</div>
@@ -80,10 +80,39 @@
 								<div class="data uk-grid">
 									<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 										<div class="data-inner">
-											<label for="anggaran_tahun_kegiatan">Tahun Anggaran Kegiatan</label>
-											<input id="anggaran_tahun_kegiatan" type="text" name="anggaran_tahun_kegiatan" value="{{ $anggaran->anggaran_tahun_kegiatan }}" required>
+											<div>
+												<label for="anggaran_tahun_kegiatan">Tahun Anggaran Kegiatan</label>
+											</div>
+											<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+												<span class="">Tahun Anggaran Kegiatan</span>
+												<i class="uk-icon-angle-down uk-icon-medium"></i>
+												<select id="anggaran_tahun_kegiatan" name="anggaran_tahun_kegiatan">
+													<option value="">Pilih Tahun Anggaran Kegiatan</option>
+													@foreach($tahun as $thisTahun)
+														@if ($thisTahun->tahun_anggaran != null)
+															<option value="{{ $thisTahun->tahun_anggaran }}" {{ ($thisTahun->tahun_anggaran == $anggaran->anggaran_tahun_kegiatan) ? 'selected' : '' }}>{{ $thisTahun->tahun_anggaran }}</option>
+														@endif
+													@endforeach
+												</select>
+											</div>
 											<div class="error" id="anggaran_tahun_kegiatan_err"></div>
 										</div>
+									</div>
+								</div>
+							</li>
+							<li class="mcf-item">
+								<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+									<span class="" >Indikator Kegiatan</span>
+									<div class="data-inner uk-text-left" style="padding-top: 10px;">
+										<div class="checkbox">
+											@foreach($indikator as $item)
+											<div>
+												<input data-status="indi" value="{{ $item->kode }}" id="{{ $item->_id }}" type="checkbox" {{ (in_array($item->kode, $anggaran->indi_kategori)) ? 'checked' : '' }} name="{{ $item->kode }}">
+												<label for="{{ $item->_id }}">{{ $item->kategori_name }}</label>
+											</div>
+											@endforeach
+										</div>
+										<div class="error" id="{{ $item->kode_variabel }}_err"></div>
 									</div>
 								</div>
 							</li>
