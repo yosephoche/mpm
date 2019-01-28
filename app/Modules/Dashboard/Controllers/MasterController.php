@@ -394,7 +394,7 @@ class MasterController extends Controller
 
 	public function authSuperCheck()
 	{
-		return (auth()->guard('admin')->user()->status_admin == 0) ? true : false;
+		return (auth()->guard('admin')->user()->status_admin == 0 || auth()->guard('admin')->user()->status_admin == 3) ? true : false;
 	}
 
 	//master jenis kegiatan

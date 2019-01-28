@@ -1,32 +1,32 @@
-{"_id":{"$oid":"592bca76fea7995a89ef7941"},"kode":"s002","name":"Dinas Kesehatan","status":1}
-{"_id":{"$oid":"592cd588fea7995a89ef7f0e"},"kode":"s005","name":"Dinas Perumahan dan Kawasan Pemukiman","status":1}
-{"_id":{"$oid":"592cd5affea7995a89ef7f18"},"kode":"s006","name":"Satuan Polisi Pamong Praja dan Pemadam Kebakaran","status":1}
-{"_id":{"$oid":"592cd518fea7995a89ef7efd"},"kode":"s004","name":"Dinas Pekerjaan Umum dan Penataan Ruang","status":1}
-{"_id":{"$oid":"592cd5edfea7995a89ef7f24"},"kode":"s008","name":"Dinas Sosial","status":1}
-{"_id":{"$oid":"592bca5bfea7995a89ef793d"},"kode":"s001","name":"Dinas Pendidikan","status":1}
-{"_id":{"$oid":"592cd60afea7995a89ef7f28"},"kode":"s009","name":"Dinas Tenaga Kerja dan Transmigrasi","status":1}
-{"_id":{"$oid":"592cd5cafea7995a89ef7f1a"},"kode":"s007","name":"Badan Penanggulangan Bencana Daerah","status":1}
-{"_id":{"$oid":"592cd628fea7995a89ef7f30"},"kode":"s010","name":"Dinas Pemberdayaan Perempuan dan Perlindungan Anak","status":1}
-{"_id":{"$oid":"592cd4e4fea7995a89ef7ef7"},"kode":"s003","name":"Rumah Sakit Umum Daerah Latemmamala","status":1}
-{"_id":{"$oid":"592cd6e7fea7995a89ef7f53"},"kode":"s014","name":"Dinas Kependudukan dan Pencatatan Sipil","status":1}
-{"_id":{"$oid":"592cd708fea7995a89ef7f5b"},"kode":"s015","name":"Dinas Pemberdayaan Masyarakat dan Desa","status":1}
-{"_id":{"$oid":"592cd6c4fea7995a89ef7f4e"},"kode":"s013","name":"Dinas Lingkungan Hidup","status":1}
-{"_id":{"$oid":"592cd725fea7995a89ef7f60"},"kode":"s016","name":"Dinas Pengendalian Penduduk dan Keluarga Berencana","status":1}
-{"_id":{"$oid":"592cd76dfea7995a89ef7f6d"},"kode":"s018","name":"Dinas Komunikasi dan Informatika","status":1}
-{"_id":{"$oid":"592cd743fea7995a89ef7f68"},"kode":"s017","name":"Dinas perhubungan","status":1}
-{"_id":{"$oid":"592cd793fea7995a89ef7f77"},"kode":"s019","name":"Dinas perdagangan, Perindustrian, Koperasi dan Usaha Kecil Menengah","status":1}
-{"_id":{"$oid":"592cd652fea7995a89ef7f39"},"kode":"s011","name":"Dinas Perikanan dan Ketahanan Pangan","status":1}
-{"_id":{"$oid":"592cd84efea7995a89ef7f97"},"kode":"s022","name":"Dinas Kebudayaan dan pariwisata","status":1}
-{"_id":{"$oid":"592cd86dfea7995a89ef7f9f"},"kode":"s023","name":"Dinas Perpustakaan dan Kearsipan","status":1}
-{"_id":{"$oid":"592cd8d4fea7995a89ef7fae"},"kode":"s025","name":"Dinas Pertanian","status":1}
-{"_id":{"$oid":"592cd8f1fea7995a89ef7fb8"},"kode":"s026","name":"Dinas Lingkungan Hidup","status":1}
-{"_id":{"$oid":"592cd954fea7995a89ef7fcc"},"kode":"s029","name":"Badan Perencanaan, Pembangunan, Penelitian, dan Pengembangan daerah","status":1}
-{"_id":{"$oid":"592cd971fea7995a89ef7fd0"},"kode":"s030","name":"Badan Pengelolaan Keuangan Daerah","status":1}
-{"_id":{"$oid":"592cd98dfea7995a89ef7fd4"},"kode":"s031","name":"Badan Kepegawaian dan Pengembangan Sumber Daya Manusia","status":1}
-{"_id":{"$oid":"592cd7b6fea7995a89ef7f80"},"kode":"s20","name":"Dinas Penanaman Modal dan Pelayanan Terpadu Satu pintu","status":1}
-{"_id":{"$oid":"592cd7d6fea7995a89ef7f84"},"kode":"s021","name":"Dinas pemuda dan Olahraga","status":1}
-{"_id":{"$oid":"592cda13fea7995a89ef7ff1"},"kode":"s035","name":"Badan Kesatuan Bangsa dan politik","status":1}
-{"_id":{"$oid":"592cd9ccfea7995a89ef7fe0"},"kode":"s033","name":"Sekretariat Dewan","status":1}
-{"_id":{"$oid":"592cda33fea7995a89ef7ff5"},"kode":"s036","name":"Kecamatan","status":1}
-{"_id":{"$oid":"592cd9a6fea7995a89ef7fdc"},"kode":"s032","name":"Sekretariat Daerah","status":1}
-{"_id":{"$oid":"592cd9eefea7995a89ef7fe9"},"kode":"s034","name":"Inspektorat Daerah","status":1}
+{"_id":{"$oid":"592bca5bfea7995a89ef793d"},"kode":"s001","name":"Dinas Pendidikan","status":0}
+{"_id":{"$oid":"592bca76fea7995a89ef7941"},"kode":"s002","name":"Dinas Perindustrian dan Perdagangan","status":1}
+{"_id":{"$oid":"592cd4e4fea7995a89ef7ef7"},"kode":"s003","name":"Dinas Kesehatan","status":1}
+{"_id":{"$oid":"592cd518fea7995a89ef7efd"},"kode":"s004","name":"Dinas Pekerjaan Umum dan Penataan Ruang","status":0}
+{"_id":{"$oid":"592cd588fea7995a89ef7f0e"},"kode":"s005","name":"Badan Kepegawaian Daerah, Pendidikan dan Pelatihan","status":1}
+{"_id":{"$oid":"592cd5affea7995a89ef7f18"},"kode":"s006","name":"Satuan Polisi Pamong Praja dan Pemadam Kebakaran","status":0}
+{"_id":{"$oid":"592cd5cafea7995a89ef7f1a"},"kode":"s007","name":"Satuan Polisi PP dan Damkar","status":1}
+{"_id":{"$oid":"592cd5edfea7995a89ef7f24"},"kode":"s008","name":"Dinas Sosial","status":0}
+{"_id":{"$oid":"592cd60afea7995a89ef7f28"},"kode":"s009","name":"Rumah sakit umum massenrempulu","status":1}
+{"_id":{"$oid":"592cd628fea7995a89ef7f30"},"kode":"s010","name":"Dinas Sosial","status":1}
+{"_id":{"$oid":"592cd652fea7995a89ef7f39"},"kode":"s011","name":"Dinas Pemberdayaan Masyarakat dan Desa","status":1}
+{"_id":{"$oid":"592cd6c4fea7995a89ef7f4e"},"kode":"s013","name":"Dinas Pekerjaan Umum","status":1}
+{"_id":{"$oid":"592cd6e7fea7995a89ef7f53"},"kode":"s014","name":"Dinas Pertanian","status":1}
+{"_id":{"$oid":"592cd708fea7995a89ef7f5b"},"kode":"s015","name":"Dinas Perhubungan","status":1}
+{"_id":{"$oid":"592cd725fea7995a89ef7f60"},"kode":"s016","name":"Dinas Ketahan Pangan","status":1}
+{"_id":{"$oid":"592cd743fea7995a89ef7f68"},"kode":"s017","name":"Dinas Pendidikan dan Kebudayaan","status":1}
+{"_id":{"$oid":"592cd76dfea7995a89ef7f6d"},"kode":"s018","name":"Dinas Lingkungan Hidup","status":1}
+{"_id":{"$oid":"592cd793fea7995a89ef7f77"},"kode":"s019","name":"Dinas perdagangan, Perindustrian, Koperasi dan Usaha Kecil Menengah","status":0}
+{"_id":{"$oid":"592cd7b6fea7995a89ef7f80"},"kode":"s20","name":"Dinas Kependudukan dan Pencatatan Sipil","status":1}
+{"_id":{"$oid":"592cd7d6fea7995a89ef7f84"},"kode":"s021","name":"Badan Pendapatan Daerah","status":1}
+{"_id":{"$oid":"592cd84efea7995a89ef7f97"},"kode":"s022","name":"Dinas Pemuda Olahraga dan Parawisata","status":1}
+{"_id":{"$oid":"592cd86dfea7995a89ef7f9f"},"kode":"s023","name":"Dinas Komunikasi Informatika dan Statistika","status":1}
+{"_id":{"$oid":"592cd8d4fea7995a89ef7fae"},"kode":"s025","name":"Dinas Pengendalian Penduduk dan Keluarga","status":1}
+{"_id":{"$oid":"592cd8f1fea7995a89ef7fb8"},"kode":"s026","name":"Dinas Koperasi, UKM, Tenaga Kerja dan Transmigrasi","status":1}
+{"_id":{"$oid":"592cd954fea7995a89ef7fcc"},"kode":"s029","name":"Dinas Perumahan, Kawasan Permukiman dan Penata Ruang","status":1}
+{"_id":{"$oid":"592cd971fea7995a89ef7fd0"},"kode":"s030","name":"Dinas Pemberdaya dan Perempuan dan Perlindungan Anak","status":1}
+{"_id":{"$oid":"592cd98dfea7995a89ef7fd4"},"kode":"s031","name":"Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu","status":1}
+{"_id":{"$oid":"592cd9a6fea7995a89ef7fdc"},"kode":"s032","name":"Dinas Perpustakaan dan Kearsipan","status":1}
+{"_id":{"$oid":"592cd9ccfea7995a89ef7fe0"},"kode":"s033","name":"Badan Kesatuan Bangsa dan Politik","status":1}
+{"_id":{"$oid":"592cd9eefea7995a89ef7fe9"},"kode":"s034","name":"Badan Perencanaan Pembangunan Daerah dan Penelitian dan Pembangunan","status":1}
+{"_id":{"$oid":"592cda13fea7995a89ef7ff1"},"kode":"s035","name":"Badan Kesatuan Bangsa dan politik","status":0}
+{"_id":{"$oid":"592cda33fea7995a89ef7ff5"},"kode":"s036","name":"Badan Pengelola Keuangan Daerah","status":1}

@@ -207,6 +207,7 @@ class AnggaranKegiatanController extends Controller
 	 */
 	public function detail($idAnggaran)
 	{
+		
 		if ($this->authOpdCheck()) {
 			$jenisKegiatan = JenisKegiatan::where('status', 1)->get();
 			$anggaranKegiatan = AnggaranKegiatan::where('_id', $idAnggaran)->where('status', 1)->get();
@@ -236,11 +237,29 @@ class AnggaranKegiatanController extends Controller
 	 * @param _id $idAnggaran
 	 */
 	public function detaildata($idAnggaran){
+		$idBy = isset($_GET['by']) ? $_GET['by'] : false;
+		$idSearch = isset($_GET['q']) ? $_GET['q'] : false;
+
 		$anggaran = AnggaranKegiatan::where('_id', $idAnggaran)->where('status', 1)->first();
 		
-		$rt = PesertaBDT::where('kab', '7316')->where('status', 1)->get();
+		if($idSearch){
+			if($idBy){
+				if($idBy == 'nourut'){
+					$rt = PesertaBDT::where('kab', '7316')->where('nourut_rt', $idSearch)->where('status', 1)->get();
+					$rtmpm = PesertaMpm::where('kab', '7316')->where('nourut_rt', $idSearch)->where('status', 1)->get();					
+				}else if($idBy == 'namaruta'){
+					$rt = PesertaBDT::where('kab', '7316')->where('individu.nama', 'like', '%'.$idSearch.'%')->where('individu.b4_k3', '1')->where('status', 1)->get();
+					$rtmpm = PesertaMpm::where('kab', '7316')->where('individu.nama', 'like', '%'.$idSearch.'%')->where('individu.b4_k3', '1')->where('status', 1)->get();					
+				}
+			}else{
+				$rt = PesertaBDT::where('kab', '7316')->where('status', 1)->get();
+				$rtmpm = PesertaMpm::where('kab', '7316')->where('status', 1)->get();
+			}
+		}else{
+			$rt = PesertaBDT::where('kab', '7316')->where('status', 1)->get();
+			$rtmpm = PesertaMpm::where('kab', '7316')->where('status', 1)->get();
+		}
 
-		$rtmpm = PesertaMpm::where('kab', '7316')->where('status', 1)->get();
 		$listkel = [];
 		
 		$rt->merge($rtmpm);
@@ -262,6 +281,7 @@ class AnggaranKegiatanController extends Controller
 		
 		return view('Dashboard::pages.anggaran-kegiatan.lihat-data', [
 			'peserta' => $this->paginateMe($resultCollection, 50, $page = null, $options = []),
+			'idAnggaran'=>$idAnggaran,
 			'jumpeserta' => $resultCollection->count()
 		]);
 	}

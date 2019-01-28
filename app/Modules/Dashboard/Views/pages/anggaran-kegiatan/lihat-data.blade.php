@@ -44,7 +44,24 @@
 															@endforeach
 														</select>
 													</div>--}}
-													<li><a id="cetak-peserta-lama" href="{{ URL('/ppfm/cetak-peserta-lama').'?kec='.((empty($_GET['kec'])) ? '' : $_GET['kec']).'&page='.((empty($_GET['page'])) ? '' : $_GET['page']) }}"><button  class="button-primary cetak">Cetak</button></a></li>
+													<div class="uk-button uk-form-select" data-uk-form-select>
+														<span class="">Pilih...</span>
+														<i class="uk-icon-angle-down uk-icon-medium"></i>
+														<select id="search-by-ang" name="search-kec">
+															<option value="" {{ empty($_GET['by']) ? 'selected' : '' }}>Pilih Filter</option>
+															<option value="nourut" {{ empty($_GET['by']) ? '' : (($_GET['by'] == 'nourut') ? 'selected' : '') }}>No. Urut</option>
+															<option value="namaruta" {{ empty($_GET['by']) ? '' : (($_GET['by'] == 'namaruta') ? 'selected' : '') }}>Nama Kepala RuTa</option>
+														</select>
+													</div>
+													<div class="" style="display: inline-block;margin-left: 10px;">
+														<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+															<div class="data-inner">
+																<input id="q-ang" type="text" name="q" placeholder="Cari" value="{{empty($_GET['q']) ? '' : $_GET['q']}}">
+																<div class="error" id="anggaran_nama_kegiatan_err"></div>
+															</div>
+														</div>
+													</div>
+													<li><a id="cetak-peserta-anggaran" href="{{ URL('/ppfm/cetak-peserta-anggaran').'/'.$idAnggaran.'?by='.((empty($_GET['by'])) ? '' : $_GET['by']).'&q='.((empty($_GET['q'])) ? '' : $_GET['q']).'&page='.((empty($_GET['page'])) ? '' : $_GET['page']) }}"><button  class="button-primary cetak">Cetak</button></a></li>
 												</ul>
 											</div>
 										</div>

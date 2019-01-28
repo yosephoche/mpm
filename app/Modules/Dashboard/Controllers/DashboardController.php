@@ -149,13 +149,30 @@ class DashboardController extends Controller
 		$value = isset($_GET['value']) ? $_GET['value'] : false;
 		$kategori = isset($_GET['kategori']) ? $_GET['kategori'] : false;
 		$idKelurahan = isset($_GET['kelurahan']) ? $_GET['kelurahan'] : false;
+		$idBy = isset($_GET['by']) ? $_GET['by'] : false;
+		$idSearch = isset($_GET['q']) ? $_GET['q'] : false;
 		$getkecamatan = Kecamatan::where('id_kota', '7316')->where('status', true)->get();
 
 		$kelurahan = Kelurahan::where('id_kelurahan', $idKelurahan)->where('status', true)->get();
 		$kecamatan = Kecamatan::where('id_kecamatan', $kelurahan[0]['id_kecamatan'])->where('status', true)->first();
+		if($idSearch){
+			if($idBy){
+				if($idBy == 'nourut'){
+					$rt = PesertaBDT::where('kab', '7316')->where('des', $idKelurahan)->where('nourut_rt', $idSearch)->where('status', 1)->get();
+					$rtmpm = PesertaMpm::where('kab', '7316')->where('des', $idKelurahan)->where('nourut_rt', $idSearch)->where('status', 1)->get();					
+				}else if($idBy == 'namaruta'){
+					$rt = PesertaBDT::where('kab', '7316')->where('des', $idKelurahan)->where('individu.nama', 'like', '%'.$idSearch.'%')->where('individu.b4_k3', '1')->where('status', 1)->get();
+					$rtmpm = PesertaMpm::where('kab', '7316')->where('des', $idKelurahan)->where('individu.nama', 'like', '%'.$idSearch.'%')->where('individu.b4_k3', '1')->where('status', 1)->get();					
+				}
+			}else{
+				$rt = PesertaBDT::where('kab', '7316')->where('des', $idKelurahan)->where('status', 1)->get();
+				$rtmpm = PesertaMpm::where('kab', '7316')->where('des', $idKelurahan)->where('status', 1)->get();
+			}
+		}else{
+			$rt = PesertaBDT::where('kab', '7316')->where('des', $idKelurahan)->where('status', 1)->get();
+			$rtmpm = PesertaMpm::where('kab', '7316')->where('des', $idKelurahan)->where('status', 1)->get();
+		}
 
-		$rt = PesertaBDT::where('kab', '7316')->where('des', $idKelurahan)->where('status', 1)->get();
-		$rtmpm = PesertaMpm::where('kab', '7316')->where('des', $idKelurahan)->where('status', 1)->get();
 		$listkel = [];
 		
 		$rt->merge($rtmpm);

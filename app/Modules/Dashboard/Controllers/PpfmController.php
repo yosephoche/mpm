@@ -13,7 +13,12 @@ use App\Models\AssetVariabel;
 use App\Http\Requests;
 use App\Models\Kelurahan;
 use App\Models\Kecamatan;
+use App\Models\AnggaranKegiatan;
 use App\Http\Controllers\Controller;
+use Illuminate\Pagination\Paginator;
+//use Jenssegers\Mongodb\Collection;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class PpfmController extends Controller
 {
@@ -749,5 +754,96 @@ class PpfmController extends Controller
 		}
 
 		return view('Dashboard::pages.ppfm.printout-sudah', ['peserta'=>$peserta_bdt]);
+	}
+
+	public function cetakpesertaindikator(){
+
+		$indikator = isset($_GET['indikator']) ? $_GET['indikator'] : false;
+		$value = isset($_GET['value']) ? $_GET['value'] : false;
+		$kategori = isset($_GET['kategori']) ? $_GET['kategori'] : false;
+		$idKelurahan = isset($_GET['kelurahan']) ? $_GET['kelurahan'] : false;
+		$idBy = isset($_GET['by']) ? $_GET['by'] : false;
+		$idSearch = isset($_GET['q']) ? $_GET['q'] : false;
+		$getkecamatan = Kecamatan::where('id_kota', '7316')->where('status', true)->get();
+
+		$kelurahan = Kelurahan::where('id_kelurahan', $idKelurahan)->where('status', true)->get();
+		$kecamatan = Kecamatan::where('id_kecamatan', $kelurahan[0]['id_kecamatan'])->where('status', true)->first();
+		if($idSearch){
+			if($idBy){
+				if($idBy == 'nourut'){
+					$rt = PesertaBDT::where('kab', '7316')->where('des', $idKelurahan)->where('nourut_rt', $idSearch)->where('status', 1)->get();
+					$rtmpm = PesertaMpm::where('kab', '7316')->where('des', $idKelurahan)->where('nourut_rt', $idSearch)->where('status', 1)->get();					
+				}else if($idBy == 'namaruta'){
+					$rt = PesertaBDT::where('kab', '7316')->where('des', $idKelurahan)->where('individu.nama', 'like', '%'.$idSearch.'%')->where('individu.b4_k3', '1')->where('status', 1)->get();
+					$rtmpm = PesertaMpm::where('kab', '7316')->where('des', $idKelurahan)->where('individu.nama', 'like', '%'.$idSearch.'%')->where('individu.b4_k3', '1')->where('status', 1)->get();					
+				}
+			}else{
+				$rt = PesertaBDT::where('kab', '7316')->where('des', $idKelurahan)->where('status', 1)->get();
+				$rtmpm = PesertaMpm::where('kab', '7316')->where('des', $idKelurahan)->where('status', 1)->get();
+			}
+		}else{
+			$rt = PesertaBDT::where('kab', '7316')->where('des', $idKelurahan)->where('status', 1)->get();
+			$rtmpm = PesertaMpm::where('kab', '7316')->where('des', $idKelurahan)->where('status', 1)->get();
+		}
+
+		$listkel = [];
+		
+		$rt->merge($rtmpm);
+
+		$processData = new PesertaBDT;
+		$result = $processData->getPesertaValueOfIndicator($indikator, $value,$kategori, $rt);
+		$resultCollection = collect($result);
+
+		return view('Dashboard::pages.ppfm.printout-sudah', ['peserta'=>$this->paginateMe($resultCollection, 50, $page = null, $options = [])]);
+	}
+
+	public function cetakpesertaanggaran($idAnggaran){
+
+		$anggaran = AnggaranKegiatan::where('_id', $idAnggaran)->where('status', 1)->first();
+
+		$idBy = isset($_GET['by']) ? $_GET['by'] : false;
+		$idSearch = isset($_GET['q']) ? $_GET['q'] : false;
+
+		if($idSearch){
+			if($idBy){
+				if($idBy == 'nourut'){
+					$rt = PesertaBDT::where('kab', '7316')->where('nourut_rt', $idSearch)->where('status', 1)->get();
+					$rtmpm = PesertaMpm::where('kab', '7316')->where('nourut_rt', $idSearch)->where('status', 1)->get();					
+				}else if($idBy == 'namaruta'){
+					$rt = PesertaBDT::where('kab', '7316')->where('individu.nama', 'like', '%'.$idSearch.'%')->where('individu.b4_k3', '1')->where('status', 1)->get();
+					$rtmpm = PesertaMpm::where('kab', '7316')->where('individu.nama', 'like', '%'.$idSearch.'%')->where('individu.b4_k3', '1')->where('status', 1)->get();					
+				}
+			}else{
+				$rt = PesertaBDT::where('kab', '7316')->where('status', 1)->get();
+				$rtmpm = PesertaMpm::where('kab', '7316')->where('status', 1)->get();
+			}
+		}else{
+			$rt = PesertaBDT::where('kab', '7316')->where('status', 1)->get();
+			$rtmpm = PesertaMpm::where('kab', '7316')->where('status', 1)->get();
+		}
+
+		$listkel = [];
+		
+		$rt->merge($rtmpm);
+
+		$res = [];
+		foreach($anggaran->indi_kategori as $listAngg){
+			if(!is_null($listAngg)){
+				/* for($i=0; $i<=2; $i++){ */
+					$processData = new PesertaBDT;
+					$result = $processData->getPesertaValueOfIndicator($listAngg, 0, 0, $rt);
+					$res = array_unique(array_merge($res,$result), SORT_REGULAR);
+				/* } */
+			}
+		}
+		$resultCollection = collect($res);
+
+		return view('Dashboard::pages.ppfm.printout-sudah', ['peserta'=>$this->paginateMe($resultCollection, 50, $page = null, $options = [])]);
+	}
+	public function paginateMe($items, $perPage = 15, $page = null, $options = [])
+	{
+		$page = $page ?: (Paginator::resolveCurrentPage() ?: 1);
+		$items = $items instanceof Collection ? $items : Collection::make($items);
+		return new LengthAwarePaginator($items->forPage($page, $perPage), $items->count(), $perPage, $page, $options);
 	}
 }

@@ -43,6 +43,8 @@ Route::group(['prefix' => '/', 'namespace' => 'App\Modules\Dashboard\Controllers
 
 			Route::get('/ppfm/cetak-peserta-baru', ['as' => 'dashboard.ppfm.cetakpesertabaru', 'uses' => 'PpfmController@cetakpesertabaru']);
 			Route::get('/ppfm/cetak-peserta-lama', ['as' => 'dashboard.ppfm.cetakpesertalama', 'uses' => 'PpfmController@cetakpesertalama']);
+			Route::get('/ppfm/cetak-peserta-indikator', ['as' => 'dashboard.ppfm.cetakpesertaindi', 'uses' => 'PpfmController@cetakpesertaindikator']);
+			Route::get('/ppfm/cetak-peserta-anggaran/{idAnggaran}', ['as' => 'dashboard.ppfm.cetakpesertaang', 'uses' => 'PpfmController@cetakpesertaanggaran']);
 
 			Route::get('/getkota/{idprov}', ['as' => 'dashboard.mpm.getkota', 'uses' => 'MpmController@getkota']);
 			Route::get('/getkecamatan/{idkota}', ['as' => 'dashboard.mpm.getkecamatan', 'uses' => 'MpmController@getkecamatan']);

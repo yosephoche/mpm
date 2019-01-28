@@ -34,7 +34,7 @@
 										<div class="uk-clearfix">
 											<div class="uk-float-right">
 												<ul>
-													<div class="uk-button uk-form-select" data-uk-form-select>
+													<!-- <div class="uk-button uk-form-select" data-uk-form-select>
 														<span class="">Pilih...</span>
 														<i class="uk-icon-angle-down uk-icon-medium"></i>
 														<select id="search-kec" name="search-kec">
@@ -43,8 +43,25 @@
 															<option value="{{ $listkec->id_kecamatan }}" {{ ($listkec->id_kecamatan == (empty($_GET['kec']) ? '' : $_GET['kec']) ? 'selected' : '') }} >{{ ucwords(strtolower($listkec->kecamatan)) }}</option>
 															@endforeach
 														</select>
+													</div> -->
+													<div class="uk-button uk-form-select" data-uk-form-select>
+														<span class="">Pilih...</span>
+														<i class="uk-icon-angle-down uk-icon-medium"></i>
+														<select id="search-by" name="search-kec">
+															<option value="" {{ empty($_GET['by']) ? 'selected' : '' }}>Pilih Filter</option>
+															<option value="nourut" {{ empty($_GET['by']) ? '' : (($_GET['by'] == 'nourut') ? 'selected' : '') }}>No. Urut</option>
+															<option value="namaruta" {{ empty($_GET['by']) ? '' : (($_GET['by'] == 'namaruta') ? 'selected' : '') }}>Nama Kepala RuTa</option>
+														</select>
 													</div>
-													<li><a id="cetak-peserta-lama" href="{{ URL('/ppfm/cetak-peserta-lama').'?kec='.((empty($_GET['kec'])) ? '' : $_GET['kec']).'&page='.((empty($_GET['page'])) ? '' : $_GET['page']) }}"><button  class="button-primary cetak">Cetak</button></a></li>
+													<div class="" style="display: inline-block;margin-left: 10px;">
+														<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+															<div class="data-inner">
+																<input id="q" type="text" name="q" placeholder="Cari" value="{{empty($_GET['q']) ? '' : $_GET['q']}}">
+																<div class="error" id="anggaran_nama_kegiatan_err"></div>
+															</div>
+														</div>
+													</div>
+													<li><a id="cetak-peserta-indikator" href="{{ URL('/ppfm/cetak-peserta-indikator').'?kelurahan='.((empty($_GET['kelurahan'])) ? '' : $_GET['kelurahan']).'&indikator='.((empty($_GET['indikator'])) ? '' : $_GET['indikator']).'&kategori='.((empty($_GET['kategori'])) ? '' : $_GET['kategori']).'&value='.((empty($_GET['value'])) ? '' : $_GET['value']).'&by='.((empty($_GET['by'])) ? '' : $_GET['by']).'&q='.((empty($_GET['q'])) ? '' : $_GET['q']).'&page='.((empty($_GET['page'])) ? '' : $_GET['page']) }}"><button  class="button-primary cetak">Cetak</button></a></li>
 												</ul>
 											</div>
 										</div>
