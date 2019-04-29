@@ -16,7 +16,7 @@
 	<div class="mc-breadcrumb" data-uk-sticky="{top:60}">
 		<ul class="uk-breadcrumb">
 			<li><a href="{{ URL('/dashboard') }}">Dashboard</a></li>
-			<li><a href="{{ URL('/master/indikator/variabel') }}">Daftar Indikator Variabel</a></li>
+			<li><a href="{{ URL('/master/tahun-anggaran') }}">Daftar Tahun Anggaran</a></li>
 			<li><a href="javascript:;">{{ $title }}</a></li>
 		</ul>
 	</div>

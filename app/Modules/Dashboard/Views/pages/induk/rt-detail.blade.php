@@ -10,14 +10,14 @@
 			}
 		</style>
 		<div class="mch-text">
-			<h2>Daftar Peserta Individu</h2>
+			<h2>Daftar Peserta Rumah Tangga</h2>
 		</div>
 	</div>
 	<div class="mc-breadcrumb" data-uk-sticky="{top:60}">
 		<ul class="uk-breadcrumb">
 			<li><a href="{{ URL('/dashboard') }}">Dashboard</a></li>
-			<li><a href="{{ URL('/induk/individu') }}">Data Induk BDT Individu</a></li>
-			<li><a href="javascript:;">Daftar Peserta Individu</a></li>
+			<li><a href="{{ URL('/induk/rumahtangga') }}">Data Induk BDT Rumah Tangga</a></li>
+			<li><a href="javascript:;">Daftar Peserta Rumah Tangga</a></li>
 		</ul>
 	</div>
 	<div class="mc-form mc-form-detail">
@@ -26,7 +26,7 @@
 				<div>
 					<div class="mcf-content">
 						<div class="mcf-title">
-							<h3>Daftar Peserta Individu MPM</h3>
+							<h3>Daftar Peserta Rumah Tangga MPM</h3>
 						</div>
 						<div class="main-table">
 							<div class="mt-wrapper">

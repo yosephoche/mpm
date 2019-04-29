@@ -334,7 +334,7 @@ class MasterController extends Controller
 			
 			return view('Dashboard::pages.master.opd.edit')
 				->withSkpd($thisSkpd[0])
-				->withTitle("Edit Data OPD");
+				->withTitle("Sunting Data OPD");
 		} else {
 			return redirect('/dashboard');
 		}
@@ -475,7 +475,7 @@ class MasterController extends Controller
 			} else {
 				return view('Dashboard::pages.master.jenis-kegiatan.edit')
 					->withKegiatan($thisJenisKegiatan[0])
-					->withTitle('Edit Data Master Jenis Kegiatan');
+					->withTitle('Sunting Data Master Jenis Kegiatan');
 			}
 		} else {
 			return redirect('/dashboard');
@@ -743,7 +743,7 @@ class MasterController extends Controller
 	
 			if ($isTahunAnggaran) {
 				return view('Dashboard::pages.master.tahun-anggaran.edit')
-					->withTitle('Edit Data Master Tahun Anggaran')
+					->withTitle('Sunting Data Master Tahun Anggaran')
 					->withTahun($isTahunAnggaran);
 			} else {
 				return redirect('/dashboard');
