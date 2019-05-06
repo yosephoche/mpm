@@ -13,7 +13,11 @@ use Mail;
 class UserManagementController extends Controller
 {
     public function index(){
-    	return view('UserManagement::pages.index');
+        if(!empty(auth()->guard('admin')->user()->email)){
+            return redirect('/dashboard');
+        }else{
+            return view('UserManagement::pages.index');
+        }
     }
 
     public function login(Request $request){
